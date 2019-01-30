@@ -1,15 +1,13 @@
-Syntax highlighted code block
 
 # HEALS Food Knowledge Graph
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## USDA Food Mappings 
 
-1. Numbered
-2. List
+This dataset includes mappings to some of the concepts found in:
+- DBpedia
+- schema.org
+- FoodOn
+- Units Ontology
+- ChEBI concepts 
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+[USDA Knowledge Graph in nanopublications (trig) format](url)
