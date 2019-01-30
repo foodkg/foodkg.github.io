@@ -10,4 +10,4 @@ This dataset includes mappings to some of the concepts found in:
 - Units Ontology
 - ChEBI 
 
-[USDA Knowledge Graph in nanopublications (trig) format](https://ibm.box.com/s/xerhb2219le0ucmtvlv2u6xvzjeb2851)
+[USDA Knowledge Graph in nanopublications (trig) format](https://drive.google.com/open?id=1hkitCcxnM_7R6OYuvC5zakWojlN2Xuog)
