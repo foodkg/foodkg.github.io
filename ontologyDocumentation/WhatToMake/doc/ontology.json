@@ -1,0 +1,1108 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Recipe"
+    }, {
+      "@id" : "_:genid3"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasCookTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid14"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "60"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Recipe"
+    }, {
+      "@id" : "_:genid18"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Lunch"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/isRecommendedForMeal"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Recipe"
+    }, {
+      "@id" : "_:genid22"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Side"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/isRecommendedForMeal"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Recipe"
+    }, {
+      "@id" : "_:genid26"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasIngredient"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasGlycemicIndex"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid30"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Breakfast"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/isRecommendedForMeal"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "50"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Recipe"
+    }, {
+      "@id" : "_:genid7"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Dinner"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/isRecommendedForMeal"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Recipe"
+    }, {
+      "@id" : "_:genid11"
+    } ]
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology."
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Forest Eckhardt"
+  }, {
+    "@value" : "Kevin Blissett"
+  }, {
+    "@value" : "Miao Qi"
+  }, {
+    "@value" : "Yarden Ne'eman"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://opensource.org/licenses/MIT"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2018-12-06"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "WhatToMake"
+  } ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "What to Make Base Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+  }, {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@value" : "http://tw.rpi.edu/media/latest/OE_12_WhatToMake.rdf"
+  }, {
+    "@value" : "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_12_WhatToMake/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@value" : "Changes to this ontology since the previous version include: the removal of smart quotes; fixes to the header; addition of dct:description, sm:copyright, and dct:license."
+  } ],
+  "https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright" : [ {
+    "@value" : "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Appetizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Course" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Appetizer,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/appetizer. [Accessed: 1-Nov-2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "appetizer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a food or drink that stimulates the appetite and is usually served before a meal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a course"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Breakfast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Meal" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Breakfast,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "breakfast"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the first meal of the day especially when taken in the morning"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a meal"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/BreakfastRecipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Breakfast,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "breakfast recipe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a class that contains recipes of type breakfast"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Brunch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Meal" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Brunch.\" [Online]. Available: https://en.wikipedia.org/wiki/Brunch. [Accessed: Nov. 16, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "brunch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a combination of breakfast and lunch eaten usually during the late morning to early afternoon, generally served from 10am up to 2pm, and regularly has some form of alcoholic drink (most usually champagne or a cocktail) served with it"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a meal"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Characteristic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Characteristic,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/characterisitc. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "characteristic"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a distinguishing trait, quality, or property"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Classes that inherit from this class represent different possible characteristics of food. Examples in this ontology include \"flavor\" and \"texture\" but these can be expanded as desired. Specific flavors and textures are represented as individuals that inherent from their respective subclass."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/ChemicalFoodProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03411041. [Accessed Nov. 19, 2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "chemical food product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a food substance derived from a nonliving source (e.g., salt, water or synthesized compounds)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Course",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "course"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "dfferent types of specific sets of food items that are served together during a meal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "The individuals that inhreit from this class represent courses of a meal. The recipe \"banana bread\" can be \"recommended for course\" \"dessert\". Additional courses can be added as individuals that inheret from this class."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Dessert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Course" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Dessert,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dessert. [Accessed: 1-Nov-2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dessert"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a usually sweet course or dish (as of pastry or ice cream) usually served at the end of a meal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a course"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Dinner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Meal" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Dinner,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dinner"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the principal meal of the day"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a meal"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/DinnerRecipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Dinner,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dinner recipe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a class that contains recipes of type dinner"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Entree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Course" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Entree,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/entree. [Accessed: 1-Nov-2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "entree"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the main course of a meal in the U.S."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a course"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Flavor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Flavor,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flavor. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "flavor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Characteristic"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Texture"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the quality of something that affects the sense of taste"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "food property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "food"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "something that can be eaten"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "This class is the top-level element that represents different classifications of food. An ingredient individual will have the type of the most specific category it falls under. For example, \"chicken egg\" will be a type of \"egg\" which is a subclass of \"poultry product\" which is a subclass of \"primary food commodity of animal origin\" which is a subclass of \"food\". Additional classifications can be added at any level of the classification."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Ingredient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Cambridge Dictionary, \"ingredient.\" [Online]. Available: https://dictionary.cambridge.org/us/dictionary/english/ingredient. [Accessed Nov. 10, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ingredient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a food that is used with other foods in the preparation of a particular dish"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Individuals that are subclasses of this class represent ingredients that are used in a specific recipe. For example, the individual \"banana\" is a subclass of \"ingredient\" and the recipe \"banana bread\" \"has ingredient\" \"banana\". Ingredients can have the properties \"has glycymic index\" and \"has gluten\"."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/LessThanOneHourRecipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Dictionary.com, \"hour.\" [Online]. Available: https://www.dictionary.com/browse/hour. [Accessed Oct. 5, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "less than one hour recipe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a class that contains all recipes that only take one hour to cook"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Lunch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Meal" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Lunch,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lunch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a usually light, especially one taken in the middle of the day"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a meal"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/LunchRecipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Lunch,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lunch recipe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid16"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a class that contains recipes of type lunch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Meal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "meal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a class that links a recipe to a certain meal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "The individuals that inhreit from this class represent different types of meals. The recipe \"kamut pancakes\" can be \"recommended for meal\" \"breakfast\". Additional meals can be added as individuals that inheret from this class."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Measurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Measure,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/measure. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "measurement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "an adequate or due portion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "This class contains subclasses that represent different kinds of measurements relating to cooking. For example \"time measurement\" is a class that contains the individuals \"minute\" and \"hour\" and is used to represent the amount of time a recipe takes to make or cook."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/MeatFromChicken",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400741. [Accessed Nov. 14, 2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "meat from chicken"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/FOODON_03400741"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the muscular tissues from a chicken"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/MeatFromCow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "meat from cow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/FOODON_03400737"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the muscular tissues from a cow"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/MeatFromLamb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "meat from lamb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/FOODON_03400737"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the muscular tissues from a lamb"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/MeatFromPig",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "meat from pig"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/FOODON_03400737"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the muscular tissues from a pig"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/MilkFromCow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Milk.\" [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow's_milk. [Accessed: Nov. 10, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "milk from cow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/FOODON_03400740"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "milk obtained from a cow"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Mushroom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Mushroom.\" [Online]. Available: https://en.wikipedia.org/wiki/Mushroom. [Accessed: Nov. 22, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mushroom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/PrimaryFoodCommodityOfFungusOrigin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/PrimaryFoodCommodityOfFungusOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "NHS, \"Eating processed foods,\" January 2017. [Online]. Available: https://www.nhs.uk/live-well/eat-well/what-are-processed-foods/. [Accessed Nov.22 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "primary food commodity of fungus origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "unaltered food derived from fungus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Recipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recipe"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a combination of ingredients and a method, created by a chef, that produces a food"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Individuals that are a type of this class represent instances of recipes that are found online. For example, the individual \"banana bread\" can be found on AllRecipes.com and has the properties \"has ingredient,\" \"has cook time,\" \"has cooking temprature,\" \"serves,\" \"is recommended for course,\" and \"is recommended for meal\"."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Salad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Course" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Salad.\" [Online]. Available: https://en.wikipedia.org/wiki/Salad. [Accessed: Nov. 16, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "salad"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a dish consisting of a mixture of small pieces of food, usually vegetables"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a course"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Side",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Course" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Side Dish,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "side"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a food served separately along with the main course"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a course"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/SideRecipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Side Dish,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "side recipe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid20"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a class that contains recipes of type side"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Snack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Meal" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Snack,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/snack. [Accessed: 1-Nov-2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snack"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a light meal : food eaten between regular meals"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a meal"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Soup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Course" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Soup.\" [Online]. Available: https://en.wikipedia.org/wiki/Soup. [Accessed: Nov. 16, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "soup"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a primarily liquid food, generally served warm or hot (but may be cool or cold), that is made by combining ingredients of meat or vegetables with stock, juice, water, or another liquid"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used as a course"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/TemperatureMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Temperature measurement.\" [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "temperature measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Measurement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "degree of hotness or coldness measured on a definite scale"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Texture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Texture,\" Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/texture. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "texture"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Characteristic"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the characteristic physical structure given to a material, an object, etc., by the size, shape, arrangement, and proportions of its parts"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "food property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/TimeMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Merriam-Webster, \"Time.\" [Online]. Available: https://www.merriam-webster.com/dictionary/time. [Accessed: Nov. 22, 018]"
+  }, {
+    "@value" : "Wikipedia, \"Temperature measurement.\" [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "time measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Measurement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the measured or measurable period during which an action, process, or condition exists or continues"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/User",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"User,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/user. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "user"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a user of the system"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Individuals that inherit from this class represent users of the system. Individual users can have likes, dislikes, and allergies that are saved in the system through the \"likes,\" \"dislikes,\" \"forbids,\" and \"is allergic to,\" properties."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "top-level class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Yeast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikidictionary, \"Yeast.\" [Online]. Available: https://en.wiktionary.org/wiki/yeast. [Accessed: Nov. 22, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "yeast"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/PrimaryFoodCommodityOfFungusOrigin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "humid, yellowish froth produced by fermenting malt worts, and used to brew beer, leaven bread, and also used in certain medicines"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "used for ingredient classification"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/dislikes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Dislike,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dislike. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dislikes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "something that a person habitually does not like or enjoy, a feeling of aversion or disapproval"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "user property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/forbids",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Forbid,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/forbid. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "forbids"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "to hinder or prevent as if by an effectual command"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "user property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasConversion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Converting,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/converting. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has conversion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "to exchange for an equivalent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "unit property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasCookTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Cook Time,\" Collins English Dictionary. [Online]. Available: https://www.collinsdictionary.com/us/dictionary/english/cooking-time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has cook time"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the time that something needs to cook"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasCookingTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Dictionary.com, \"temperature.\" [Online]. Available: https://www.dictionary.com/browse/temperature. [Accessed Oct. 13, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has cooking temperature"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the temperature at which a food must be baked"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasFlavor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Dictionary.com, \"flavor.\" [Online]. Available: https://www.dictionary.com/browse/flavor?s=t. [Accessed Oct. 13, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has flavor"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "indicates that this item has this flavor"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "ingredient property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasGluten",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Gluten.\" [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has gluten"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a property of ingredients that show whether or not that ingerdient contains gluten"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "ingredient property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasGlycemicIndex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Méthod Montignac , \"The Glycemic Index Concept,\" 2014. [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has glycemic index"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "has a glycemic indexe value which measures carbs’ from the perspective of their pure sugar/starch content in order to determine how they affect glycemia (blood sugar levels)  after meals"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "ingredient property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasIngredient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Merriam-Webster, \"ingredient,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/ingredient. [Accessed Oct. 18, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has ingredient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "to have a component part of any combination or mixture"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasSaved",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Merriam-Webster, \"save,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/save. [Accessed Oct. 13, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has saved"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "to store (data) in a computer or on a storage device"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "user property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/hasTexture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Dictionary.com, \"texture.\" [Online]. Available: https://www.dictionary.com/browse/texture?s=t. [Accessed Oct. 13, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has texture"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "indicates that this item has this texture"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "ingredient property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/highGlycemicRecipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Montignac Method, \"Search for a specific Glycemic Index,\"  2014. [Online]. Available: http://www.montignac.com/en/search-for-a-specific-glycemic-index/. [Accessed Nov. 1, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "high glycemic recipe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid24"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a class of recipes that contains an ingredient with a glycemic index of 50 or more"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe class"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/isAllergicTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Merriam-Webster, \"allergic,\"2018. [Online]. Available https https://www.merriam-webster.com/dictionary/allergic. [Accessed Oct. 13, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is allergic to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "the subject has an allergy to the object of this relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "user property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/isRecommendedForCourse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is recommended for course"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a property of recipe that indicates what course the recipe is recommended for"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/isRecommendedForMeal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is recommended for meal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a property of recipe that indicates what meal the recipe is recommended for"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/serves",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Serve definition and meaning,\" Collins English Dictionary. Available: https://www.collinsdictionary.com/dictionary/english/serve [Accessed 27-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "serves"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "used to indicate how much food a recipe produces"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "recipe property"
+  } ]
+}, {
+  "@id" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/substitutesFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "\"Substitute,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/substitute. [Accessed: 12-Oct-2018]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "substitutes for"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "indicates that this item can take the place or function of another"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "ingredient property"
+  } ]
+} ]

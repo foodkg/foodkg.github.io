@@ -1,0 +1,959 @@
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://www.w3.org/2002/07/owl#versionIRI> <https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://www.w3.org/2002/07/owl#imports> <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/abstract> "The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology." .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/contributor> "Forest Eckhardt" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/contributor> "Kevin Blissett" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/contributor> "Miao Qi" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/contributor> "Yarden Ne'eman" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/description> "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations." .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/modified> "2018-12-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/publisher> "WhatToMake" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/references> "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://purl.org/dc/terms/source> "https://bioportal.bioontology.org/ontologies/FOODON/?p=summary" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://www.w3.org/2000/01/rdf-schema#label> "WhatToMake Food Classification" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://www.w3.org/2002/07/owl#priorVersion> "http://tw.rpi.edu/media/latest/OE_12_food_classification_FOODON.rdf" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://www.w3.org/2002/07/owl#priorVersion> "https://tw.rpi.edu/web/Courses/Ontologies/2018/OE_12_FOODON_03411564_WhatToMake/" .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <http://www.w3.org/2004/02/skos/core#changeNote> "Changes to this ontology since the previous version include: moved the dct:source reference into the header and replaced all other references to dct:source with rdfs:isDefinedBy with only the resource link; changed the smart quotes to regular quotes; updated the ontology abstract; added dct:description, sm:copyright, and dct:license." .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/> <https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.obolibrary.org/obo/IAO_0000114
+<http://purl.obolibrary.org/obo/IAO_0000114> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.obolibrary.org/obo/IAO_0000412
+<http://purl.obolibrary.org/obo/IAO_0000412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.geneontology.org/formats/oboInOwl#hasDbXref
+<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright
+<https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400644
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food> .
+<https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0644" .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400644" .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.w3.org/2000/01/rdf-schema#label> "primary food commodity of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.w3.org/2004/02/skos/core#definition> "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.w3.org/2004/02/skos/core#definition> "unaltered food derived from plant" .
+<http://purl.obolibrary.org/obo/FOODON_03400644> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400645
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food> .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0645" .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400645" .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.w3.org/2000/01/rdf-schema#label> "primary food commodity of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.w3.org/2004/02/skos/core#definition> "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.w3.org/2004/02/skos/core#definition> "unaltered food derived from animal" .
+<http://purl.obolibrary.org/obo/FOODON_03400645> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400647
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food> .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0647" .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400647" .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.w3.org/2000/01/rdf-schema#label> "processed food of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.w3.org/2004/02/skos/core#definition> "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.w3.org/2004/02/skos/core#definition> "altered food derived from plant" .
+<http://purl.obolibrary.org/obo/FOODON_03400647> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400648
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food> .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0648" .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400648" .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.w3.org/2000/01/rdf-schema#label> "processed food of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.w3.org/2004/02/skos/core#definition> "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.w3.org/2004/02/skos/core#definition> "altered food derived from animal" .
+<http://purl.obolibrary.org/obo/FOODON_03400648> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400649
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400644> .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://purl.obolibrary.org/obo/IAO_0000115> "Fruits are derived from many different kinds of perennial plants, trees and shrubs, usually cultivated. They consist mostly of the ripe, often sweet, succulent or pulpy developed plant ovary and its accessory parts, commonly and traditionally known as fruit.\nExposure to pesticides is dependent on the particular part of the fruit used for food. Fruits may be consumed whole, after the removal of the peel, or in part, and in the form of fresh, dried or processed products."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0649" .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400649 " .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://www.w3.org/2000/01/rdf-schema#label> "fruit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400649> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400650
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400644> .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://purl.obolibrary.org/obo/IAO_0000115> "Vegetables are foods derived from many different kinds of plants mostly annual and usually cultivated, commonly known by custom and tradition as \"vegetables\".\nIn several countries, some of these commodities grown on large areas are distinguished as \"field crops\" or arable crops e.g. sugar beet. For the sake of convenience in this guide such crops are classified under Type 2 Vegetables.\nExposure to pesticides is dependent on the particular part of the plant used for food and the growing practices.\nVegetables may be consumed in whole or in part and in the form of fresh, dried or processed foods."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0650" .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400650" .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://www.w3.org/2000/01/rdf-schema#label> "vegetable"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400650> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400651
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400644> .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://purl.obolibrary.org/obo/IAO_0000115> "TYPE 03 - GRASSES\n\nGrasses are herbaceous annual and perennial monocotyledonous plants of different kinds, cultivated extensively for their ears (heads) of starchy seeds used directly for the production of food. Grasses used for animal feed are classified under Class C; Primary Animal feed commodities, Group 051.\n\nThe plants are fully exposed to pesticides applied during the growing season."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0651" .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400651" .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://www.w3.org/2000/01/rdf-schema#label> "grass"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400651> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400652
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400644> .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://purl.obolibrary.org/obo/IAO_0000115> "TYPE 04  -  NUTS AND SEEDS\n\nNuts and seeds are derived from a large variety of trees, shrubs and herbaceous plants, mostly cultivated.\n\nThe mature seeds or nuts are used as human food, for the production of beverages or edible vegetable oils and for the production of seed meals and cakes for animal feed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0652" .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400652" .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://www.w3.org/2000/01/rdf-schema#label> "nut and seed"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400652> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400653
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400644> .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://purl.obolibrary.org/obo/IAO_0000115> "TYPE 05  -  HERBS AND SPICES\n\nHerbs and spices are the flavoursome or aromatic leaves, stems, roots, flowers or fruits of a variety of plants used to impart special flavours to food and beverages."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0653" .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "  http://purl.obolibrary.org/obo/FOODON_03400653" .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://www.w3.org/2000/01/rdf-schema#label> "herb and spice"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400653> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400654
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400645> .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://purl.obolibrary.org/obo/IAO_0000115> "TYPE 06  -  MAMMALIAN PRODUCTS\n\nMammalian products are derived from the edible parts of various mammals, primarily herbivorous, slaughtered for food. These mammals are usually domesticated, or to a lesser extent obtained as game animals.\n\nThis type does not include edible products from marine mammals, for which see Group 044."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0654" .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400654" .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://www.w3.org/2000/01/rdf-schema#label> "mammalian product"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400654> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400655
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400645> .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0655" .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400655" .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://www.w3.org/2000/01/rdf-schema#label> "poultry product"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://www.w3.org/2004/02/skos/core#definition> "any poultry carcass, or part of it; or any product which is made wholly or partially from any poultry carcass or part of it" .
+<http://purl.obolibrary.org/obo/FOODON_03400655> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400656
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400645> .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://purl.obolibrary.org/obo/IAO_0000115> "Type 08  -  Aquatic animal products\n\nAquatic animal products are derived from the edible parts of various aquatic animals, usually wild, harvested for food."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0656" .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400656" .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://www.w3.org/2000/01/rdf-schema#label> "aquatic animal product"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400656> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400657
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400645> .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://purl.org/dc/terms/source> "SoftSchool.com, \"Amphibians vs. Reptiles.\" [Online]. Available: http://www.softschools.com/difference/amphibians_vs_reptiles/42/. [Accessed Nov.16, 2018]" .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0657" .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400657" .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://www.w3.org/2000/01/rdf-schema#label> "amphibian and reptile"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://www.w3.org/2004/02/skos/core#definition> "living things that are cold-blooded and have backbones" .
+<http://purl.obolibrary.org/obo/FOODON_03400657> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400658
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400645> .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://purl.org/dc/terms/source> "SoftSchool.com, \"Amphibians vs. Reptiles.\" [Online]. Available: http://www.softschools.com/difference/amphibians_vs_reptiles/42/. [Accessed Nov.16, 2018]" .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0658" .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400658" .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://www.w3.org/2000/01/rdf-schema#label> "invertebrate animal"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://www.w3.org/2004/02/skos/core#definition> "animal that lacks a vertebral column, or backbone, in contrast to the cartilaginous or bony vertebrates" .
+<http://purl.obolibrary.org/obo/FOODON_03400658> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400660
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400647> .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://purl.obolibrary.org/obo/IAO_0000115> "The term \"secondary food commodity\" means a \"primary food commodity\" which has undergone simple processing, such as removal of certain portions, drying (except natural drying), husking, and comminution, which do not basically alter the composition or identity of the product. Natural field dried mature crops or parts of crops such as pulses, bulb onions or cereal grains are not considered as secondary food commodities.\n\nSecondary food commodities may be processed further or used as ingredients in the manufacture of food or sold directly to the consumer."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0660" .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400660" .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://www.w3.org/2000/01/rdf-schema#label> "secondary food commodity of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400660> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400661
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400647> .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://purl.obolibrary.org/obo/IAO_0000115> "Type 13  -  Derived edible products of plant origin\n\n\"Derived edible products\" are foods or edible substances isolated from primary food commodities or raw agricultural commodities, not intended for human consumption as such, using physical, biological or chemical processing.\n\nThis type of processed food includes groups such as vegetable oils (crude and refined), by-products of the fractionation of cereals fruit juices, teas (fermented and dried), cocoa powder and by-products of cocoa manufacturing, and extracts of various plants."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0661" .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400661" .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://www.w3.org/2000/01/rdf-schema#label> "derived product of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400661> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400662
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400647> .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://purl.obolibrary.org/obo/IAO_0000115> "Type 14 - Manufactured Foods (single-ingredient) of plant origin\n\nThe term \"single-ingredient manufactured food\" means a \"processed food\" which consists of one identifiable food ingredient, with or without packing medium or minor ingredients, such as flavouring agents, spices and condiments, and which is normally pre-packaged and ready for consumption with or without cooking."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0662" .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400662" .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://www.w3.org/2000/01/rdf-schema#label> "manufactured food (single ingredient) of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400662> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400663
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400647> .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://purl.obolibrary.org/obo/IAO_0000115> "The term \"multi-ingredient manufactured food\" means a processed food, consisting of more than one major ingredient.\n\nA multi-ingredient food consisting of ingredients of both plant and animal origin will be included in this type if the ingredient(s) of plant origin is (are) predominant."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0663" .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400663" .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://www.w3.org/2000/01/rdf-schema#label> "manufactured food (multi-ingredient) of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400663> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400664
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400648> .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://purl.obolibrary.org/obo/IAO_0000115> "Type 16 - Secondary food commodities of animal origin\n\nThe term \"secondary food commodity\" means a \"primary food commodity\" which has undergone simple processing, such as removal of certain portions, drying, and comminution, which do not basically alter the composition or identity of the commodity.\n\nSecondary food commodities may be processed further, or used as ingredients in the manufacture of food, or sold directly to the consumer.\n\nThis type of processed food includes groups of processed primary food commodities of animal origin which have undergone simple processing, such as processed mammalian meat and poultry meat, fishes and other aquatic animals, e.g. dried meat, dried fish."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0664" .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400664" .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://www.w3.org/2000/01/rdf-schema#label> "secondary food commodity of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400664> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400665
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400648> .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://purl.obolibrary.org/obo/IAO_0000115> "Type 17 - Derived edible products of animal origin\n\nThe term \"Derived edible products\" means foods or edible substances isolated from primary food commodities or raw agricultural commodities not intended for human consumption as such, using physical, biological and chemical processes.\n\nThis type includes processed (rendered or extracted, possibly refined and/or clarified) fats from mammals, including aquatic mammals, poultry and aquatic organisms such as fishes"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0665" .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400665" .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://www.w3.org/2000/01/rdf-schema#label> "derived edible product of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400665> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400666
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400648> .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://purl.obolibrary.org/obo/IAO_0000115> "The term \"single ingredient manufactured food\" means a processed food which consists of one identifiable food ingredient, with or without packing medium or minor ingredients such as flavouring agents, spices and condiments, and which is normally pre-packaged and ready for consumption, with or without cooking."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0666" .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400666" .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://www.w3.org/2000/01/rdf-schema#label> "manufactured food (single-ingredient) of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400666> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400667
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400648> .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://purl.obolibrary.org/obo/IAO_0000115> "19  Manufactured food (multi-ingredient) of animal origin\n\nThe term \"multi-ingredient manufactured food\" means a processed food consisting of more than one major ingredient.\nA multi-ingredient food consisting of ingredients of both animal and plant origin will be included in this type if the ingredient(s) of animal origin is (are) predominant"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0667" .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400667" .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://www.w3.org/2000/01/rdf-schema#label> "manufactured food (multi-ingredient) of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400667> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400668
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400649> .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://purl.obolibrary.org/obo/IAO_0000115> "Citrus fruits are produced on trees or shrubs of the family Rutaceae. These fruits are characterized by aromatic oily peel, globular form and interior segments of juice-filled vesicles. The fruit is fully exposed to pesticides during the growing season. Post-harvest treatments with pesticides and liquid waxes are often carried out to avoid deterioration during transport and distribution due to fungal diseases, insect pests or loss of moisture.\nThe fruit pulp may be consumed in succulent form and as a juice. The entire fruit may be used for preserves."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0668" .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400668" .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://www.w3.org/2000/01/rdf-schema#label> "citrus fruit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400668> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400669
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400649> .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://purl.obolibrary.org/obo/IAO_0000115> "Pome fruits are produced on trees and shrubs belonging to certain genera of the rose family (Rosaceae), especially the genera Malus and Pyrus. They are characterized by fleshy tissue surrounding a core consisting of parchment-like carpels enclosing the seeds.\nPome fruits are fully exposed to pesticides applied during the growing season. Post-harvest treatments directly after harvest may also occur. The entire fruit, except the core, may be consumed in the succulent form or after processing."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0669" .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400669" .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://www.w3.org/2000/01/rdf-schema#label> "pome fruit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400669> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400670
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400649> .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://purl.obolibrary.org/obo/IAO_0000115> "Stone fruits are produced on trees belonging to the genus Prunus of the rose family (Rosaceae). They are characterized by fleshy tissue surrounding a single hard shelled seed. The fruit is fully exposed to pesticides applied during the growing season (fruit setting until harvest). Dipping of fruit immediately after harvest, especially with fungicides, may also occur.\nThe entire fruit, except the seed, may be consumed in a succulent or processed form."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0670" .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400670" .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://www.w3.org/2000/01/rdf-schema#label> "stone fruit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400670> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400671
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400649> .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://purl.obolibrary.org/obo/IAO_0000115> "Berries and other small fruits are derived from a variety of perennial plants and shrubs having fruit characterized by a high surface: weight ratio. The fruits are fully exposed to pesticides applied during the growing season (blossoming until harvest).\nThe entire fruit, often including seed, may be consumed in a succulent or processed form."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0671" .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400671" .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://www.w3.org/2000/01/rdf-schema#label> "berries and other small fruit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400671> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400672
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400649> .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://purl.obolibrary.org/obo/IAO_0000115> "The assorted tropical and sub-tropical fruits - edible peel are derived from the immature or mature fruits of a large variety of perennial plants, usually shrubs or trees. The fruits are fully exposed to pesticides during the growing season (period of fruit development).\nThe whole fruit may be consumed in a succulent or processed form."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0672" .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400672" .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://www.w3.org/2000/01/rdf-schema#label> "assorted tropical and sub-tropical fruit - edible peel"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400672> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400673
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400649> .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://purl.obolibrary.org/obo/IAO_0000115> "The assorted tropical and sub-tropical fruits - inedible peel are derived from the immature or mature fruits of a large variety of perennial plants, usually shrubs or trees. Fruits are fully exposed to pesticides applied during the growing season (period of fruit development) but the edible portion is protected by skin, peel or husk. The edible part of the fruits may be consumed in a fresh or processed form."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0673" .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400673" .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://www.w3.org/2000/01/rdf-schema#label> "assorted tropical and sub-tropical fruit - inedible peel"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400673> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400674
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://purl.obolibrary.org/obo/IAO_0000115> "Bulb vegetables are pungent highly flavoured foods derived from fleshy scale bulbs in some commodities including stem and leaves, of the genus Allium of the lily family (Lilaceae). Bulb fennel is included in this group; the bulb-like growth of this commodity gives rise to similar residues.\nThe subterranean parts of the bulbs and shoots are protected from direct exposure to pesticides during the growing season.\nThe entire bulb may be consumed after removal of the parchment-like skin. The leaves and stems of some species or cultivars may also be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0674" .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400674" .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://www.w3.org/2000/01/rdf-schema#label> "bulb vegetable"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400674> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400675
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://purl.obolibrary.org/obo/IAO_0000115> "Brassica (cole or cabbage) vegetables and flowerhead brassicas are foods derived from the leafy heads, stems and immature inflorescences of plants belonging to the genus Brassica or the family Cruciferae. Although Kohlrabi does not comply fully with the description above, for convenience and because of the similarity in residue behaviour the commodity is classified in this group. Koblrabi is a tuber-like enlargement of the stem.\nThe edible part of the crop is partly protected from pesticides applied during the growing season by outer leaves, or skin (Kohlrabi).\nThe entire vegetable after discarding obviously decomposed or withered leaves may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0675" .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400675" .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://www.w3.org/2000/01/rdf-schema#label> "brassica (cole or cabbage) vegetable, head cabbage, flowerhead brassica"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400675> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400676
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://purl.obolibrary.org/obo/IAO_0000115> "Fruiting vegetables, Cucurbits are derived from the immature or mature fruits of various plants, belonging to the botanical family Cucurbitaceae; usually these are annual vines or bushes.\nThese vegetables are fully exposed to pesticides during the period of fruit development.\nThe edible portion of those fruits of which the inedible peel is discarded before consumption is protected from most pesticides, by the skin or peel, except from pesticides with a systemic action.\nThe entire fruiting vegetables or the edible portion after discarding the inedible peel may be consumed in the fresh form or after processing.The entire immature fruit of some of the fruiting vegetables species may be consumed, whereas only the edible portion of the mature fruit of the same species, after discarding the then inedible peel, is consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0676" .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400676" .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://www.w3.org/2000/01/rdf-schema#label> "fruiting vegetable, cucurbit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400676> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400677
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://purl.obolibrary.org/obo/IAO_0000115> "Fruiting vegetables, other than Cucurbits are derived from the immature and mature fruits of various plants, usually annual vines or bushes. The group includes edible fungi and mushrooms, being comparable organs of lower plants. Many plants of this group belong to the botanical family Solanaceae.\nThis group does not include fruits of vegetables of the botanical family Cucurbitaceae or the pods of vegetables of the Leguminosae-family.\nThe vegetables of this group are fully exposed to pesticides applied during the period of fruit development, except those of which the edible portion is covered by husks, such as sweet corn, ground cherries (Physalis spp.). The latter fruiting vegetables are protected from most pesticides by the husk except from pesticides with a systemic action.\nThe entire fruiting vegetable or the edible portion after discarding husks or peels may be consumed in a fresh form or after processing."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0677" .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400677" .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://www.w3.org/2000/01/rdf-schema#label> "fruiting vegetable, other than cucurbit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400677> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400678
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://purl.obolibrary.org/obo/IAO_0000115> "Leafy vegetables are foods derived from the leaves of a wide variety of edible plants, usually annuals or biennials. They are characterized by a high surface:weight ratio. The leaves are fully exposed to pesticides applied during the growing season.\nThe entire leaf may be consumed, either fresh or after processing or household cooking."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0678" .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400678" .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://www.w3.org/2000/01/rdf-schema#label> "leafy vegetable (including brassica leafy vegetable)"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400678> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400679
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://purl.obolibrary.org/obo/IAO_0000115> "Legume vegetables are derived from the succulent seed and immature pods of leguminous plants commonly known as beans and peas.\nPods are fully exposed to pesticides during the growing season, whereas the succulent seed is protected within the pod from most pesticides, except pesticides with systemic action.\nThe succulent forms may be consumed as whole pods or as the shelled product."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0679" .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400679" .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://www.w3.org/2000/01/rdf-schema#label> "legume vegetable"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400679> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400680
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://purl.obolibrary.org/obo/IAO_0000115> "Pulses are derived from the mature seeds naturally or artificially dried, of leguminous plants known as beans (dry) and peas (dry).\nThe seeds in the pods are protected from most pesticides applied during the growing season except pesticides which show a systemic action. The dried beans and peas however are often exposed to post-harvest treatments.\nThe dry pulses are consumed after processing or household cooking."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0680" .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400680" .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://www.w3.org/2000/01/rdf-schema#label> "pulse"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400680> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400681
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://purl.obolibrary.org/obo/IAO_0000115> "Root and tuber vegetables are the starchy enlarged solid roots, tubers, corms or rhizomes, mostly subterranean, of various species of plants, mostly annuals.\nThe underground location protects the edible portion from pesticides applied to the aerial parts of the crop during the growing season; however the commodities in this group are exposed to pesticide residues from soil treatments.\nThe entire vegetable may be consumed in the form of fresh or processed foods."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0681" .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400681" .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://www.w3.org/2000/01/rdf-schema#label> "root and tuber vegetable"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400681> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400682
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400650> .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://purl.obolibrary.org/obo/IAO_0000115> "Stalk and stem vegetables are the edible stalks, leaf stems or immature shoots, from a variety of annual or perennial plants. Although not actually belonging to this group, globe artichoke (the immature flowerhead) of the family Compositae is included in this group.\nDepending upon the part of the crop used for consumption and the growing practices, stalk and stem vegetables are exposed, in varying degrees, to pesticides applied during the growing season.\nStalk and stem vegetables may be consumed in whole or in part and in the form of fresh, dried or processed foods."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0682" .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400682" .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://www.w3.org/2000/01/rdf-schema#label> "stalk and stem vegetable"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400682> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400683
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400651> .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://purl.obolibrary.org/obo/IAO_0000115> "Cereal grains are derived from the ears (heads) of starchy seeds produced by a variety of plants, primarily of the grass family (Grainineae)\nBuckwheat, a dicotyledonous crop belonging to the botanical family Polygonaceae and two Chenopodium species, belonging to the botanical family Chenopodiaceae are included in this group, because of similarities in size and type of the seed, residue pattern and the use of the commodity.\nThe edible seeds are protected to varying degrees from pesticides applied during flee growing season by husks. Husks are removed before processing and/or consumption.\nCereal grains are often exposed to post-harvest treatments with pesticides."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0683" .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400683" .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://www.w3.org/2000/01/rdf-schema#label> "cereal grain"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400683> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400684
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400651> .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://purl.obolibrary.org/obo/IAO_0000115> "Grasses For sugar or syrup production, includes species of grasses with a high sugar content especially in the stem. The stems are mainly used for sugar or syrup production, and to a small extent as vegetables or sweets. The leaves, ears and several wastes of the sugar or syrup manufacturing process are used, among others, as animal feed see Group 052: Miscellaneous fodder and forage crops)."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0684" .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400684" .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://www.w3.org/2000/01/rdf-schema#label> "grass for sugar and syrup production"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400684> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400685
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400652> .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://purl.obolibrary.org/obo/IAO_0000115> "Tree nuts are the seeds of a variety of trees and shrubs which are characterized by a hard inedible shell enclosing an oily seed.\nThe seed is protected from pesticides applied during the growing season by the shell and other parts of the fruit.\nThe edible portion of the nut is consumed in succulent, dried or processed forms."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0685" .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400685" .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://www.w3.org/2000/01/rdf-schema#label> "tree nut"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400685> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400686
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400652> .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://purl.obolibrary.org/obo/IAO_0000115> "Oilseed consists of seeds from a variety of plants used in the production of edible vegetable oils, seed meals and cakes for animal feed. Some important vegetable oil seeds are by-products of fibre or fruit crops (e.g. cotton seed, olives).\nSome of the oilseeds are, directly or after slight processing (e.g. roasting), used as food (e.g. peanuts) or for food flavouring (e.g. poppy seed, sesame seed).\nOilseeds are protected from pesticides applied during the growing season by the shell or husk."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0686" .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400686" .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://www.w3.org/2000/01/rdf-schema#label> "oilseed"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400686> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400687
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400652> .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://purl.obolibrary.org/obo/IAO_0000115> "The seeds for beverages and sweets are derived from tropical and sub-tropical trees and shrubs. After processing the seeds are used in the production of beverages and sweets.\nThese seeds are protected from pesticides applied during the growing season by the shell or other parts of the fruit."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0687" .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400687" .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://www.w3.org/2000/01/rdf-schema#label> "seed for beverage and sweet"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400687> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400688
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400653> .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://purl.obolibrary.org/obo/IAO_0000115> "Herbs consist of leaves, flowers, stems and roots from a variety of herbaceous plants, used in relatively small amounts as condiments to flavour foods or beverages. They are used either in fresh or naturally dried form.\nHerbs are fully exposed to pesticides applied during the growing season. Post-harvest treatments are often carried out on dried herbs.\nHerbs are consumed as components of other foods in succulent and dried forms or as extracts of the succulent products."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0688" .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400688" .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://www.w3.org/2000/01/rdf-schema#label> "herb"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400688> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400689
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400653> .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://purl.obolibrary.org/obo/IAO_0000115> "Spices consist of the aromatic seeds roots, berries or other fruits from a variety of plants, which are used in relatively small quantities to flavour foods.\nSpices are exposed in varying degrees to pesticides applied during the growing season. Also post-harvest treatments may be applied to spices in the dried form.\nThey are consumed primarily in the dried form as condiment."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0689" .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400689" .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://www.w3.org/2000/01/rdf-schema#label> "spice"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400689> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400737
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400654> .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://purl.obolibrary.org/obo/IAO_0000115> "Meats are the muscular tissues, including adhering fatty tissues such as intramuscular and subcutaneous fat from animal carcases or cuts of these as prepared for wholesale or retail distribution in a \"fresh\" state. The cuts offered to the consumer may include bones, connective tissues and tendons as well as nerves and lymph nodes.\nThe cornrnodity description of \"fresh\" meat includes meat which has been quick-frozen or quick-frozen and thawed.\nThe Group does not include edible offal as defined in Group 032.\nExposures to pesticides is through animal metabolism following oral intake with feed or through dermal intake as a consequence of external use of pesticides against ectoparasites.\nThe entire commodity except bones may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0737" .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400737" .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://www.w3.org/2000/01/rdf-schema#label> "meat (from mammal other than marine mammal)"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400738
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400654> .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://purl.obolibrary.org/obo/IAO_0000115> "Mammalian fats, excluding milk fats are derived from the fatty tissues of animals (not processed). For processed animal fats see Group 085.\nExposure to pesticides is through animal metabolism following oral intake with feed or through dermal intake as a consequence of external use of the pesticides against ectoparasites.\nThe entire commodity may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0738" .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400738" .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://www.w3.org/2000/01/rdf-schema#label> "mammalian fat"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400738> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400739
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400654> .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://purl.obolibrary.org/obo/IAO_0000115> "Edible offal are edible tissue and organs other than muscles (= meat) and animal fat from slaughtered animals as prepared for wholesale or retail distribution.\nExamples: liver, kidney, tongue, heart, stomach, sweetbread (thymus gland), braln, etc.\nThe group name and definitions are in conformity with those recorded in the Codex Standards 89-1981 and 98-1981, Codex Standard for Luncheon Meat and Codex Standard for Cooked Cured Chopped Meat respectively: \"Edible offal\" means such offal as have been passed as fit for human consumption, but not including lungs, ears, scalp, snout (including lips and muzzle), mucous membranes, sinews, genital system, udders, intestines and urinary bladder\". In the former Classification of Food and Food Groups in the Guide to Codex Maximum Limits for Pesticide Residues 1978; CAC/PR 1-1978 the name Meat by-products was used for this group.\nExposure to pesticides is through animal metabolism following oral intake with feed or through dermal intake as a consequence of external use of pesticides on livestock animals against ectoparasites.\nThe entire commodity may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0739" .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400739" .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://www.w3.org/2000/01/rdf-schema#label> "edible offal (mammalian)"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400739> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400740
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400654> .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://purl.obolibrary.org/obo/IAO_0000115> "Milks are the mammary secretions of various species of lactating herbivorous ruminant animals, usually domesticated.\nIn conformity with the Codex Alimentarius Code of Principles concerning Milk and Milk Products the term \"Milk\" shall mean exclusively the normal mammary excretion obtained from one or more milkings without either addition thereto or extraction therefrom.\nNotwithstanding the provisions in the preceding paragraph, \"the term \"Milk\" may be used for milk treated without altering its composition, or for milk, the fat content of which has been standardized under domestic legislation\".\nThe entire commodity may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0740" .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400740" .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://www.w3.org/2000/01/rdf-schema#label> "milk"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400741
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400655> .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://purl.obolibrary.org/obo/IAO_0000115> "Poultry meats are the muscular tissues including adhering fat and skin from poultry carcases as prepared for wholesale or retail distribution.\nExposure to pesticides may result from external treatment of animals or poultry houses or through animal metabolism following oral intake of pesticides with feed.\nThe entire product may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0741" .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400741" .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://www.w3.org/2000/01/rdf-schema#label> "poultry meat (including pigeon meat)"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400742
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400655> .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://purl.obolibrary.org/obo/IAO_0000115> "Poultry fats are derived from the fatty tissues of poultry. Exposure to pesticides may result from external treatment of animals or poultry houses or through animal metabolism following oral intake of pesticides with feed.\nThe entire product may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0742" .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400742" .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://www.w3.org/2000/01/rdf-schema#label> "poultry fat"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400742> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400743
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400655> .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://purl.obolibrary.org/obo/IAO_0000115> "Poultry edible offal are such edible tissues and organs, other than poultry meat and poultry fat, from slaughtered poultry as have been passed as fit for human consumption. Examples: liver, gizzard, heart, skin etc. In the former Classification of Food and Feed Groups in the Guide to Codex Maximum Limits for Pesticide Residues 1978: CAC/PR 1-1978 the name Poultry by-products was used for this group.\nExposure to pesticides is through animal metabolism following oral intake of pesticides with feed or may result from external treatment of animals or poultry houses.\nThe entire product may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0743" .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400743" .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://www.w3.org/2000/01/rdf-schema#label> "poultry, edible offal of"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400743> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400744
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400655> .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://purl.obolibrary.org/obo/IAO_0000115> "Eggs are the fresh edible portion of the body produced by female birds, especially domestic fowl.\nThe edible portion includes egg yolk and egg white after removal of the shell."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0744" .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400744" .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://www.w3.org/2000/01/rdf-schema#label> "egg"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400744> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400745
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400656> .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://purl.obolibrary.org/obo/IAO_0000115> "The freshwater fishes generally remain lifelong,including flee spawning period,in fresh water (lakes, ponds, rivers and brooks).\nSeveral species of freshwater fish are domesticated and bred in fish farms. Exposure of the latter species to pesticides is mainly through compounded fish feed and can also be through water pollution."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0745" .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400745" .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://www.w3.org/2000/01/rdf-schema#label> "freshwater fish"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400745> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400746
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400656> .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://purl.obolibrary.org/obo/IAO_0000115> "The diadromous fishes in general migrate from the sea to brackish and/or freshwater and in the opposite direction.\nThe anadromous species spawn in fresh water (streams, small rivers and brooks) e.g. several salmon species, whereas eels spawn in the ocean. Some species, such as trout, are domesticated and do not migrate. They are bred in fish farms in ponds, mountain streams etc. The latter species especially may be exposed to pesticides through compounded fish feed and also through water pollution.\nThe fleshy parts of the animals and, to a lesser extent, roe and milt are consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0746" .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400746" .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://www.w3.org/2000/01/rdf-schema#label> "diadromoous fish"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400746> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400747
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400656> .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://purl.obolibrary.org/obo/IAO_0000115> "The marine fishes generally live in open seas. They are all or nearly all wild species, caught and prepared (often deep-frozen) for wholesale and retail distribution. Exposure to pesticides is mainly through water pollution and animal metabolism.\nEspecially the fleshy parts of the animals and to a lesser extent roe and milt are consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0747" .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400747" .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://www.w3.org/2000/01/rdf-schema#label> "marine fish"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400747> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400748
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400656> .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://purl.obolibrary.org/obo/IAO_0000115> "Fish roes are the edible reproductive bodies of several species of fish. Of some of these only the \"hard roe\", the female reproductive body, is used whereas both the \"hard\" and \"soft\" roe (milt) of other species is marketed.\nThe term roe used in flee commodity description includes if relevant both types of roe.\nThe liver of some species is used as such for human consumption or for production of liver oils (e.g. cod liver oil).\nExposure to pesticides is through animal metabolism."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0748" .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400748" .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://www.w3.org/2000/01/rdf-schema#label> "fish roe (including milt = soft roe) and edible offal of fish"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400748> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400749
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400656> .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://purl.obolibrary.org/obo/IAO_0000115> "Several sea mammals are caught on a large scale. The meat of various species is used as food or feed in some areas of the world. The blubber (=whale or seal fat) fat and train oil (oil derived from whale fat) is used after processing as raw material in food or feed manufacture; the sperm oil, as well as the spermaceti (a waxy substance from the head of sperm whales) is mainly used in cosmetics and some other industrial products.\nExposure to pesticides is by consumption of contaminated prey or through water pollution.\nThe entire commodity except the bones and other inedible parts may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0749" .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400749" .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://www.w3.org/2000/01/rdf-schema#label> "marine mammal"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400749> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400750
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400656> .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://purl.obolibrary.org/obo/IAO_0000115> "Crustaceans are aquatic animals of various species, wild or cultivated, which have an inedible chitinous outer shell.\nA small number of species live in fresh water but most species live in brackish water and/or in the sea.\nExposure to pesticides is through animal metabolism or water pollution.\nCrustaceans are prepared for wholesale or retail distribution at a \"raw\" stage, often still alive, \"raw\" and deep-frozen or cooked directly after catching and deep-frozen. Shrimps or prawns may also be parboiled and thereafter deep-frozen.\nAlthough the cooked or parboiled crustaceans should be regarded as processed foods, the animals of this group are primarily classified in the Chapter on Primary food commodities, Type 8: Aquatic animal products, since several crustaceans are also-marketed in a \"raw\" form, i.e. not exposed to temperatures sufficiently high to coagulate the protein at the surface. A short reference to processed Crustaceans is given in Type 17: Derived edible products of animal origin, Group 084 Crustaceans, processed.\nThe entire commodity except the shell may be consumed: the \"raw\" commodities, in general, after cooking.\n\nIn some countries, species such as the Norway lobster (Nephrops norvegicus) are included in the commodity \"Prawns\" with some qualifying designation, such as Dublin Bay Prawn or Prawn of Bantry Bay (both Ireland).The Codex Stan. 92-1981 on Quick Frozen Shrimps and Prawns does not prevent this practice, provided that the designation on the label ensures that the consumer will not be misled.\nThere is no clear-cut distinction between Shrimps and Prawns. In several countries the commodity name-Shrimps is used for the small species whereas the slightly larger ones are called Prawns. However, a species marked in certain regions of the world as \"Prawn\" may be called in the local English language in other areas a shrimp and visa versa, e.g., Pandalus borcalis is called Northern prawn or Deepwater prawn in the United Kingdom and the same species is named Pink shrimp in Canada. In Australia only the name Prawn is used for animals included in this commodity.\nNot including the Freshwater species of the Palaemonidae."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0750" .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400750" .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://www.w3.org/2000/01/rdf-schema#label> "crustacean"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400750> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400751
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400657> .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://purl.obolibrary.org/obo/IAO_0000115> "Frog, lizard, snake and turtle products are the edible parts from various animal species of the zoological classes Amphibia and Reptilia, usually wild, harvested for food. Some frog species are cultivated in a few European and Asian countries and to a small extent in the USA and \"marketed\" in the form of deep-frozen frog legs. The wild species are marketed in the same manner.\nA few turtle species are raised from eggs or hatchlings in some tropical countries, especially the Green Turtle.\nExposure to pesticides is through animal metabolism.\nThe entire product, except the bones and the bony or horny outer shell (turtles), may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0751" .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400751" .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://www.w3.org/2000/01/rdf-schema#label> "frog, lizard, snake and turtle"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400751> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400752
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400658> .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://purl.obolibrary.org/obo/IAO_0000115> "Molluscs are aquatic or land animals or various species, wild or cultivated, which have an inedible outer or inner shell.\nThe edible aquatic Molluscs live mainly in brackish water or in the sea; several species are cultivated. A few edible species of land snails are cultivated.\nExposure to pesticides is through animal metabolism: the aquatic species also through water contamination.\nThe entire commodity except the outer or inner shell may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0752" .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400752" .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://www.w3.org/2000/01/rdf-schema#label> "mollusc (including cephalopod) and other invertebrate animal"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400752> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400756
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400660> .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://purl.obolibrary.org/obo/IAO_0000115> "Dried fruits. The commodities of this group are in general artificially dried. They may or may not be preserved or candied with addition of sugars.\nExposure to pesticides may arise from pre-harvest applications, post-harvest treatment of the fruits before processing, or treatment of the dried fruit to avoid losses during transport and wholesale or retail distribution."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0756" .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400756" .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://www.w3.org/2000/01/rdf-schema#label> "dried fruit"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400756> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400757
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400660> .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://purl.obolibrary.org/obo/IAO_0000115> "Dried vegetables. The commodities of this group are in general artificially dried and often comminuted. Exposure to pesticides is from pre-harvest applications and or treatment of the dry commodities.\nThe entire commodity may be consumed after soaking or boiling."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0757" .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400757" .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://www.w3.org/2000/01/rdf-schema#label> "dried vegetable"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400757> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400758
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400660> .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://purl.obolibrary.org/obo/IAO_0000115> "Dried herbs. The commodities of this group are in general artificially dried and often comminuted. For the commodities on the \"fresh\" state see Group 027 Herbs. Exposure to pesticides is from pre-harvest applications and/or treatment of the dry commodities.\nThey are often consumed in the dried form or soaked as a condiment in food commodities of plant or animal origin or in drinks, generally in small amounts"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0758" .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400758" .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://www.w3.org/2000/01/rdf-schema#label> "dried herb"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400758> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400759
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400660> .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://purl.obolibrary.org/obo/IAO_0000115> "Milled cereal products (early milling stages). The group includes the early milling fractions of cereal grains, except buckwheat, cañihua and quinoa such as husked rice, polished rice and the unprocessed cereal grain brans.\nExposure to pesticides is through pre-harvest treatments of the growing cereal grain crop and especially through post-harvest treatment of cereal grains.\nThe entire commodity may be consumed after further processing or household preparation."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0759" .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400759" .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://www.w3.org/2000/01/rdf-schema#label> "milled cereal product (early milling stage)"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400759> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400760
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400660> .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0760" .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400760" .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://www.w3.org/2000/01/rdf-schema#label> "miscellaneaous secondary food commodity of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://www.w3.org/2004/02/skos/core#definition> "a \"primary food commodity\" of various types or from different sources which has undergone simple processing" .
+<http://purl.obolibrary.org/obo/FOODON_03400760> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400761
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400661> .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://purl.obolibrary.org/obo/IAO_0000115> "Cereal grain milling fractions includes milling fractions of cereal grains at the final stage of milling and separation in the fractions. The group also includes the processed brans, as prepared for direct consumption."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0761" .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400761" .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://www.w3.org/2000/01/rdf-schema#label> "cereal grain milling fraction"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400761> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400762
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400661> .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://purl.obolibrary.org/obo/IAO_0000115> "Teas are derived from the leaves of several plants, principally Camellia sinensis.\nThey are used mainly in a fermented and dried form or only as dry leaves for the preparation of infusions, which are used as beverages.\nNewly grown vegetative shoots (terminal bud and 2-3 leaves) of tea are plucked, withered, twisted and comminuted and thereafter, in general, fermented and dried.\nTeas made from other plants are often prepared in a similar way."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0762" .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400762" .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://www.w3.org/2000/01/rdf-schema#label> "tea"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400762> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400763
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400661> .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://purl.obolibrary.org/obo/IAO_0000115> "Vegetable oils, crude, includes the crude vegetable oils derived from oil seed Group 023, tropical and sub-tropical oil-containing fruits such as olives, and some pulses (e.g. soya bean, dry). For the definition and characteristics of Olive oil, crude see Codex Stan. 33-1981. The crude oils are used as constituents of compounded animal feeds or further processed (refined, clarified). See Group 068, Vegetable oils, edible (or refined).\nExposure to pesticides is through pre-harvest treatment of the relevant crops or post-harvest treatment of the oilseeds or oil-containing pulses."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0763" .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400763" .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://www.w3.org/2000/01/rdf-schema#label> "vegetable oil, crude"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400763> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400764
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400661> .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://purl.obolibrary.org/obo/IAO_0000115> "Vegetable oils, edible (or refined) includes the vegetable oil derived from oil seed, Group 023, tropical and sub-tropical oil-containing fruits such as olives, and some pulses with a high oil content. The edible oils are derived from the crude oils though a refining and/or clarifying process. For definitions and characteristics of the edible oils listed below, see Codex Stan. 20-27 (inclusive), 33,124 and 126 (inclusive) - 1981.\nExposure to pesticides is through pre-harvest treatment of the relevant crops, or post-harvest treatment of the oilseeds and oil containing pulses."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0764" .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400764" .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://www.w3.org/2000/01/rdf-schema#label> "vegetable oil, edible (or refined)"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400764> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400765
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400661> .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://purl.obolibrary.org/obo/IAO_0000115> "Miscellaneous derived edible products include various intermediate products in the manufacture of edible food products. Some of these are used for further processing and not consumed as food or feed as such."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0765" .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400765" .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://www.w3.org/2000/01/rdf-schema#label> "miscellaneous derived edible product of plant origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400765> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400766
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400661> .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://purl.obolibrary.org/obo/IAO_0000115> "Fruit juices are pressed from various mature fruits, either from the whole fruits or from the pulp (Type 1 and fruits from fruiting vegetables, Groups 011 and 012). A small amount of preserving agent(s) may be added to the juices during processing. The juices are often prepared for international trade in a concentrated form which is reconstituted for wholesale or retail distribution to about the original juice concentration as obtained by the pressing process."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0766" .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400766" .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://www.w3.org/2000/01/rdf-schema#label> "fruit juice"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400766> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400767
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400661> .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://purl.obolibrary.org/obo/IAO_0000115> "The commodities of this group are by-products derived from fruit and vegetable processing which are mainly used for animal feeding purposes either as a part of the ration of livestock animals as such, or as an element in the manufacture of compounded feeds. The commodities are prepared, in general, in a dry form for wholesale or retail distribution."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0767" .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400767" .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://www.w3.org/2000/01/rdf-schema#label> "by-product, used for animal feeding purpose, derived from fruit and vegetable processing"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400767> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400768
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400663> .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://purl.obolibrary.org/obo/IAO_0000115> "The commodities of this group are manufactured with several ingredients; products derived from cereal grains however form the major ingredient."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0768" .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400768" .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://www.w3.org/2000/01/rdf-schema#label> "manufactured multi-ingredient cereal product"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400768> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400769
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400664> .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://purl.obolibrary.org/obo/IAO_0000115> "Dried meat and fish products, includes natural or artificial dried meat products and dried fishes, mainly marine fishes. Most of the dried fishes are naturally dried (wind and sun). For convenience other marine animals, whether or not fishes or Crustaceans, are classified in this group.\nThe entire commodity may be consumed, either as such or after processing (c.q. dried fish)."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0769" .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400769" .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://www.w3.org/2000/01/rdf-schema#label> "dried meat and fish product"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400769> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400770
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400665> .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary milk products include milk products which have undergone simple processing such as removal or part removal of certain ingredients e.g. water, milk fat etc. The group and the commodities therein will only be used for pesticides which are not partitioned exclusively or nearly exclusively into the milk fat.\nThe group includes among others the following commodities as defined in the relevant Codex Standards, see CAC/VOL. XVI-Ed. 1 (1984). The reference no. of the standard is indicated between brackets.\nMilk powders (whole, skimmed and partly skimmed) (Standard A-5 1971); evaporated milks (whole, skimmed) (Standard A-3 1971); skimmed milk.\nSpecific commodities will be listed in this group with their code nos. accordingly as the necessity for this arises."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0770" .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400770" .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://www.w3.org/2000/01/rdf-schema#label> "secondary milk product"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400770> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400771
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400665> .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://purl.obolibrary.org/obo/IAO_0000115> "Crustaceans are processed to a large extent before entering the national or international trade channels.\nCrabs, lobsters and shrimps or prawns are in general cooked directly after catching. Thereafter either the animals are deep frozen with or without shell, or the meat without shell is canned, with or without a packing medium. The latter may consist of water, salt, lemon juice and sugars.\nShrimps or prawns may also be \"parboiled\" and thereafter deep-frozen.\nAccording to the relevant Codex Standards, namely 92-1981, and 95-1981 \"cooked\" means heated for a period of time such that the thermal centre reaches a temperature adequate to coagulate the protein and \"parboiled\" means heated for a period of such time that the surface of the product Codex Alimentarius reaches a temperature adequate to coagulate the protein at the surface but inadequate to coagulate the protein at the thermal centre.\nThe cooked commodities are in general subjected to deep-freezing directly after cooking or the cooking is part of the canning process.\nThe designation cooked after the commodity may include any of the processes mentioned except the parboiled and deep-frozen shrimps or prawns.\nThe entire commodity except the shell may be consumed."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0771" .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400771" .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://www.w3.org/2000/01/rdf-schema#label> "crustaceans, processed"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400771> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400772
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400665> .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://purl.obolibrary.org/obo/IAO_0000115> "The processed animal fats include rendered or extracted (possibly refined and/or clarified) fats from land and aquatic mammals and poultry and fats and oils derived from fishes."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0772" .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400772" .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://www.w3.org/2000/01/rdf-schema#label> "animal fat, processed"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400772> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400773
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400665> .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://purl.obolibrary.org/obo/IAO_0000115> "Milk fats are the fatty ingredients derived from the milk of various mammals"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0773" .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400773" .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://www.w3.org/2000/01/rdf-schema#label> "milk fats"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400773> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400774
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400665> .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://purl.obolibrary.org/obo/IAO_0000115> "Derived milk products include food or edible substances isolated from the primary food commodity cattle milk, or milks from other mammals, using physical, biological and chemical processes. This group and the commodities therein will only be used if necessary for pesticides which are not partitioned exclusively or nearly exclusively into the milk fat. For further explanation, see Group 082.\nThis group includes among others the following food commodities, as defined in the relevant Codex Standards, see CAC/VOL. XXI, Ed-1 (1984): Butter, whey butter, both in Standard A-1 (1971), Butteroil, anhydrous butteroil, both in Standard A-2 (1973); Cream, Standard A-9 (1976); Cream powders (half cream, high fat), Standard A-10 (1971); Edible acid casein, Standard A-12 (1976): Edible caseinates, Standard A-13 (1976).\nSpecific commodities will be listed in this group with their code nos. accordingly as the necessity for this arises."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0774" .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400774" .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://www.w3.org/2000/01/rdf-schema#label> "derived milk product"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400774> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400775
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400666> .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://purl.obolibrary.org/obo/IAO_0000115> "This group and the commodities therein will only be used, if the necessity arises, for pesticides which are not partitioned exclusively or nearly exclusively into the milk fat. For further explanation see Group 0 82.\nThis group includes among others the following food commodities, as defined in the relevant Codex Standards (indicated between brackets); Yoghurt (Codex Standard A-11(a) 1975); Cheeses, individually named (Codex Standard A-6 1978 and Standard Standard C-1 (1966-1978).\nSpecific commodities will be listed in this group with their code nos. accordingly as the necessity for this arises"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0775" .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400775" .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://www.w3.org/2000/01/rdf-schema#label> "manufactured milk product (single ingredient) of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400775> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400776
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400667> .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://purl.obolibrary.org/obo/IAO_0000115> "This group and the commodities therein will only be used in the classification if necessary for pesticides which are not partitioned exclusively or nearly exclusively into the milk fat. For further explanation see Group 082.\nThis group includes among others the following commodities, as defined in the relevant Codex Standards, see CAC/VOL.XVI, Ed-1 (1984); Processed Cheese Products, Codex Standard A-8(a) and A-8(b) (1978) Processed Cheese Preparations, Standard A-8(c) (1978); Flavoured Yoghurt, Standard A-11(b) (1976); Sweetened Condensed Milk, Standard A-4 (1971).\nSpecific commodities will be listed in this group with their code nos. accordingly as the necessity for this arises."@en .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0776" .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.obolibrary.org/obo/FOODON_03400776" .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://www.w3.org/2000/01/rdf-schema#label> "manufactured milk product (multi-ingredient) of animal origin"@en .
+<http://purl.obolibrary.org/obo/FOODON_03400776> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/Food
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
