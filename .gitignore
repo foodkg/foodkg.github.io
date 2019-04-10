@@ -1,0 +1,16 @@
+__pycache__
+data/
+*.trig
+*.json
+*.csv
+*.profile
+cache/
+env/
+*.pkl
+.ipynb_checkpoints/
+.idea
+*.pyc
+in/
+out/
+int/
+report.txt

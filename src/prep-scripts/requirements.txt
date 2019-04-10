@@ -1,0 +1,15 @@
+certifi==2019.3.9
+chardet==3.0.4
+idna==2.8
+isodate==0.6.0
+joblib==0.13.2
+more-itertools==6.0.0
+nltk==3.4
+pyparsing==2.4.0
+rdflib==4.2.2
+requests==2.21.0
+singledispatch==3.4.0.3
+six==1.12.0
+tqdm==4.31.1
+urllib3==1.24.1
+webcolors==1.8.1
