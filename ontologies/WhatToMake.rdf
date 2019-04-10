@@ -1,0 +1,814 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+	<!ENTITY wtm "https://purl.org/heals/wtm/core/" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+]>
+
+<rdf:RDF xml:base="https://purl.org/heals/wtm/core/"
+     xmlns:wtm="https://purl.org/heals/wtm/core/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:sm="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://purl.org/heals/wtm/core/">
+        <owl:versionIRI rdf:resource="https://purl.org/heals/wtm/core/"/>
+        <owl:imports rdf:resource="https://purl.org/heals/wtm/foodon/"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
+        <dct:contributor>Forest Eckhardt</dct:contributor>
+        <dct:contributor>Kevin Blissett</dct:contributor>
+        <dct:contributor>Yarden Ne'eman</dct:contributor>
+        <dct:contributor>Miao Qi</dct:contributor>
+<!--        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_12_WhatToMake.rdf</owl:priorVersion>-->
+        <owl:priorVersion>https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/</owl:priorVersion>
+        <dct:modified rdf:datatype="&xsd;date">2019-04-03</dct:modified>
+        <skos:changeNote>Changes to this ontology since the previous version include: update of the ontology IRI.</skos:changeNote>
+        <dct:description>The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations.</dct:description>
+        <dct:abstract rdf:datatype="&xsd;string">The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology.</dct:abstract>
+        <rdfs:label>What to Make Base Ontology</rdfs:label>
+        <dct:publisher>WhatToMake</dct:publisher>
+        <sm:copyright>Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi</sm:copyright>
+        <dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
+        <dct:references>https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance</dct:references>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &wtm;dislikes -->
+
+    <owl:ObjectProperty rdf:about="&wtm;dislikes">
+        <dct:source>"Dislike," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dislike. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>dislikes</rdfs:label>
+        <skos:definition>something that a person habitually does not like or enjoy, a feeling of aversion or disapproval</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;forbids -->
+
+    <owl:ObjectProperty rdf:about="&wtm;forbids">
+        <dct:source>"Forbid," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/forbid. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>forbids</rdfs:label>
+        <skos:definition>to hinder or prevent as if by an effectual command</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;hasConversion -->
+
+    <owl:ObjectProperty rdf:about="&wtm;hasConversion">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <dct:source>"Converting," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/converting. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>has conversion</rdfs:label>
+        <skos:definition>to exchange for an equivalent</skos:definition>
+        <skos:scopeNote>unit property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;hasFlavor -->
+
+    <owl:ObjectProperty rdf:about="&wtm;hasFlavor">
+        <dct:source>Dictionary.com, "flavor." [Online]. Available: https://www.dictionary.com/browse/flavor?s=t. [Accessed Oct. 13, 2018]</dct:source>
+        <rdfs:label>has flavor</rdfs:label>
+        <skos:definition>indicates that this item has this flavor</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="&wtm;hasIngredient">
+        <dct:source>Merriam-Webster, "ingredient," 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/ingredient. [Accessed Oct. 18, 2018]</dct:source>
+        <rdfs:label>has ingredient</rdfs:label>
+        <skos:definition>to have a component part of any combination or mixture</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;hasSaved -->
+
+    <owl:ObjectProperty rdf:about="&wtm;hasSaved">
+        <dct:source>Merriam-Webster, "save," 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/save. [Accessed Oct. 13, 2018]</dct:source>
+        <rdfs:label>has saved</rdfs:label>
+        <skos:definition>to store (data) in a computer or on a storage device</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;hasTexture -->
+
+    <owl:ObjectProperty rdf:about="&wtm;hasTexture">
+        <dct:source>Dictionary.com, "texture." [Online]. Available: https://www.dictionary.com/browse/texture?s=t. [Accessed Oct. 13, 2018]</dct:source>
+        <rdfs:label>has texture</rdfs:label>
+        <skos:definition>indicates that this item has this texture</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;isAllergicTo -->
+
+    <owl:ObjectProperty rdf:about="&wtm;isAllergicTo">
+        <dct:source>Merriam-Webster, "allergic,"2018. [Online]. Available https https://www.merriam-webster.com/dictionary/allergic. [Accessed Oct. 13, 2018]</dct:source>
+        <rdfs:label>is allergic to</rdfs:label>
+        <skos:definition>the subject has an allergy to the object of this relation</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;isRecommendedForCourse -->
+
+    <owl:ObjectProperty rdf:about="&wtm;isRecommendedForCourse">
+        <dct:source>Wikipedia , "Course (food)." [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]</dct:source>
+        <rdfs:label>is recommended for course</rdfs:label>
+        <skos:definition>a property of recipe that indicates what course the recipe is recommended for</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;isRecommendedForMeal -->
+
+    <owl:ObjectProperty rdf:about="&wtm;isRecommendedForMeal">
+        <dct:source>Wikipedia, "Meal." [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]</dct:source>
+        <rdfs:label>is recommended for meal</rdfs:label>
+        <skos:definition>a property of recipe that indicates what meal the recipe is recommended for</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- &wtm;substitutesFor -->
+
+    <owl:ObjectProperty rdf:about="&wtm;substitutesFor">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <dct:source>"Substitute," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/substitute. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>substitutes for</rdfs:label>
+        <skos:definition>indicates that this item can take the place or function of another</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &wtm;hasCookTime -->
+
+    <owl:DatatypeProperty rdf:about="&wtm;hasCookTime">
+        <dct:source>"Cook Time," Collins English Dictionary. [Online]. Available: https://www.collinsdictionary.com/us/dictionary/english/cooking-time</dct:source>
+        <rdfs:label>has cook time</rdfs:label>
+        <skos:definition>the time that something needs to cook</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &wtm;hasCookingTemperature -->
+
+    <owl:DatatypeProperty rdf:about="&wtm;hasCookingTemperature">
+        <dct:source>Dictionary.com, "temperature." [Online]. Available: https://www.dictionary.com/browse/temperature. [Accessed Oct. 13, 2018]</dct:source>
+        <rdfs:label>has cooking temperature</rdfs:label>
+        <skos:definition>the temperature at which a food must be baked</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &wtm;hasGluten -->
+
+    <owl:DatatypeProperty rdf:about="&wtm;hasGluten">
+        <dct:source>Wikipedia, "Gluten." [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018]</dct:source>
+        <rdfs:label>has gluten</rdfs:label>
+        <skos:definition>a property of ingredients that show whether or not that ingerdient contains gluten</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &wtm;hasGlycemicIndex -->
+
+    <owl:DatatypeProperty rdf:about="&wtm;hasGlycemicIndex">
+        <dct:source>Méthod Montignac , "The Glycemic Index Concept," 2014. [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]</dct:source>
+        <rdfs:label>has glycemic index</rdfs:label>
+        <skos:definition>has a glycemic indexe value which measures carbs’ from the perspective of their pure sugar/starch content in order to determine how they affect glycemia (blood sugar levels)  after meals</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- &wtm;serves -->
+
+    <owl:DatatypeProperty rdf:about="&wtm;serves">
+        <dct:source>"Serve definition and meaning," Collins English Dictionary. Available: https://www.collinsdictionary.com/dictionary/english/serve [Accessed 27-Oct-2018].</dct:source>
+        <rdfs:label>serves</rdfs:label>
+        <skos:definition>used to indicate how much food a recipe produces</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &wtm;BreakfastRecipe -->
+
+    <owl:Class rdf:about="&wtm;BreakfastRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wtm;Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&wtm;isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="&wtm;Breakfast"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dct:source>"Breakfast," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>breakfast recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type breakfast</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Characteristic -->
+
+    <owl:Class rdf:about="&wtm;Characteristic">
+        <skos:scopeNote>top-level class</skos:scopeNote>
+        <dct:source>"Characteristic," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/characterisitc. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>characteristic</rdfs:label>
+        <skos:definition>a distinguishing trait, quality, or property</skos:definition>
+        <skos:example>Classes that inherit from this class represent different possible characteristics of food. Examples in this ontology include "flavor" and "texture" but these can be expanded as desired. Specific flavors and textures are represented as individuals that inherent from their respective subclass.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;ChemicalFoodProduct -->
+
+    <owl:Class rdf:about="&wtm;ChemicalFoodProduct">
+        <rdfs:subClassOf rdf:resource="&wtm;Food"/>
+        <dct:source>BioPortal, "FoodOn,"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03411041. [Accessed Nov. 19, 2018].</dct:source>
+        <rdfs:label>chemical food product</rdfs:label>
+        <skos:definition>a food substance derived from a nonliving source (e.g., salt, water or synthesized compounds)</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Course -->
+
+    <owl:Class rdf:about="&wtm;Course">
+        <dct:source>Wikipedia , "Course (food)." [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]</dct:source>
+        <rdfs:label>course</rdfs:label>
+        <skos:definition>dfferent types of specific sets of food items that are served together during a meal</skos:definition>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+        <skos:example>The individuals that inhreit from this class represent courses of a meal. The recipe "banana bread" can be "recommended for course" "dessert". Additional courses can be added as individuals that inheret from this class.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;DinnerRecipe -->
+
+    <owl:Class rdf:about="&wtm;DinnerRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wtm;Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&wtm;isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="&wtm;Dinner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dct:source>"Dinner," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>dinner recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type dinner</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Flavor -->
+
+    <owl:Class rdf:about="&wtm;Flavor">
+        <rdfs:subClassOf rdf:resource="&wtm;Characteristic"/>
+        <owl:disjointWith rdf:resource="&wtm;Texture"/>
+        <dct:source>"Flavor," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flavor. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>flavor</rdfs:label>
+        <skos:definition>the quality of something that affects the sense of taste</skos:definition>
+        <skos:scopeNote>food property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Food -->
+
+    <owl:Class rdf:about="&wtm;Food">
+        <dct:source>BBC, "Food Ontology," ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018].</dct:source>
+        <rdfs:label>food</rdfs:label>
+        <skos:definition>something that can be eaten</skos:definition>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+        <skos:example>This class is the top-level element that represents different classifications of food. An ingredient individual will have the type of the most specific category it falls under. For example, "chicken egg" will be a type of "egg" which is a subclass of "poultry product" which is a subclass of "primary food commodity of animal origin" which is a subclass of "food". Additional classifications can be added at any level of the classification.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Ingredient -->
+
+    <owl:Class rdf:about="&wtm;Ingredient">
+        <dct:source>Cambridge Dictionary, "ingredient." [Online]. Available: https://dictionary.cambridge.org/us/dictionary/english/ingredient. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>ingredient</rdfs:label>
+        <skos:definition>a food that is used with other foods in the preparation of a particular dish</skos:definition>
+        <skos:example>Individuals that are subclasses of this class represent ingredients that are used in a specific recipe. For example, the individual "banana" is a subclass of "ingredient" and the recipe "banana bread" "has ingredient" "banana". Ingredients can have the properties "has glycymic index" and "has gluten".</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;LessThanOneHourRecipe -->
+
+    <owl:Class rdf:about="&wtm;LessThanOneHourRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wtm;Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&wtm;hasCookTime"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">60</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dct:source>Dictionary.com, "hour." [Online]. Available: https://www.dictionary.com/browse/hour. [Accessed Oct. 5, 2018]</dct:source>
+        <rdfs:label>less than one hour recipe</rdfs:label>
+        <skos:definition>a class that contains all recipes that only take one hour to cook</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;LunchRecipe -->
+
+    <owl:Class rdf:about="&wtm;LunchRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wtm;Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&wtm;isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="&wtm;Lunch"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dct:source>"Lunch," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>lunch recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type lunch</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Meal -->
+
+    <owl:Class rdf:about="&wtm;Meal">
+        <dct:source>Wikipedia, "Meal." [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]</dct:source>
+        <rdfs:label>meal</rdfs:label>
+        <skos:definition>a class that links a recipe to a certain meal</skos:definition>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+        <skos:example>The individuals that inhreit from this class represent different types of meals. The recipe "kamut pancakes" can be "recommended for meal" "breakfast". Additional meals can be added as individuals that inheret from this class.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Measurement -->
+
+    <owl:Class rdf:about="&wtm;Measurement">
+        <dct:source>"Measure," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/measure. [Accessed: 12-Oct-2018].</dct:source>
+        <skos:definition>an adequate or due portion</skos:definition>
+        <rdfs:label>measurement</rdfs:label>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+        <skos:example>This class contains subclasses that represent different kinds of measurements relating to cooking. For example "time measurement" is a class that contains the individuals "minute" and "hour" and is used to represent the amount of time a recipe takes to make or cook.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;MeatFromChicken -->
+
+    <owl:Class rdf:about="&wtm;MeatFromChicken">
+        <rdfs:subClassOf rdf:resource="&obo;FOODON_03400741"/>
+        <dct:source>BioPortal, "FoodOn,"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400741. [Accessed Nov. 14, 2018].</dct:source>
+        <rdfs:label>meat from chicken</rdfs:label>
+        <skos:definition>the muscular tissues from a chicken</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;MeatFromCow -->
+
+    <owl:Class rdf:about="&wtm;MeatFromCow">
+        <rdfs:subClassOf rdf:resource="&obo;FOODON_03400737"/>
+        <dct:source>BioPortal, "FoodOn,"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018].</dct:source>
+        <rdfs:label>meat from cow</rdfs:label>
+        <skos:definition>the muscular tissues from a cow</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;MeatFromLamb -->
+
+    <owl:Class rdf:about="&wtm;MeatFromLamb">
+        <rdfs:subClassOf rdf:resource="&obo;FOODON_03400737"/>
+        <dct:source>BioPortal, "FoodOn,"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018].</dct:source>
+        <rdfs:label>meat from lamb</rdfs:label>
+        <skos:definition>the muscular tissues from a lamb</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;MeatFromPig -->
+
+    <owl:Class rdf:about="&wtm;MeatFromPig">
+        <rdfs:subClassOf rdf:resource="&obo;FOODON_03400737"/>
+        <dct:source>BioPortal, "FoodOn,"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018].</dct:source>
+        <rdfs:label>meat from pig</rdfs:label>
+        <skos:definition>the muscular tissues from a pig</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;MilkFromCow -->
+
+    <owl:Class rdf:about="&wtm;MilkFromCow">
+        <rdfs:subClassOf rdf:resource="&obo;FOODON_03400740"/>
+        <dct:source>Wikipedia, "Milk." [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow&apos;s_milk. [Accessed: Nov. 10, 2018]</dct:source>
+        <rdfs:label>milk from cow</rdfs:label>
+        <skos:definition>milk obtained from a cow</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Mushroom -->
+
+    <owl:Class rdf:about="&wtm;Mushroom">
+        <rdfs:subClassOf rdf:resource="&wtm;PrimaryFoodCommodityOfFungusOrigin"/>
+        <dct:source>Wikipedia, "Mushroom." [Online]. Available: https://en.wikipedia.org/wiki/Mushroom. [Accessed: Nov. 22, 2018]</dct:source>
+        <rdfs:label>mushroom</rdfs:label>
+        <skos:definition>the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;PrimaryFoodCommodityOfFungusOrigin -->
+
+    <owl:Class rdf:about="&wtm;PrimaryFoodCommodityOfFungusOrigin">
+        <rdfs:subClassOf rdf:resource="&wtm;Food"/>
+        <dct:source>NHS, "Eating processed foods," January 2017. [Online]. Available: https://www.nhs.uk/live-well/eat-well/what-are-processed-foods/. [Accessed Nov.22 2018]</dct:source>
+        <rdfs:label>primary food commodity of fungus origin</rdfs:label>
+        <skos:definition>unaltered food derived from fungus</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Recipe -->
+
+    <owl:Class rdf:about="&wtm;Recipe">
+        <dct:source>BBC, "Food Ontology," ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018].</dct:source>
+        <rdfs:label>recipe</rdfs:label>
+        <skos:definition>a combination of ingredients and a method, created by a chef, that produces a food</skos:definition>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+        <skos:example>Individuals that are a type of this class represent instances of recipes that are found online. For example, the individual "banana bread" can be found on AllRecipes.com and has the properties "has ingredient," "has cook time," "has cooking temprature," "serves," "is recommended for course," and "is recommended for meal".</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;SideRecipe -->
+
+    <owl:Class rdf:about="&wtm;SideRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wtm;Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&wtm;isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="&wtm;Side"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dct:source>"Side Dish," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>side recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type side</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;TemperatureMeasurement -->
+
+    <owl:Class rdf:about="&wtm;TemperatureMeasurement">
+        <rdfs:subClassOf rdf:resource="&wtm;Measurement"/>
+        <dct:source>Wikipedia, "Temperature measurement." [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]</dct:source>
+        <rdfs:label>temperature measurement</rdfs:label>
+        <skos:definition>degree of hotness or coldness measured on a definite scale</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Texture -->
+
+    <owl:Class rdf:about="&wtm;Texture">
+        <rdfs:subClassOf rdf:resource="&wtm;Characteristic"/>
+        <dct:source>"Texture," Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/texture. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>texture</rdfs:label>
+        <skos:definition>the characteristic physical structure given to a material, an object, etc., by the size, shape, arrangement, and proportions of its parts</skos:definition>
+        <skos:scopeNote>food property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;TimeMeasurement -->
+
+    <owl:Class rdf:about="&wtm;TimeMeasurement">
+        <rdfs:subClassOf rdf:resource="&wtm;Measurement"/>
+        <dct:source>Merriam-Webster, "Time." [Online]. Available: https://www.merriam-webster.com/dictionary/time. [Accessed: Nov. 22, 018]</dct:source>
+        <dct:source>Wikipedia, "Temperature measurement." [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]</dct:source>
+        <rdfs:label>time measurement</rdfs:label>
+        <skos:definition>the measured or measurable period during which an action, process, or condition exists or continues</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;User -->
+
+    <owl:Class rdf:about="&wtm;User">
+        <dct:source>"User," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/user. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>user</rdfs:label>
+        <skos:definition>a user of the system</skos:definition>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+        <skos:example>Individuals that inherit from this class represent users of the system. Individual users can have likes, dislikes, and allergies that are saved in the system through the "likes," "dislikes," "forbids," and "is allergic to," properties.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;Yeast -->
+
+    <owl:Class rdf:about="&wtm;Yeast">
+        <rdfs:subClassOf rdf:resource="&wtm;PrimaryFoodCommodityOfFungusOrigin"/>
+        <dct:source>Wikidictionary, "Yeast." [Online]. Available: https://en.wiktionary.org/wiki/yeast. [Accessed: Nov. 22, 2018]</dct:source>
+        <rdfs:label>yeast</rdfs:label>
+        <skos:definition>humid, yellowish froth produced by fermenting malt worts, and used to brew beer, leaven bread, and also used in certain medicines</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- &wtm;highGlycemicRecipe -->
+
+    <owl:Class rdf:about="&wtm;highGlycemicRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wtm;Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&wtm;hasIngredient"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&wtm;hasGlycemicIndex"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;nonNegativeInteger">50</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dct:source>Montignac Method, "Search for a specific Glycemic Index,"  2014. [Online]. Available: http://www.montignac.com/en/search-for-a-specific-glycemic-index/. [Accessed Nov. 1, 2018]</dct:source>
+        <rdfs:label>high glycemic recipe</rdfs:label>
+        <skos:definition>a class of recipes that contains an ingredient with a glycemic index of 50 or more</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &wtm;Appetizer -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Appetizer">
+        <rdf:type rdf:resource="&wtm;Course"/>
+        <dct:source>"Appetizer," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/appetizer. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>appetizer</rdfs:label>
+        <skos:definition>a food or drink that stimulates the appetite and is usually served before a meal</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Breakfast -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Breakfast">
+        <rdf:type rdf:resource="&wtm;Meal"/>
+        <rdfs:label>breakfast</rdfs:label>
+        <skos:definition>the first meal of the day especially when taken in the morning</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+        <dct:source>"Breakfast," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018].</dct:source>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Brunch -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Brunch">
+        <rdf:type rdf:resource="&wtm;Meal"/>
+        <dct:source>Wikipedia, "Brunch." [Online]. Available: https://en.wikipedia.org/wiki/Brunch. [Accessed: Nov. 16, 2018]</dct:source>
+        <rdfs:label>brunch</rdfs:label>
+        <skos:definition>a combination of breakfast and lunch eaten usually during the late morning to early afternoon, generally served from 10am up to 2pm, and regularly has some form of alcoholic drink (most usually champagne or a cocktail) served with it</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Dessert -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Dessert">
+        <rdf:type rdf:resource="&wtm;Course"/>
+        <dct:source>"Dessert," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dessert. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>dessert</rdfs:label>
+        <skos:definition>a usually sweet course or dish (as of pastry or ice cream) usually served at the end of a meal</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Dinner -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Dinner">
+        <rdf:type rdf:resource="&wtm;Meal"/>
+        <dct:source>"Dinner," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>dinner</rdfs:label>
+        <skos:definition>the principal meal of the day</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Entree -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Entree">
+        <rdf:type rdf:resource="&wtm;Course"/>
+        <dct:source>"Entree," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/entree. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>entree</rdfs:label>
+        <skos:definition>the main course of a meal in the U.S.</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Lunch -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Lunch">
+        <rdf:type rdf:resource="&wtm;Meal"/>
+        <dct:source>"Lunch," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>lunch</rdfs:label>
+        <skos:definition>a usually light, especially one taken in the middle of the day</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Salad -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Salad">
+        <rdf:type rdf:resource="&wtm;Course"/>
+        <dct:source>Wikipedia, "Salad." [Online]. Available: https://en.wikipedia.org/wiki/Salad. [Accessed: Nov. 16, 2018]</dct:source>
+        <rdfs:label>salad</rdfs:label>
+        <skos:definition>a dish consisting of a mixture of small pieces of food, usually vegetables</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Side -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Side">
+        <rdf:type rdf:resource="&wtm;Course"/>
+        <dct:source>"Side Dish," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018].</dct:source>
+        <rdfs:label>side</rdfs:label>
+        <skos:definition>a food served separately along with the main course</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Snack -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Snack">
+        <rdf:type rdf:resource="&wtm;Meal"/>
+        <dct:source>"Snack," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/snack. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>snack</rdfs:label>
+        <skos:definition>a light meal : food eaten between regular meals</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &wtm;Soup -->
+
+    <owl:NamedIndividual rdf:about="&wtm;Soup">
+        <rdf:type rdf:resource="&wtm;Course"/>
+        <dct:source>Wikipedia, "Soup." [Online]. Available: https://en.wikipedia.org/wiki/Soup. [Accessed: Nov. 16, 2018]</dct:source>
+        <rdfs:label>soup</rdfs:label>
+        <skos:definition>a primarily liquid food, generally served warm or hot (but may be cool or cold), that is made by combining ingredients of meat or vegetables with stock, juice, water, or another liquid</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

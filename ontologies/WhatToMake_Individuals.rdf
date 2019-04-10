@@ -1,0 +1,2043 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" > 
+	<!ENTITY wtm "https://purl.org/heals/wtm/core/" >
+	<!ENTITY ind "https://purl.org/heals/wtm/individuals/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#">
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+]>
+
+<rdf:RDF xml:base="https://purl.org/heals/wtm/individuals/"
+     xmlns:wtm="https://purl.org/heals/wtm/core/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:ind="https://purl.org/heals/wtm/individuals/"
+     xmlns:sm="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://purl.org/heals/wtm/individuals/">
+        <owl:versionIRI rdf:resource="https://purl.org/heals/wtm/individuals/"/>
+        <owl:imports rdf:resource="https://purl.org/heals/wtm/core/"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
+<!--        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_12_WhatToMake_Individuals.rdf</owl:priorVersion>-->
+        <owl:priorVersion>https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_Individuals/</owl:priorVersion>
+        <dct:contributor>Forest Eckhardt</dct:contributor>
+        <dct:contributor>Kevin Blissett</dct:contributor>
+        <dct:modified rdf:datatype="&xsd;date">2019-04-03</dct:modified>
+        <dct:contributor>Yarden Ne'eman</dct:contributor>
+        <dct:contributor>Miao Qi</dct:contributor>
+        <dct:description>The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations.</dct:description>
+        <dct:abstract rdf:datatype="&xsd;string">The WhatToMake Individuals Ontology contains the invididual recipes and food items used in those recipes that are available in the system. These individuals are defined using classes and properties that are defined in the WhatToMake Base Ontology.</dct:abstract>
+        <rdfs:label>What to Make Individuals</rdfs:label>
+        <skos:changeNote>Changes to this ontology since the previous version include: update of ontology IRI</skos:changeNote>
+        <dct:publisher>WhatToMake</dct:publisher>
+        <sm:copyright>Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi</sm:copyright>
+        <dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
+        <dct:references>https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance</dct:references>
+    </owl:Ontology>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &ind;AllPurposeFlour -->
+
+    <owl:NamedIndividual rdf:about="&ind;AllPurposeFlour">
+        <rdf:type rdf:resource="&obo;FOODON_03400759"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">true</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">71</wtm:hasGlycemicIndex>
+        <dct:source>"Flour," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flour. [Accessed: 13-Oct-2018].</dct:source>
+        <rdfs:label>all purpose flour</rdfs:label>
+        <skos:definition>a product consisting of finely milled wheat</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Almond -->
+
+    <owl:NamedIndividual rdf:about="&ind;Almond">
+        <rdf:type rdf:resource="&obo;FOODON_03400685"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasTexture rdf:resource="&ind;Crunchy"/>
+        <wtm:substitutesFor rdf:resource="&ind;Pecan"/>
+        <wtm:substitutesFor rdf:resource="&ind;PumpkinSeed"/>
+        <wtm:substitutesFor rdf:resource="&ind;Walnut"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "almond." [Online]. Available: https://www.dictionary.com/browse/almond. [Accessed Oct. 20, 2018]</dct:source>
+        <rdfs:label>almond</rdfs:label>
+        <skos:definition>the nutlike kernel of the fruit of either of two trees, Prunus dulcis (sweet almond) or P. dulcis amara (bitter almond), which grow in warm temperate regions</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;AlmondBiscotti -->
+
+    <owl:NamedIndividual rdf:about="&ind;AlmondBiscotti">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;Almond"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingPowder"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;OliveOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;VanillaExtract"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Dessert"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Snack"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">120</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">15</wtm:serves>
+        <dct:source>Allrecipes.com, "Chef John's Almond Biscotti," 2010. [Online]. Available: https://www.allrecipes.com/recipe/260575/chef-johns-almond-biscotti/?internalSource=hub%20recipe&amp;referringContentType=Search. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>almond biscotti</rdfs:label>
+        <skos:definition>a hard italian bread made from almonds</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/260575/chef-johns-almond-biscotti/?internalSource=hub%20recipe&amp;referringContentType=Search.</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;AlmondMeal -->
+
+    <owl:NamedIndividual rdf:about="&ind;AlmondMeal">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&obo;FOODON_03400685"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">25</wtm:hasGlycemicIndex>
+        <dct:source>Wikipedia, "Almond meal." [Online]. Available:https://en.wikipedia.org/wiki/Almond_meal. [Accessed: Nov. 10, 2018]</dct:source>
+        <rdfs:label>almond meal</rdfs:label>
+        <skos:definition>an ingredient made from ground up almonds</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;AppleCiderVinegar -->
+
+    <owl:NamedIndividual rdf:about="&ind;AppleCiderVinegar">
+        <rdf:type rdf:resource="&obo;FOODON_03400760"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>Wikipedia, "Apple cider vinegar." [Online]. Available: https://en.wikipedia.org/wiki/Apple_cider_vinegar. [Accessed: Nov. 10, 2018]</dct:source>
+        <rdfs:label>apple cider vinegar</rdfs:label>
+        <skos:definition>a vinegar made from fermented apple juice</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Bacon -->
+
+    <owl:NamedIndividual rdf:about="&ind;Bacon">
+        <rdf:type rdf:resource="&obo;FOODON_03400667"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "bacon." [Online]. Available: https://www.dictionary.com/browse/bacon. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>bacon</rdfs:label>
+        <skos:definition>the back and sides of the hog, salted and dried or smoked, usually sliced thin and fried for food</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BakedChickenTender -->
+
+    <owl:NamedIndividual rdf:about="&ind;BakedChickenTender">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;Chicken"/>
+        <wtm:hasIngredient rdf:resource="&ind;Garlic"/>
+        <wtm:hasIngredient rdf:resource="&ind;LemonJuice"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;Tarragon"/>
+        <wtm:hasIngredient rdf:resource="&ind;WholeGrainMustard"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">45</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">425</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">4</wtm:serves>
+        <dct:source>English Oxford Living Dictionaries, "baked," 2018. [Online]. Available: https://en.oxforddictionaries.com/definition/baked. [Accessed Oct. 18, 2018]</dct:source>
+        <dct:source>Wiktionary, "chicken tender," Dec. 2017. [Online]. Available: https://en.wiktionary.org/wiki/chicken_tender. [Accessed Oct. 18, 2018]</dct:source>
+        <rdfs:label>baked chicken tender</rdfs:label>
+        <skos:definition>chicken dish involving a flap of chicken meat found on, and easily detached from, the breast which is cooked by dry heat in an oven</skos:definition>
+        <skos:editorialNote>A portion of chicken</skos:editorialNote>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://diabetesstrong.com/mustard-baked-chicken-tenders/</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BakersYeast -->
+
+    <owl:NamedIndividual rdf:about="&ind;BakersYeast">
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <rdf:type rdf:resource="&wtm;Yeast"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">35</wtm:hasGlycemicIndex>
+        <dct:source>Wikipedia, "Baker's yeast." [Online]. Available: https://en.wikipedia.org/wiki/Baker%27s_yeast. [Accessed: Nov. 22, 2018]</dct:source>
+        <rdfs:label>baker's yeast</rdfs:label>
+        <skos:definition>the strains of yeast commonly used as a leavening agent in baking bread and bakery products, where it converts the fermentable sugars present in the dough into carbon dioxide and ethanol</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BakingPowder -->
+
+    <owl:NamedIndividual rdf:about="&ind;BakingPowder">
+        <rdf:type rdf:resource="&wtm;ChemicalFoodProduct"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Baking powder," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/baking%20powder. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>baking powder</rdfs:label>
+        <skos:definition>a powder used as a leavening agent in making baked goods (such as quick breads) that typically consists of sodium bicarbonate, an acidic substance (such as cream of tartar), and starch or flour</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BakingSoda -->
+
+    <owl:NamedIndividual rdf:about="&ind;BakingSoda">
+        <rdf:type rdf:resource="&wtm;ChemicalFoodProduct"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Baking soda," the free dictionary. [Online]. Available: https://www.thefreedictionary.com/baking+soda [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>baking soda</rdfs:label>
+        <skos:definition>a white crystalline compound, NaHCO3, chemically known as sodium bicarbonate, that is used especially in beverages and as a leavening agent to make baked goods</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BalsamicVinegar -->
+
+    <owl:NamedIndividual rdf:about="&ind;BalsamicVinegar">
+        <rdf:type rdf:resource="&obo;FOODON_03400760"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Balsamic vinegar," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/balsamic%20vinegar. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>balsamic vinegar</rdfs:label>
+        <skos:definition>an aged Italian vinegar made from the must of white grapes</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Banana -->
+
+    <owl:NamedIndividual rdf:about="&ind;Banana">
+        <rdf:type rdf:resource="&obo;FOODON_03400673"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">55</wtm:hasGlycemicIndex>
+        <dct:source>"Banana ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/banana. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>banana</rdfs:label>
+        <skos:definition>an elongated usually tapering tropical fruit with soft pulpy flesh enclosed in a soft usually yellow rind</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BananaBlueberryAlmondFlourMuffin -->
+
+    <owl:NamedIndividual rdf:about="&ind;BananaBlueberryAlmondFlourMuffin">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AlmondMeal"/>
+        <wtm:hasIngredient rdf:resource="&ind;AppleCiderVinegar"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingSoda"/>
+        <wtm:hasIngredient rdf:resource="&ind;Banana"/>
+        <wtm:hasIngredient rdf:resource="&ind;Blueberry"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;Honey"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Dessert"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Snack"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">60</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">4</wtm:serves>
+        <dct:source>Allrecipes.com, "Banana Blueberry Almond Flour Muffins ," 2010. [Online]. Available: https://www.allrecipes.com/recipe/238012/banana-blueberry-almond-flour-muffins-gluten-free/?internalSource=hub%20recipe&amp;referringContentType=Search. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>banana blueberry almond flour muffin</rdfs:label>
+        <skos:definition>a banana blueberry muffin made with almond flour</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/238012/banana-blueberry-almond-flour-muffins-gluten-free/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BananaBread -->
+
+    <owl:NamedIndividual rdf:about="&ind;BananaBread">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingSoda"/>
+        <wtm:hasIngredient rdf:resource="&ind;Banana"/>
+        <wtm:hasIngredient rdf:resource="&ind;BrownSugar"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;Walnut"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Dessert"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Side"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Snack"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">65</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">10</wtm:serves>
+        <dct:source>Wikipedia, "Banana bread," Oct. 2018. [Online]. Available: https://en.wikipedia.org/wiki/Banana_bread. [Accessed Oct. 13, 2018]</dct:source>
+        <rdfs:label>banana bread</rdfs:label>
+        <skos:definition>a type of bread made from mashed bananas</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/6687/banana-bread/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Basil -->
+
+    <owl:NamedIndividual rdf:about="&ind;Basil">
+        <rdf:type rdf:resource="&obo;FOODON_03400688"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Basil," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/basil [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>basil</rdfs:label>
+        <skos:definition>the dried or fresh leaves of a basil used especially as a seasoning</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Beef -->
+
+    <owl:NamedIndividual rdf:about="&ind;Beef">
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <rdf:type rdf:resource="&wtm;MeatFromCow"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Beef," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/beef. [Accessed: 13-Oct-2018].</dct:source>
+        <rdfs:label>beef</rdfs:label>
+        <skos:definition>the flesh of an adult domestic bovine used as food</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BeefBouillon -->
+
+    <owl:NamedIndividual rdf:about="&ind;BeefBouillon">
+        <rdf:type rdf:resource="&obo;FOODON_03400667"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>EATBYDATE, "Beef Broth Substitutes," 2012. [Online]. Available: https://www.eatbydate.com/substitutions/beef-broth-substitute/. [Accessed Oct. 27, 2018]</dct:source>
+        <rdfs:label>beef bouillon</rdfs:label>
+        <skos:definition>an ingredient that can be combined with water to substitute for beef stock</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BeefNilaga -->
+
+    <owl:NamedIndividual rdf:about="&ind;BeefNilaga">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;Beef"/>
+        <wtm:hasIngredient rdf:resource="&ind;BeefBouillon"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPeppercorn"/>
+        <wtm:hasIngredient rdf:resource="&ind;Cabbage"/>
+        <wtm:hasIngredient rdf:resource="&ind;Carrot"/>
+        <wtm:hasIngredient rdf:resource="&ind;Celery"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChayoteSquash"/>
+        <wtm:hasIngredient rdf:resource="&ind;Onion"/>
+        <wtm:hasIngredient rdf:resource="&ind;Potato"/>
+        <wtm:hasIngredient rdf:resource="&ind;Water"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">90</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">5</wtm:serves>
+        <dct:source>Foxy folksy, "NILAGANG BAKA (FILIPINO BEEF SOUP WITH VEGETABLES)," June 2017. [Online]. Available: https://www.foxyfolksy.com/nilagang-baka-filipino-beef-soup-vegetables/. [Accessed Oct. 18, 2018]</dct:source>
+        <rdfs:label>beef nilaga</rdfs:label>
+        <skos:definition>a Filipino beef soup cooked until the meat becomes really tender and with vegetables like potatoes, beans, and cabbage that makes this simple soup healthy and flavorful</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.foxyfolksy.com/nilagang-baka-filipino-beef-soup-vegetables/</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BeefStew -->
+
+    <owl:NamedIndividual rdf:about="&ind;BeefStew">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;Beef"/>
+        <wtm:hasIngredient rdf:resource="&ind;BeefBouillon"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;Carrot"/>
+        <wtm:hasIngredient rdf:resource="&ind;Celery"/>
+        <wtm:hasIngredient rdf:resource="&ind;Cornstarch"/>
+        <wtm:hasIngredient rdf:resource="&ind;Onion"/>
+        <wtm:hasIngredient rdf:resource="&ind;Parsley"/>
+        <wtm:hasIngredient rdf:resource="&ind;Potato"/>
+        <wtm:hasIngredient rdf:resource="&ind;Rosemary"/>
+        <wtm:hasIngredient rdf:resource="&ind;VegetableOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Water"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">140</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">10</wtm:serves>
+        <dct:source>Recipetips.com, "Beef Stew," 2018. [Online]. Available: https://www.recipetips.com/glossary-term/t--36245/beef-stew.asp. [Accessed Oct. 13, 2018]</dct:source>
+        <rdfs:label>beef stew</rdfs:label>
+        <skos:definition>a food dish that combines beef with a variety of other ingredients, such as potatoes, vegetables, herbs, spices, and broth to create a savory dish, rich in flavor and often served as the main dish</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.recipetips.com/glossary-term/t--36245/beef-stew.asp</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Bitter -->
+
+    <owl:NamedIndividual rdf:about="&ind;Bitter">
+        <rdf:type rdf:resource="&wtm;Flavor"/>
+        <dct:source>"Bitter," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/bitter. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>bitter</rdfs:label>
+        <skos:definition>being or inducing the one of the four basic taste sensations that is peculiarly acrid acrid, astringent, or disagreeable and suggestive of an infusion of hops</skos:definition>
+        <skos:scopeNote>used as a flavor</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BlackPepper -->
+
+    <owl:NamedIndividual rdf:about="&ind;BlackPepper">
+        <rdf:type rdf:resource="&obo;FOODON_03400689"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Black Pepper," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/black pepper. [Accessed: 13-Oct-2018].</dct:source>
+        <rdfs:label>black pepper</rdfs:label>
+        <skos:definition>a spice that consists of the dried berry of an Indian vine ground with the black husk still on</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BlackPeppercorn -->
+
+    <owl:NamedIndividual rdf:about="&ind;BlackPeppercorn">
+        <rdf:type rdf:resource="&obo;FOODON_03400689"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Peppercorn ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/peppercorn. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>black peppercorn</rdfs:label>
+        <skos:definition>a dried berry of the black pepper</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Blueberry -->
+
+    <owl:NamedIndividual rdf:about="&ind;Blueberry">
+        <rdf:type rdf:resource="&obo;FOODON_03400671"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">25</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "blueberry." [Online]. Available: https://www.dictionary.com/browse/blueberry. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>blueberry</rdfs:label>
+        <skos:definition>the edible, usually bluish berry of various shrubs belonging to the genus Vaccinium, of the heath family</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BraisedBalsamicChicken -->
+
+    <owl:NamedIndividual rdf:about="&ind;BraisedBalsamicChicken">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;BalsamicVinegar"/>
+        <wtm:hasIngredient rdf:resource="&ind;Basil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Chicken"/>
+        <wtm:hasIngredient rdf:resource="&ind;OliveOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Onion"/>
+        <wtm:hasIngredient rdf:resource="&ind;Oregano"/>
+        <wtm:hasIngredient rdf:resource="&ind;Rosemary"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;Thyme"/>
+        <wtm:hasIngredient rdf:resource="&ind;Tomato"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">35</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">6</wtm:serves>
+        <dct:source>Sanderson Farms, "Balsamic Braised Chicken Thighs." [Online]. Available: http://sandersonfarms.mobi/recipes/balsamic-braised-chicken-thighs/. [Accessed: 1-Nov-2018]</dct:source>
+        <dct:source>Wikipedia, "Braising." [Online]. Available: https://en.wikipedia.org/wiki/Braising. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>braised balsamic chicken</rdfs:label>
+        <skos:definition>a Mediterranean-inspired chicken recipe by cooking the chicken with both wet and dry heats, signatured by the balsamic vinegar in the recipe</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>http://sandersonfarms.mobi/recipes/balsamic-braised-chicken-thighs/</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;BrownSugar -->
+
+    <owl:NamedIndividual rdf:about="&ind;BrownSugar">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">70</wtm:hasGlycemicIndex>
+        <dct:source>"Brown Surgar," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/brown sugar. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>brown sugar</rdfs:label>
+        <skos:definition>soft sugar whose crystals are covered by a film of refined dark syrup</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Brownies -->
+
+    <owl:NamedIndividual rdf:about="&ind;Brownies">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingPowder"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;CocoaPowder"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;Honey"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;VanillaExtract"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Dessert"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Snack"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">60</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">16</wtm:serves>
+        <dct:source>"Brownie," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/brownie. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>brownies</rdfs:label>
+        <skos:definition>a small square or rectangle of rich usually chocolate cake often containing nuts</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/10549/best-brownies/?internalSource=staff%20pick&amp;referringId=838&amp;referringContentType=Recipe%20Hub</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Butter -->
+
+    <owl:NamedIndividual rdf:about="&ind;Butter">
+        <rdf:type rdf:resource="&obo;FOODON_03400774"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Butter ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/butter. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>butter</rdfs:label>
+        <skos:definition>a solid emulsion of fat globules, air, and water made by churning milk or cream and used as food</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Cabbage -->
+
+    <owl:NamedIndividual rdf:about="&ind;Cabbage">
+        <rdf:type rdf:resource="&obo;FOODON_03400675"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>"Cabbage ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/cabbage. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>cabbage</rdfs:label>
+        <skos:definition>any of several brassicas of European origin especially a leafy garden plant with a short stem and a dense globular head of usually green leaves that is used as a vegetable</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CaneSugar -->
+
+    <owl:NamedIndividual rdf:about="&ind;CaneSugar">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">70</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "cane sugar." [Online]. Available: https://www.dictionary.com/browse/cane-sugar. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>cane sugar</rdfs:label>
+        <skos:definition>sugar obtained from sugar cane, identical with that obtained from the sugar beet</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CanolaOil -->
+
+    <owl:NamedIndividual rdf:about="&ind;CanolaOil">
+        <rdf:type rdf:resource="&obo;FOODON_03400764"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>Wikipedia, "Canola oil." [Online]. Available: https://en.wikipedia.org/wiki/Canola_oil. [Accessed: Nov. 10, 2018]</dct:source>
+        <rdfs:label>canola oil</rdfs:label>
+        <skos:definition>a vegetable oil derived from a variety of rapeseed that is low in erucic acid</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Carrot -->
+
+    <owl:NamedIndividual rdf:about="&ind;Carrot">
+        <rdf:type rdf:resource="&obo;FOODON_03400681"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>"Carrot," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/carrot. [Accessed: 13-Oct-2018].</dct:source>
+        <rdfs:label>carrot</rdfs:label>
+        <skos:definition>a biennial herb with a usually orange spindle-shaped edible root</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Celery -->
+
+    <owl:NamedIndividual rdf:about="&ind;Celery">
+        <rdf:type rdf:resource="&obo;FOODON_03400682"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>"Celery ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/celery. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>celery</rdfs:label>
+        <skos:definition>a European herb the carrot family specifically one of a cultivated variety with leafstalks eaten raw or cooked</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Celsius -->
+
+    <owl:NamedIndividual rdf:about="&ind;Celsius">
+        <rdf:type rdf:resource="&wtm;TemperatureMeasurement"/>
+        <dct:source>relating to, conforming to, or having the international thermometric scale on which the interval between the triple point of water and the boiling point of water is divided into 99.99 degrees with 0.01° representing the triple point and 100° the boiling point</dct:source>
+        <rdfs:label>celsius</rdfs:label>
+        <skos:definition>relating to, conforming to, or having the international thermometric scale on which the interval between the triple point of water and the boiling point of water is divided into 99.99 degrees with 0.01° representing the triple point and 100° the boiling point</skos:definition>
+        <skos:editorialNote>A temperature scale that is used in recipes</skos:editorialNote>
+        <skos:scopeNote>value of temperature</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;ChayoteSquash -->
+
+    <owl:NamedIndividual rdf:about="&ind;ChayoteSquash">
+        <rdf:type rdf:resource="&obo;FOODON_03400676"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">50</wtm:hasGlycemicIndex>
+        <dct:source>"chayote," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/chayote. [Accessed: 1-Nov-2018].</dct:source>
+        <rdfs:label>chayote squash</rdfs:label>
+        <skos:definition>pear-shaped fruit of a West Indian annual vine (Sechium edule) of the gourd family that is widely cultivated as a vegetable</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Cheese -->
+
+    <owl:NamedIndividual rdf:about="&ind;Cheese">
+        <rdf:type rdf:resource="&obo;FOODON_03400775"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "cheese." [Online]. Available: https://www.dictionary.com/browse/cheese. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>cheese</rdfs:label>
+        <skos:definition>the curd of milk separated from the whey and prepared in many ways as a food</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Chicken -->
+
+    <owl:NamedIndividual rdf:about="&ind;Chicken">
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <rdf:type rdf:resource="&wtm;MeatFromChicken"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Chicken," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/chicken. [Accessed: 13-Oct-2018].</dct:source>
+        <rdfs:label>chicken</rdfs:label>
+        <skos:definition>the common domestic fowl</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;ChickenBroth -->
+
+    <owl:NamedIndividual rdf:about="&ind;ChickenBroth">
+        <rdf:type rdf:resource="&obo;FOODON_03400667"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">true</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>vocabulary.com, "chicken broth." [Online]. Available: https://www.vocabulary.com/dictionary/chicken%20broth. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>chicken broth</rdfs:label>
+        <skos:definition>a stock made with chicken</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;ChickenSalad -->
+
+    <owl:NamedIndividual rdf:about="&ind;ChickenSalad">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;Celery"/>
+        <wtm:hasIngredient rdf:resource="&ind;Chicken"/>
+        <wtm:hasIngredient rdf:resource="&ind;DriedCranberry"/>
+        <wtm:hasIngredient rdf:resource="&ind;GreenOnion"/>
+        <wtm:hasIngredient rdf:resource="&ind;GreenPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;Mayonnaise"/>
+        <wtm:hasIngredient rdf:resource="&ind;Paprika"/>
+        <wtm:hasIngredient rdf:resource="&ind;Pecan"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Side"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">15</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">12</wtm:serves>
+        <dct:source>Allrecipes.com, "Fruited Curry Chicken Salad," 2010. [Online]. Available: https://www.allrecipes.com/recipe/15735/fruited-curry-chicken-salad/?internalSource=hub%20recipe&amp;referringContentType=Search. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>chicken salad</rdfs:label>
+        <skos:definition>a dish made from chicken and mayonnaise</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/15735/fruited-curry-chicken-salad/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;ChuckRoast -->
+
+    <owl:NamedIndividual rdf:about="&ind;ChuckRoast">
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <rdf:type rdf:resource="&wtm;MeatFromCow"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Chuck steak," WIKIPEDIA [Online]. Available: https://en.wikipedia.org/wiki/Chuck_steak [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>chuck roast</rdfs:label>
+        <skos:definition>a cut of beef and is part of the sub primal cut known as the chuck</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Cilantro -->
+
+    <owl:NamedIndividual rdf:about="&ind;Cilantro">
+        <rdf:type rdf:resource="&obo;FOODON_03400678"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "cilantro." [Online]. Available: https://www.dictionary.com/browse/cilantro. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>cilantro</rdfs:label>
+        <skos:definition>the strong-scented leaves of the coriander plant, used in salads or to flavor and garnish food</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Clove -->
+
+    <owl:NamedIndividual rdf:about="&ind;Clove">
+        <rdf:type rdf:resource="&obo;FOODON_03400674"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Clove," WIKIPEDIA [Online]. Available: https://en.wikipedia.org/wiki/Clove [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>clove</rdfs:label>
+        <skos:definition>the aromatic flower buds of a tree in the family Myrtaceae</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CocoaPowder -->
+
+    <owl:NamedIndividual rdf:about="&ind;CocoaPowder">
+        <rdf:type rdf:resource="&obo;FOODON_03400663"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">20</wtm:hasGlycemicIndex>
+        <dct:source>The Spruce Eats, "What Is Cocoa Powder?,"  2018.  [Online]. Available: https://www.thespruceeats.com/what-is-cocoa-powder-520351. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>cocoa powder</rdfs:label>
+        <skos:definition>an unsweetened powder produced by grinding the seeds of the fruit of a tropical evergreen tree called the cacao, or cocoa tree</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Coconut -->
+
+    <owl:NamedIndividual rdf:about="&ind;Coconut">
+        <rdf:type rdf:resource="&obo;FOODON_03400670"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">35</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "coconut." [Online]. Available: https://www.dictionary.com/browse/coconut. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>coconut</rdfs:label>
+        <skos:definition>the large, hard-shelled seed of the coconut palm, lined with a white edible meat, and containing a milky liquid</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CoconutMilk -->
+
+    <owl:NamedIndividual rdf:about="&ind;CoconutMilk">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">40</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "coconut milk." [Online]. Available: https://www.dictionary.com/browse/coconut-milk. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>coconut milk</rdfs:label>
+        <skos:definition>the clear, potable liquid contained within the young hollow seed of the coconut palm</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CornSyrup -->
+
+    <owl:NamedIndividual rdf:about="&ind;CornSyrup">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">115</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "corn syrup."  [Online]. Available: https://www.dictionary.com/browse/corn-syrup. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>corn syrup</rdfs:label>
+        <skos:definition>syrup prepared from corn</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CornedBeef -->
+
+    <owl:NamedIndividual rdf:about="&ind;CornedBeef">
+        <rdf:type rdf:resource="&obo;FOODON_03400667"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Corned beef ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/corned beef. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>corned beef</rdfs:label>
+        <skos:definition>beef that has been preserved in salt water</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CornedBeefHash -->
+
+    <owl:NamedIndividual rdf:about="&ind;CornedBeefHash">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;BeefBouillon"/>
+        <wtm:hasIngredient rdf:resource="&ind;CornedBeef"/>
+        <wtm:hasIngredient rdf:resource="&ind;Onion"/>
+        <wtm:hasIngredient rdf:resource="&ind;Potato"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">40</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">4</wtm:serves>
+        <dct:source>Wikipedia, "Hash (food)," Aug. 2018. [Online]. Available: https://en.wikipedia.org/wiki/Hash_(food). [Accessed Oct. 18, 2018]</dct:source>
+        <rdfs:label>corned beef hash</rdfs:label>
+        <skos:definition>a culinary dish consisting of diced or chopped meat, potatoes and spices that are mixed together and cooked by themselves or with other ingredients such as onions</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/33129/corned-beef-hash/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Cornstarch -->
+
+    <owl:NamedIndividual rdf:about="&ind;Cornstarch">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">95</wtm:hasGlycemicIndex>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;boolean">false</wtm:hasGlycemicIndex>
+        <dct:source>"Cornstarch ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/cornstarch. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>cornstarch</rdfs:label>
+        <skos:definition>starch made from corn and used in foods as a thickening agent, in making corn syrup and sugars, and in the manufacture of adhesives and sizes for paper and textiles</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;CowMilk -->
+
+    <owl:NamedIndividual rdf:about="&ind;CowMilk">
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <rdf:type rdf:resource="&wtm;MilkFromCow"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">30</wtm:hasGlycemicIndex>
+        <dct:source>Wikipedia, "Milk." [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow's_milk. [Accessed: Nov. 10, 2018]</dct:source>
+        <rdfs:label>cow milk</rdfs:label>
+        <skos:definition>milk obtained from a cow</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Creamy -->
+
+    <owl:NamedIndividual rdf:about="&ind;Creamy">
+        <rdf:type rdf:resource="&wtm;Texture"/>
+        <dct:source>"Creamy," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/creamy. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>creamy</rdfs:label>
+        <skos:definition>resembling cream (as in color, texture, or taste)</skos:definition>
+        <skos:scopeNote>used as a texture</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Crumbly -->
+
+    <owl:NamedIndividual rdf:about="&ind;Crumbly">
+        <rdf:type rdf:resource="&wtm;Texture"/>
+        <dct:source>"Crumbly," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/crumbly. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>crumbly</rdfs:label>
+        <skos:definition>easily crumbled</skos:definition>
+        <skos:scopeNote>used as a texture</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Crunchy -->
+
+    <owl:NamedIndividual rdf:about="&ind;Crunchy">
+        <rdf:type rdf:resource="&wtm;Texture"/>
+        <dct:source>"Crunchy," Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/crunchy?s=t. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>crunchy</rdfs:label>
+        <skos:definition>crisp, brittle</skos:definition>
+        <skos:editorialNote>This is a subclass of texture and is one of the textural components that could be considered for substitutions</skos:editorialNote>
+        <skos:scopeNote>used as a texture</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;DriedCranberry -->
+
+    <owl:NamedIndividual rdf:about="&ind;DriedCranberry">
+        <rdf:type rdf:resource="&obo;FOODON_03400756"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">30</wtm:hasGlycemicIndex>
+        <dct:source>Wikipedia, "Dried cranberry." [Online]. Available: https://en.wikipedia.org/wiki/Dried_cranberry. [Accessed: Nov. 10, 2018]</dct:source>
+        <rdfs:label>dried cranberry</rdfs:label>
+        <skos:definition>an ingredient made by partially dehydrating fresh cranberries</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;ChickenEgg -->
+
+    <owl:NamedIndividual rdf:about="&ind;ChickenEgg">
+        <rdf:type rdf:resource="&obo;FOODON_03400744"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "egg." [Online]. Available: https://www.dictionary.com/browse/egg. [Accessed Oct. 5, 2018]</dct:source>
+        <rdfs:label>chicken egg</rdfs:label>
+        <skos:definition>the roundish reproductive body produced by a female chicken</skos:definition>
+        <skos:editorialNote>Only used to refer to the egg of a chicken. Other types of eggs will appear under separate labels in the ontology.</skos:editorialNote>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="&ind;Fahrenheit">
+        <rdf:type rdf:resource="&wtm;TemperatureMeasurement"/>
+        <dct:source>"Fahrenheit," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/Fahrenheit. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>fahrenheit</rdfs:label>
+        <skos:definition>relating or conforming to a thermometric scale on which under standard atmospheric pressure the boiling point of water is at 212 degrees above the zero of the scale, the freezing point is at 32 degrees above zero, and the zero point approximates the temperature produced by mixing equal quantities by weight of snow and common salt</skos:definition>
+        <skos:editorialNote>A temperature scale that is used in recipes</skos:editorialNote>
+        <skos:scopeNote>value of temperature</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;FlourlessCoconutAndAlmondCake -->
+
+    <owl:NamedIndividual rdf:about="&ind;FlourlessCoconutAndAlmondCake">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;Almond"/>
+        <wtm:hasIngredient rdf:resource="&ind;AlmondMeal"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;Coconut"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;VanillaExtract"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Snack"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dessert"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">60</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">12</wtm:serves>
+        <dct:source>Allrecipes.com, "Flourless Coconut and Almond Cake," 2010. [Online]. Available: https://www.allrecipes.com/recipe/241524/flourless-coconut-and-almond-cake/?internalSource=hub%20recipe&amp;referringContentType=Search. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>flourless coconut and almond cake</rdfs:label>
+        <skos:definition>a cake made with coconut and almonds which contains no white flour</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/241524/flourless-coconut-and-almond-cake/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Garlic -->
+
+    <owl:NamedIndividual rdf:about="&ind;Garlic">
+        <rdf:type rdf:resource="&obo;FOODON_03400674"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">30</wtm:hasGlycemicIndex>
+        <dct:source>"Garlic ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/garlic. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>garlic</rdfs:label>
+        <skos:definition>widely cultivated for its pungent compound bulbs much used in cookery</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;GlutenFreeCoconutCake -->
+
+    <owl:NamedIndividual rdf:about="&ind;GlutenFreeCoconutCake">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingPowder"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingSoda"/>
+        <wtm:hasIngredient rdf:resource="&ind;Coconut"/>
+        <wtm:hasIngredient rdf:resource="&ind;CoconutMilk"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;GlutenFreeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;VanillaExtract"/>
+        <wtm:hasIngredient rdf:resource="&ind;VegetableOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Walnut"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Dessert"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Snack"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">60</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">16</wtm:serves>
+        <dct:source>Allrecipes.com, "Gluten-Free Coconut Cake," 2010. [Online]. Available: https://www.allrecipes.com/recipe/237655/gluten-free-coconut-cake/?internalSource=hub%20recipe&amp;referringContentType=Search&amp;clickId=cardslot%201. [Accessed Nov.9, 2018]</dct:source>
+        <dct:source>Wikipedia, "Coconut cake." [Online]. Available: https://en.wikipedia.org/wiki/Coconut_cake. [Accessed: Oct. 25, 2018]</dct:source>
+        <dct:source>Wikipedia, "Gluten." [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018] </dct:source>
+        <rdfs:label>gluten free coconut cake</rdfs:label>
+        <skos:definition>a cake frosted with a white frosting and covered in coconut flakes, with no ingredients contain gluten</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/237655/gluten-free-coconut-cake/?internalSource=hub%20recipe&amp;referringContentType=Search&amp;clickId=cardslot%201</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;GlutenFreeFlour -->
+
+    <owl:NamedIndividual rdf:about="&ind;GlutenFreeFlour">
+        <rdf:type rdf:resource="&obo;FOODON_03400759"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:substitutesFor rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">95</wtm:hasGlycemicIndex>
+        <dct:source>Baking Bites, "What is Gluten Free Flour?"[Online]. Available: http://bakingbites.com/2013/01/what-is-gluten-free-flour/. [Accessed Nov. 1, 2018]</dct:source>
+        <rdfs:label>gluten free flour</rdfs:label>
+        <skos:definition>flours that are made of non-gluten containing products</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;GoldenKamutBread -->
+
+    <owl:NamedIndividual rdf:about="&ind;GoldenKamutBread">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakersYeast"/>
+        <wtm:hasIngredient rdf:resource="&ind;KamutFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;OliveOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;Water"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Appetizer"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">180</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">1</wtm:serves>
+        <dct:source>kingarthurflour.com, "GOLDEN KAMUT BREAD. [Online]. Available: https://www.kingarthurflour.com/recipes/golden-kamut-bread-recipe. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>golden kamut bread</rdfs:label>
+        <skos:definition>a bread made from kamut</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.kingarthurflour.com/recipes/golden-kamut-bread-recipe</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Gooey -->
+
+    <owl:NamedIndividual rdf:about="&ind;Gooey">
+        <rdf:type rdf:resource="&wtm;Texture"/>
+        <dct:source>"Gooey," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/gooey. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>gooey</rdfs:label>
+        <skos:definition>a viscid or sticky substance</skos:definition>
+        <skos:scopeNote>used as a texture</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Greasy -->
+
+    <owl:NamedIndividual rdf:about="&ind;Greasy">
+        <rdf:type rdf:resource="&wtm;Texture"/>
+        <dct:source>"Greasy," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/greasy. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>greasy</rdfs:label>
+        <skos:definition>containing an unusual amount of grease</skos:definition>
+        <skos:scopeNote>used as a texture</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;GreenOnion -->
+
+    <owl:NamedIndividual rdf:about="&ind;GreenOnion">
+        <rdf:type rdf:resource="&obo;FOODON_03400674"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "green onion." [Online]. Available: https://www.dictionary.com/browse/green-onion. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>green onion</rdfs:label>
+        <skos:definition>a young onion with a slender green stalk and a small bulb, used as a table vegetable, usually raw,especially in salads; scallion</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;GreenPepper -->
+
+    <owl:NamedIndividual rdf:about="&ind;GreenPepper">
+        <rdf:type rdf:resource="&obo;FOODON_03400677"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "green pepper." [Online]. Available: https://www.dictionary.com/browse/green-pepper. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>green pepper</rdfs:label>
+        <skos:definition>the mild-flavored, unripe fruit of the bell or sweet pepper, Capsicum annuum grossum, used as a greenvegetable</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;GrilledChickenKabob -->
+
+    <owl:NamedIndividual rdf:about="&ind;GrilledChickenKabob">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;Chicken"/>
+        <wtm:hasIngredient rdf:resource="&ind;LemonJuice"/>
+        <wtm:hasIngredient rdf:resource="&ind;OliveOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Rosemary"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteVinegar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Appetizer"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">60</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">6</wtm:serves>
+        <dct:source>Allrecipes.com, "Rosemary Ranch Chicken Kabobs," 2010. [Online]. Available: https://www.allrecipes.com/recipe/64513/rosemary-ranch-chicken-kabobs/?internalSource=hub%20recipe&amp;referringContentType=Search. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>grilled chicken kabob</rdfs:label>
+        <skos:definition>a kabob dish made from chicken</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/64513/rosemary-ranch-chicken-kabobs/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Honey -->
+
+    <owl:NamedIndividual rdf:about="&ind;Honey">
+        <rdf:type rdf:resource="&obo;FOODON_03400666"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">60</wtm:hasGlycemicIndex>
+        <dct:source>"Honey," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/honey. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>honey</rdfs:label>
+        <skos:definition>a sweet viscid material elaborated out of the nectar of flowers in the honey sac of various bees</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Hour -->
+
+    <owl:NamedIndividual rdf:about="&ind;Hour">
+        <rdf:type rdf:resource="&wtm;TimeMeasurement"/>
+        <dct:source>Dictionary.com, "hour." [Online]. Available: https://www.dictionary.com/browse/hour. [Accessed Oct. 5, 2018]</dct:source>
+        <rdfs:label>hour</rdfs:label>
+        <skos:altLabel>hours</skos:altLabel>
+        <skos:definition>the measured or measurable period during which an action, process, or condition exists or continues</skos:definition>
+        <skos:scopeNote>value of time</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Kamut -->
+
+    <owl:NamedIndividual rdf:about="&ind;Kamut">
+        <rdf:type rdf:resource="&obo;FOODON_03400683"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">true</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">45</wtm:hasGlycemicIndex>
+        <dct:source>Kamut, "The grain," 2018. [Online]. Available: https://www.kamut.com/en/discover/the-grain. [Accessed Oct. 20, 2018]</dct:source>
+        <rdfs:label>kamut</rdfs:label>
+        <skos:definition>khorasan wheat (kamut) is an ancient grain</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;KamutFlour -->
+
+    <owl:NamedIndividual rdf:about="&ind;KamutFlour">
+        <rdf:type rdf:resource="&obo;FOODON_03400759"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:substitutesFor rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">true</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">45</wtm:hasGlycemicIndex>
+        <dct:source>foodrepublic.com, "What Is Kamut?" [Online]. Available: http://www.foodrepublic.com/2013/04/15/what-is-kamut/. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>kamut flour</rdfs:label>
+        <skos:definition>flour made from an ancient grain also known as khorsan wheat</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;KamutMuffin -->
+
+    <owl:NamedIndividual rdf:about="&ind;KamutMuffin">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingPowder"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;CowMilk"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;KamutFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;VanillaExtract"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Dessert"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Snack"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">30</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">425</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">12</wtm:serves>
+        <dct:source>kingarthurflour.com, "baking with ancient grains: KAMUT FLOUR." [Online]. Available: https://www.kingarthurflour.com/guides/baking-with-ancient-grains/kamut-flour/. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>kamut muffin</rdfs:label>
+        <skos:definition>a muffin made primarily from kamut</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.kingarthurflour.com/recipes/basic-muffins-with-berry-and-oatmeal-versions-recipe</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;KamutPancake -->
+
+    <owl:NamedIndividual rdf:about="&ind;KamutPancake">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingSoda"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;CowMilk"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;KamutFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Appetizer"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">45</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">375</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">12</wtm:serves>
+        <dct:source>kingarthurflour.com, "baking with ancient grains: KAMUT FLOUR." [Online]. Available: https://www.kingarthurflour.com/guides/baking-with-ancient-grains/kamut-flour/. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>kamut pancake</rdfs:label>
+        <skos:definition>a pancake made primarily from kamut</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.kingarthurflour.com/recipes/simply-perfect-pancakes-recipe</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Lamb -->
+
+    <owl:NamedIndividual rdf:about="&ind;Lamb">
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <rdf:type rdf:resource="&wtm;MeatFromLamb"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Lamb," WIKIPEDIA [Online]. Available: https://en.wikipedia.org/wiki/Lamb [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>lamb</rdfs:label>
+        <skos:definition>the meat of sheep</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;LemonJuice -->
+
+    <owl:NamedIndividual rdf:about="&ind;LemonJuice">
+        <rdf:type rdf:resource="&obo;FOODON_03400766"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">20</wtm:hasGlycemicIndex>
+        <dct:source>"lemon juice," the free dictionary. [Online]. Available: https://www.thefreedictionary.com/lemon+juice. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>lemon juice</rdfs:label>
+        <skos:definition>usually freshly squeezed juice of lemons</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Mayonnaise -->
+
+    <owl:NamedIndividual rdf:about="&ind;Mayonnaise">
+        <rdf:type rdf:resource="&obo;FOODON_03400776"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">true</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">60</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "mayonnaise." [Online]. Available: https://www.dictionary.com/browse/mayonnaise. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>mayonnaise</rdfs:label>
+        <skos:definition>a thick dressing of egg yolks, vinegar or lemon juice, oil, and seasonings, used for salads, sandwiches,vegetable dishes, etc</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Minute -->
+
+    <owl:NamedIndividual rdf:about="&ind;Minute">
+        <rdf:type rdf:resource="&wtm;TimeMeasurement"/>
+        <dct:source>Dictionary.com, "minute." [Online]. Available: https://www.dictionary.com/browse/minute?s=t. [Accessed Oct. 5, 2018]</dct:source>
+        <rdfs:label>minute</rdfs:label>
+        <skos:altLabel>minutes</skos:altLabel>
+        <skos:definition>the sixtieth part (1/60) of an hour; sixty seconds</skos:definition>
+        <skos:scopeNote>value of time</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Moist -->
+
+    <owl:NamedIndividual rdf:about="&ind;Moist">
+        <rdf:type rdf:resource="&wtm;Texture"/>
+        <dct:source>"Moist," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/moist. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>moist</rdfs:label>
+        <skos:definition>slightly or moderately wet</skos:definition>
+        <skos:scopeNote>used as a texture</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Mushy -->
+
+    <owl:NamedIndividual rdf:about="&ind;Mushy">
+        <rdf:type rdf:resource="&wtm;Texture"/>
+        <dct:source>"Mushy," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/mushy. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>mushy</rdfs:label>
+        <skos:definition>having the consistency of mush</skos:definition>
+        <skos:scopeNote>used as a texture</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Nutty -->
+
+    <owl:NamedIndividual rdf:about="&ind;Nutty">
+        <rdf:type rdf:resource="&wtm;Flavor"/>
+        <dct:source>"Nutty," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/nutty. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>nutty</rdfs:label>
+        <skos:definition>having a flavor like that of nuts</skos:definition>
+        <skos:editorialNote>A property of flavor that will aid in the substitution decision making of the ontology</skos:editorialNote>
+        <skos:scopeNote>used as a flavor</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Oat -->
+
+    <owl:NamedIndividual rdf:about="&ind;Oat">
+        <rdf:type rdf:resource="&obo;FOODON_03400683"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">40</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "oat." [Online]. Available: https://www.dictionary.com/browse/oat. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>oat</rdfs:label>
+        <skos:definition>a cereal grass, Avena sativa, cultivated for its edible seed</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;OliveOil -->
+
+    <owl:NamedIndividual rdf:about="&ind;OliveOil">
+        <rdf:type rdf:resource="&obo;FOODON_03400764"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Olive oil," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/olive%20oil. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>olive oil</rdfs:label>
+        <skos:definition>a pale yellow to yellowish-green nondrying oil that is obtained from olives, is high in monounsaturated fat, and is used chiefly as a salad oil and in cooking</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Onion -->
+
+    <owl:NamedIndividual rdf:about="&ind;Onion">
+        <rdf:type rdf:resource="&obo;FOODON_03400674"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>"Onion ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/onion. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>onion</rdfs:label>
+        <skos:definition>a widely cultivated Asian herb of the lily family with pungent edible bulbs</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Oregano -->
+
+    <owl:NamedIndividual rdf:about="&ind;Oregano">
+        <rdf:type rdf:resource="&obo;FOODON_03400688"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Oregano," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/oregano [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>oregano</rdfs:label>
+        <skos:definition>a bushy perennial mint (Origanum vulgare) with leaves that are used as a seasoning and a source of aromatic oil</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Paprika -->
+
+    <owl:NamedIndividual rdf:about="&ind;Paprika">
+        <rdf:type rdf:resource="&obo;FOODON_03400688"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>"Paprika ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/paprika. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>paprika</rdfs:label>
+        <skos:definition>a usually mild red condiment consisting of the dried finely ground pods of various sweet peppers</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Parsley -->
+
+    <owl:NamedIndividual rdf:about="&ind;Parsley">
+        <rdf:type rdf:resource="&obo;FOODON_03400688"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Parsley ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/parsley. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>parsley</rdfs:label>
+        <skos:definition>a European biennial herb of the carrot family widely grown for its finely dissected curly or flat leaves which are used as an herb or garnish</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Peanut -->
+
+    <owl:NamedIndividual rdf:about="&ind;Peanut">
+        <rdf:type rdf:resource="&obo;FOODON_03400686"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "peanut." [Online]. Available: https://www.dictionary.com/browse/peanut. [Accessed Oct. 5, 2018]</dct:source>
+        <rdfs:label>peanut</rdfs:label>
+        <skos:definition>the pod or the enclosed edible seed of the plant, Arachis hypogaea, of the legume family: the pod is forced underground in growing, where it ripens</skos:definition>
+        <skos:editorialNote>This definition refers to the nuts of the plant as used as an ingredient in a recipe.</skos:editorialNote>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Pecan -->
+
+    <owl:NamedIndividual rdf:about="&ind;Pecan">
+        <rdf:type rdf:resource="&obo;FOODON_03400685"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasTexture rdf:resource="&ind;Crunchy"/>
+        <wtm:substitutesFor rdf:resource="&ind;Almond"/>
+        <wtm:substitutesFor rdf:resource="&ind;Walnut"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "pecan." [Online]. Available: https://www.dictionary.com/browse/pecan. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>pecan</rdfs:label>
+        <skos:definition>a tall hickory tree, Carya illinoinensis, of the southern U.S. and Mexico, cultivated for its oval, smooth-shelled, edible nuts</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;PotRoastWithVegetables -->
+
+    <owl:NamedIndividual rdf:about="&ind;PotRoastWithVegetables">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;Basil"/>
+        <wtm:hasIngredient rdf:resource="&ind;BeefBouillon"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;BrownSugar"/>
+        <wtm:hasIngredient rdf:resource="&ind;Carrot"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChuckRoast"/>
+        <wtm:hasIngredient rdf:resource="&ind;Cornstarch"/>
+        <wtm:hasIngredient rdf:resource="&ind;Garlic"/>
+        <wtm:hasIngredient rdf:resource="&ind;Onion"/>
+        <wtm:hasIngredient rdf:resource="&ind;Potato"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;Thyme"/>
+        <wtm:hasIngredient rdf:resource="&ind;Tomato"/>
+        <wtm:hasIngredient rdf:resource="&ind;Water"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">65</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">6</wtm:serves>
+        <dct:source>Myrecipes, "Pot Roast 101," 2018. [Online]. Available: https://www.myrecipes.com/quick-and-easy/how-to-cook-pot-roast. [Accessed Oct. 18, 2018]</dct:source>
+        <rdfs:label>pot roast with vegetables</rdfs:label>
+        <skos:definition>slow-cooked beef with carrots, potatoes, or other vegetables added partway through cooking</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.myrecipes.com/quick-and-easy/how-to-cook-pot-roast</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Potato -->
+
+    <owl:NamedIndividual rdf:about="&ind;Potato">
+        <rdf:type rdf:resource="&obo;FOODON_03400681"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">70</wtm:hasGlycemicIndex>
+        <dct:source>"Potato," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/potato. [Accessed: 13-Oct-2018].</dct:source>
+        <rdfs:label>potato</rdfs:label>
+        <skos:definition>a memeber of the nightshade family widely cultivated for its edible starchy tuber</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;PumpkinSeed -->
+
+    <owl:NamedIndividual rdf:about="&ind;PumpkinSeed">
+        <rdf:type rdf:resource="&obo;FOODON_03400686"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:substitutesFor rdf:resource="&ind;Walnut"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">10</wtm:hasGlycemicIndex>
+        <dct:source>"pumpkin seed - Dictionary Definition," Vocabulary.com. [Online]. Available: https://www.vocabulary.com/dictionary/pumpkin seed. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>pumpkin seed</rdfs:label>
+        <skos:definition>the edible seed of a pumpkin</skos:definition>
+        <skos:editorialNote>A potential substitution for members of the tree nut family</skos:editorialNote>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Rosemary -->
+
+    <owl:NamedIndividual rdf:about="&ind;Rosemary">
+        <rdf:type rdf:resource="&obo;FOODON_03400688"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Rosemary ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/rosemary. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>rosemary</rdfs:label>
+        <skos:definition>a fragrant shrubby Mediterranean mint having grayish-green needlelike leaves used as a seasoning</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Salt -->
+
+    <owl:NamedIndividual rdf:about="&ind;Salt">
+        <rdf:type rdf:resource="&wtm;ChemicalFoodProduct"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Salt," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/salt. [Accessed: 13-Oct-2018].</dct:source>
+        <rdfs:label>salt</rdfs:label>
+        <skos:definition>a crystalline compound NaCl that consists of sodium chloride, is abundant in nature, and is used especially to season or preserve food or in industry</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Salty -->
+
+    <owl:NamedIndividual rdf:about="&ind;Salty">
+        <rdf:type rdf:resource="&wtm;Flavor"/>
+        <dct:source>"Salty," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/salty. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>salty</rdfs:label>
+        <skos:definition>of, seasoned with, or containing salt</skos:definition>
+        <skos:scopeNote>used as a flavor</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;SaucyShepherdPie -->
+
+    <owl:NamedIndividual rdf:about="&ind;SaucyShepherdPie">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;Beef"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;Carrot"/>
+        <wtm:hasIngredient rdf:resource="&ind;CowMilk"/>
+        <wtm:hasIngredient rdf:resource="&ind;Onion"/>
+        <wtm:hasIngredient rdf:resource="&ind;Potato"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">50</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">5</wtm:serves>
+        <dct:source>Wikipedia, "Shepherd's pie," Oct. 2018. [Online]. Available: https://en.wikipedia.org/wiki/Shepherd%27s_pie. [Accessed Oct. 18, 2018]</dct:source>
+        <rdfs:label>saucy shepherd pie</rdfs:label>
+        <skos:definition>minced red meat cooked in a gravy or sauce with onions and sometimes other vegetables, such as peas, celery or carrots, and topped with a layer of mashed potato before it is baked</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/238606/saucy-shepherds-pie/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;SesameOil -->
+
+    <owl:NamedIndividual rdf:about="&ind;SesameOil">
+        <rdf:type rdf:resource="&obo;FOODON_03400764"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "sesame oil." [Online]. Available: https://www.dictionary.com/browse/sesame-oil. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>sesame oil</rdfs:label>
+        <skos:definition>a yellow oil expressed from the seeds of the sesame, used in cooking, as a vehicle for medicines, and in the manufacture of margarine, soap, and cosmetics</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Smoky -->
+
+    <owl:NamedIndividual rdf:about="&ind;Smoky">
+        <rdf:type rdf:resource="&wtm;Flavor"/>
+        <dct:source>"Smoky," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/smoky. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>smoky</rdfs:label>
+        <skos:definition>suggestive of smoke especially in flavor or odor</skos:definition>
+        <skos:scopeNote>used as a flavor</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;SmotheredChickenBreast -->
+
+    <owl:NamedIndividual rdf:about="&ind;SmotheredChickenBreast">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;Bacon"/>
+        <wtm:hasIngredient rdf:resource="&ind;BlackPepper"/>
+        <wtm:hasIngredient rdf:resource="&ind;BrownSugar"/>
+        <wtm:hasIngredient rdf:resource="&ind;Cheese"/>
+        <wtm:hasIngredient rdf:resource="&ind;Chicken"/>
+        <wtm:hasIngredient rdf:resource="&ind;Onion"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;VegetableOil"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">35</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">4</wtm:serves>
+        <dct:source>Allrecipes.com, "Smothered Chicken Breasts," 2010. [Online]. Available: https://www.allrecipes.com/recipe/222607/smothered-chicken-breasts/?internalSource=hub%20recipe&amp;referringContentType=Search. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>smothered chicken breast</rdfs:label>
+        <skos:definition>a dish made from chicken breast, topped with bacon, caramelized onions, and zippy shredded cheese</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/222607/smothered-chicken-breasts/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;SoySauce -->
+
+    <owl:NamedIndividual rdf:about="&ind;SoySauce">
+        <rdf:type rdf:resource="&obo;FOODON_03400663"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "soy sauce." [Online]. Available: https://www.dictionary.com/browse/soy-sauce. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>soy sauce</rdfs:label>
+        <skos:definition>a salty, fermented sauce prepared from soybeans, used in East Asian cuisine</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Spicy -->
+
+    <owl:NamedIndividual rdf:about="&ind;Spicy">
+        <rdf:type rdf:resource="&wtm;Flavor"/>
+        <dct:source>"Spicy," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/spicy. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>spicy</rdfs:label>
+        <skos:definition>having the quality, flavor, or fragrance of spice</skos:definition>
+        <skos:scopeNote>used as a flavor</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Sweet -->
+
+    <owl:NamedIndividual rdf:about="&ind;Sweet">
+        <rdf:type rdf:resource="&wtm;Flavor"/>
+        <dct:source>"Sweet," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/sweet. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>sweet</rdfs:label>
+        <skos:definition>being or inducing the one of the four basic taste sensations that is typically induced by disaccharides and is mediated especially by receptors in taste buds at the front of the tongue</skos:definition>
+        <skos:scopeNote>used as a flavor</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;TapiocaFlour -->
+
+    <owl:NamedIndividual rdf:about="&ind;TapiocaFlour">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">85</wtm:hasGlycemicIndex>
+        <dct:source>"Tapioca," The Free Dictionary. [Online]. Available: https://www.thefreedictionary.com/Tapioca+flour. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>tapioca flour</rdfs:label>
+        <skos:definition>a flour made from the tapioca plant</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Tarragon -->
+
+    <owl:NamedIndividual rdf:about="&ind;Tarragon">
+        <rdf:type rdf:resource="&obo;FOODON_03400688"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Tarragon ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tarragon. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>tarragon</rdfs:label>
+        <skos:definition>a small widely cultivated perennial artemisia (Artemisia dracunculus) having aromatic narrow usually entire leaves, its leaves used as a seasoning</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Tart -->
+
+    <owl:NamedIndividual rdf:about="&ind;Tart">
+        <rdf:type rdf:resource="&wtm;Flavor"/>
+        <dct:source>"Tart," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tart. [Accessed: 18-Oct-2018].</dct:source>
+        <rdfs:label>tart</rdfs:label>
+        <skos:definition>agreeably sharp or acid to the taste</skos:definition>
+        <skos:scopeNote>used as a flavor</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;ThaiChicken -->
+
+    <owl:NamedIndividual rdf:about="&ind;ThaiChicken">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;Basil"/>
+        <wtm:hasIngredient rdf:resource="&ind;Chicken"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenBroth"/>
+        <wtm:hasIngredient rdf:resource="&ind;Cilantro"/>
+        <wtm:hasIngredient rdf:resource="&ind;SesameOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;SoySauce"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Entree"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Dinner"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Lunch"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">15</wtm:hasCookTime>
+        <wtm:serves rdf:datatype="&xsd;integer">4</wtm:serves>
+        <dct:source>Allrecipes.com, "Thai Chicken," 2010. [Online]. Available: https://www.allrecipes.com/recipe/16862/thai-chicken/?internalSource=hub%20recipe&amp;referringContentType=Search. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>thai chicken</rdfs:label>
+        <skos:definition>a thai dish made with chicken</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/16862/thai-chicken/?internalSource=hub%20recipe&amp;referringContentType=Search</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Thyme -->
+
+    <owl:NamedIndividual rdf:about="&ind;Thyme">
+        <rdf:type rdf:resource="&obo;FOODON_03400688"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>"Thyme," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/thyme. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>thyme</rdfs:label>
+        <skos:definition>any of a genus (Thymus) of Eurasian mints with small pungent aromatic leaves</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Tomato -->
+
+    <owl:NamedIndividual rdf:about="&ind;Tomato">
+        <rdf:type rdf:resource="&obo;FOODON_03400677"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">30</wtm:hasGlycemicIndex>
+        <dct:source>"Tomato," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tomato. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>tomato</rdfs:label>
+        <skos:definition>the usually large, rounded, edible, pulpy berry of an herb (genus Solanum) of the nightshade family native to South America that is typically red but may be yellow, orange, green, or purplish in color and is eaten raw or cooked as a vegetable</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;User15 -->
+
+    <owl:NamedIndividual rdf:about="&ind;User15">
+        <rdf:type rdf:resource="&wtm;User"/>
+        <wtm:dislikes rdf:resource="&ind;Almond"/>
+        <wtm:dislikes rdf:resource="&ind;Celery"/>
+        <wtm:forbids rdf:resource="&ind;Onion"/>
+        <wtm:isAllergicTo rdf:resource="&ind;Pecan"/>
+        <dct:source>Techopedia, "User Identification (User ID)," 2018. [Online]. Available: https://www.techopedia.com/definition/12552/user-identification-user-id. [Accessed Oct. 18, 2018]</dct:source>
+        <rdfs:label>user 15</rdfs:label>
+        <skos:definition>the user with ID 15</skos:definition>
+        <skos:scopeNote>represents an individual user</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;VanillaExtract -->
+
+    <owl:NamedIndividual rdf:about="&ind;VanillaExtract">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>Wikipedia, "Vanilla extract." [Online]. Available: https://en.wikipedia.org/wiki/Vanilla_extract. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>vanilla extract</rdfs:label>
+        <skos:definition>a solution made by macerating and percolating vanilla pods in a solution of ethanol and water</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;VegetableOil -->
+
+    <owl:NamedIndividual rdf:about="&ind;VegetableOil">
+        <rdf:type rdf:resource="&obo;FOODON_03400764"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Vegetable Oil ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/vegetable oil. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>vegetable oil</rdfs:label>
+        <skos:definition>an oil of plant origin</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Walnut -->
+
+    <owl:NamedIndividual rdf:about="&ind;Walnut">
+        <rdf:type rdf:resource="&obo;FOODON_03400685"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasTexture rdf:resource="&ind;Crunchy"/>
+        <wtm:substitutesFor rdf:resource="&ind;Almond"/>
+        <wtm:substitutesFor rdf:resource="&ind;Pecan"/>
+        <wtm:substitutesFor rdf:resource="&ind;PumpkinSeed"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">15</wtm:hasGlycemicIndex>
+        <dct:source>"Walnut," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/walnut. [Accessed: 12-Oct-2018].</dct:source>
+        <rdfs:label>walnut</rdfs:label>
+        <skos:definition>the furrowed nut of any of a genus (Juglans of the family Juglandaceae, the walnut family) of deciduous trees</skos:definition>
+        <skos:editorialNote>Member of the tree nut family which is a common allergen</skos:editorialNote>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;Water -->
+
+    <owl:NamedIndividual rdf:about="&ind;Water">
+        <rdf:type rdf:resource="&wtm;ChemicalFoodProduct"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">0</wtm:hasGlycemicIndex>
+        <dct:source>"Water ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/water. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>water</rdfs:label>
+        <skos:definition>the liquid that descends from the clouds as rain, forms streams, lakes, and seas, and is a major constituent of all living matter and that when pure is an odorless, tasteless, very slightly compressible liquid oxide of hydrogen H2O which appears bluish in thick layers, freezes at 0° C and boils at 100° C, has a maximum density at 4° C and a high specific heat, is feebly ionized to hydrogen and hydroxyl ions, and is a poor conductor of electricity and a good solvent</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;WhiteBread -->
+
+    <owl:NamedIndividual rdf:about="&ind;WhiteBread">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakersYeast"/>
+        <wtm:hasIngredient rdf:resource="&ind;Butter"/>
+        <wtm:hasIngredient rdf:resource="&ind;CowMilk"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;WhiteSugar"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Appetizer"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">185</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">350</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">12</wtm:serves>
+        <dct:source>Allrecipes.com, "Simple White Bread," 2010. [Online]. Available: https://www.allrecipes.com/recipe/6771/simple-white-bread/?internalSource=hub%20recipe&amp;referringContentType=Search&amp;clickId=cardslot%2011. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>white bread</rdfs:label>
+        <skos:definition>baked foods produced from dough made of flour, water, salt and other optional ingredients, and leavened by yeast or other leavening agents</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/6771/simple-white-bread/?internalSource=hub%20recipe&amp;referringContentType=Search&amp;clickId=cardslot%2011</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;WhiteSugar -->
+
+    <owl:NamedIndividual rdf:about="&ind;WhiteSugar">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">70</wtm:hasGlycemicIndex>
+        <dct:source>"Sugar," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/sugar. [Accessed: 1-Nov-2018]</dct:source>
+        <rdfs:label>white sugar</rdfs:label>
+        <skos:definition>a sweet crystallizable material that consists wholly or essentially of sucrose, is colorless or white when pure tending to brown when less refined, is obtained commercially from sugarcane or sugar beet and less extensively from sorghum, maples, and palms, and is important as a source of dietary carbohydrate and as a sweetener and preservative of other foods</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;WhiteVinegar -->
+
+    <owl:NamedIndividual rdf:about="&ind;WhiteVinegar">
+        <rdf:type rdf:resource="&obo;FOODON_03400662"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">5</wtm:hasGlycemicIndex>
+        <dct:source>Dictionary.com, "vinegar." [Online]. Available: https://www.dictionary.com/browse/vinegar. [Accessed Nov. 10, 2018]</dct:source>
+        <rdfs:label>white vinegar</rdfs:label>
+        <skos:definition>a sour liquid consisting of dilute and impure acetic acid</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;WholeGrainBananaPancake -->
+
+    <owl:NamedIndividual rdf:about="&ind;WholeGrainBananaPancake">
+        <rdf:type rdf:resource="&wtm;Recipe"/>
+        <wtm:hasIngredient rdf:resource="&ind;BakingPowder"/>
+        <wtm:hasIngredient rdf:resource="&ind;Banana"/>
+        <wtm:hasIngredient rdf:resource="&ind;CanolaOil"/>
+        <wtm:hasIngredient rdf:resource="&ind;CowMilk"/>
+        <wtm:hasIngredient rdf:resource="&ind;ChickenEgg"/>
+        <wtm:hasIngredient rdf:resource="&ind;Oat"/>
+        <wtm:hasIngredient rdf:resource="&ind;Salt"/>
+        <wtm:hasIngredient rdf:resource="&ind;WholeWheatFlour"/>
+        <wtm:isRecommendedForCourse rdf:resource="&wtm;Side"/>
+        <wtm:isRecommendedForMeal rdf:resource="&wtm;Breakfast"/>
+        <wtm:hasCookTime rdf:datatype="&xsd;integer">20</wtm:hasCookTime>
+        <wtm:hasCookingTemperature rdf:datatype="&xsd;integer">375</wtm:hasCookingTemperature>
+        <wtm:serves rdf:datatype="&xsd;integer">3</wtm:serves>
+        <dct:source>Allrecipes.com, "Whole Grain Banana Pancakes," 2010. [Online]. Available: https://www.allrecipes.com/recipe/231392/whole-grain-banana-pancakes/?internalSource=hub%20recipe&amp;referringContentType=Search&amp;clickId=cardslot%201. [Accessed Nov.9, 2018]</dct:source>
+        <rdfs:label>whole grain banana pancake</rdfs:label>
+        <skos:definition>a banana pancake made with whole grain</skos:definition>
+        <skos:scopeNote>recipe</skos:scopeNote>
+        <prov:wasDerivedFrom>https://www.allrecipes.com/recipe/231392/whole-grain-banana-pancakes/?internalSource=hub%20recipe&amp;referringContentType=Search&amp;clickId=cardslot%201</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;WholeGrainMustard -->
+
+    <owl:NamedIndividual rdf:about="&ind;WholeGrainMustard">
+        <rdf:type rdf:resource="&obo;FOODON_03400663"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">false</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">55</wtm:hasGlycemicIndex>
+        <dct:source>TasteofHome, "What Is Whole Grain Mustard?," 2018. [Online]. Available: https://www.tasteofhome.com/cooking-tips/ask-the-test-kitchen/what-is-whole-grain-mustard-. [Accessed Oct. 27 2018]</dct:source>
+        <rdfs:label>whole grain mustard</rdfs:label>
+        <skos:definition>prepared mustard with visible mustard seeds</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- &ind;WholeWheatFlour -->
+
+    <owl:NamedIndividual rdf:about="&ind;WholeWheatFlour">
+        <rdf:type rdf:resource="&obo;FOODON_03400759"/>
+        <rdf:type rdf:resource="&wtm;Ingredient"/>
+        <wtm:substitutesFor rdf:resource="&ind;AllPurposeFlour"/>
+        <wtm:hasGluten rdf:datatype="&xsd;boolean">true</wtm:hasGluten>
+        <wtm:hasGlycemicIndex rdf:datatype="&xsd;nonNegativeInteger">40</wtm:hasGlycemicIndex>
+        <dct:source>"Whole Wheat Flour ," Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/whole wheat flour. [Accessed: 26-Oct-2018].</dct:source>
+        <rdfs:label>whole wheat flour</rdfs:label>
+        <skos:definition>flour that is ground from the whole grain and contains all the constituents of the wheat kernels</skos:definition>
+        <skos:scopeNote>used as an ingredient</skos:scopeNote>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
