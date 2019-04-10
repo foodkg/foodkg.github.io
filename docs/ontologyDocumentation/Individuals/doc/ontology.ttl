@@ -1,0 +1,1900 @@
+@prefix : <http://idea.rpi.edu/heals/ont/whattomake/individuals/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://idea.rpi.edu/heals/ont/whattomake/individuals/> .
+
+<http://idea.rpi.edu/heals/ont/whattomake/individuals/> rdf:type owl:Ontology ;
+                                                         owl:versionIRI <http://idea.rpi.edu/heals/ont/whattomake/individuals/> ;
+                                                         owl:imports <http://www.omg.org/techprocess/ab/SpecificationMetadata/> ;
+                                                         <http://purl.org/dc/terms/abstract> "The WhatToMake Individuals Ontology contains the invididual recipes and food items used in those recipes that are available in the system. These individuals are defined using classes and properties that are defined in the WhatToMake Base Ontology." ;
+                                                         <http://purl.org/dc/terms/contributor> "Forest Eckhardt" ,
+                                                                                                "Kevin Blissett" ,
+                                                                                                "Miao Qi" ,
+                                                                                                "Yarden Ne'eman" ;
+                                                         <http://purl.org/dc/terms/description> "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations." ;
+                                                         <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+                                                         <http://purl.org/dc/terms/modified> "2019-04-03"^^xsd:date ;
+                                                         <http://purl.org/dc/terms/publisher> "WhatToMake" ;
+                                                         <http://purl.org/dc/terms/references> "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance" ;
+                                                         rdfs:label "What to Make Individuals" ;
+                                                         owl:priorVersion "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_Individuals/" ;
+                                                         <http://www.w3.org/2004/02/skos/core#changeNote> "Changes to this ontology since the previous version include: update of ontology IRI" ;
+                                                         <https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/dislikes
+<http://idea.rpi.edu/heals/ont/whattomake/core/dislikes> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/forbids
+<http://idea.rpi.edu/heals/ont/whattomake/core/forbids> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo
+<http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/serves
+<http://idea.rpi.edu/heals/ont/whattomake/core/serves> rdf:type owl:AnnotationProperty .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor
+<http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright
+<https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct
+<http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/Flavor
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient
+<http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow
+<http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/Recipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement
+<http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/Texture
+<http://idea.rpi.edu/heals/ont/whattomake/core/Texture> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/User
+<http://idea.rpi.edu/heals/ont/whattomake/core/User> rdf:type owl:Class .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/core/Yeast
+<http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400662
+<http://purl.obolibrary.org/obo/FOODON_03400662> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400663
+<http://purl.obolibrary.org/obo/FOODON_03400663> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400666
+<http://purl.obolibrary.org/obo/FOODON_03400666> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400667
+<http://purl.obolibrary.org/obo/FOODON_03400667> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400670
+<http://purl.obolibrary.org/obo/FOODON_03400670> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400671
+<http://purl.obolibrary.org/obo/FOODON_03400671> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400673
+<http://purl.obolibrary.org/obo/FOODON_03400673> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400674
+<http://purl.obolibrary.org/obo/FOODON_03400674> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400675
+<http://purl.obolibrary.org/obo/FOODON_03400675> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400676
+<http://purl.obolibrary.org/obo/FOODON_03400676> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400677
+<http://purl.obolibrary.org/obo/FOODON_03400677> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400678
+<http://purl.obolibrary.org/obo/FOODON_03400678> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400681
+<http://purl.obolibrary.org/obo/FOODON_03400681> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400682
+<http://purl.obolibrary.org/obo/FOODON_03400682> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400683
+<http://purl.obolibrary.org/obo/FOODON_03400683> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400685
+<http://purl.obolibrary.org/obo/FOODON_03400685> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400686
+<http://purl.obolibrary.org/obo/FOODON_03400686> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400688
+<http://purl.obolibrary.org/obo/FOODON_03400688> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400689
+<http://purl.obolibrary.org/obo/FOODON_03400689> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400744
+<http://purl.obolibrary.org/obo/FOODON_03400744> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400756
+<http://purl.obolibrary.org/obo/FOODON_03400756> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400759
+<http://purl.obolibrary.org/obo/FOODON_03400759> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400760
+<http://purl.obolibrary.org/obo/FOODON_03400760> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400764
+<http://purl.obolibrary.org/obo/FOODON_03400764> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400766
+<http://purl.obolibrary.org/obo/FOODON_03400766> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400774
+<http://purl.obolibrary.org/obo/FOODON_03400774> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400775
+<http://purl.obolibrary.org/obo/FOODON_03400775> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400776
+<http://purl.obolibrary.org/obo/FOODON_03400776> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/AllPurposeFlour
+:AllPurposeFlour rdf:type owl:NamedIndividual ,
+                          <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                          <http://purl.obolibrary.org/obo/FOODON_03400759> ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "true"^^xsd:boolean ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "71"^^xsd:nonNegativeInteger ;
+                 <http://purl.org/dc/terms/source> "\"Flour,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flour. [Accessed: 13-Oct-2018]." ;
+                 rdfs:label "all purpose flour" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "a product consisting of finely milled wheat" ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Almond
+:Almond rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400685> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> :Crunchy ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> :Pecan ,
+                                                                       :PumpkinSeed ,
+                                                                       :Walnut ;
+        <http://purl.org/dc/terms/source> "Dictionary.com, \"almond.\" [Online]. Available: https://www.dictionary.com/browse/almond. [Accessed Oct. 20, 2018]" ;
+        rdfs:label "almond" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "the nutlike kernel of the fruit of either of two trees, Prunus dulcis (sweet almond) or P. dulcis amara (bitter almond), which grow in warm temperate regions" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/AlmondBiscotti
+:AlmondBiscotti rdf:type owl:NamedIndividual ,
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 120 ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AllPurposeFlour ,
+                                                                              :Almond ,
+                                                                              :BakingPowder ,
+                                                                              :Butter ,
+                                                                              :ChickenEgg ,
+                                                                              :OliveOil ,
+                                                                              :Salt ,
+                                                                              :VanillaExtract ,
+                                                                              :WhiteSugar ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Snack> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 15 ;
+                <http://purl.org/dc/terms/source> "Allrecipes.com, \"Chef John's Almond Biscotti,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/260575/chef-johns-almond-biscotti/?internalSource=hub%20recipe&referringContentType=Search. [Accessed Nov.9, 2018]" ;
+                rdfs:label "almond biscotti" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "a hard italian bread made from almonds" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/260575/chef-johns-almond-biscotti/?internalSource=hub%20recipe&referringContentType=Search." .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/AlmondMeal
+:AlmondMeal rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400662> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400685> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "25"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "Wikipedia, \"Almond meal.\" [Online]. Available:https://en.wikipedia.org/wiki/Almond_meal. [Accessed: Nov. 10, 2018]" ;
+            rdfs:label "almond meal" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "an ingredient made from ground up almonds" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/AppleCiderVinegar
+:AppleCiderVinegar rdf:type owl:NamedIndividual ,
+                            <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                            <http://purl.obolibrary.org/obo/FOODON_03400760> ;
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+                   <http://purl.org/dc/terms/source> "Wikipedia, \"Apple cider vinegar.\" [Online]. Available: https://en.wikipedia.org/wiki/Apple_cider_vinegar. [Accessed: Nov. 10, 2018]" ;
+                   rdfs:label "apple cider vinegar" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "a vinegar made from fermented apple juice" ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Bacon
+:Bacon rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400667> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "Dictionary.com, \"bacon.\" [Online]. Available: https://www.dictionary.com/browse/bacon. [Accessed Nov. 10, 2018]" ;
+       rdfs:label "bacon" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "the back and sides of the hog, salted and dried or smoked, usually sliced thin and fried for food" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BakedChickenTender
+:BakedChickenTender rdf:type owl:NamedIndividual ,
+                             <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 45 ;
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 425 ;
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :BlackPepper ,
+                                                                                  :Chicken ,
+                                                                                  :Garlic ,
+                                                                                  :LemonJuice ,
+                                                                                  :Salt ,
+                                                                                  :Tarragon ,
+                                                                                  :WholeGrainMustard ;
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                         <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 4 ;
+                    <http://purl.org/dc/terms/source> "English Oxford Living Dictionaries, \"baked,\" 2018. [Online]. Available: https://en.oxforddictionaries.com/definition/baked. [Accessed Oct. 18, 2018]" ,
+                                                      "Wiktionary, \"chicken tender,\" Dec. 2017. [Online]. Available: https://en.wiktionary.org/wiki/chicken_tender. [Accessed Oct. 18, 2018]" ;
+                    rdfs:label "baked chicken tender" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "chicken dish involving a flap of chicken meat found on, and easily detached from, the breast which is cooked by dry heat in an oven" ;
+                    <http://www.w3.org/2004/02/skos/core#editorialNote> "A portion of chicken" ;
+                    <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                    <http://www.w3.org/ns/prov#wasDerivedFrom> "https://diabetesstrong.com/mustard-baked-chicken-tenders/" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BakersYeast
+:BakersYeast rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "35"^^xsd:nonNegativeInteger ;
+             <http://purl.org/dc/terms/source> "Wikipedia, \"Baker's yeast.\" [Online]. Available: https://en.wikipedia.org/wiki/Baker%27s_yeast. [Accessed: Nov. 22, 2018]" ;
+             rdfs:label "baker's yeast" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "the strains of yeast commonly used as a leavening agent in baking bread and bakery products, where it converts the fermentable sugars present in the dough into carbon dioxide and ethanol" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BakingPowder
+:BakingPowder rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+              <http://purl.org/dc/terms/source> "\"Baking powder,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/baking%20powder. [Accessed: 1-Nov-2018]" ;
+              rdfs:label "baking powder" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "a powder used as a leavening agent in making baked goods (such as quick breads) that typically consists of sodium bicarbonate, an acidic substance (such as cream of tartar), and starch or flour" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BakingSoda
+:BakingSoda rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "\"Baking soda,\" the free dictionary. [Online]. Available: https://www.thefreedictionary.com/baking+soda [Accessed: 26-Oct-2018]." ;
+            rdfs:label "baking soda" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "a white crystalline compound, NaHCO3, chemically known as sodium bicarbonate, that is used especially in beverages and as a leavening agent to make baked goods" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BalsamicVinegar
+:BalsamicVinegar rdf:type owl:NamedIndividual ,
+                          <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                          <http://purl.obolibrary.org/obo/FOODON_03400760> ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+                 <http://purl.org/dc/terms/source> "\"Balsamic vinegar,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/balsamic%20vinegar. [Accessed: 1-Nov-2018]" ;
+                 rdfs:label "balsamic vinegar" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "an aged Italian vinegar made from the must of white grapes" ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Banana
+:Banana rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400673> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "55"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "\"Banana ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/banana. [Accessed: 26-Oct-2018]." ;
+        rdfs:label "banana" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "an elongated usually tapering tropical fruit with soft pulpy flesh enclosed in a soft usually yellow rind" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BananaBlueberryAlmondFlourMuffin
+:BananaBlueberryAlmondFlourMuffin rdf:type owl:NamedIndividual ,
+                                           <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 60 ;
+                                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+                                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AlmondMeal ,
+                                                                                                :AppleCiderVinegar ,
+                                                                                                :BakingSoda ,
+                                                                                                :Banana ,
+                                                                                                :Blueberry ,
+                                                                                                :ChickenEgg ,
+                                                                                                :Honey ;
+                                  <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> ;
+                                  <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ,
+                                                                                                       <http://idea.rpi.edu/heals/ont/whattomake/core/Snack> ;
+                                  <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 4 ;
+                                  <http://purl.org/dc/terms/source> "Allrecipes.com, \"Banana Blueberry Almond Flour Muffins ,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/238012/banana-blueberry-almond-flour-muffins-gluten-free/?internalSource=hub%20recipe&referringContentType=Search. [Accessed Nov.9, 2018]" ;
+                                  rdfs:label "banana blueberry almond flour muffin" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "a banana blueberry muffin made with almond flour" ;
+                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                                  <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/238012/banana-blueberry-almond-flour-muffins-gluten-free/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BananaBread
+:BananaBread rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 65 ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AllPurposeFlour ,
+                                                                           :BakingSoda ,
+                                                                           :Banana ,
+                                                                           :BrownSugar ,
+                                                                           :Butter ,
+                                                                           :ChickenEgg ,
+                                                                           :Salt ,
+                                                                           :Walnut ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> ,
+                                                                                    <http://idea.rpi.edu/heals/ont/whattomake/core/Side> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ,
+                                                                                  <http://idea.rpi.edu/heals/ont/whattomake/core/Snack> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 10 ;
+             <http://purl.org/dc/terms/source> "Wikipedia, \"Banana bread,\" Oct. 2018. [Online]. Available: https://en.wikipedia.org/wiki/Banana_bread. [Accessed Oct. 13, 2018]" ;
+             rdfs:label "banana bread" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "a type of bread made from mashed bananas" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+             <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/6687/banana-bread/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Basil
+:Basil rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400688> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "\"Basil,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/basil [Accessed: 1-Nov-2018]" ;
+       rdfs:label "basil" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "the dried or fresh leaves of a basil used especially as a seasoning" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Beef
+:Beef rdf:type owl:NamedIndividual ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> ;
+      <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+      <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+      <http://purl.org/dc/terms/source> "\"Beef,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/beef. [Accessed: 13-Oct-2018]." ;
+      rdfs:label "beef" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "the flesh of an adult domestic bovine used as food" ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BeefBouillon
+:BeefBouillon rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                       <http://purl.obolibrary.org/obo/FOODON_03400667> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+              <http://purl.org/dc/terms/source> "EATBYDATE, \"Beef Broth Substitutes,\" 2012. [Online]. Available: https://www.eatbydate.com/substitutions/beef-broth-substitute/. [Accessed Oct. 27, 2018]" ;
+              rdfs:label "beef bouillon" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "an ingredient that can be combined with water to substitute for beef stock" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BeefNilaga
+:BeefNilaga rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 90 ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :Beef ,
+                                                                          :BeefBouillon ,
+                                                                          :BlackPeppercorn ,
+                                                                          :Cabbage ,
+                                                                          :Carrot ,
+                                                                          :Celery ,
+                                                                          :ChayoteSquash ,
+                                                                          :Onion ,
+                                                                          :Potato ,
+                                                                          :Water ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                 <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 5 ;
+            <http://purl.org/dc/terms/source> "Foxy folksy, \"NILAGANG BAKA (FILIPINO BEEF SOUP WITH VEGETABLES),\" June 2017. [Online]. Available: https://www.foxyfolksy.com/nilagang-baka-filipino-beef-soup-vegetables/. [Accessed Oct. 18, 2018]" ;
+            rdfs:label "beef nilaga" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "a Filipino beef soup cooked until the meat becomes really tender and with vegetables like potatoes, beans, and cabbage that makes this simple soup healthy and flavorful" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+            <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.foxyfolksy.com/nilagang-baka-filipino-beef-soup-vegetables/" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BeefStew
+:BeefStew rdf:type owl:NamedIndividual ,
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 140 ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :Beef ,
+                                                                        :BeefBouillon ,
+                                                                        :BlackPepper ,
+                                                                        :Carrot ,
+                                                                        :Celery ,
+                                                                        :Cornstarch ,
+                                                                        :Onion ,
+                                                                        :Parsley ,
+                                                                        :Potato ,
+                                                                        :Rosemary ,
+                                                                        :VegetableOil ,
+                                                                        :Water ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                               <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 10 ;
+          <http://purl.org/dc/terms/source> "Recipetips.com, \"Beef Stew,\" 2018. [Online]. Available: https://www.recipetips.com/glossary-term/t--36245/beef-stew.asp. [Accessed Oct. 13, 2018]" ;
+          rdfs:label "beef stew" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "a food dish that combines beef with a variety of other ingredients, such as potatoes, vegetables, herbs, spices, and broth to create a savory dish, rich in flavor and often served as the main dish" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+          <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.recipetips.com/glossary-term/t--36245/beef-stew.asp" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Bitter
+:Bitter rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> ;
+        <http://purl.org/dc/terms/source> "\"Bitter,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/bitter. [Accessed: 18-Oct-2018]." ;
+        rdfs:label "bitter" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "being or inducing the one of the four basic taste sensations that is peculiarly acrid acrid, astringent, or disagreeable and suggestive of an infusion of hops" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a flavor" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BlackPepper
+:BlackPepper rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                      <http://purl.obolibrary.org/obo/FOODON_03400689> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+             <http://purl.org/dc/terms/source> "\"Black Pepper,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/black pepper. [Accessed: 13-Oct-2018]." ;
+             rdfs:label "black pepper" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "a spice that consists of the dried berry of an Indian vine ground with the black husk still on" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BlackPeppercorn
+:BlackPeppercorn rdf:type owl:NamedIndividual ,
+                          <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                          <http://purl.obolibrary.org/obo/FOODON_03400689> ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+                 <http://purl.org/dc/terms/source> "\"Peppercorn ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/peppercorn. [Accessed: 26-Oct-2018]." ;
+                 rdfs:label "black peppercorn" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "a dried berry of the black pepper" ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Blueberry
+:Blueberry rdf:type owl:NamedIndividual ,
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                    <http://purl.obolibrary.org/obo/FOODON_03400671> ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "25"^^xsd:nonNegativeInteger ;
+           <http://purl.org/dc/terms/source> "Dictionary.com, \"blueberry.\" [Online]. Available: https://www.dictionary.com/browse/blueberry. [Accessed Nov. 10, 2018]" ;
+           rdfs:label "blueberry" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "the edible, usually bluish berry of various shrubs belonging to the genus Vaccinium, of the heath family" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BraisedBalsamicChicken
+:BraisedBalsamicChicken rdf:type owl:NamedIndividual ,
+                                 <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 35 ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :BalsamicVinegar ,
+                                                                                      :Basil ,
+                                                                                      :Chicken ,
+                                                                                      :OliveOil ,
+                                                                                      :Onion ,
+                                                                                      :Oregano ,
+                                                                                      :Rosemary ,
+                                                                                      :Salt ,
+                                                                                      :Thyme ,
+                                                                                      :Tomato ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                             <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 6 ;
+                        <http://purl.org/dc/terms/source> "Sanderson Farms, \"Balsamic Braised Chicken Thighs.\" [Online]. Available: http://sandersonfarms.mobi/recipes/balsamic-braised-chicken-thighs/. [Accessed: 1-Nov-2018]" ,
+                                                          "Wikipedia, \"Braising.\" [Online]. Available: https://en.wikipedia.org/wiki/Braising. [Accessed: 1-Nov-2018]" ;
+                        rdfs:label "braised balsamic chicken" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "a Mediterranean-inspired chicken recipe by cooking the chicken with both wet and dry heats, signatured by the balsamic vinegar in the recipe" ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                        <http://www.w3.org/ns/prov#wasDerivedFrom> "http://sandersonfarms.mobi/recipes/balsamic-braised-chicken-thighs/" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/BrownSugar
+:BrownSugar rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "70"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "\"Brown Surgar,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/brown sugar. [Accessed: 26-Oct-2018]." ;
+            rdfs:label "brown sugar" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "soft sugar whose crystals are covered by a film of refined dark syrup" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Brownies
+:Brownies rdf:type owl:NamedIndividual ,
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 60 ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AllPurposeFlour ,
+                                                                        :BakingPowder ,
+                                                                        :Butter ,
+                                                                        :ChickenEgg ,
+                                                                        :CocoaPowder ,
+                                                                        :Honey ,
+                                                                        :Salt ,
+                                                                        :VanillaExtract ,
+                                                                        :WhiteSugar ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Snack> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 16 ;
+          <http://purl.org/dc/terms/source> "\"Brownie,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/brownie. [Accessed: 1-Nov-2018]" ;
+          rdfs:label "brownies" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "a small square or rectangle of rich usually chocolate cake often containing nuts" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+          <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/10549/best-brownies/?internalSource=staff%20pick&referringId=838&referringContentType=Recipe%20Hub" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Butter
+:Butter rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400774> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "\"Butter ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/butter. [Accessed: 26-Oct-2018]." ;
+        rdfs:label "butter" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "a solid emulsion of fat globules, air, and water made by churning milk or cream and used as food" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Cabbage
+:Cabbage rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                  <http://purl.obolibrary.org/obo/FOODON_03400675> ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+         <http://purl.org/dc/terms/source> "\"Cabbage ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/cabbage. [Accessed: 26-Oct-2018]." ;
+         rdfs:label "cabbage" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "any of several brassicas of European origin especially a leafy garden plant with a short stem and a dense globular head of usually green leaves that is used as a vegetable" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CaneSugar
+:CaneSugar rdf:type owl:NamedIndividual ,
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                    <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "70"^^xsd:nonNegativeInteger ;
+           <http://purl.org/dc/terms/source> "Dictionary.com, \"cane sugar.\" [Online]. Available: https://www.dictionary.com/browse/cane-sugar. [Accessed Nov. 10, 2018]" ;
+           rdfs:label "cane sugar" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "sugar obtained from sugar cane, identical with that obtained from the sugar beet" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CanolaOil
+:CanolaOil rdf:type owl:NamedIndividual ,
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                    <http://purl.obolibrary.org/obo/FOODON_03400764> ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+           <http://purl.org/dc/terms/source> "Wikipedia, \"Canola oil.\" [Online]. Available: https://en.wikipedia.org/wiki/Canola_oil. [Accessed: Nov. 10, 2018]" ;
+           rdfs:label "canola oil" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "a vegetable oil derived from a variety of rapeseed that is low in erucic acid" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Carrot
+:Carrot rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400681> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "\"Carrot,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/carrot. [Accessed: 13-Oct-2018]." ;
+        rdfs:label "carrot" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "a biennial herb with a usually orange spindle-shaped edible root" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Celery
+:Celery rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400682> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "\"Celery ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/celery. [Accessed: 26-Oct-2018]." ;
+        rdfs:label "celery" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "a European herb the carrot family specifically one of a cultivated variety with leafstalks eaten raw or cooked" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Celsius
+:Celsius rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> ;
+         <http://purl.org/dc/terms/source> "relating to, conforming to, or having the international thermometric scale on which the interval between the triple point of water and the boiling point of water is divided into 99.99 degrees with 0.01° representing the triple point and 100° the boiling point" ;
+         rdfs:label "celsius" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "relating to, conforming to, or having the international thermometric scale on which the interval between the triple point of water and the boiling point of water is divided into 99.99 degrees with 0.01° representing the triple point and 100° the boiling point" ;
+         <http://www.w3.org/2004/02/skos/core#editorialNote> "A temperature scale that is used in recipes" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "value of temperature" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/ChayoteSquash
+:ChayoteSquash rdf:type owl:NamedIndividual ,
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                        <http://purl.obolibrary.org/obo/FOODON_03400676> ;
+               <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+               <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "50"^^xsd:nonNegativeInteger ;
+               <http://purl.org/dc/terms/source> "\"chayote,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/chayote. [Accessed: 1-Nov-2018]." ;
+               rdfs:label "chayote squash" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "pear-shaped fruit of a West Indian annual vine (Sechium edule) of the gourd family that is widely cultivated as a vegetable" ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Cheese
+:Cheese rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400775> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "Dictionary.com, \"cheese.\" [Online]. Available: https://www.dictionary.com/browse/cheese. [Accessed Nov. 10, 2018]" ;
+        rdfs:label "cheese" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "the curd of milk separated from the whey and prepared in many ways as a food" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Chicken
+:Chicken rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+         <http://purl.org/dc/terms/source> "\"Chicken,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/chicken. [Accessed: 13-Oct-2018]." ;
+         rdfs:label "chicken" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "the common domestic fowl" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/ChickenBroth
+:ChickenBroth rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                       <http://purl.obolibrary.org/obo/FOODON_03400667> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "true"^^xsd:boolean ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+              <http://purl.org/dc/terms/source> "vocabulary.com, \"chicken broth.\" [Online]. Available: https://www.vocabulary.com/dictionary/chicken%20broth. [Accessed Nov. 10, 2018]" ;
+              rdfs:label "chicken broth" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "a stock made with chicken" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/ChickenEgg
+:ChickenEgg rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400744> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "Dictionary.com, \"egg.\" [Online]. Available: https://www.dictionary.com/browse/egg. [Accessed Oct. 5, 2018]" ;
+            rdfs:label "chicken egg" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "the roundish reproductive body produced by a female chicken" ;
+            <http://www.w3.org/2004/02/skos/core#editorialNote> "Only used to refer to the egg of a chicken. Other types of eggs will appear under separate labels in the ontology." ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/ChickenSalad
+:ChickenSalad rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 15 ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :BlackPepper ,
+                                                                            :Celery ,
+                                                                            :Chicken ,
+                                                                            :DriedCranberry ,
+                                                                            :GreenOnion ,
+                                                                            :GreenPepper ,
+                                                                            :Mayonnaise ,
+                                                                            :Paprika ,
+                                                                            :Pecan ,
+                                                                            :Salt ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Side> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                   <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 12 ;
+              <http://purl.org/dc/terms/source> "Allrecipes.com, \"Fruited Curry Chicken Salad,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/15735/fruited-curry-chicken-salad/?internalSource=hub%20recipe&referringContentType=Search. [Accessed Nov.9, 2018]" ;
+              rdfs:label "chicken salad" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "a dish made from chicken and mayonnaise" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+              <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/15735/fruited-curry-chicken-salad/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/ChuckRoast
+:ChuckRoast rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "\"Chuck steak,\" WIKIPEDIA [Online]. Available: https://en.wikipedia.org/wiki/Chuck_steak [Accessed: 26-Oct-2018]." ;
+            rdfs:label "chuck roast" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "a cut of beef and is part of the sub primal cut known as the chuck" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Cilantro
+:Cilantro rdf:type owl:NamedIndividual ,
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                   <http://purl.obolibrary.org/obo/FOODON_03400678> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+          <http://purl.org/dc/terms/source> "Dictionary.com, \"cilantro.\" [Online]. Available: https://www.dictionary.com/browse/cilantro. [Accessed Nov. 10, 2018]" ;
+          rdfs:label "cilantro" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "the strong-scented leaves of the coriander plant, used in salads or to flavor and garnish food" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Clove
+:Clove rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400674> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "\"Clove,\" WIKIPEDIA [Online]. Available: https://en.wikipedia.org/wiki/Clove [Accessed: 26-Oct-2018]." ;
+       rdfs:label "clove" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "the aromatic flower buds of a tree in the family Myrtaceae" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CocoaPowder
+:CocoaPowder rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                      <http://purl.obolibrary.org/obo/FOODON_03400663> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "20"^^xsd:nonNegativeInteger ;
+             <http://purl.org/dc/terms/source> "The Spruce Eats, \"What Is Cocoa Powder?,\"  2018.  [Online]. Available: https://www.thespruceeats.com/what-is-cocoa-powder-520351. [Accessed: 1-Nov-2018]" ;
+             rdfs:label "cocoa powder" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "an unsweetened powder produced by grinding the seeds of the fruit of a tropical evergreen tree called the cacao, or cocoa tree" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Coconut
+:Coconut rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                  <http://purl.obolibrary.org/obo/FOODON_03400670> ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "35"^^xsd:nonNegativeInteger ;
+         <http://purl.org/dc/terms/source> "Dictionary.com, \"coconut.\" [Online]. Available: https://www.dictionary.com/browse/coconut. [Accessed Nov. 10, 2018]" ;
+         rdfs:label "coconut" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "the large, hard-shelled seed of the coconut palm, lined with a white edible meat, and containing a milky liquid" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CoconutMilk
+:CoconutMilk rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                      <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "40"^^xsd:nonNegativeInteger ;
+             <http://purl.org/dc/terms/source> "Dictionary.com, \"coconut milk.\" [Online]. Available: https://www.dictionary.com/browse/coconut-milk. [Accessed Nov. 10, 2018]" ;
+             rdfs:label "coconut milk" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "the clear, potable liquid contained within the young hollow seed of the coconut palm" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CornSyrup
+:CornSyrup rdf:type owl:NamedIndividual ,
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                    <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "115"^^xsd:nonNegativeInteger ;
+           <http://purl.org/dc/terms/source> "Dictionary.com, \"corn syrup.\"  [Online]. Available: https://www.dictionary.com/browse/corn-syrup. [Accessed Nov. 10, 2018]" ;
+           rdfs:label "corn syrup" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "syrup prepared from corn" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CornedBeef
+:CornedBeef rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400667> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "\"Corned beef ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/corned beef. [Accessed: 26-Oct-2018]." ;
+            rdfs:label "corned beef" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "beef that has been preserved in salt water" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CornedBeefHash
+:CornedBeefHash rdf:type owl:NamedIndividual ,
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 40 ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :BeefBouillon ,
+                                                                              :CornedBeef ,
+                                                                              :Onion ,
+                                                                              :Potato ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 4 ;
+                <http://purl.org/dc/terms/source> "Wikipedia, \"Hash (food),\" Aug. 2018. [Online]. Available: https://en.wikipedia.org/wiki/Hash_(food). [Accessed Oct. 18, 2018]" ;
+                rdfs:label "corned beef hash" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "a culinary dish consisting of diced or chopped meat, potatoes and spices that are mixed together and cooked by themselves or with other ingredients such as onions" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/33129/corned-beef-hash/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Cornstarch
+:Cornstarch rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "false"^^xsd:boolean ,
+                                                                             "95"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "\"Cornstarch ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/cornstarch. [Accessed: 26-Oct-2018]." ;
+            rdfs:label "cornstarch" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "starch made from corn and used in foods as a thickening agent, in making corn syrup and sugars, and in the manufacture of adhesives and sizes for paper and textiles" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/CowMilk
+:CowMilk rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "30"^^xsd:nonNegativeInteger ;
+         <http://purl.org/dc/terms/source> "Wikipedia, \"Milk.\" [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow's_milk. [Accessed: Nov. 10, 2018]" ;
+         rdfs:label "cow milk" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "milk obtained from a cow" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Creamy
+:Creamy rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> ;
+        <http://purl.org/dc/terms/source> "\"Creamy,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/creamy. [Accessed: 18-Oct-2018]." ;
+        rdfs:label "creamy" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "resembling cream (as in color, texture, or taste)" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a texture" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Crumbly
+:Crumbly rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> ;
+         <http://purl.org/dc/terms/source> "\"Crumbly,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/crumbly. [Accessed: 18-Oct-2018]." ;
+         rdfs:label "crumbly" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "easily crumbled" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a texture" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Crunchy
+:Crunchy rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> ;
+         <http://purl.org/dc/terms/source> "\"Crunchy,\" Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/crunchy?s=t. [Accessed: 12-Oct-2018]." ;
+         rdfs:label "crunchy" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "crisp, brittle" ;
+         <http://www.w3.org/2004/02/skos/core#editorialNote> "This is a subclass of texture and is one of the textural components that could be considered for substitutions" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a texture" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/DriedCranberry
+:DriedCranberry rdf:type owl:NamedIndividual ,
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                         <http://purl.obolibrary.org/obo/FOODON_03400756> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "30"^^xsd:nonNegativeInteger ;
+                <http://purl.org/dc/terms/source> "Wikipedia, \"Dried cranberry.\" [Online]. Available: https://en.wikipedia.org/wiki/Dried_cranberry. [Accessed: Nov. 10, 2018]" ;
+                rdfs:label "dried cranberry" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "an ingredient made by partially dehydrating fresh cranberries" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Fahrenheit
+:Fahrenheit rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> ;
+            <http://purl.org/dc/terms/source> "\"Fahrenheit,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/Fahrenheit. [Accessed: 12-Oct-2018]." ;
+            rdfs:label "fahrenheit" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "relating or conforming to a thermometric scale on which under standard atmospheric pressure the boiling point of water is at 212 degrees above the zero of the scale, the freezing point is at 32 degrees above zero, and the zero point approximates the temperature produced by mixing equal quantities by weight of snow and common salt" ;
+            <http://www.w3.org/2004/02/skos/core#editorialNote> "A temperature scale that is used in recipes" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "value of temperature" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/FlourlessCoconutAndAlmondCake
+:FlourlessCoconutAndAlmondCake rdf:type owl:NamedIndividual ,
+                                        <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                               <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 60 ;
+                               <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+                               <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :Almond ,
+                                                                                             :AlmondMeal ,
+                                                                                             :Butter ,
+                                                                                             :ChickenEgg ,
+                                                                                             :Coconut ,
+                                                                                             :VanillaExtract ,
+                                                                                             :WhiteSugar ;
+                               <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Snack> ;
+                               <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> ;
+                               <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 12 ;
+                               <http://purl.org/dc/terms/source> "Allrecipes.com, \"Flourless Coconut and Almond Cake,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/241524/flourless-coconut-and-almond-cake/?internalSource=hub%20recipe&referringContentType=Search. [Accessed Nov.9, 2018]" ;
+                               rdfs:label "flourless coconut and almond cake" ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "a cake made with coconut and almonds which contains no white flour" ;
+                               <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                               <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/241524/flourless-coconut-and-almond-cake/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Garlic
+:Garlic rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400674> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "30"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "\"Garlic ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/garlic. [Accessed: 26-Oct-2018]." ;
+        rdfs:label "garlic" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "widely cultivated for its pungent compound bulbs much used in cookery" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/GlutenFreeCoconutCake
+:GlutenFreeCoconutCake rdf:type owl:NamedIndividual ,
+                                <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 60 ;
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :BakingPowder ,
+                                                                                     :BakingSoda ,
+                                                                                     :ChickenEgg ,
+                                                                                     :Coconut ,
+                                                                                     :CoconutMilk ,
+                                                                                     :GlutenFreeFlour ,
+                                                                                     :Salt ,
+                                                                                     :VanillaExtract ,
+                                                                                     :VegetableOil ,
+                                                                                     :Walnut ,
+                                                                                     :WhiteSugar ;
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> ;
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ,
+                                                                                            <http://idea.rpi.edu/heals/ont/whattomake/core/Snack> ;
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 16 ;
+                       <http://purl.org/dc/terms/source> "Allrecipes.com, \"Gluten-Free Coconut Cake,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/237655/gluten-free-coconut-cake/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201. [Accessed Nov.9, 2018]" ,
+                                                         "Wikipedia, \"Coconut cake.\" [Online]. Available: https://en.wikipedia.org/wiki/Coconut_cake. [Accessed: Oct. 25, 2018]" ,
+                                                         "Wikipedia, \"Gluten.\" [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018] " ;
+                       rdfs:label "gluten free coconut cake" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "a cake frosted with a white frosting and covered in coconut flakes, with no ingredients contain gluten" ;
+                       <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                       <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/237655/gluten-free-coconut-cake/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/GlutenFreeFlour
+:GlutenFreeFlour rdf:type owl:NamedIndividual ,
+                          <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                          <http://purl.obolibrary.org/obo/FOODON_03400759> ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "95"^^xsd:nonNegativeInteger ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> :AllPurposeFlour ;
+                 <http://purl.org/dc/terms/source> "Baking Bites, \"What is Gluten Free Flour?\"[Online]. Available: http://bakingbites.com/2013/01/what-is-gluten-free-flour/. [Accessed Nov. 1, 2018]" ;
+                 rdfs:label "gluten free flour" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "flours that are made of non-gluten containing products" ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/GoldenKamutBread
+:GoldenKamutBread rdf:type owl:NamedIndividual ,
+                           <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 180 ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AllPurposeFlour ,
+                                                                                :BakersYeast ,
+                                                                                :KamutFlour ,
+                                                                                :OliveOil ,
+                                                                                :Salt ,
+                                                                                :Water ,
+                                                                                :WhiteSugar ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 1 ;
+                  <http://purl.org/dc/terms/source> "kingarthurflour.com, \"GOLDEN KAMUT BREAD. [Online]. Available: https://www.kingarthurflour.com/recipes/golden-kamut-bread-recipe. [Accessed Nov.9, 2018]" ;
+                  rdfs:label "golden kamut bread" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "a bread made from kamut" ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                  <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.kingarthurflour.com/recipes/golden-kamut-bread-recipe" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Gooey
+:Gooey rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> ;
+       <http://purl.org/dc/terms/source> "\"Gooey,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/gooey. [Accessed: 18-Oct-2018]." ;
+       rdfs:label "gooey" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "a viscid or sticky substance" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a texture" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Greasy
+:Greasy rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> ;
+        <http://purl.org/dc/terms/source> "\"Greasy,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/greasy. [Accessed: 18-Oct-2018]." ;
+        rdfs:label "greasy" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "containing an unusual amount of grease" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a texture" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/GreenOnion
+:GreenOnion rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400674> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "Dictionary.com, \"green onion.\" [Online]. Available: https://www.dictionary.com/browse/green-onion. [Accessed Nov. 10, 2018]" ;
+            rdfs:label "green onion" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "a young onion with a slender green stalk and a small bulb, used as a table vegetable, usually raw,especially in salads; scallion" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/GreenPepper
+:GreenPepper rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                      <http://purl.obolibrary.org/obo/FOODON_03400677> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+             <http://purl.org/dc/terms/source> "Dictionary.com, \"green pepper.\" [Online]. Available: https://www.dictionary.com/browse/green-pepper. [Accessed Nov. 10, 2018]" ;
+             rdfs:label "green pepper" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "the mild-flavored, unripe fruit of the bell or sweet pepper, Capsicum annuum grossum, used as a greenvegetable" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/GrilledChickenKabob
+:GrilledChickenKabob rdf:type owl:NamedIndividual ,
+                              <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 60 ;
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :BlackPepper ,
+                                                                                   :Chicken ,
+                                                                                   :LemonJuice ,
+                                                                                   :OliveOil ,
+                                                                                   :Rosemary ,
+                                                                                   :Salt ,
+                                                                                   :WhiteVinegar ;
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> ,
+                                                                                            <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                          <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 6 ;
+                     <http://purl.org/dc/terms/source> "Allrecipes.com, \"Rosemary Ranch Chicken Kabobs,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/64513/rosemary-ranch-chicken-kabobs/?internalSource=hub%20recipe&referringContentType=Search. [Accessed Nov.9, 2018]" ;
+                     rdfs:label "grilled chicken kabob" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "a kabob dish made from chicken" ;
+                     <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                     <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/64513/rosemary-ranch-chicken-kabobs/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Honey
+:Honey rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400666> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "60"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "\"Honey,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/honey. [Accessed: 1-Nov-2018]" ;
+       rdfs:label "honey" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "a sweet viscid material elaborated out of the nectar of flowers in the honey sac of various bees" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Hour
+:Hour rdf:type owl:NamedIndividual ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> ;
+      <http://purl.org/dc/terms/source> "Dictionary.com, \"hour.\" [Online]. Available: https://www.dictionary.com/browse/hour. [Accessed Oct. 5, 2018]" ;
+      rdfs:label "hour" ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "hours" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "the measured or measurable period during which an action, process, or condition exists or continues" ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "value of time" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Kamut
+:Kamut rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400683> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "true"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "45"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "Kamut, \"The grain,\" 2018. [Online]. Available: https://www.kamut.com/en/discover/the-grain. [Accessed Oct. 20, 2018]" ;
+       rdfs:label "kamut" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "khorasan wheat (kamut) is an ancient grain" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/KamutFlour
+:KamutFlour rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400759> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "true"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "45"^^xsd:nonNegativeInteger ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> :AllPurposeFlour ;
+            <http://purl.org/dc/terms/source> "foodrepublic.com, \"What Is Kamut?\" [Online]. Available: http://www.foodrepublic.com/2013/04/15/what-is-kamut/. [Accessed Nov.9, 2018]" ;
+            rdfs:label "kamut flour" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "flour made from an ancient grain also known as khorsan wheat" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/KamutMuffin
+:KamutMuffin rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 30 ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 425 ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AllPurposeFlour ,
+                                                                           :BakingPowder ,
+                                                                           :Butter ,
+                                                                           :ChickenEgg ,
+                                                                           :CowMilk ,
+                                                                           :KamutFlour ,
+                                                                           :Salt ,
+                                                                           :VanillaExtract ,
+                                                                           :WhiteSugar ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ,
+                                                                                  <http://idea.rpi.edu/heals/ont/whattomake/core/Snack> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 12 ;
+             <http://purl.org/dc/terms/source> "kingarthurflour.com, \"baking with ancient grains: KAMUT FLOUR.\" [Online]. Available: https://www.kingarthurflour.com/guides/baking-with-ancient-grains/kamut-flour/. [Accessed Nov.9, 2018]" ;
+             rdfs:label "kamut muffin" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "a muffin made primarily from kamut" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+             <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.kingarthurflour.com/recipes/basic-muffins-with-berry-and-oatmeal-versions-recipe" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/KamutPancake
+:KamutPancake rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 45 ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 375 ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AllPurposeFlour ,
+                                                                            :BakingSoda ,
+                                                                            :Butter ,
+                                                                            :ChickenEgg ,
+                                                                            :CowMilk ,
+                                                                            :KamutFlour ,
+                                                                            :Salt ,
+                                                                            :WhiteSugar ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 12 ;
+              <http://purl.org/dc/terms/source> "kingarthurflour.com, \"baking with ancient grains: KAMUT FLOUR.\" [Online]. Available: https://www.kingarthurflour.com/guides/baking-with-ancient-grains/kamut-flour/. [Accessed Nov.9, 2018]" ;
+              rdfs:label "kamut pancake" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "a pancake made primarily from kamut" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+              <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.kingarthurflour.com/recipes/simply-perfect-pancakes-recipe" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Lamb
+:Lamb rdf:type owl:NamedIndividual ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> ;
+      <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+      <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+      <http://purl.org/dc/terms/source> "\"Lamb,\" WIKIPEDIA [Online]. Available: https://en.wikipedia.org/wiki/Lamb [Accessed: 26-Oct-2018]." ;
+      rdfs:label "lamb" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "the meat of sheep" ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/LemonJuice
+:LemonJuice rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400766> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "20"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "\"lemon juice,\" the free dictionary. [Online]. Available: https://www.thefreedictionary.com/lemon+juice. [Accessed: 26-Oct-2018]." ;
+            rdfs:label "lemon juice" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "usually freshly squeezed juice of lemons" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Mayonnaise
+:Mayonnaise rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400776> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "true"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "60"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "Dictionary.com, \"mayonnaise.\" [Online]. Available: https://www.dictionary.com/browse/mayonnaise. [Accessed Nov. 10, 2018]" ;
+            rdfs:label "mayonnaise" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "a thick dressing of egg yolks, vinegar or lemon juice, oil, and seasonings, used for salads, sandwiches,vegetable dishes, etc" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Minute
+:Minute rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> ;
+        <http://purl.org/dc/terms/source> "Dictionary.com, \"minute.\" [Online]. Available: https://www.dictionary.com/browse/minute?s=t. [Accessed Oct. 5, 2018]" ;
+        rdfs:label "minute" ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "minutes" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "the sixtieth part (1/60) of an hour; sixty seconds" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "value of time" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Moist
+:Moist rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> ;
+       <http://purl.org/dc/terms/source> "\"Moist,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/moist. [Accessed: 18-Oct-2018]." ;
+       rdfs:label "moist" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "slightly or moderately wet" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a texture" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Mushy
+:Mushy rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> ;
+       <http://purl.org/dc/terms/source> "\"Mushy,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/mushy. [Accessed: 18-Oct-2018]." ;
+       rdfs:label "mushy" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "having the consistency of mush" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a texture" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Nutty
+:Nutty rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> ;
+       <http://purl.org/dc/terms/source> "\"Nutty,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/nutty. [Accessed: 12-Oct-2018]." ;
+       rdfs:label "nutty" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "having a flavor like that of nuts" ;
+       <http://www.w3.org/2004/02/skos/core#editorialNote> "A property of flavor that will aid in the substitution decision making of the ontology" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a flavor" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Oat
+:Oat rdf:type owl:NamedIndividual ,
+              <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+              <http://purl.obolibrary.org/obo/FOODON_03400683> ;
+     <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+     <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "40"^^xsd:nonNegativeInteger ;
+     <http://purl.org/dc/terms/source> "Dictionary.com, \"oat.\" [Online]. Available: https://www.dictionary.com/browse/oat. [Accessed Nov. 10, 2018]" ;
+     rdfs:label "oat" ;
+     <http://www.w3.org/2004/02/skos/core#definition> "a cereal grass, Avena sativa, cultivated for its edible seed" ;
+     <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/OliveOil
+:OliveOil rdf:type owl:NamedIndividual ,
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                   <http://purl.obolibrary.org/obo/FOODON_03400764> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+          <http://purl.org/dc/terms/source> "\"Olive oil,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/olive%20oil. [Accessed: 1-Nov-2018]" ;
+          rdfs:label "olive oil" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "a pale yellow to yellowish-green nondrying oil that is obtained from olives, is high in monounsaturated fat, and is used chiefly as a salad oil and in cooking" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Onion
+:Onion rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400674> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "\"Onion ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/onion. [Accessed: 26-Oct-2018]." ;
+       rdfs:label "onion" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "a widely cultivated Asian herb of the lily family with pungent edible bulbs" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Oregano
+:Oregano rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                  <http://purl.obolibrary.org/obo/FOODON_03400688> ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+         <http://purl.org/dc/terms/source> "\"Oregano,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/oregano [Accessed: 1-Nov-2018]" ;
+         rdfs:label "oregano" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "a bushy perennial mint (Origanum vulgare) with leaves that are used as a seasoning and a source of aromatic oil" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Paprika
+:Paprika rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                  <http://purl.obolibrary.org/obo/FOODON_03400688> ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+         <http://purl.org/dc/terms/source> "\"Paprika ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/paprika. [Accessed: 26-Oct-2018]." ;
+         rdfs:label "paprika" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "a usually mild red condiment consisting of the dried finely ground pods of various sweet peppers" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Parsley
+:Parsley rdf:type owl:NamedIndividual ,
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                  <http://purl.obolibrary.org/obo/FOODON_03400688> ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+         <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+         <http://purl.org/dc/terms/source> "\"Parsley ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/parsley. [Accessed: 26-Oct-2018]." ;
+         rdfs:label "parsley" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "a European biennial herb of the carrot family widely grown for its finely dissected curly or flat leaves which are used as an herb or garnish" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Peanut
+:Peanut rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400686> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "Dictionary.com, \"peanut.\" [Online]. Available: https://www.dictionary.com/browse/peanut. [Accessed Oct. 5, 2018]" ;
+        rdfs:label "peanut" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "the pod or the enclosed edible seed of the plant, Arachis hypogaea, of the legume family: the pod is forced underground in growing, where it ripens" ;
+        <http://www.w3.org/2004/02/skos/core#editorialNote> "This definition refers to the nuts of the plant as used as an ingredient in a recipe." ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Pecan
+:Pecan rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400685> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> :Crunchy ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> :Almond ,
+                                                                      :Walnut ;
+       <http://purl.org/dc/terms/source> "Dictionary.com, \"pecan.\" [Online]. Available: https://www.dictionary.com/browse/pecan. [Accessed Nov. 10, 2018]" ;
+       rdfs:label "pecan" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "a tall hickory tree, Carya illinoinensis, of the southern U.S. and Mexico, cultivated for its oval, smooth-shelled, edible nuts" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/PotRoastWithVegetables
+:PotRoastWithVegetables rdf:type owl:NamedIndividual ,
+                                 <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 65 ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :Basil ,
+                                                                                      :BeefBouillon ,
+                                                                                      :BlackPepper ,
+                                                                                      :BrownSugar ,
+                                                                                      :Carrot ,
+                                                                                      :ChuckRoast ,
+                                                                                      :Cornstarch ,
+                                                                                      :Garlic ,
+                                                                                      :Onion ,
+                                                                                      :Potato ,
+                                                                                      :Salt ,
+                                                                                      :Thyme ,
+                                                                                      :Tomato ,
+                                                                                      :Water ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                             <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 6 ;
+                        <http://purl.org/dc/terms/source> "Myrecipes, \"Pot Roast 101,\" 2018. [Online]. Available: https://www.myrecipes.com/quick-and-easy/how-to-cook-pot-roast. [Accessed Oct. 18, 2018]" ;
+                        rdfs:label "pot roast with vegetables" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "slow-cooked beef with carrots, potatoes, or other vegetables added partway through cooking" ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                        <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.myrecipes.com/quick-and-easy/how-to-cook-pot-roast" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Potato
+:Potato rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400681> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "70"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "\"Potato,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/potato. [Accessed: 13-Oct-2018]." ;
+        rdfs:label "potato" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "a memeber of the nightshade family widely cultivated for its edible starchy tuber" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/PumpkinSeed
+:PumpkinSeed rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                      <http://purl.obolibrary.org/obo/FOODON_03400686> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "10"^^xsd:nonNegativeInteger ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> :Walnut ;
+             <http://purl.org/dc/terms/source> "\"pumpkin seed - Dictionary Definition,\" Vocabulary.com. [Online]. Available: https://www.vocabulary.com/dictionary/pumpkin seed. [Accessed: 12-Oct-2018]." ;
+             rdfs:label "pumpkin seed" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "the edible seed of a pumpkin" ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "A potential substitution for members of the tree nut family" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Rosemary
+:Rosemary rdf:type owl:NamedIndividual ,
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                   <http://purl.obolibrary.org/obo/FOODON_03400688> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+          <http://purl.org/dc/terms/source> "\"Rosemary ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/rosemary. [Accessed: 26-Oct-2018]." ;
+          rdfs:label "rosemary" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "a fragrant shrubby Mediterranean mint having grayish-green needlelike leaves used as a seasoning" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Salt
+:Salt rdf:type owl:NamedIndividual ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ;
+      <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+      <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+      <http://purl.org/dc/terms/source> "\"Salt,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/salt. [Accessed: 13-Oct-2018]." ;
+      rdfs:label "salt" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "a crystalline compound NaCl that consists of sodium chloride, is abundant in nature, and is used especially to season or preserve food or in industry" ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Salty
+:Salty rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> ;
+       <http://purl.org/dc/terms/source> "\"Salty,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/salty. [Accessed: 18-Oct-2018]." ;
+       rdfs:label "salty" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "of, seasoned with, or containing salt" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a flavor" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/SaucyShepherdPie
+:SaucyShepherdPie rdf:type owl:NamedIndividual ,
+                           <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 50 ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :Beef ,
+                                                                                :BlackPepper ,
+                                                                                :Butter ,
+                                                                                :Carrot ,
+                                                                                :CowMilk ,
+                                                                                :Onion ,
+                                                                                :Potato ,
+                                                                                :Salt ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                       <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+                  <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 5 ;
+                  <http://purl.org/dc/terms/source> "Wikipedia, \"Shepherd's pie,\" Oct. 2018. [Online]. Available: https://en.wikipedia.org/wiki/Shepherd%27s_pie. [Accessed Oct. 18, 2018]" ;
+                  rdfs:label "saucy shepherd pie" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "minced red meat cooked in a gravy or sauce with onions and sometimes other vegetables, such as peas, celery or carrots, and topped with a layer of mashed potato before it is baked" ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                  <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/238606/saucy-shepherds-pie/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/SesameOil
+:SesameOil rdf:type owl:NamedIndividual ,
+                    <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                    <http://purl.obolibrary.org/obo/FOODON_03400764> ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+           <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+           <http://purl.org/dc/terms/source> "Dictionary.com, \"sesame oil.\" [Online]. Available: https://www.dictionary.com/browse/sesame-oil. [Accessed Nov. 10, 2018]" ;
+           rdfs:label "sesame oil" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "a yellow oil expressed from the seeds of the sesame, used in cooking, as a vehicle for medicines, and in the manufacture of margarine, soap, and cosmetics" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Smoky
+:Smoky rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> ;
+       <http://purl.org/dc/terms/source> "\"Smoky,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/smoky. [Accessed: 18-Oct-2018]." ;
+       rdfs:label "smoky" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "suggestive of smoke especially in flavor or odor" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a flavor" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/SmotheredChickenBreast
+:SmotheredChickenBreast rdf:type owl:NamedIndividual ,
+                                 <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 35 ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :Bacon ,
+                                                                                      :BlackPepper ,
+                                                                                      :BrownSugar ,
+                                                                                      :Cheese ,
+                                                                                      :Chicken ,
+                                                                                      :Onion ,
+                                                                                      :Salt ,
+                                                                                      :VegetableOil ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                             <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+                        <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 4 ;
+                        <http://purl.org/dc/terms/source> "Allrecipes.com, \"Smothered Chicken Breasts,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/222607/smothered-chicken-breasts/?internalSource=hub%20recipe&referringContentType=Search. [Accessed Nov.9, 2018]" ;
+                        rdfs:label "smothered chicken breast" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "a dish made from chicken breast, topped with bacon, caramelized onions, and zippy shredded cheese" ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                        <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/222607/smothered-chicken-breasts/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/SoySauce
+:SoySauce rdf:type owl:NamedIndividual ,
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                   <http://purl.obolibrary.org/obo/FOODON_03400663> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+          <http://purl.org/dc/terms/source> "Dictionary.com, \"soy sauce.\" [Online]. Available: https://www.dictionary.com/browse/soy-sauce. [Accessed Nov. 10, 2018]" ;
+          rdfs:label "soy sauce" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "a salty, fermented sauce prepared from soybeans, used in East Asian cuisine" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Spicy
+:Spicy rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> ;
+       <http://purl.org/dc/terms/source> "\"Spicy,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/spicy. [Accessed: 18-Oct-2018]." ;
+       rdfs:label "spicy" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "having the quality, flavor, or fragrance of spice" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a flavor" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Sweet
+:Sweet rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> ;
+       <http://purl.org/dc/terms/source> "\"Sweet,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/sweet. [Accessed: 18-Oct-2018]." ;
+       rdfs:label "sweet" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "being or inducing the one of the four basic taste sensations that is typically induced by disaccharides and is mediated especially by receptors in taste buds at the front of the tongue" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a flavor" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/TapiocaFlour
+:TapiocaFlour rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                       <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "85"^^xsd:nonNegativeInteger ;
+              <http://purl.org/dc/terms/source> "\"Tapioca,\" The Free Dictionary. [Online]. Available: https://www.thefreedictionary.com/Tapioca+flour. [Accessed Nov.9, 2018]" ;
+              rdfs:label "tapioca flour" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "a flour made from the tapioca plant" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Tarragon
+:Tarragon rdf:type owl:NamedIndividual ,
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                   <http://purl.obolibrary.org/obo/FOODON_03400688> ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+          <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+          <http://purl.org/dc/terms/source> "\"Tarragon ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tarragon. [Accessed: 26-Oct-2018]." ;
+          rdfs:label "tarragon" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "a small widely cultivated perennial artemisia (Artemisia dracunculus) having aromatic narrow usually entire leaves, its leaves used as a seasoning" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Tart
+:Tart rdf:type owl:NamedIndividual ,
+               <http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> ;
+      <http://purl.org/dc/terms/source> "\"Tart,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tart. [Accessed: 18-Oct-2018]." ;
+      rdfs:label "tart" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "agreeably sharp or acid to the taste" ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a flavor" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/ThaiChicken
+:ThaiChicken rdf:type owl:NamedIndividual ,
+                      <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 15 ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :Basil ,
+                                                                           :Chicken ,
+                                                                           :ChickenBroth ,
+                                                                           :Cilantro ,
+                                                                           :SesameOil ,
+                                                                           :SoySauce ,
+                                                                           :WhiteSugar ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Entree> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> ,
+                                                                                  <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> ;
+             <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 4 ;
+             <http://purl.org/dc/terms/source> "Allrecipes.com, \"Thai Chicken,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/16862/thai-chicken/?internalSource=hub%20recipe&referringContentType=Search. [Accessed Nov.9, 2018]" ;
+             rdfs:label "thai chicken" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "a thai dish made with chicken" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+             <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/16862/thai-chicken/?internalSource=hub%20recipe&referringContentType=Search" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Thyme
+:Thyme rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                <http://purl.obolibrary.org/obo/FOODON_03400688> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "\"Thyme,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/thyme. [Accessed: 1-Nov-2018]" ;
+       rdfs:label "thyme" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "any of a genus (Thymus) of Eurasian mints with small pungent aromatic leaves" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Tomato
+:Tomato rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400677> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "30"^^xsd:nonNegativeInteger ;
+        <http://purl.org/dc/terms/source> "\"Tomato,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/tomato. [Accessed: 1-Nov-2018]" ;
+        rdfs:label "tomato" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "the usually large, rounded, edible, pulpy berry of an herb (genus Solanum) of the nightshade family native to South America that is typically red but may be yellow, orange, green, or purplish in color and is eaten raw or cooked as a vegetable" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/User15
+:User15 rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/User> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/dislikes> :Almond ,
+                                                                 :Celery ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/forbids> :Onion ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo> :Pecan ;
+        <http://purl.org/dc/terms/source> "Techopedia, \"User Identification (User ID),\" 2018. [Online]. Available: https://www.techopedia.com/definition/12552/user-identification-user-id. [Accessed Oct. 18, 2018]" ;
+        rdfs:label "user 15" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "the user with ID 15" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "represents an individual user" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/VanillaExtract
+:VanillaExtract rdf:type owl:NamedIndividual ,
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                         <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+                <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+                <http://purl.org/dc/terms/source> "Wikipedia, \"Vanilla extract.\" [Online]. Available: https://en.wikipedia.org/wiki/Vanilla_extract. [Accessed: 1-Nov-2018]" ;
+                rdfs:label "vanilla extract" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "a solution made by macerating and percolating vanilla pods in a solution of ethanol and water" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/VegetableOil
+:VegetableOil rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                       <http://purl.obolibrary.org/obo/FOODON_03400764> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+              <http://purl.org/dc/terms/source> "\"Vegetable Oil ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/vegetable oil. [Accessed: 26-Oct-2018]." ;
+              rdfs:label "vegetable oil" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "an oil of plant origin" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Walnut
+:Walnut rdf:type owl:NamedIndividual ,
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400685> ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "15"^^xsd:nonNegativeInteger ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> :Crunchy ;
+        <http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> :Almond ,
+                                                                       :Pecan ,
+                                                                       :PumpkinSeed ;
+        <http://purl.org/dc/terms/source> "\"Walnut,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/walnut. [Accessed: 12-Oct-2018]." ;
+        rdfs:label "walnut" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "the furrowed nut of any of a genus (Juglans of the family Juglandaceae, the walnut family) of deciduous trees" ;
+        <http://www.w3.org/2004/02/skos/core#editorialNote> "Member of the tree nut family which is a common allergen" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/Water
+:Water rdf:type owl:NamedIndividual ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> ,
+                <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+       <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "0"^^xsd:nonNegativeInteger ;
+       <http://purl.org/dc/terms/source> "\"Water ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/water. [Accessed: 26-Oct-2018]." ;
+       rdfs:label "water" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "the liquid that descends from the clouds as rain, forms streams, lakes, and seas, and is a major constituent of all living matter and that when pure is an odorless, tasteless, very slightly compressible liquid oxide of hydrogen H2O which appears bluish in thick layers, freezes at 0° C and boils at 100° C, has a maximum density at 4° C and a high specific heat, is feebly ionized to hydrogen and hydroxyl ions, and is a poor conductor of electricity and a good solvent" ;
+       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/WhiteBread
+:WhiteBread rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 185 ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 350 ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :AllPurposeFlour ,
+                                                                          :BakersYeast ,
+                                                                          :Butter ,
+                                                                          :CowMilk ,
+                                                                          :Salt ,
+                                                                          :WhiteSugar ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 12 ;
+            <http://purl.org/dc/terms/source> "Allrecipes.com, \"Simple White Bread,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/6771/simple-white-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%2011. [Accessed Nov.9, 2018]" ;
+            rdfs:label "white bread" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "baked foods produced from dough made of flour, water, salt and other optional ingredients, and leavened by yeast or other leavening agents" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+            <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/6771/simple-white-bread/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%2011" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/WhiteSugar
+:WhiteSugar rdf:type owl:NamedIndividual ,
+                     <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                     <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+            <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "70"^^xsd:nonNegativeInteger ;
+            <http://purl.org/dc/terms/source> "\"Sugar,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/sugar. [Accessed: 1-Nov-2018]" ;
+            rdfs:label "white sugar" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "a sweet crystallizable material that consists wholly or essentially of sucrose, is colorless or white when pure tending to brown when less refined, is obtained commercially from sugarcane or sugar beet and less extensively from sorghum, maples, and palms, and is important as a source of dietary carbohydrate and as a sweetener and preservative of other foods" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/WhiteVinegar
+:WhiteVinegar rdf:type owl:NamedIndividual ,
+                       <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                       <http://purl.obolibrary.org/obo/FOODON_03400662> ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+              <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "5"^^xsd:nonNegativeInteger ;
+              <http://purl.org/dc/terms/source> "Dictionary.com, \"vinegar.\" [Online]. Available: https://www.dictionary.com/browse/vinegar. [Accessed Nov. 10, 2018]" ;
+              rdfs:label "white vinegar" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "a sour liquid consisting of dilute and impure acetic acid" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/WholeGrainBananaPancake
+:WholeGrainBananaPancake rdf:type owl:NamedIndividual ,
+                                  <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> ;
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> 20 ;
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> 375 ;
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> :BakingPowder ,
+                                                                                       :Banana ,
+                                                                                       :CanolaOil ,
+                                                                                       :ChickenEgg ,
+                                                                                       :CowMilk ,
+                                                                                       :Oat ,
+                                                                                       :Salt ,
+                                                                                       :WholeWheatFlour ;
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://idea.rpi.edu/heals/ont/whattomake/core/Side> ;
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> ;
+                         <http://idea.rpi.edu/heals/ont/whattomake/core/serves> 3 ;
+                         <http://purl.org/dc/terms/source> "Allrecipes.com, \"Whole Grain Banana Pancakes,\" 2010. [Online]. Available: https://www.allrecipes.com/recipe/231392/whole-grain-banana-pancakes/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201. [Accessed Nov.9, 2018]" ;
+                         rdfs:label "whole grain banana pancake" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "a banana pancake made with whole grain" ;
+                         <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe" ;
+                         <http://www.w3.org/ns/prov#wasDerivedFrom> "https://www.allrecipes.com/recipe/231392/whole-grain-banana-pancakes/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/WholeGrainMustard
+:WholeGrainMustard rdf:type owl:NamedIndividual ,
+                            <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                            <http://purl.obolibrary.org/obo/FOODON_03400663> ;
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "false"^^xsd:boolean ;
+                   <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "55"^^xsd:nonNegativeInteger ;
+                   <http://purl.org/dc/terms/source> "TasteofHome, \"What Is Whole Grain Mustard?,\" 2018. [Online]. Available: https://www.tasteofhome.com/cooking-tips/ask-the-test-kitchen/what-is-whole-grain-mustard-. [Accessed Oct. 27 2018]" ;
+                   rdfs:label "whole grain mustard" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "prepared mustard with visible mustard seeds" ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  http://idea.rpi.edu/heals/ont/whattomake/individuals/WholeWheatFlour
+:WholeWheatFlour rdf:type owl:NamedIndividual ,
+                          <http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> ,
+                          <http://purl.obolibrary.org/obo/FOODON_03400759> ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> "true"^^xsd:boolean ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> "40"^^xsd:nonNegativeInteger ;
+                 <http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> :AllPurposeFlour ;
+                 <http://purl.org/dc/terms/source> "\"Whole Wheat Flour ,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/whole wheat flour. [Accessed: 26-Oct-2018]." ;
+                 rdfs:label "whole wheat flour" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "flour that is ground from the whole grain and contains all the constituents of the wheat kernels" ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "used as an ingredient" .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

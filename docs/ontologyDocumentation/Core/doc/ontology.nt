@@ -1,0 +1,584 @@
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://www.w3.org/2002/07/owl#versionIRI> <http://idea.rpi.edu/heals/ont/whattomake/core/> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://www.w3.org/2002/07/owl#imports> <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/abstract> "The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/contributor> "Forest Eckhardt" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/contributor> "Kevin Blissett" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/contributor> "Miao Qi" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/contributor> "Yarden Ne'eman" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/description> "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/modified> "2019-04-03"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/publisher> "WhatToMake" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://purl.org/dc/terms/references> "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://www.w3.org/2000/01/rdf-schema#label> "What to Make Base Ontology" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://www.w3.org/2002/07/owl#priorVersion> "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <http://www.w3.org/2004/02/skos/core#changeNote> "Changes to this ontology since the previous version include: update of the ontology IRI." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/> <https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright
+<https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/dislikes
+<http://idea.rpi.edu/heals/ont/whattomake/core/dislikes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/dislikes> <http://purl.org/dc/terms/source> "\"Dislike,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dislike. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/dislikes> <http://www.w3.org/2000/01/rdf-schema#label> "dislikes" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/dislikes> <http://www.w3.org/2004/02/skos/core#definition> "something that a person habitually does not like or enjoy, a feeling of aversion or disapproval" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/dislikes> <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/forbids
+<http://idea.rpi.edu/heals/ont/whattomake/core/forbids> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/forbids> <http://purl.org/dc/terms/source> "\"Forbid,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/forbid. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/forbids> <http://www.w3.org/2000/01/rdf-schema#label> "forbids" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/forbids> <http://www.w3.org/2004/02/skos/core#definition> "to hinder or prevent as if by an effectual command" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/forbids> <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion> <http://purl.org/dc/terms/source> "\"Converting,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/converting. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion> <http://www.w3.org/2000/01/rdf-schema#label> "has conversion" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion> <http://www.w3.org/2004/02/skos/core#definition> "to exchange for an equivalent" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion> <http://www.w3.org/2004/02/skos/core#scopeNote> "unit property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor> <http://purl.org/dc/terms/source> "Dictionary.com, \"flavor.\" [Online]. Available: https://www.dictionary.com/browse/flavor?s=t. [Accessed Oct. 13, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor> <http://www.w3.org/2000/01/rdf-schema#label> "has flavor" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor> <http://www.w3.org/2004/02/skos/core#definition> "indicates that this item has this flavor" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor> <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> <http://purl.org/dc/terms/source> "Merriam-Webster, \"ingredient,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/ingredient. [Accessed Oct. 18, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> <http://www.w3.org/2000/01/rdf-schema#label> "has ingredient" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> <http://www.w3.org/2004/02/skos/core#definition> "to have a component part of any combination or mixture" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved> <http://purl.org/dc/terms/source> "Merriam-Webster, \"save,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/save. [Accessed Oct. 13, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved> <http://www.w3.org/2000/01/rdf-schema#label> "has saved" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved> <http://www.w3.org/2004/02/skos/core#definition> "to store (data) in a computer or on a storage device" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved> <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> <http://purl.org/dc/terms/source> "Dictionary.com, \"texture.\" [Online]. Available: https://www.dictionary.com/browse/texture?s=t. [Accessed Oct. 13, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> <http://www.w3.org/2000/01/rdf-schema#label> "has texture" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> <http://www.w3.org/2004/02/skos/core#definition> "indicates that this item has this texture" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture> <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo
+<http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo> <http://purl.org/dc/terms/source> "Merriam-Webster, \"allergic,\"2018. [Online]. Available https https://www.merriam-webster.com/dictionary/allergic. [Accessed Oct. 13, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo> <http://www.w3.org/2000/01/rdf-schema#label> "is allergic to" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo> <http://www.w3.org/2004/02/skos/core#definition> "the subject has an allergy to the object of this relation" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo> <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://purl.org/dc/terms/source> "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://www.w3.org/2000/01/rdf-schema#label> "is recommended for course" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://www.w3.org/2004/02/skos/core#definition> "a property of recipe that indicates what course the recipe is recommended for" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://purl.org/dc/terms/source> "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://www.w3.org/2000/01/rdf-schema#label> "is recommended for meal" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://www.w3.org/2004/02/skos/core#definition> "a property of recipe that indicates what meal the recipe is recommended for" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor
+<http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> <http://purl.org/dc/terms/source> "\"Substitute,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/substitute. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> <http://www.w3.org/2000/01/rdf-schema#label> "substitutes for" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> <http://www.w3.org/2004/02/skos/core#definition> "indicates that this item can take the place or function of another" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor> <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> <http://purl.org/dc/terms/source> "\"Cook Time,\" Collins English Dictionary. [Online]. Available: https://www.collinsdictionary.com/us/dictionary/english/cooking-time" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> <http://www.w3.org/2000/01/rdf-schema#label> "has cook time" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> <http://www.w3.org/2004/02/skos/core#definition> "the time that something needs to cook" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> <http://purl.org/dc/terms/source> "Dictionary.com, \"temperature.\" [Online]. Available: https://www.dictionary.com/browse/temperature. [Accessed Oct. 13, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "has cooking temperature" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> <http://www.w3.org/2004/02/skos/core#definition> "the temperature at which a food must be baked" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> <http://purl.org/dc/terms/source> "Wikipedia, \"Gluten.\" [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> <http://www.w3.org/2000/01/rdf-schema#label> "has gluten" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> <http://www.w3.org/2004/02/skos/core#definition> "a property of ingredients that show whether or not that ingerdient contains gluten" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten> <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> <http://purl.org/dc/terms/source> "Méthod Montignac , \"The Glycemic Index Concept,\" 2014. [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> <http://www.w3.org/2000/01/rdf-schema#label> "has glycemic index" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> <http://www.w3.org/2004/02/skos/core#definition> "has a glycemic indexe value which measures carbs’ from the perspective of their pure sugar/starch content in order to determine how they affect glycemia (blood sugar levels)  after meals" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/serves
+<http://idea.rpi.edu/heals/ont/whattomake/core/serves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/serves> <http://purl.org/dc/terms/source> "\"Serve definition and meaning,\" Collins English Dictionary. Available: https://www.collinsdictionary.com/dictionary/english/serve [Accessed 27-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/serves> <http://www.w3.org/2000/01/rdf-schema#label> "serves" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/serves> <http://www.w3.org/2004/02/skos/core#definition> "used to indicate how much food a recipe produces" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/serves> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe> <http://purl.org/dc/terms/source> "\"Breakfast,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe> <http://www.w3.org/2000/01/rdf-schema#label> "breakfast recipe" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe> <http://www.w3.org/2004/02/skos/core#definition> "a class that contains recipes of type breakfast" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic
+<http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> <http://purl.org/dc/terms/source> "\"Characteristic,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/characterisitc. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> <http://www.w3.org/2000/01/rdf-schema#label> "characteristic" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> <http://www.w3.org/2004/02/skos/core#definition> "a distinguishing trait, quality, or property" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> <http://www.w3.org/2004/02/skos/core#example> "Classes that inherit from this class represent different possible characteristics of food. Examples in this ontology include \"flavor\" and \"texture\" but these can be expanded as desired. Specific flavors and textures are represented as individuals that inherent from their respective subclass." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct
+<http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/Food> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03411041. [Accessed Nov. 19, 2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> <http://www.w3.org/2000/01/rdf-schema#label> "chemical food product" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> <http://www.w3.org/2004/02/skos/core#definition> "a food substance derived from a nonliving source (e.g., salt, water or synthesized compounds)" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Course
+<http://idea.rpi.edu/heals/ont/whattomake/core/Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Course> <http://purl.org/dc/terms/source> "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Course> <http://www.w3.org/2000/01/rdf-schema#label> "course" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Course> <http://www.w3.org/2004/02/skos/core#definition> "dfferent types of specific sets of food items that are served together during a meal" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Course> <http://www.w3.org/2004/02/skos/core#example> "The individuals that inhreit from this class represent courses of a meal. The recipe \"banana bread\" can be \"recommended for course\" \"dessert\". Additional courses can be added as individuals that inheret from this class." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Course> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe> <http://purl.org/dc/terms/source> "\"Dinner,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe> <http://www.w3.org/2000/01/rdf-schema#label> "dinner recipe" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe> <http://www.w3.org/2004/02/skos/core#definition> "a class that contains recipes of type dinner" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Flavor
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> <http://www.w3.org/2002/07/owl#disjointWith> <http://idea.rpi.edu/heals/ont/whattomake/core/Texture> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> <http://purl.org/dc/terms/source> "\"Flavor,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flavor. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> <http://www.w3.org/2000/01/rdf-schema#label> "flavor" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> <http://www.w3.org/2004/02/skos/core#definition> "the quality of something that affects the sense of taste" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Flavor> <http://www.w3.org/2004/02/skos/core#scopeNote> "food property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Food
+<http://idea.rpi.edu/heals/ont/whattomake/core/Food> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Food> <http://purl.org/dc/terms/source> "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Food> <http://www.w3.org/2000/01/rdf-schema#label> "food" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Food> <http://www.w3.org/2004/02/skos/core#definition> "something that can be eaten" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Food> <http://www.w3.org/2004/02/skos/core#example> "This class is the top-level element that represents different classifications of food. An ingredient individual will have the type of the most specific category it falls under. For example, \"chicken egg\" will be a type of \"egg\" which is a subclass of \"poultry product\" which is a subclass of \"primary food commodity of animal origin\" which is a subclass of \"food\". Additional classifications can be added at any level of the classification." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Food> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient
+<http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> <http://purl.org/dc/terms/source> "Cambridge Dictionary, \"ingredient.\" [Online]. Available: https://dictionary.cambridge.org/us/dictionary/english/ingredient. [Accessed Nov. 10, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> <http://www.w3.org/2000/01/rdf-schema#label> "ingredient" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> <http://www.w3.org/2004/02/skos/core#definition> "a food that is used with other foods in the preparation of a particular dish" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> <http://www.w3.org/2004/02/skos/core#example> "Individuals that are subclasses of this class represent ingredients that are used in a specific recipe. For example, the individual \"banana\" is a subclass of \"ingredient\" and the recipe \"banana bread\" \"has ingredient\" \"banana\". Ingredients can have the properties \"has glycymic index\" and \"has gluten\"." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid12 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2001/XMLSchema#maxInclusive> "60"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe> <http://purl.org/dc/terms/source> "Dictionary.com, \"hour.\" [Online]. Available: https://www.dictionary.com/browse/hour. [Accessed Oct. 5, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe> <http://www.w3.org/2000/01/rdf-schema#label> "less than one hour recipe" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe> <http://www.w3.org/2004/02/skos/core#definition> "a class that contains all recipes that only take one hour to cook" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> .
+_:genid18 <http://www.w3.org/2002/07/owl#hasValue> <http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe> <http://purl.org/dc/terms/source> "\"Lunch,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe> <http://www.w3.org/2000/01/rdf-schema#label> "lunch recipe" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe> <http://www.w3.org/2004/02/skos/core#definition> "a class that contains recipes of type lunch" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Meal
+<http://idea.rpi.edu/heals/ont/whattomake/core/Meal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Meal> <http://purl.org/dc/terms/source> "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Meal> <http://www.w3.org/2000/01/rdf-schema#label> "meal" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Meal> <http://www.w3.org/2004/02/skos/core#definition> "a class that links a recipe to a certain meal" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Meal> <http://www.w3.org/2004/02/skos/core#example> "The individuals that inhreit from this class represent different types of meals. The recipe \"kamut pancakes\" can be \"recommended for meal\" \"breakfast\". Additional meals can be added as individuals that inheret from this class." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Meal> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Measurement
+<http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> <http://purl.org/dc/terms/source> "\"Measure,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/measure. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "measurement" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> <http://www.w3.org/2004/02/skos/core#definition> "an adequate or due portion" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> <http://www.w3.org/2004/02/skos/core#example> "This class contains subclasses that represent different kinds of measurements relating to cooking. For example \"time measurement\" is a class that contains the individuals \"minute\" and \"hour\" and is used to represent the amount of time a recipe takes to make or cook." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400741> .
+<http://purl.obolibrary.org/obo/FOODON_03400741> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400741. [Accessed Nov. 14, 2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> <http://www.w3.org/2000/01/rdf-schema#label> "meat from chicken" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> <http://www.w3.org/2004/02/skos/core#definition> "the muscular tissues from a chicken" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400737> .
+<http://purl.obolibrary.org/obo/FOODON_03400737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> <http://www.w3.org/2000/01/rdf-schema#label> "meat from cow" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> <http://www.w3.org/2004/02/skos/core#definition> "the muscular tissues from a cow" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400737> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> <http://www.w3.org/2000/01/rdf-schema#label> "meat from lamb" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> <http://www.w3.org/2004/02/skos/core#definition> "the muscular tissues from a lamb" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400737> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig> <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig> <http://www.w3.org/2000/01/rdf-schema#label> "meat from pig" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig> <http://www.w3.org/2004/02/skos/core#definition> "the muscular tissues from a pig" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow
+<http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/FOODON_03400740> .
+<http://purl.obolibrary.org/obo/FOODON_03400740> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> <http://purl.org/dc/terms/source> "Wikipedia, \"Milk.\" [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow's_milk. [Accessed: Nov. 10, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> <http://www.w3.org/2000/01/rdf-schema#label> "milk from cow" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> <http://www.w3.org/2004/02/skos/core#definition> "milk obtained from a cow" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom
+<http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom> <http://purl.org/dc/terms/source> "Wikipedia, \"Mushroom.\" [Online]. Available: https://en.wikipedia.org/wiki/Mushroom. [Accessed: Nov. 22, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom> <http://www.w3.org/2000/01/rdf-schema#label> "mushroom" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom> <http://www.w3.org/2004/02/skos/core#definition> "the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin
+<http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/Food> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> <http://purl.org/dc/terms/source> "NHS, \"Eating processed foods,\" January 2017. [Online]. Available: https://www.nhs.uk/live-well/eat-well/what-are-processed-foods/. [Accessed Nov.22 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "primary food commodity of fungus origin" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> <http://www.w3.org/2004/02/skos/core#definition> "unaltered food derived from fungus" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Recipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> <http://purl.org/dc/terms/source> "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> <http://www.w3.org/2000/01/rdf-schema#label> "recipe" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> <http://www.w3.org/2004/02/skos/core#definition> "a combination of ingredients and a method, created by a chef, that produces a food" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> <http://www.w3.org/2004/02/skos/core#example> "Individuals that are a type of this class represent instances of recipes that are found online. For example, the individual \"banana bread\" can be found on AllRecipes.com and has the properties \"has ingredient,\" \"has cook time,\" \"has cooking temprature,\" \"serves,\" \"is recommended for course,\" and \"is recommended for meal\"." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal> .
+_:genid22 <http://www.w3.org/2002/07/owl#hasValue> <http://idea.rpi.edu/heals/ont/whattomake/core/Side> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe> <http://purl.org/dc/terms/source> "\"Side Dish,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe> <http://www.w3.org/2000/01/rdf-schema#label> "side recipe" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe> <http://www.w3.org/2004/02/skos/core#definition> "a class that contains recipes of type side" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement
+<http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> <http://purl.org/dc/terms/source> "Wikipedia, \"Temperature measurement.\" [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "temperature measurement" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> <http://www.w3.org/2004/02/skos/core#definition> "degree of hotness or coldness measured on a definite scale" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Texture
+<http://idea.rpi.edu/heals/ont/whattomake/core/Texture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Texture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Texture> <http://purl.org/dc/terms/source> "\"Texture,\" Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/texture. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Texture> <http://www.w3.org/2000/01/rdf-schema#label> "texture" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Texture> <http://www.w3.org/2004/02/skos/core#definition> "the characteristic physical structure given to a material, an object, etc., by the size, shape, arrangement, and proportions of its parts" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Texture> <http://www.w3.org/2004/02/skos/core#scopeNote> "food property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/Measurement> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> <http://purl.org/dc/terms/source> "Merriam-Webster, \"Time.\" [Online]. Available: https://www.merriam-webster.com/dictionary/time. [Accessed: Nov. 22, 018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> <http://purl.org/dc/terms/source> "Wikipedia, \"Temperature measurement.\" [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "time measurement" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> <http://www.w3.org/2004/02/skos/core#definition> "the measured or measurable period during which an action, process, or condition exists or continues" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/User
+<http://idea.rpi.edu/heals/ont/whattomake/core/User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/User> <http://purl.org/dc/terms/source> "\"User,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/user. [Accessed: 12-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/User> <http://www.w3.org/2000/01/rdf-schema#label> "user" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/User> <http://www.w3.org/2004/02/skos/core#definition> "a user of the system" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/User> <http://www.w3.org/2004/02/skos/core#example> "Individuals that inherit from this class represent users of the system. Individual users can have likes, dislikes, and allergies that are saved in the system through the \"likes,\" \"dislikes,\" \"forbids,\" and \"is allergic to,\" properties." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/User> <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Yeast
+<http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> <http://purl.org/dc/terms/source> "Wikidictionary, \"Yeast.\" [Online]. Available: https://en.wiktionary.org/wiki/yeast. [Accessed: Nov. 22, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> <http://www.w3.org/2000/01/rdf-schema#label> "yeast" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> <http://www.w3.org/2004/02/skos/core#definition> "humid, yellowish froth produced by fermenting malt worts, and used to brew beer, leaven bread, and also used in certain medicines" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Yeast> <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe
+<http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://idea.rpi.edu/heals/ont/whattomake/core/Recipe> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid28 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2001/XMLSchema#minInclusive> "50"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe> <http://purl.org/dc/terms/source> "Montignac Method, \"Search for a specific Glycemic Index,\"  2014. [Online]. Available: http://www.montignac.com/en/search-for-a-specific-glycemic-index/. [Accessed Nov. 1, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe> <http://www.w3.org/2000/01/rdf-schema#label> "high glycemic recipe" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe> <http://www.w3.org/2004/02/skos/core#definition> "a class of recipes that contains an ingredient with a glycemic index of 50 or more" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe> <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400737
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400740
+# 
+# http://purl.obolibrary.org/obo/FOODON_03400741
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer
+<http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Course> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> <http://purl.org/dc/terms/source> "\"Appetizer,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/appetizer. [Accessed: 1-Nov-2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> <http://www.w3.org/2000/01/rdf-schema#label> "appetizer" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> <http://www.w3.org/2004/02/skos/core#definition> "a food or drink that stimulates the appetite and is usually served before a meal" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast
+<http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Meal> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> <http://purl.org/dc/terms/source> "\"Breakfast,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> <http://www.w3.org/2000/01/rdf-schema#label> "breakfast" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> <http://www.w3.org/2004/02/skos/core#definition> "the first meal of the day especially when taken in the morning" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Brunch
+<http://idea.rpi.edu/heals/ont/whattomake/core/Brunch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Brunch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Meal> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Brunch> <http://purl.org/dc/terms/source> "Wikipedia, \"Brunch.\" [Online]. Available: https://en.wikipedia.org/wiki/Brunch. [Accessed: Nov. 16, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Brunch> <http://www.w3.org/2000/01/rdf-schema#label> "brunch" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Brunch> <http://www.w3.org/2004/02/skos/core#definition> "a combination of breakfast and lunch eaten usually during the late morning to early afternoon, generally served from 10am up to 2pm, and regularly has some form of alcoholic drink (most usually champagne or a cocktail) served with it" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Brunch> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Dessert
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Course> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> <http://purl.org/dc/terms/source> "\"Dessert,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dessert. [Accessed: 1-Nov-2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> <http://www.w3.org/2000/01/rdf-schema#label> "dessert" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> <http://www.w3.org/2004/02/skos/core#definition> "a usually sweet course or dish (as of pastry or ice cream) usually served at the end of a meal" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dessert> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Dinner
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Meal> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> <http://purl.org/dc/terms/source> "\"Dinner,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> <http://www.w3.org/2000/01/rdf-schema#label> "dinner" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> <http://www.w3.org/2004/02/skos/core#definition> "the principal meal of the day" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Dinner> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Entree
+<http://idea.rpi.edu/heals/ont/whattomake/core/Entree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Entree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Course> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Entree> <http://purl.org/dc/terms/source> "\"Entree,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/entree. [Accessed: 1-Nov-2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Entree> <http://www.w3.org/2000/01/rdf-schema#label> "entree" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Entree> <http://www.w3.org/2004/02/skos/core#definition> "the main course of a meal in the U.S." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Entree> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Lunch
+<http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Meal> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> <http://purl.org/dc/terms/source> "\"Lunch,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> <http://www.w3.org/2000/01/rdf-schema#label> "lunch" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> <http://www.w3.org/2004/02/skos/core#definition> "a usually light, especially one taken in the middle of the day" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Lunch> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Salad
+<http://idea.rpi.edu/heals/ont/whattomake/core/Salad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Salad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Course> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Salad> <http://purl.org/dc/terms/source> "Wikipedia, \"Salad.\" [Online]. Available: https://en.wikipedia.org/wiki/Salad. [Accessed: Nov. 16, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Salad> <http://www.w3.org/2000/01/rdf-schema#label> "salad" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Salad> <http://www.w3.org/2004/02/skos/core#definition> "a dish consisting of a mixture of small pieces of food, usually vegetables" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Salad> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Side
+<http://idea.rpi.edu/heals/ont/whattomake/core/Side> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Side> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Course> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Side> <http://purl.org/dc/terms/source> "\"Side Dish,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018]." .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Side> <http://www.w3.org/2000/01/rdf-schema#label> "side" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Side> <http://www.w3.org/2004/02/skos/core#definition> "a food served separately along with the main course" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Side> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Snack
+<http://idea.rpi.edu/heals/ont/whattomake/core/Snack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Snack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Meal> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Snack> <http://purl.org/dc/terms/source> "\"Snack,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/snack. [Accessed: 1-Nov-2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Snack> <http://www.w3.org/2000/01/rdf-schema#label> "snack" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Snack> <http://www.w3.org/2004/02/skos/core#definition> "a light meal : food eaten between regular meals" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Snack> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
+# 
+# http://idea.rpi.edu/heals/ont/whattomake/core/Soup
+<http://idea.rpi.edu/heals/ont/whattomake/core/Soup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Soup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://idea.rpi.edu/heals/ont/whattomake/core/Course> .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Soup> <http://purl.org/dc/terms/source> "Wikipedia, \"Soup.\" [Online]. Available: https://en.wikipedia.org/wiki/Soup. [Accessed: Nov. 16, 2018]" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Soup> <http://www.w3.org/2000/01/rdf-schema#label> "soup" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Soup> <http://www.w3.org/2004/02/skos/core#definition> "a primarily liquid food, generally served warm or hot (but may be cool or cold), that is made by combining ingredients of meat or vegetables with stock, juice, water, or another liquid" .
+<http://idea.rpi.edu/heals/ont/whattomake/core/Soup> <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
