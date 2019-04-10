@@ -1,0 +1,3 @@
+[submodule "src/recipeformats"]
+	path = src/recipeformats
+	url = https://github.com/Etherealflux/recipeformats
