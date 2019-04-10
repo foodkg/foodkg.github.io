@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://idea.rpi.edu/heals/ont/whattomake/foodon/"
-     xml:base="http://idea.rpi.edu/heals/ont/whattomake/foodon/"
+<rdf:RDF xmlns="https://purl.org/heals/wtm/foodon/"
+     xml:base="https://purl.org/heals/wtm/foodon/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,8 +12,8 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:SpecificationMetadata1="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
-    <owl:Ontology rdf:about="http://idea.rpi.edu/heals/ont/whattomake/foodon/">
-        <owl:versionIRI rdf:resource="http://idea.rpi.edu/heals/ont/whattomake/foodon/"/>
+    <owl:Ontology rdf:about="https://purl.org/heals/wtm/foodon/">
+        <owl:versionIRI rdf:resource="https://purl.org/heals/wtm/foodon/"/>
         <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
         <terms:abstract>The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology.</terms:abstract>
         <terms:contributor>Forest Eckhardt</terms:contributor>
@@ -107,18 +107,11 @@
     
 
 
-    <!-- http://idea.rpi.edu/heals/ont/whattomake/core/Food -->
-
-
-    <owl:Class rdf:about="http://idea.rpi.edu/heals/ont/whattomake/core/Food"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FOODON_03400644 -->
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400644">
-        <rdfs:subClassOf rdf:resource="http://idea.rpi.edu/heals/ont/whattomake/core/Food"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0644</oboInOwl:hasDbXref>
@@ -135,7 +128,7 @@
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400645">
-        <rdfs:subClassOf rdf:resource="http://idea.rpi.edu/heals/ont/whattomake/core/Food"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0645</oboInOwl:hasDbXref>
@@ -152,7 +145,7 @@
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400647">
-        <rdfs:subClassOf rdf:resource="http://idea.rpi.edu/heals/ont/whattomake/core/Food"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0647</oboInOwl:hasDbXref>
@@ -169,7 +162,7 @@
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400648">
-        <rdfs:subClassOf rdf:resource="http://idea.rpi.edu/heals/ont/whattomake/core/Food"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0648</oboInOwl:hasDbXref>
@@ -1561,6 +1554,13 @@ Specific commodities will be listed in this group with their code nos. according
         <rdfs:label xml:lang="en">manufactured milk product (multi-ingredient) of animal origin</rdfs:label>
         <skos:scopeNote>used for ingredient classification</skos:scopeNote>
     </owl:Class>
+    
+
+
+    <!-- https://purl.org/heals/wtm/core/Food -->
+
+
+    <owl:Class rdf:about="https://purl.org/heals/wtm/core/Food"/>
 </rdf:RDF>
 
 

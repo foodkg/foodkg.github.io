@@ -2,8 +2,8 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.obolibrary.org/obo", "http://www.w3.org/2000/01/rdf-schema", "http://www.omg.org/techprocess/ab/SpecificationMetadata", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://idea.rpi.edu/heals/ont/whattomake/core", "http://www.w3.org/2004/02/skos/core" ],
-    "iri" : "http://idea.rpi.edu/heals/ont/whattomake/foodon/",
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://purl.org/heals/wtm/core", "http://purl.obolibrary.org/obo", "http://www.w3.org/2000/01/rdf-schema", "http://www.omg.org/techprocess/ab/SpecificationMetadata", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2004/02/skos/core" ],
+    "iri" : "https://purl.org/heals/wtm/foodon/",
     "description" : {
       "undefined" : "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations."
     },
@@ -42,12 +42,12 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Forest Eckhardt",
+        "value" : "Yarden Ne'eman",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Yarden Ne'eman",
+        "value" : "Forest Eckhardt",
         "type" : "label"
       } ],
       "references" : [ {
@@ -74,16 +74,16 @@
         "value" : "2019-04-03",
         "type" : "label"
       } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://bioportal.bioontology.org/ontologies/FOODON/?p=summary",
-        "type" : "label"
-      } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "undefined",
         "value" : "The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://bioportal.bioontology.org/ontologies/FOODON/?p=summary",
         "type" : "label"
       } ]
     }
@@ -111,7 +111,7 @@
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "32",
@@ -123,7 +123,7 @@
     "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "40",
     "type" : "owl:Class"
   }, {
     "id" : "41",
@@ -147,28 +147,31 @@
     "id" : "59",
     "type" : "owl:Class"
   }, {
-    "id" : "58",
+    "id" : "71",
     "type" : "owl:Class"
   }, {
-    "id" : "72",
+    "id" : "58",
     "type" : "owl:Class"
   }, {
     "id" : "74",
     "type" : "owl:Class"
   }, {
-    "id" : "75",
+    "id" : "76",
     "type" : "owl:Class"
   }, {
-    "id" : "82",
+    "id" : "77",
     "type" : "owl:Class"
   }, {
-    "id" : "90",
+    "id" : "83",
     "type" : "owl:Class"
   }, {
     "id" : "91",
     "type" : "owl:Class"
   }, {
-    "id" : "93",
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
     "type" : "owl:Class"
   }, {
     "id" : "19",
@@ -177,16 +180,13 @@
     "id" : "51",
     "type" : "owl:Class"
   }, {
-    "id" : "96",
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "106",
     "type" : "owl:Class"
   }, {
     "id" : "107",
@@ -198,6 +198,12 @@
     "id" : "109",
     "type" : "owl:Class"
   }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
     "id" : "28",
     "type" : "owl:Class"
   }, {
@@ -207,10 +213,7 @@
     "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "112",
+    "id" : "113",
     "type" : "owl:Class"
   }, {
     "id" : "43",
@@ -222,10 +225,10 @@
     "id" : "60",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "33",
@@ -234,46 +237,43 @@
     "id" : "34",
     "type" : "owl:Class"
   }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
     "id" : "38",
     "type" : "owl:Class"
   }, {
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "69",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
     "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "103",
+    "id" : "104",
     "type" : "owl:Class"
   }, {
-    "id" : "120",
+    "id" : "121",
     "type" : "owl:Class"
   }, {
     "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "125",
-    "type" : "owl:Class"
-  }, {
-    "id" : "153",
     "type" : "owl:Class"
   }, {
     "id" : "126",
     "type" : "owl:Class"
   }, {
     "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
     "type" : "owl:Class"
   }, {
     "id" : "46",
@@ -285,7 +285,7 @@
     "id" : "48",
     "type" : "owl:Class"
   }, {
-    "id" : "129",
+    "id" : "130",
     "type" : "owl:Class"
   }, {
     "id" : "53",
@@ -318,10 +318,7 @@
     "id" : "56",
     "type" : "owl:Class"
   }, {
-    "id" : "128",
-    "type" : "owl:Class"
-  }, {
-    "id" : "77",
+    "id" : "129",
     "type" : "owl:Class"
   }, {
     "id" : "78",
@@ -333,7 +330,10 @@
     "id" : "80",
     "type" : "owl:Class"
   }, {
-    "id" : "123",
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
     "type" : "owl:unionOf"
   }, {
     "id" : "70",
@@ -348,49 +348,46 @@
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "116",
+    "id" : "117",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "102",
+    "id" : "103",
     "type" : "owl:Thing"
   }, {
     "id" : "65",
     "type" : "owl:Thing"
   }, {
-    "id" : "119",
+    "id" : "120",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "83",
+    "id" : "84",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "84",
+    "id" : "85",
     "type" : "owl:Class"
   }, {
-    "id" : "92",
+    "id" : "93",
     "type" : "owl:Class"
   }, {
-    "id" : "76",
-    "type" : "owl:Class"
-  }, {
-    "id" : "71",
-    "type" : "owl:Class"
-  }, {
-    "id" : "94",
+    "id" : "72",
     "type" : "owl:Class"
   }, {
     "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "96",
     "type" : "owl:Class"
   }, {
-    "id" : "85",
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
     "type" : "owl:Class"
   }, {
     "id" : "86",
@@ -405,7 +402,10 @@
     "id" : "89",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -587,16 +587,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400770",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Secondary milk products include milk products which have undergone simple processing such as removal or part removal of certain ingredients e.g. water, milk fat etc. The group and the commodities therein will only be used for pesticides which are not partitioned exclusively or nearly exclusively into the milk fat.\nThe group includes among others the following commodities as defined in the relevant Codex Standards, see CAC/VOL. XVI-Ed. 1 (1984). The reference no. of the standard is indicated between brackets.\nMilk powders (whole, skimmed and partly skimmed) (Standard A-5 1971); evaporated milks (whole, skimmed) (Standard A-3 1971); skimmed milk.\nSpecific commodities will be listed in this group with their code nos. accordingly as the necessity for this arises.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -618,55 +618,6 @@
     },
     "attributes" : [ "external" ],
     "id" : "18",
-    "superClasses" : [ "19" ]
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400771",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "annotations" : {
-      "hasDbXref" : [ {
-        "identifier" : "hasDbXref",
-        "language" : "undefined",
-        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0771",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/FOODON_03400771",
-        "type" : "label"
-      } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "Crustaceans are processed to a large extent before entering the national or international trade channels.\nCrabs, lobsters and shrimps or prawns are in general cooked directly after catching. Thereafter either the animals are deep frozen with or without shell, or the meat without shell is canned, with or without a packing medium. The latter may consist of water, salt, lemon juice and sugars.\nShrimps or prawns may also be \"parboiled\" and thereafter deep-frozen.\nAccording to the relevant Codex Standards, namely 92-1981, and 95-1981 \"cooked\" means heated for a period of time such that the thermal centre reaches a temperature adequate to coagulate the protein and \"parboiled\" means heated for a period of such time that the surface of the product Codex Alimentarius reaches a temperature adequate to coagulate the protein at the surface but inadequate to coagulate the protein at the thermal centre.\nThe cooked commodities are in general subjected to deep-freezing directly after cooking or the cooking is part of the canning process.\nThe designation cooked after the commodity may include any of the processes mentioned except the parboiled and deep-frozen shrimps or prawns.\nThe entire commodity except the shell may be consumed.",
-        "type" : "label"
-      } ],
-      "IAO_0000114" : [ {
-        "identifier" : "IAO_0000114",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
-        "type" : "iri"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "used for ingredient classification",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "FOODON_03400771",
-      "en" : "crustaceans, processed"
-    },
-    "attributes" : [ "external" ],
-    "id" : "20",
     "superClasses" : [ "19" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400650",
@@ -714,10 +665,59 @@
       "IRI-based" : "FOODON_03400650",
       "en" : "vegetable"
     },
-    "subClasses" : [ "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+    "subClasses" : [ "22", "23", "24", "25", "26", "27", "28", "29", "30" ],
     "attributes" : [ "external" ],
-    "id" : "21",
-    "superClasses" : [ "22" ]
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400771",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "annotations" : {
+      "hasDbXref" : [ {
+        "identifier" : "hasDbXref",
+        "language" : "undefined",
+        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0771",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FOODON_03400771",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Crustaceans are processed to a large extent before entering the national or international trade channels.\nCrabs, lobsters and shrimps or prawns are in general cooked directly after catching. Thereafter either the animals are deep frozen with or without shell, or the meat without shell is canned, with or without a packing medium. The latter may consist of water, salt, lemon juice and sugars.\nShrimps or prawns may also be \"parboiled\" and thereafter deep-frozen.\nAccording to the relevant Codex Standards, namely 92-1981, and 95-1981 \"cooked\" means heated for a period of time such that the thermal centre reaches a temperature adequate to coagulate the protein and \"parboiled\" means heated for a period of such time that the surface of the product Codex Alimentarius reaches a temperature adequate to coagulate the protein at the surface but inadequate to coagulate the protein at the thermal centre.\nThe cooked commodities are in general subjected to deep-freezing directly after cooking or the cooking is part of the canning process.\nThe designation cooked after the commodity may include any of the processes mentioned except the parboiled and deep-frozen shrimps or prawns.\nThe entire commodity except the shell may be consumed.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000114" : [ {
+        "identifier" : "IAO_0000114",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "used for ingredient classification",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FOODON_03400771",
+      "en" : "crustaceans, processed"
+    },
+    "attributes" : [ "external" ],
+    "id" : "31",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400651",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -735,16 +735,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400651",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "TYPE 03 - GRASSES\n\nGrasses are herbaceous annual and perennial monocotyledonous plants of different kinds, cultivated extensively for their ears (heads) of starchy seeds used directly for the production of food. Grasses used for animal feed are classified under Class C; Primary Animal feed commodities, Group 051.\n\nThe plants are fully exposed to pesticides applied during the growing season.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -767,7 +767,7 @@
     "subClasses" : [ "33", "34" ],
     "attributes" : [ "external" ],
     "id" : "32",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400772",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -818,6 +818,56 @@
     "id" : "35",
     "superClasses" : [ "19" ]
   }, {
+    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400652",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "annotations" : {
+      "hasDbXref" : [ {
+        "identifier" : "hasDbXref",
+        "language" : "undefined",
+        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0652",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FOODON_03400652",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "TYPE 04  -  NUTS AND SEEDS\n\nNuts and seeds are derived from a large variety of trees, shrubs and herbaceous plants, mostly cultivated.\n\nThe mature seeds or nuts are used as human food, for the production of beverages or edible vegetable oils and for the production of seed meals and cakes for animal feed.",
+        "type" : "label"
+      } ],
+      "IAO_0000114" : [ {
+        "identifier" : "IAO_0000114",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "used for ingredient classification",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FOODON_03400652",
+      "en" : "nut and seed"
+    },
+    "subClasses" : [ "37", "38", "39" ],
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "21" ]
+  }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400773",
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
@@ -834,16 +884,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400773",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Milk fats are the fatty ingredients derived from the milk of various mammals",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -864,58 +914,8 @@
       "en" : "milk fats"
     },
     "attributes" : [ "external" ],
-    "id" : "36",
+    "id" : "40",
     "superClasses" : [ "19" ]
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400652",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "annotations" : {
-      "hasDbXref" : [ {
-        "identifier" : "hasDbXref",
-        "language" : "undefined",
-        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0652",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/FOODON_03400652",
-        "type" : "label"
-      } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "TYPE 04  -  NUTS AND SEEDS\n\nNuts and seeds are derived from a large variety of trees, shrubs and herbaceous plants, mostly cultivated.\n\nThe mature seeds or nuts are used as human food, for the production of beverages or edible vegetable oils and for the production of seed meals and cakes for animal feed.",
-        "type" : "label"
-      } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
-      "IAO_0000114" : [ {
-        "identifier" : "IAO_0000114",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
-        "type" : "iri"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "used for ingredient classification",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "FOODON_03400652",
-      "en" : "nut and seed"
-    },
-    "subClasses" : [ "38", "39", "40" ],
-    "attributes" : [ "external" ],
-    "id" : "37",
-    "superClasses" : [ "22" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400774",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -933,16 +933,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400774",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Derived milk products include food or edible substances isolated from the primary food commodity cattle milk, or milks from other mammals, using physical, biological and chemical processes. This group and the commodities therein will only be used if necessary for pesticides which are not partitioned exclusively or nearly exclusively into the milk fat. For further explanation, see Group 082.\nThis group includes among others the following food commodities, as defined in the relevant Codex Standards, see CAC/VOL. XXI, Ed-1 (1984): Butter, whey butter, both in Standard A-1 (1971), Butteroil, anhydrous butteroil, both in Standard A-2 (1973); Cream, Standard A-9 (1976); Cream powders (half cream, high fat), Standard A-10 (1971); Edible acid casein, Standard A-12 (1976): Edible caseinates, Standard A-13 (1976).\nSpecific commodities will be listed in this group with their code nos. accordingly as the necessity for this arises.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -982,16 +982,16 @@
         "value" : "  http://purl.obolibrary.org/obo/FOODON_03400653",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "TYPE 05  -  HERBS AND SPICES\n\nHerbs and spices are the flavoursome or aromatic leaves, stems, roots, flowers or fruits of a variety of plants used to impart special flavours to food and beverages.",
-        "type" : "label"
-      } ],
       "IAO_0000412" : [ {
         "identifier" : "IAO_0000412",
         "language" : "undefined",
         "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "TYPE 05  -  HERBS AND SPICES\n\nHerbs and spices are the flavoursome or aromatic leaves, stems, roots, flowers or fruits of a variety of plants used to impart special flavours to food and beverages.",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1014,7 +1014,7 @@
     "subClasses" : [ "43", "44" ],
     "attributes" : [ "external" ],
     "id" : "42",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400654",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1245,6 +1245,16 @@
     "id" : "59",
     "superClasses" : [ "60" ]
   }, {
+    "iri" : "https://purl.org/heals/wtm/core/Food",
+    "baseIri" : "https://purl.org/heals/wtm/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Food"
+    },
+    "subClasses" : [ "1", "72", "73", "21" ],
+    "attributes" : [ "external" ],
+    "id" : "71"
+  }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400667",
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
@@ -1261,16 +1271,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400667",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "19  Manufactured food (multi-ingredient) of animal origin\n\nThe term \"multi-ingredient manufactured food\" means a processed food consisting of more than one major ingredient.\nA multi-ingredient food consisting of ingredients of both animal and plant origin will be included in this type if the ingredient(s) of animal origin is (are) predominant",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1293,7 +1303,7 @@
     "subClasses" : [ "57" ],
     "attributes" : [ "external" ],
     "id" : "58",
-    "superClasses" : [ "71" ]
+    "superClasses" : [ "73" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400668",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1311,16 +1321,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400668",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "Citrus fruits are produced on trees or shrubs of the family Rutaceae. These fruits are characterized by aromatic oily peel, globular form and interior segments of juice-filled vesicles. The fruit is fully exposed to pesticides during the growing season. Post-harvest treatments with pesticides and liquid waxes are often carried out to avoid deterioration during transport and distribution due to fungal diseases, insect pests or loss of moisture.\nThe fruit pulp may be consumed in succulent form and as a juice. The entire fruit may be used for preserves.",
-        "type" : "label"
-      } ],
       "IAO_0000412" : [ {
         "identifier" : "IAO_0000412",
         "language" : "undefined",
         "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Citrus fruits are produced on trees or shrubs of the family Rutaceae. These fruits are characterized by aromatic oily peel, globular form and interior segments of juice-filled vesicles. The fruit is fully exposed to pesticides during the growing season. Post-harvest treatments with pesticides and liquid waxes are often carried out to avoid deterioration during transport and distribution due to fungal diseases, insect pests or loss of moisture.\nThe fruit pulp may be consumed in succulent form and as a juice. The entire fruit may be used for preserves.",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1341,8 +1351,8 @@
       "en" : "citrus fruit"
     },
     "attributes" : [ "external" ],
-    "id" : "72",
-    "superClasses" : [ "73" ]
+    "id" : "74",
+    "superClasses" : [ "75" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400669",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1390,8 +1400,8 @@
       "en" : "pome fruit"
     },
     "attributes" : [ "external" ],
-    "id" : "74",
-    "superClasses" : [ "73" ]
+    "id" : "76",
+    "superClasses" : [ "75" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400660",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1409,16 +1419,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400660",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "The term \"secondary food commodity\" means a \"primary food commodity\" which has undergone simple processing, such as removal of certain portions, drying (except natural drying), husking, and comminution, which do not basically alter the composition or identity of the product. Natural field dried mature crops or parts of crops such as pulses, bulb onions or cereal grains are not considered as secondary food commodities.\n\nSecondary food commodities may be processed further or used as ingredients in the manufacture of food or sold directly to the consumer.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1438,10 +1448,10 @@
       "IRI-based" : "FOODON_03400660",
       "en" : "secondary food commodity of plant origin"
     },
-    "subClasses" : [ "77", "78", "79", "80", "81" ],
+    "subClasses" : [ "78", "79", "80", "81", "82" ],
     "attributes" : [ "external" ],
-    "id" : "75",
-    "superClasses" : [ "76" ]
+    "id" : "77",
+    "superClasses" : [ "72" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400661",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1459,16 +1469,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400661",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Type 13  -  Derived edible products of plant origin\n\n\"Derived edible products\" are foods or edible substances isolated from primary food commodities or raw agricultural commodities, not intended for human consumption as such, using physical, biological or chemical processing.\n\nThis type of processed food includes groups such as vegetable oils (crude and refined), by-products of the fractionation of cereals fruit juices, teas (fermented and dried), cocoa powder and by-products of cocoa manufacturing, and extracts of various plants.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1488,10 +1498,10 @@
       "IRI-based" : "FOODON_03400661",
       "en" : "derived product of plant origin"
     },
-    "subClasses" : [ "83", "84", "85", "86", "87", "88", "89" ],
+    "subClasses" : [ "84", "85", "86", "87", "88", "89", "90" ],
     "attributes" : [ "external" ],
-    "id" : "82",
-    "superClasses" : [ "76" ]
+    "id" : "83",
+    "superClasses" : [ "72" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400662",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1509,16 +1519,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400662",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Type 14 - Manufactured Foods (single-ingredient) of plant origin\n\nThe term \"single-ingredient manufactured food\" means a \"processed food\" which consists of one identifiable food ingredient, with or without packing medium or minor ingredients, such as flavouring agents, spices and condiments, and which is normally pre-packaged and ready for consumption with or without cooking.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1539,8 +1549,8 @@
       "en" : "manufactured food (single ingredient) of plant origin"
     },
     "attributes" : [ "external" ],
-    "id" : "90",
-    "superClasses" : [ "76" ]
+    "id" : "91",
+    "superClasses" : [ "72" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400663",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1587,10 +1597,10 @@
       "IRI-based" : "FOODON_03400663",
       "en" : "manufactured food (multi-ingredient) of plant origin"
     },
-    "subClasses" : [ "92" ],
+    "subClasses" : [ "93" ],
     "attributes" : [ "external" ],
-    "id" : "91",
-    "superClasses" : [ "76" ]
+    "id" : "92",
+    "superClasses" : [ "72" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400664",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1637,10 +1647,10 @@
       "IRI-based" : "FOODON_03400664",
       "en" : "secondary food commodity of animal origin"
     },
-    "subClasses" : [ "94" ],
+    "subClasses" : [ "96" ],
     "attributes" : [ "external" ],
-    "id" : "93",
-    "superClasses" : [ "71" ]
+    "id" : "95",
+    "superClasses" : [ "73" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400665",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1658,16 +1668,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400665",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "Type 17 - Derived edible products of animal origin\n\nThe term \"Derived edible products\" means foods or edible substances isolated from primary food commodities or raw agricultural commodities not intended for human consumption as such, using physical, biological and chemical processes.\n\nThis type includes processed (rendered or extracted, possibly refined and/or clarified) fats from mammals, including aquatic mammals, poultry and aquatic organisms such as fishes",
-        "type" : "label"
-      } ],
       "IAO_0000412" : [ {
         "identifier" : "IAO_0000412",
         "language" : "undefined",
         "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Type 17 - Derived edible products of animal origin\n\nThe term \"Derived edible products\" means foods or edible substances isolated from primary food commodities or raw agricultural commodities not intended for human consumption as such, using physical, biological and chemical processes.\n\nThis type includes processed (rendered or extracted, possibly refined and/or clarified) fats from mammals, including aquatic mammals, poultry and aquatic organisms such as fishes",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1687,10 +1697,10 @@
       "IRI-based" : "FOODON_03400665",
       "en" : "derived edible product of animal origin"
     },
-    "subClasses" : [ "18", "20", "35", "36", "41" ],
+    "subClasses" : [ "18", "31", "35", "40", "41" ],
     "attributes" : [ "external" ],
     "id" : "19",
-    "superClasses" : [ "71" ]
+    "superClasses" : [ "73" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400666",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1740,7 +1750,7 @@
     "subClasses" : [ "50" ],
     "attributes" : [ "external" ],
     "id" : "51",
-    "superClasses" : [ "71" ]
+    "superClasses" : [ "73" ]
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
@@ -1749,7 +1759,7 @@
       "IRI-based" : "List"
     },
     "attributes" : [ "external" ],
-    "id" : "96"
+    "id" : "97"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400678",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1797,8 +1807,8 @@
       "en" : "leafy vegetable (including brassica leafy vegetable)"
     },
     "attributes" : [ "external" ],
-    "id" : "23",
-    "superClasses" : [ "21" ]
+    "id" : "22",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400679",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1846,8 +1856,8 @@
       "en" : "legume vegetable"
     },
     "attributes" : [ "external" ],
-    "id" : "24",
-    "superClasses" : [ "21" ]
+    "id" : "23",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400670",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1895,8 +1905,8 @@
       "en" : "stone fruit"
     },
     "attributes" : [ "external" ],
-    "id" : "106",
-    "superClasses" : [ "73" ]
+    "id" : "107",
+    "superClasses" : [ "75" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400671",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1944,8 +1954,8 @@
       "en" : "berries and other small fruit"
     },
     "attributes" : [ "external" ],
-    "id" : "107",
-    "superClasses" : [ "73" ]
+    "id" : "108",
+    "superClasses" : [ "75" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400672",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1963,16 +1973,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400672",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "The assorted tropical and sub-tropical fruits - edible peel are derived from the immature or mature fruits of a large variety of perennial plants, usually shrubs or trees. The fruits are fully exposed to pesticides during the growing season (period of fruit development).\nThe whole fruit may be consumed in a succulent or processed form.",
-        "type" : "label"
-      } ],
       "IAO_0000412" : [ {
         "identifier" : "IAO_0000412",
         "language" : "undefined",
         "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "The assorted tropical and sub-tropical fruits - edible peel are derived from the immature or mature fruits of a large variety of perennial plants, usually shrubs or trees. The fruits are fully exposed to pesticides during the growing season (period of fruit development).\nThe whole fruit may be consumed in a succulent or processed form.",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -1993,8 +2003,8 @@
       "en" : "assorted tropical and sub-tropical fruit - edible peel"
     },
     "attributes" : [ "external" ],
-    "id" : "108",
-    "superClasses" : [ "73" ]
+    "id" : "109",
+    "superClasses" : [ "75" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400673",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2042,8 +2052,8 @@
       "en" : "assorted tropical and sub-tropical fruit - inedible peel"
     },
     "attributes" : [ "external" ],
-    "id" : "109",
-    "superClasses" : [ "73" ]
+    "id" : "110",
+    "superClasses" : [ "75" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400674",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2091,8 +2101,8 @@
       "en" : "bulb vegetable"
     },
     "attributes" : [ "external" ],
-    "id" : "28",
-    "superClasses" : [ "21" ]
+    "id" : "27",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400675",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2140,8 +2150,8 @@
       "en" : "brassica (cole or cabbage) vegetable, head cabbage, flowerhead brassica"
     },
     "attributes" : [ "external" ],
-    "id" : "29",
-    "superClasses" : [ "21" ]
+    "id" : "28",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400676",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2189,8 +2199,8 @@
       "en" : "fruiting vegetable, cucurbit"
     },
     "attributes" : [ "external" ],
-    "id" : "30",
-    "superClasses" : [ "21" ]
+    "id" : "29",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400677",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2208,16 +2218,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400677",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Fruiting vegetables, other than Cucurbits are derived from the immature and mature fruits of various plants, usually annual vines or bushes. The group includes edible fungi and mushrooms, being comparable organs of lower plants. Many plants of this group belong to the botanical family Solanaceae.\nThis group does not include fruits of vegetables of the botanical family Cucurbitaceae or the pods of vegetables of the Leguminosae-family.\nThe vegetables of this group are fully exposed to pesticides applied during the period of fruit development, except those of which the edible portion is covered by husks, such as sweet corn, ground cherries (Physalis spp.). The latter fruiting vegetables are protected from most pesticides by the husk except from pesticides with a systemic action.\nThe entire fruiting vegetable or the edible portion after discarding husks or peels may be consumed in a fresh form or after processing.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -2238,8 +2248,8 @@
       "en" : "fruiting vegetable, other than cucurbit"
     },
     "attributes" : [ "external" ],
-    "id" : "31",
-    "superClasses" : [ "21" ]
+    "id" : "30",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/MediaType",
     "baseIri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata",
@@ -2263,7 +2273,7 @@
       "undefined" : "MIME MediaType"
     },
     "attributes" : [ "external" ],
-    "id" : "112",
+    "id" : "113",
     "superClasses" : [ "13" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400689",
@@ -2282,16 +2292,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400689",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Spices consist of the aromatic seeds roots, berries or other fruits from a variety of plants, which are used in relatively small quantities to flavour foods.\nSpices are exposed in varying degrees to pesticides applied during the growing season. Also post-harvest treatments may be applied to spices in the dried form.\nThey are consumed primarily in the dried form as condiment.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -2411,8 +2421,8 @@
       "en" : "root and tuber vegetable"
     },
     "attributes" : [ "external" ],
-    "id" : "26",
-    "superClasses" : [ "21" ]
+    "id" : "25",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400682",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2460,8 +2470,8 @@
       "en" : "stalk and stem vegetable"
     },
     "attributes" : [ "external" ],
-    "id" : "27",
-    "superClasses" : [ "21" ]
+    "id" : "26",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400683",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2479,16 +2489,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400683",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Cereal grains are derived from the ears (heads) of starchy seeds produced by a variety of plants, primarily of the grass family (Grainineae)\nBuckwheat, a dicotyledonous crop belonging to the botanical family Polygonaceae and two Chenopodium species, belonging to the botanical family Chenopodiaceae are included in this group, because of similarities in size and type of the seed, residue pattern and the use of the commodity.\nThe edible seeds are protected to varying degrees from pesticides applied during flee growing season by husks. Husks are removed before processing and/or consumption.\nCereal grains are often exposed to post-harvest treatments with pesticides.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -2528,16 +2538,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400684",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Grasses For sugar or syrup production, includes species of grasses with a high sugar content especially in the stem. The stems are mainly used for sugar or syrup production, and to a small extent as vegetables or sweets. The leaves, ears and several wastes of the sugar or syrup manufacturing process are used, among others, as animal feed see Group 052: Miscellaneous fodder and forage crops).",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -2607,57 +2617,8 @@
       "en" : "tree nut"
     },
     "attributes" : [ "external" ],
-    "id" : "38",
-    "superClasses" : [ "37" ]
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400686",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "annotations" : {
-      "hasDbXref" : [ {
-        "identifier" : "hasDbXref",
-        "language" : "undefined",
-        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0686",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/FOODON_03400686",
-        "type" : "label"
-      } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "Oilseed consists of seeds from a variety of plants used in the production of edible vegetable oils, seed meals and cakes for animal feed. Some important vegetable oil seeds are by-products of fibre or fruit crops (e.g. cotton seed, olives).\nSome of the oilseeds are, directly or after slight processing (e.g. roasting), used as food (e.g. peanuts) or for food flavouring (e.g. poppy seed, sesame seed).\nOilseeds are protected from pesticides applied during the growing season by the shell or husk.",
-        "type" : "label"
-      } ],
-      "IAO_0000114" : [ {
-        "identifier" : "IAO_0000114",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
-        "type" : "iri"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "used for ingredient classification",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "FOODON_03400686",
-      "en" : "oilseed"
-    },
-    "attributes" : [ "external" ],
-    "id" : "39",
-    "superClasses" : [ "37" ]
+    "id" : "37",
+    "superClasses" : [ "36" ]
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/IssueResolution",
     "baseIri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata",
@@ -2678,6 +2639,55 @@
     "id" : "69",
     "superClasses" : [ "13" ]
   }, {
+    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400686",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "annotations" : {
+      "hasDbXref" : [ {
+        "identifier" : "hasDbXref",
+        "language" : "undefined",
+        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0686",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FOODON_03400686",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Oilseed consists of seeds from a variety of plants used in the production of edible vegetable oils, seed meals and cakes for animal feed. Some important vegetable oil seeds are by-products of fibre or fruit crops (e.g. cotton seed, olives).\nSome of the oilseeds are, directly or after slight processing (e.g. roasting), used as food (e.g. peanuts) or for food flavouring (e.g. poppy seed, sesame seed).\nOilseeds are protected from pesticides applied during the growing season by the shell or husk.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000114" : [ {
+        "identifier" : "IAO_0000114",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "used for ingredient classification",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FOODON_03400686",
+      "en" : "oilseed"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "36" ]
+  }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400687",
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
@@ -2694,16 +2704,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400687",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "The seeds for beverages and sweets are derived from tropical and sub-tropical trees and shrubs. After processing the seeds are used in the production of beverages and sweets.\nThese seeds are protected from pesticides applied during the growing season by the shell or other parts of the fruit.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -2724,8 +2734,8 @@
       "en" : "seed for beverage and sweet"
     },
     "attributes" : [ "external" ],
-    "id" : "40",
-    "superClasses" : [ "37" ]
+    "id" : "39",
+    "superClasses" : [ "36" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400688",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2822,23 +2832,23 @@
       "en" : "pulse"
     },
     "attributes" : [ "external" ],
-    "id" : "25",
-    "superClasses" : [ "21" ]
+    "id" : "24",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/Specification",
     "baseIri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "an explicit set of requirements to be satisfied by a material, product, or service",
-        "type" : "label"
-      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "spec",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "an explicit set of requirements to be satisfied by a material, product, or service",
         "type" : "label"
       } ],
       "source" : [ {
@@ -2872,16 +2882,16 @@
         "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "en",
         "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
         "type" : "label"
       } ]
     },
@@ -2890,7 +2900,7 @@
       "en" : "Concept Scheme"
     },
     "attributes" : [ "external" ],
-    "id" : "103"
+    "id" : "104"
   }, {
     "iri" : "http://purl.org/dc/terms/LicenseDocument",
     "baseIri" : "http://purl.org/dc/terms",
@@ -2926,7 +2936,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "120"
+    "id" : "121"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -2949,7 +2959,7 @@
       "IRI-based" : "Concept",
       "en" : "Concept"
     },
-    "subClasses" : [ "125", "63", "62", "126", "127", "128", "112", "69", "129" ],
+    "subClasses" : [ "126", "63", "62", "127", "128", "129", "113", "69", "130" ],
     "attributes" : [ "external" ],
     "id" : "13"
   }, {
@@ -2969,18 +2979,8 @@
       "undefined" : "bibliographic citation"
     },
     "attributes" : [ "external" ],
-    "id" : "125",
+    "id" : "126",
     "superClasses" : [ "13" ]
-  }, {
-    "iri" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food",
-    "baseIri" : "http://idea.rpi.edu/heals/ont/whattomake/core",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Food"
-    },
-    "subClasses" : [ "1", "76", "71", "22" ],
-    "attributes" : [ "external" ],
-    "id" : "153"
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/TypeOfContent",
     "baseIri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata",
@@ -2998,7 +2998,7 @@
       "undefined" : "content type"
     },
     "attributes" : [ "external" ],
-    "id" : "126",
+    "id" : "127",
     "superClasses" : [ "13" ]
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/Module",
@@ -3017,7 +3017,7 @@
       "undefined" : "module"
     },
     "attributes" : [ "external" ],
-    "id" : "127",
+    "id" : "128",
     "superClasses" : [ "13" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400737",
@@ -3189,7 +3189,7 @@
       "undefined" : "organization"
     },
     "attributes" : [ "external" ],
-    "id" : "129",
+    "id" : "130",
     "superClasses" : [ "13" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400744",
@@ -3502,16 +3502,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400740",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Milks are the mammary secretions of various species of lactating herbivorous ruminant animals, usually domesticated.\nIn conformity with the Codex Alimentarius Code of Principles concerning Milk and Milk Products the term \"Milk\" shall mean exclusively the normal mammary excretion obtained from one or more milkings without either addition thereto or extraction therefrom.\nNotwithstanding the provisions in the preceding paragraph, \"the term \"Milk\" may be used for milk treated without altering its composition, or for milk, the fat content of which has been standardized under domestic legislation\".\nThe entire commodity may be consumed.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -3600,16 +3600,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400742",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Poultry fats are derived from the fatty tissues of poultry. Exposure to pesticides may result from external treatment of animals or poultry houses or through animal metabolism following oral intake of pesticides with feed.\nThe entire product may be consumed.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -3649,16 +3649,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400743",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Poultry edible offal are such edible tissues and organs, other than poultry meat and poultry fat, from slaughtered poultry as have been passed as fit for human consumption. Examples: liver, gizzard, heart, skin etc. In the former Classification of Food and Feed Groups in the Guide to Codex Maximum Limits for Pesticide Residues 1978: CAC/PR 1-1978 the name Poultry by-products was used for this group.\nExposure to pesticides is through animal metabolism following oral intake of pesticides with feed or may result from external treatment of animals or poultry houses.\nThe entire product may be consumed.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -3698,7 +3698,7 @@
       "undefined" : "specification family"
     },
     "attributes" : [ "external" ],
-    "id" : "128",
+    "id" : "129",
     "superClasses" : [ "13" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400756",
@@ -3747,8 +3747,8 @@
       "en" : "dried fruit"
     },
     "attributes" : [ "external" ],
-    "id" : "77",
-    "superClasses" : [ "75" ]
+    "id" : "78",
+    "superClasses" : [ "77" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400757",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -3796,8 +3796,8 @@
       "en" : "dried vegetable"
     },
     "attributes" : [ "external" ],
-    "id" : "78",
-    "superClasses" : [ "75" ]
+    "id" : "79",
+    "superClasses" : [ "77" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400758",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -3845,8 +3845,8 @@
       "en" : "dried herb"
     },
     "attributes" : [ "external" ],
-    "id" : "79",
-    "superClasses" : [ "75" ]
+    "id" : "80",
+    "superClasses" : [ "77" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400759",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -3894,13 +3894,13 @@
       "en" : "milled cereal product (early milling stage)"
     },
     "attributes" : [ "external" ],
-    "id" : "80",
-    "superClasses" : [ "75" ]
+    "id" : "81",
+    "superClasses" : [ "77" ]
   }, {
     "instances" : 0,
     "union" : [ "60", "13" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "123"
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "124"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -3925,16 +3925,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400750",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "Crustaceans are aquatic animals of various species, wild or cultivated, which have an inedible chitinous outer shell.\nA small number of species live in fresh water but most species live in brackish water and/or in the sea.\nExposure to pesticides is through animal metabolism or water pollution.\nCrustaceans are prepared for wholesale or retail distribution at a \"raw\" stage, often still alive, \"raw\" and deep-frozen or cooked directly after catching and deep-frozen. Shrimps or prawns may also be parboiled and thereafter deep-frozen.\nAlthough the cooked or parboiled crustaceans should be regarded as processed foods, the animals of this group are primarily classified in the Chapter on Primary food commodities, Type 8: Aquatic animal products, since several crustaceans are also-marketed in a \"raw\" form, i.e. not exposed to temperatures sufficiently high to coagulate the protein at the surface. A short reference to processed Crustaceans is given in Type 17: Derived edible products of animal origin, Group 084 Crustaceans, processed.\nThe entire commodity except the shell may be consumed: the \"raw\" commodities, in general, after cooking.\n\nIn some countries, species such as the Norway lobster (Nephrops norvegicus) are included in the commodity \"Prawns\" with some qualifying designation, such as Dublin Bay Prawn or Prawn of Bantry Bay (both Ireland).The Codex Stan. 92-1981 on Quick Frozen Shrimps and Prawns does not prevent this practice, provided that the designation on the label ensures that the consumer will not be misled.\nThere is no clear-cut distinction between Shrimps and Prawns. In several countries the commodity name-Shrimps is used for the small species whereas the slightly larger ones are called Prawns. However, a species marked in certain regions of the world as \"Prawn\" may be called in the local English language in other areas a shrimp and visa versa, e.g., Pandalus borcalis is called Northern prawn or Deepwater prawn in the United Kingdom and the same species is named Pink shrimp in Canada. In Australia only the name Prawn is used for animals included in this commodity.\nNot including the Freshwater species of the Palaemonidae.",
-        "type" : "label"
-      } ],
       "IAO_0000412" : [ {
         "identifier" : "IAO_0000412",
         "language" : "undefined",
         "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Crustaceans are aquatic animals of various species, wild or cultivated, which have an inedible chitinous outer shell.\nA small number of species live in fresh water but most species live in brackish water and/or in the sea.\nExposure to pesticides is through animal metabolism or water pollution.\nCrustaceans are prepared for wholesale or retail distribution at a \"raw\" stage, often still alive, \"raw\" and deep-frozen or cooked directly after catching and deep-frozen. Shrimps or prawns may also be parboiled and thereafter deep-frozen.\nAlthough the cooked or parboiled crustaceans should be regarded as processed foods, the animals of this group are primarily classified in the Chapter on Primary food commodities, Type 8: Aquatic animal products, since several crustaceans are also-marketed in a \"raw\" form, i.e. not exposed to temperatures sufficiently high to coagulate the protein at the surface. A short reference to processed Crustaceans is given in Type 17: Derived edible products of animal origin, Group 084 Crustaceans, processed.\nThe entire commodity except the shell may be consumed: the \"raw\" commodities, in general, after cooking.\n\nIn some countries, species such as the Norway lobster (Nephrops norvegicus) are included in the commodity \"Prawns\" with some qualifying designation, such as Dublin Bay Prawn or Prawn of Bantry Bay (both Ireland).The Codex Stan. 92-1981 on Quick Frozen Shrimps and Prawns does not prevent this practice, provided that the designation on the label ensures that the consumer will not be misled.\nThere is no clear-cut distinction between Shrimps and Prawns. In several countries the commodity name-Shrimps is used for the small species whereas the slightly larger ones are called Prawns. However, a species marked in certain regions of the world as \"Prawn\" may be called in the local English language in other areas a shrimp and visa versa, e.g., Pandalus borcalis is called Northern prawn or Deepwater prawn in the United Kingdom and the same species is named Pink shrimp in Canada. In Australia only the name Prawn is used for animals included in this commodity.\nNot including the Freshwater species of the Palaemonidae.",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -4016,7 +4016,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "116",
+    "id" : "117",
     "label" : {
       "IRI-based" : "string"
     }
@@ -4072,7 +4072,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "102",
+    "id" : "103",
     "label" : {
       "undefined" : "Thing"
     }
@@ -4085,7 +4085,7 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "119",
+    "id" : "120",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -4137,8 +4137,8 @@
       "en" : "fruit juice"
     },
     "attributes" : [ "external" ],
-    "id" : "83",
-    "superClasses" : [ "82" ]
+    "id" : "84",
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400645",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4170,13 +4170,13 @@
       } ],
       "definition" : [ {
         "identifier" : "definition",
-        "language" : "en",
-        "value" : "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.",
+        "language" : "undefined",
+        "value" : "unaltered food derived from animal",
         "type" : "label"
       }, {
         "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "unaltered food derived from animal",
+        "language" : "en",
+        "value" : "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.",
         "type" : "label"
       } ],
       "scopeNote" : [ {
@@ -4193,7 +4193,7 @@
     "subClasses" : [ "0", "8", "10", "45", "52" ],
     "attributes" : [ "external" ],
     "id" : "1",
-    "superClasses" : [ "153" ]
+    "superClasses" : [ "71" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400767",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4211,16 +4211,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400767",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "The commodities of this group are by-products derived from fruit and vegetable processing which are mainly used for animal feeding purposes either as a part of the ration of livestock animals as such, or as an element in the manufacture of compounded feeds. The commodities are prepared, in general, in a dry form for wholesale or retail distribution.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -4241,8 +4241,8 @@
       "en" : "by-product, used for animal feeding purpose, derived from fruit and vegetable processing"
     },
     "attributes" : [ "external" ],
-    "id" : "84",
-    "superClasses" : [ "82" ]
+    "id" : "85",
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400768",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4290,8 +4290,8 @@
       "en" : "manufactured multi-ingredient cereal product"
     },
     "attributes" : [ "external" ],
-    "id" : "92",
-    "superClasses" : [ "91" ]
+    "id" : "93",
+    "superClasses" : [ "92" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400647",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4343,10 +4343,10 @@
       "IRI-based" : "FOODON_03400647",
       "en" : "processed food of plant origin"
     },
-    "subClasses" : [ "75", "82", "90", "91" ],
+    "subClasses" : [ "77", "83", "91", "92" ],
     "attributes" : [ "external" ],
-    "id" : "76",
-    "superClasses" : [ "153" ]
+    "id" : "72",
+    "superClasses" : [ "71" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400648",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4378,13 +4378,13 @@
       } ],
       "definition" : [ {
         "identifier" : "definition",
-        "language" : "en",
-        "value" : "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.",
+        "language" : "undefined",
+        "value" : "altered food derived from animal",
         "type" : "label"
       }, {
         "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "altered food derived from animal",
+        "language" : "en",
+        "value" : "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.",
         "type" : "label"
       } ],
       "scopeNote" : [ {
@@ -4398,10 +4398,10 @@
       "IRI-based" : "FOODON_03400648",
       "en" : "processed food of animal origin"
     },
-    "subClasses" : [ "58", "93", "19", "51" ],
+    "subClasses" : [ "58", "95", "19", "51" ],
     "attributes" : [ "external" ],
-    "id" : "71",
-    "superClasses" : [ "153" ]
+    "id" : "73",
+    "superClasses" : [ "71" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400769",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4449,8 +4449,8 @@
       "en" : "dried meat and fish product"
     },
     "attributes" : [ "external" ],
-    "id" : "94",
-    "superClasses" : [ "93" ]
+    "id" : "96",
+    "superClasses" : [ "95" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400649",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4468,16 +4468,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400649 ",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Fruits are derived from many different kinds of perennial plants, trees and shrubs, usually cultivated. They consist mostly of the ripe, often sweet, succulent or pulpy developed plant ovary and its accessory parts, commonly and traditionally known as fruit.\nExposure to pesticides is dependent on the particular part of the fruit used for food. Fruits may be consumed whole, after the removal of the peel, or in part, and in the form of fresh, dried or processed products.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -4497,10 +4497,10 @@
       "IRI-based" : "FOODON_03400649",
       "en" : "fruit"
     },
-    "subClasses" : [ "72", "74", "106", "107", "108", "109" ],
+    "subClasses" : [ "74", "76", "107", "108", "109", "110" ],
     "attributes" : [ "external" ],
-    "id" : "73",
-    "superClasses" : [ "22" ]
+    "id" : "75",
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400760",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4548,8 +4548,8 @@
       "en" : "miscellaneaous secondary food commodity of plant origin"
     },
     "attributes" : [ "external" ],
-    "id" : "81",
-    "superClasses" : [ "75" ]
+    "id" : "82",
+    "superClasses" : [ "77" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400761",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4597,8 +4597,8 @@
       "en" : "cereal grain milling fraction"
     },
     "attributes" : [ "external" ],
-    "id" : "85",
-    "superClasses" : [ "82" ]
+    "id" : "86",
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400762",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4646,8 +4646,8 @@
       "en" : "tea"
     },
     "attributes" : [ "external" ],
-    "id" : "86",
-    "superClasses" : [ "82" ]
+    "id" : "87",
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400763",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4695,8 +4695,8 @@
       "en" : "vegetable oil, crude"
     },
     "attributes" : [ "external" ],
-    "id" : "87",
-    "superClasses" : [ "82" ]
+    "id" : "88",
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400764",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4714,16 +4714,16 @@
         "value" : "http://purl.obolibrary.org/obo/FOODON_03400764",
         "type" : "label"
       } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "Vegetable oils, edible (or refined) includes the vegetable oil derived from oil seed, Group 023, tropical and sub-tropical oil-containing fruits such as olives, and some pulses with a high oil content. The edible oils are derived from the crude oils though a refining and/or clarifying process. For definitions and characteristics of the edible oils listed below, see Codex Stan. 20-27 (inclusive), 33,124 and 126 (inclusive) - 1981.\nExposure to pesticides is through pre-harvest treatment of the relevant crops, or post-harvest treatment of the oilseeds and oil containing pulses.",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
         "type" : "label"
       } ],
       "IAO_0000114" : [ {
@@ -4744,57 +4744,8 @@
       "en" : "vegetable oil, edible (or refined)"
     },
     "attributes" : [ "external" ],
-    "id" : "88",
-    "superClasses" : [ "82" ]
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400765",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "annotations" : {
-      "hasDbXref" : [ {
-        "identifier" : "hasDbXref",
-        "language" : "undefined",
-        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0765",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/FOODON_03400765",
-        "type" : "label"
-      } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "Miscellaneous derived edible products include various intermediate products in the manufacture of edible food products. Some of these are used for further processing and not consumed as food or feed as such.",
-        "type" : "label"
-      } ],
-      "IAO_0000412" : [ {
-        "identifier" : "IAO_0000412",
-        "language" : "undefined",
-        "value" : "http://langual.org",
-        "type" : "label"
-      } ],
-      "IAO_0000114" : [ {
-        "identifier" : "IAO_0000114",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
-        "type" : "iri"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "used for ingredient classification",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "FOODON_03400765",
-      "en" : "miscellaneous derived edible product of plant origin"
-    },
-    "attributes" : [ "external" ],
     "id" : "89",
-    "superClasses" : [ "82" ]
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/FOODON_03400644",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4826,13 +4777,13 @@
       } ],
       "definition" : [ {
         "identifier" : "definition",
-        "language" : "en",
-        "value" : "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.",
+        "language" : "undefined",
+        "value" : "unaltered food derived from plant",
         "type" : "label"
       }, {
         "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "unaltered food derived from plant",
+        "language" : "en",
+        "value" : "LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.",
         "type" : "label"
       } ],
       "scopeNote" : [ {
@@ -4846,10 +4797,59 @@
       "IRI-based" : "FOODON_03400644",
       "en" : "primary food commodity of plant origin"
     },
-    "subClasses" : [ "73", "21", "32", "37", "42" ],
+    "subClasses" : [ "75", "20", "32", "36", "42" ],
     "attributes" : [ "external" ],
-    "id" : "22",
-    "superClasses" : [ "153" ]
+    "id" : "21",
+    "superClasses" : [ "71" ]
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/FOODON_03400765",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "annotations" : {
+      "hasDbXref" : [ {
+        "identifier" : "hasDbXref",
+        "language" : "undefined",
+        "value" : "http://www.langual.org/langual_thesaurus.asp?termid=A0765",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FOODON_03400765",
+        "type" : "label"
+      } ],
+      "IAO_0000412" : [ {
+        "identifier" : "IAO_0000412",
+        "language" : "undefined",
+        "value" : "http://langual.org",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Miscellaneous derived edible products include various intermediate products in the manufacture of edible food products. Some of these are used for further processing and not consumed as food or feed as such.",
+        "type" : "label"
+      } ],
+      "IAO_0000114" : [ {
+        "identifier" : "IAO_0000114",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/IAO_0000428",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "used for ingredient classification",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FOODON_03400765",
+      "en" : "miscellaneous derived edible product of plant origin"
+    },
+    "attributes" : [ "external" ],
+    "id" : "90",
+    "superClasses" : [ "83" ]
   } ],
   "property" : [ {
     "id" : "12",
@@ -4867,9 +4867,6 @@
     "id" : "16",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "97",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "98",
     "type" : "rdfs:SubClassOf"
   }, {
@@ -4880,48 +4877,48 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "105",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "110",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "113",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "115",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "117",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "118",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "95",
+    "id" : "106",
     "type" : "owl:objectProperty"
   }, {
     "id" : "111",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "104",
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
     "type" : "owl:objectProperty"
   }, {
     "id" : "67",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "121",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "122",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "124",
-    "type" : "rdfs:SubClassOf"
+    "id" : "123",
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "130",
+    "id" : "125",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "131",
@@ -4990,7 +4987,10 @@
     "id" : "152",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "114",
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
     "type" : "owl:objectProperty"
   }, {
     "id" : "154",
@@ -5332,36 +5332,36 @@
     },
     "superproperty" : [ "12" ],
     "domain" : "65",
-    "subproperty" : [ "95" ],
+    "subproperty" : [ "94" ],
     "comment" : {
       "en" : "skos:related is disjoint with skos:broaderTransitive"
     },
-    "attributes" : [ "external", "symmetric", "object" ],
+    "attributes" : [ "external", "object", "symmetric" ],
     "id" : "16"
   }, {
-    "range" : "22",
+    "range" : "21",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "97"
-  }, {
-    "range" : "22",
-    "domain" : "21",
     "attributes" : [ "object", "anonymous" ],
     "id" : "98"
   }, {
-    "range" : "22",
-    "domain" : "37",
+    "range" : "21",
+    "domain" : "20",
     "attributes" : [ "object", "anonymous" ],
     "id" : "99"
   }, {
-    "range" : "22",
-    "domain" : "42",
+    "range" : "21",
+    "domain" : "36",
     "attributes" : [ "object", "anonymous" ],
     "id" : "100"
   }, {
+    "range" : "21",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#inScheme",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "103",
+    "range" : "104",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5386,13 +5386,13 @@
       "IRI-based" : "inScheme",
       "en" : "is in scheme"
     },
-    "domain" : "102",
-    "subproperty" : [ "104" ],
+    "domain" : "103",
+    "subproperty" : [ "105" ],
     "attributes" : [ "external", "object" ],
-    "id" : "101"
+    "id" : "102"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
-    "inverse" : "104",
+    "inverse" : "105",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
     "range" : "13",
     "annotations" : {
@@ -5413,12 +5413,12 @@
       "IRI-based" : "hasTopConcept",
       "en" : "has top concept"
     },
-    "domain" : "103",
+    "domain" : "104",
     "attributes" : [ "external", "object" ],
-    "id" : "105"
+    "id" : "106"
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/isReflectedIn",
-    "inverse" : "111",
+    "inverse" : "112",
     "baseIri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata",
     "range" : "63",
     "label" : {
@@ -5427,7 +5427,7 @@
     },
     "domain" : "69",
     "attributes" : [ "external", "object" ],
-    "id" : "110"
+    "id" : "111"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#exactMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -5450,25 +5450,25 @@
       "IRI-based" : "exactMatch",
       "en" : "has exact match"
     },
-    "superproperty" : [ "114" ],
+    "superproperty" : [ "115" ],
     "domain" : "65",
     "comment" : {
       "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
     },
-    "attributes" : [ "external", "symmetric", "object", "transitive" ],
-    "id" : "113"
+    "attributes" : [ "external", "transitive", "object", "symmetric" ],
+    "id" : "114"
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/isIdentifiedBy",
     "baseIri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata",
-    "range" : "116",
+    "range" : "117",
     "label" : {
       "IRI-based" : "isIdentifiedBy",
       "undefined" : "is identified by"
     },
     "cardinality" : "1",
     "domain" : "69",
-    "attributes" : [ "external", "functional", "datatype" ],
-    "id" : "115"
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "116"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broadMatch",
     "inverse" : "67",
@@ -5495,11 +5495,11 @@
     "superproperty" : [ "66", "17" ],
     "domain" : "65",
     "attributes" : [ "external", "object" ],
-    "id" : "117"
+    "id" : "118"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#notation",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "119",
+    "range" : "120",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5526,7 +5526,7 @@
     },
     "domain" : "65",
     "attributes" : [ "external", "datatype" ],
-    "id" : "118"
+    "id" : "119"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -5551,8 +5551,8 @@
     },
     "superproperty" : [ "16", "17" ],
     "domain" : "65",
-    "attributes" : [ "external", "symmetric", "object" ],
-    "id" : "95"
+    "attributes" : [ "external", "object", "symmetric" ],
+    "id" : "94"
   }, {
     "iri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/reflects",
     "baseIri" : "http://www.omg.org/techprocess/ab/SpecificationMetadata",
@@ -5563,11 +5563,11 @@
     },
     "domain" : "63",
     "attributes" : [ "external", "object" ],
-    "id" : "111"
+    "id" : "112"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "103",
+    "range" : "104",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5586,10 +5586,10 @@
       "IRI-based" : "topConceptOf",
       "en" : "is top concept in scheme"
     },
-    "superproperty" : [ "101" ],
+    "superproperty" : [ "102" ],
     "domain" : "13",
     "attributes" : [ "external", "object" ],
-    "id" : "104"
+    "id" : "105"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -5619,7 +5619,7 @@
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#memberList",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "96",
+    "range" : "97",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5642,12 +5642,12 @@
     "comment" : {
       "en" : "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
     },
-    "attributes" : [ "external", "functional", "object" ],
-    "id" : "121"
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "122"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#member",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "123",
+    "range" : "124",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5668,127 +5668,127 @@
     },
     "domain" : "60",
     "attributes" : [ "external", "object" ],
-    "id" : "122"
+    "id" : "123"
   }, {
-    "range" : "21",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "124"
-  }, {
-    "range" : "21",
+    "range" : "20",
     "domain" : "25",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "130"
+    "id" : "125"
   }, {
-    "range" : "21",
+    "range" : "20",
     "domain" : "24",
     "attributes" : [ "object", "anonymous" ],
     "id" : "131"
   }, {
-    "range" : "13",
-    "domain" : "69",
+    "range" : "20",
+    "domain" : "23",
     "attributes" : [ "object", "anonymous" ],
     "id" : "132"
   }, {
     "range" : "13",
-    "domain" : "112",
+    "domain" : "69",
     "attributes" : [ "object", "anonymous" ],
     "id" : "133"
   }, {
-    "range" : "21",
-    "domain" : "23",
+    "range" : "13",
+    "domain" : "113",
     "attributes" : [ "object", "anonymous" ],
     "id" : "134"
   }, {
-    "range" : "13",
-    "domain" : "129",
+    "range" : "20",
+    "domain" : "22",
     "attributes" : [ "object", "anonymous" ],
     "id" : "135"
   }, {
     "range" : "13",
-    "domain" : "126",
+    "domain" : "130",
     "attributes" : [ "object", "anonymous" ],
     "id" : "136"
   }, {
     "range" : "13",
-    "domain" : "62",
+    "domain" : "127",
     "attributes" : [ "object", "anonymous" ],
     "id" : "137"
   }, {
     "range" : "13",
-    "domain" : "128",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
     "id" : "138"
   }, {
     "range" : "13",
-    "domain" : "127",
+    "domain" : "129",
     "attributes" : [ "object", "anonymous" ],
     "id" : "139"
   }, {
     "range" : "13",
-    "domain" : "125",
+    "domain" : "128",
     "attributes" : [ "object", "anonymous" ],
     "id" : "140"
+  }, {
+    "range" : "13",
+    "domain" : "126",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
   }, {
     "range" : "10",
     "domain" : "11",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "141"
+    "id" : "142"
   }, {
     "range" : "13",
     "domain" : "63",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "142"
+    "id" : "143"
   }, {
     "range" : "0",
     "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "143"
+    "id" : "144"
   }, {
     "range" : "0",
     "domain" : "5",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "144"
+    "id" : "145"
   }, {
     "range" : "8",
     "domain" : "9",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "145"
+    "id" : "146"
   }, {
     "range" : "0",
     "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "146"
+    "id" : "147"
   }, {
     "range" : "0",
     "domain" : "2",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "147"
+    "id" : "148"
   }, {
     "range" : "0",
     "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "148"
+    "id" : "149"
   }, {
     "range" : "0",
     "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "149"
+    "id" : "150"
   }, {
     "range" : "52",
     "domain" : "56",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "150"
-  }, {
-    "range" : "75",
-    "domain" : "77",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "151"
   }, {
-    "range" : "58",
-    "domain" : "57",
+    "range" : "71",
+    "domain" : "72",
     "attributes" : [ "object", "anonymous" ],
     "id" : "152"
+  }, {
+    "range" : "71",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -5813,9 +5813,9 @@
     },
     "superproperty" : [ "17" ],
     "domain" : "65",
-    "subproperty" : [ "113" ],
-    "attributes" : [ "external", "symmetric", "object" ],
-    "id" : "114"
+    "subproperty" : [ "114" ],
+    "attributes" : [ "external", "object", "symmetric" ],
+    "id" : "115"
   }, {
     "range" : "52",
     "domain" : "53",
@@ -5882,8 +5882,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "163"
   }, {
-    "range" : "37",
-    "domain" : "40",
+    "range" : "36",
+    "domain" : "39",
     "attributes" : [ "object", "anonymous" ],
     "id" : "164"
   }, {
@@ -5899,8 +5899,8 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "165"
   }, {
-    "range" : "37",
-    "domain" : "39",
+    "range" : "36",
+    "domain" : "38",
     "attributes" : [ "object", "anonymous" ],
     "id" : "167"
   }, {
@@ -5909,13 +5909,13 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "168"
   }, {
-    "range" : "21",
-    "domain" : "31",
+    "range" : "20",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
     "id" : "169"
   }, {
-    "range" : "37",
-    "domain" : "38",
+    "range" : "36",
+    "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "170"
   }, {
@@ -5924,48 +5924,48 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "171"
   }, {
-    "range" : "21",
-    "domain" : "28",
+    "range" : "20",
+    "domain" : "27",
     "attributes" : [ "object", "anonymous" ],
     "id" : "172"
   }, {
-    "range" : "21",
-    "domain" : "27",
+    "range" : "20",
+    "domain" : "26",
     "attributes" : [ "object", "anonymous" ],
     "id" : "173"
   }, {
-    "range" : "21",
-    "domain" : "30",
+    "range" : "20",
+    "domain" : "29",
     "attributes" : [ "object", "anonymous" ],
     "id" : "174"
   }, {
-    "range" : "21",
-    "domain" : "29",
+    "range" : "20",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
     "id" : "175"
   }, {
-    "range" : "153",
-    "domain" : "1",
+    "range" : "19",
+    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
     "id" : "176"
   }, {
-    "range" : "51",
-    "domain" : "50",
+    "range" : "19",
+    "domain" : "31",
     "attributes" : [ "object", "anonymous" ],
     "id" : "177"
   }, {
-    "range" : "153",
-    "domain" : "71",
+    "range" : "19",
+    "domain" : "41",
     "attributes" : [ "object", "anonymous" ],
     "id" : "178"
   }, {
-    "range" : "153",
-    "domain" : "76",
+    "range" : "19",
+    "domain" : "40",
     "attributes" : [ "object", "anonymous" ],
     "id" : "179"
   }, {
     "range" : "19",
-    "domain" : "41",
+    "domain" : "18",
     "attributes" : [ "object", "anonymous" ],
     "id" : "180"
   }, {
@@ -6000,56 +6000,56 @@
     "superproperty" : [ "12" ],
     "domain" : "65",
     "subproperty" : [ "66" ],
-    "attributes" : [ "external", "object", "transitive" ],
+    "attributes" : [ "external", "transitive", "object" ],
     "id" : "15"
   }, {
-    "range" : "19",
-    "domain" : "36",
+    "range" : "95",
+    "domain" : "96",
     "attributes" : [ "object", "anonymous" ],
     "id" : "181"
   }, {
-    "range" : "19",
-    "domain" : "35",
+    "range" : "92",
+    "domain" : "93",
     "attributes" : [ "object", "anonymous" ],
     "id" : "182"
   }, {
-    "range" : "93",
-    "domain" : "94",
+    "range" : "83",
+    "domain" : "88",
     "attributes" : [ "object", "anonymous" ],
     "id" : "183"
   }, {
-    "range" : "91",
-    "domain" : "92",
+    "range" : "83",
+    "domain" : "87",
     "attributes" : [ "object", "anonymous" ],
     "id" : "184"
   }, {
-    "range" : "19",
-    "domain" : "20",
+    "range" : "83",
+    "domain" : "90",
     "attributes" : [ "object", "anonymous" ],
     "id" : "185"
   }, {
-    "range" : "19",
-    "domain" : "18",
+    "range" : "83",
+    "domain" : "89",
     "attributes" : [ "object", "anonymous" ],
     "id" : "186"
   }, {
-    "range" : "82",
-    "domain" : "87",
+    "range" : "83",
+    "domain" : "84",
     "attributes" : [ "object", "anonymous" ],
     "id" : "187"
   }, {
-    "range" : "82",
-    "domain" : "86",
+    "range" : "77",
+    "domain" : "82",
     "attributes" : [ "object", "anonymous" ],
     "id" : "188"
   }, {
-    "range" : "82",
-    "domain" : "89",
+    "range" : "83",
+    "domain" : "86",
     "attributes" : [ "object", "anonymous" ],
     "id" : "189"
   }, {
-    "range" : "82",
-    "domain" : "88",
+    "range" : "83",
+    "domain" : "85",
     "attributes" : [ "object", "anonymous" ],
     "id" : "190"
   }, {
@@ -6082,35 +6082,35 @@
     },
     "superproperty" : [ "15" ],
     "domain" : "65",
-    "subproperty" : [ "117" ],
+    "subproperty" : [ "118" ],
     "comment" : {
       "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
     },
     "attributes" : [ "external", "object" ],
     "id" : "66"
   }, {
-    "range" : "82",
-    "domain" : "84",
+    "range" : "77",
+    "domain" : "80",
     "attributes" : [ "object", "anonymous" ],
     "id" : "191"
   }, {
-    "range" : "82",
-    "domain" : "83",
+    "range" : "77",
+    "domain" : "79",
     "attributes" : [ "object", "anonymous" ],
     "id" : "192"
   }, {
-    "range" : "82",
-    "domain" : "85",
+    "range" : "77",
+    "domain" : "81",
     "attributes" : [ "object", "anonymous" ],
     "id" : "193"
   }, {
-    "range" : "75",
-    "domain" : "79",
+    "range" : "71",
+    "domain" : "21",
     "attributes" : [ "object", "anonymous" ],
     "id" : "194"
   }, {
-    "range" : "75",
-    "domain" : "78",
+    "range" : "71",
+    "domain" : "73",
     "attributes" : [ "object", "anonymous" ],
     "id" : "195"
   }, {
@@ -6137,59 +6137,59 @@
     },
     "superproperty" : [ "12" ],
     "domain" : "65",
-    "subproperty" : [ "114", "95", "67", "117" ],
+    "subproperty" : [ "115", "94", "67", "118" ],
     "comment" : {
       "en" : "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
     },
     "attributes" : [ "external", "object" ],
     "id" : "17"
   }, {
-    "range" : "75",
-    "domain" : "81",
+    "range" : "77",
+    "domain" : "78",
     "attributes" : [ "object", "anonymous" ],
     "id" : "196"
   }, {
-    "range" : "75",
-    "domain" : "80",
+    "range" : "58",
+    "domain" : "57",
     "attributes" : [ "object", "anonymous" ],
     "id" : "197"
   }, {
-    "range" : "73",
-    "domain" : "108",
+    "range" : "75",
+    "domain" : "109",
     "attributes" : [ "object", "anonymous" ],
     "id" : "198"
   }, {
-    "range" : "73",
-    "domain" : "107",
+    "range" : "75",
+    "domain" : "108",
     "attributes" : [ "object", "anonymous" ],
     "id" : "199"
   }, {
-    "range" : "22",
-    "domain" : "73",
+    "range" : "21",
+    "domain" : "75",
     "attributes" : [ "object", "anonymous" ],
     "id" : "200"
   }, {
-    "range" : "73",
-    "domain" : "109",
+    "range" : "75",
+    "domain" : "110",
     "attributes" : [ "object", "anonymous" ],
     "id" : "201"
   }, {
-    "range" : "73",
-    "domain" : "72",
+    "range" : "75",
+    "domain" : "74",
     "attributes" : [ "object", "anonymous" ],
     "id" : "202"
   }, {
-    "range" : "73",
-    "domain" : "106",
+    "range" : "75",
+    "domain" : "107",
     "attributes" : [ "object", "anonymous" ],
     "id" : "203"
   }, {
-    "range" : "73",
-    "domain" : "74",
+    "range" : "75",
+    "domain" : "76",
     "attributes" : [ "object", "anonymous" ],
     "id" : "204"
   }, {
-    "range" : "103",
+    "range" : "104",
     "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "205"
@@ -6199,48 +6199,48 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "206"
   }, {
-    "range" : "103",
+    "range" : "104",
     "domain" : "60",
     "attributes" : [ "object", "anonymous" ],
     "id" : "207"
   }, {
-    "range" : "71",
-    "domain" : "93",
+    "range" : "73",
+    "domain" : "95",
     "attributes" : [ "object", "anonymous" ],
     "id" : "208"
   }, {
-    "range" : "71",
+    "range" : "73",
     "domain" : "58",
     "attributes" : [ "object", "anonymous" ],
     "id" : "209"
   }, {
-    "range" : "71",
+    "range" : "73",
     "domain" : "51",
     "attributes" : [ "object", "anonymous" ],
     "id" : "210"
   }, {
-    "range" : "71",
+    "range" : "73",
     "domain" : "19",
     "attributes" : [ "object", "anonymous" ],
     "id" : "211"
   }, {
-    "range" : "76",
-    "domain" : "82",
+    "range" : "72",
+    "domain" : "83",
     "attributes" : [ "object", "anonymous" ],
     "id" : "212"
   }, {
-    "range" : "76",
-    "domain" : "75",
+    "range" : "72",
+    "domain" : "77",
     "attributes" : [ "object", "anonymous" ],
     "id" : "213"
   }, {
-    "range" : "76",
-    "domain" : "91",
+    "range" : "72",
+    "domain" : "92",
     "attributes" : [ "object", "anonymous" ],
     "id" : "214"
   }, {
-    "range" : "76",
-    "domain" : "90",
+    "range" : "72",
+    "domain" : "91",
     "attributes" : [ "object", "anonymous" ],
     "id" : "215"
   }, {
@@ -6284,7 +6284,7 @@
     "superproperty" : [ "12" ],
     "domain" : "65",
     "subproperty" : [ "64" ],
-    "attributes" : [ "external", "object", "transitive" ],
+    "attributes" : [ "external", "transitive", "object" ],
     "id" : "14"
   }, {
     "range" : "1",
@@ -6297,8 +6297,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "219"
   }, {
-    "range" : "153",
-    "domain" : "22",
+    "range" : "51",
+    "domain" : "50",
     "attributes" : [ "object", "anonymous" ],
     "id" : "220"
   }, {

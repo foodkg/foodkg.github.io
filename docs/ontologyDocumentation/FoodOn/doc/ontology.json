@@ -1,60 +1,4 @@
 [ {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/foodon/",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/terms/abstract" : [ {
-    "@value" : "The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology."
-  } ],
-  "http://purl.org/dc/terms/contributor" : [ {
-    "@value" : "Forest Eckhardt"
-  }, {
-    "@value" : "Kevin Blissett"
-  }, {
-    "@value" : "Miao Qi"
-  }, {
-    "@value" : "Yarden Ne'eman"
-  } ],
-  "http://purl.org/dc/terms/description" : [ {
-    "@value" : "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations."
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://opensource.org/licenses/MIT"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2019-04-03"
-  } ],
-  "http://purl.org/dc/terms/publisher" : [ {
-    "@value" : "WhatToMake"
-  } ],
-  "http://purl.org/dc/terms/references" : [ {
-    "@value" : "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance"
-  } ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@value" : "https://bioportal.bioontology.org/ontologies/FOODON/?p=summary"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "WhatToMake Food Classification"
-  } ],
-  "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-  } ],
-  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@value" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/foodon/"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
-    "@value" : "Changes to this ontology since the previous version include: update of ontology IRI"
-  } ],
-  "https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright" : [ {
-    "@value" : "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi"
-  } ]
-}, {
   "@id" : "http://purl.obolibrary.org/obo/FOODON_03400644",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000114" : [ {
@@ -74,7 +18,7 @@
     "@value" : "primary food commodity of plant origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food"
+    "@id" : "https://purl.org/heals/wtm/core/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -105,7 +49,7 @@
     "@value" : "primary food commodity of animal origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food"
+    "@id" : "https://purl.org/heals/wtm/core/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -136,7 +80,7 @@
     "@value" : "processed food of plant origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food"
+    "@id" : "https://purl.org/heals/wtm/core/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -167,7 +111,7 @@
     "@value" : "processed food of animal origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food"
+    "@id" : "https://purl.org/heals/wtm/core/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2431,6 +2375,62 @@
 }, {
   "@id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/heals/wtm/core/Food",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://purl.org/heals/wtm/foodon/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology."
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Forest Eckhardt"
+  }, {
+    "@value" : "Kevin Blissett"
+  }, {
+    "@value" : "Miao Qi"
+  }, {
+    "@value" : "Yarden Ne'eman"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://opensource.org/licenses/MIT"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2019-04-03"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "WhatToMake"
+  } ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "https://bioportal.bioontology.org/ontologies/FOODON/?p=summary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WhatToMake Food Classification"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@value" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://purl.org/heals/wtm/foodon/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@value" : "Changes to this ontology since the previous version include: update of ontology IRI"
+  } ],
+  "https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright" : [ {
+    "@value" : "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi"
+  } ]
 }, {
   "@id" : "https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

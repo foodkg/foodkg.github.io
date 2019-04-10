@@ -3,7 +3,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Recipe"
+      "@id" : "https://purl.org/heals/wtm/core/Recipe"
     }, {
       "@id" : "_:genid3"
     } ]
@@ -12,7 +12,7 @@
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime"
+    "@id" : "https://purl.org/heals/wtm/core/hasCookTime"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "_:genid12"
@@ -39,7 +39,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Recipe"
+      "@id" : "https://purl.org/heals/wtm/core/Recipe"
     }, {
       "@id" : "_:genid18"
     } ]
@@ -48,17 +48,17 @@
   "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Lunch"
+    "@id" : "https://purl.org/heals/wtm/core/Lunch"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal"
+    "@id" : "https://purl.org/heals/wtm/core/isRecommendedForMeal"
   } ]
 }, {
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Recipe"
+      "@id" : "https://purl.org/heals/wtm/core/Recipe"
     }, {
       "@id" : "_:genid22"
     } ]
@@ -67,17 +67,17 @@
   "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Side"
+    "@id" : "https://purl.org/heals/wtm/core/Side"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal"
+    "@id" : "https://purl.org/heals/wtm/core/isRecommendedForMeal"
   } ]
 }, {
   "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Recipe"
+      "@id" : "https://purl.org/heals/wtm/core/Recipe"
     }, {
       "@id" : "_:genid26"
     } ]
@@ -86,7 +86,7 @@
   "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient"
+    "@id" : "https://purl.org/heals/wtm/core/hasIngredient"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "_:genid27"
@@ -95,7 +95,7 @@
   "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex"
+    "@id" : "https://purl.org/heals/wtm/core/hasGlycemicIndex"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "_:genid28"
@@ -115,10 +115,10 @@
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast"
+    "@id" : "https://purl.org/heals/wtm/core/Breakfast"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal"
+    "@id" : "https://purl.org/heals/wtm/core/isRecommendedForMeal"
   } ]
 }, {
   "@id" : "_:genid30",
@@ -131,7 +131,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Recipe"
+      "@id" : "https://purl.org/heals/wtm/core/Recipe"
     }, {
       "@id" : "_:genid7"
     } ]
@@ -140,23 +140,38 @@
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Dinner"
+    "@id" : "https://purl.org/heals/wtm/core/Dinner"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal"
+    "@id" : "https://purl.org/heals/wtm/core/isRecommendedForMeal"
   } ]
 }, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Recipe"
+      "@id" : "https://purl.org/heals/wtm/core/Recipe"
     }, {
       "@id" : "_:genid11"
     } ]
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/",
+  "@id" : "http://purl.obolibrary.org/obo/FOODON_03400737",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/FOODON_03400740",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/FOODON_03400741",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://purl.org/heals/wtm/core/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@value" : "The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology."
@@ -197,7 +212,7 @@
     "@value" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/"
+    "@id" : "https://purl.org/heals/wtm/core/"
   } ],
   "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
     "@value" : "Changes to this ontology since the previous version include: update of the ontology IRI."
@@ -206,8 +221,8 @@
     "@value" : "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Course" ],
+  "@id" : "https://purl.org/heals/wtm/core/Appetizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Course" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Appetizer,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/appetizer. [Accessed: 1-Nov-2018]"
   } ],
@@ -221,8 +236,8 @@
     "@value" : "used as a course"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Meal" ],
+  "@id" : "https://purl.org/heals/wtm/core/Breakfast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Meal" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Breakfast,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018]."
   } ],
@@ -236,7 +251,7 @@
     "@value" : "used as a meal"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe",
+  "@id" : "https://purl.org/heals/wtm/core/BreakfastRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Breakfast,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018]."
@@ -254,8 +269,8 @@
     "@value" : "recipe class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Brunch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Meal" ],
+  "@id" : "https://purl.org/heals/wtm/core/Brunch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Meal" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Brunch.\" [Online]. Available: https://en.wikipedia.org/wiki/Brunch. [Accessed: Nov. 16, 2018]"
   } ],
@@ -269,7 +284,7 @@
     "@value" : "used as a meal"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic",
+  "@id" : "https://purl.org/heals/wtm/core/Characteristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Characteristic,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/characterisitc. [Accessed: 25-Oct-2018]."
@@ -287,7 +302,7 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct",
+  "@id" : "https://purl.org/heals/wtm/core/ChemicalFoodProduct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03411041. [Accessed Nov. 19, 2018]."
@@ -296,7 +311,7 @@
     "@value" : "chemical food product"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food"
+    "@id" : "https://purl.org/heals/wtm/core/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "a food substance derived from a nonliving source (e.g., salt, water or synthesized compounds)"
@@ -305,7 +320,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Course",
+  "@id" : "https://purl.org/heals/wtm/core/Course",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]"
@@ -323,8 +338,8 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Dessert",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Course" ],
+  "@id" : "https://purl.org/heals/wtm/core/Dessert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Course" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Dessert,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dessert. [Accessed: 1-Nov-2018]"
   } ],
@@ -338,8 +353,8 @@
     "@value" : "used as a course"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Dinner",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Meal" ],
+  "@id" : "https://purl.org/heals/wtm/core/Dinner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Meal" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Dinner,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018]."
   } ],
@@ -353,7 +368,7 @@
     "@value" : "used as a meal"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe",
+  "@id" : "https://purl.org/heals/wtm/core/DinnerRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Dinner,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018]."
@@ -371,8 +386,8 @@
     "@value" : "recipe class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Entree",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Course" ],
+  "@id" : "https://purl.org/heals/wtm/core/Entree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Course" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Entree,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/entree. [Accessed: 1-Nov-2018]"
   } ],
@@ -386,7 +401,7 @@
     "@value" : "used as a course"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Flavor",
+  "@id" : "https://purl.org/heals/wtm/core/Flavor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Flavor,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flavor. [Accessed: 12-Oct-2018]."
@@ -395,10 +410,10 @@
     "@value" : "flavor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic"
+    "@id" : "https://purl.org/heals/wtm/core/Characteristic"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Texture"
+    "@id" : "https://purl.org/heals/wtm/core/Texture"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "the quality of something that affects the sense of taste"
@@ -407,7 +422,7 @@
     "@value" : "food property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food",
+  "@id" : "https://purl.org/heals/wtm/core/Food",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]."
@@ -425,7 +440,7 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient",
+  "@id" : "https://purl.org/heals/wtm/core/Ingredient",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Cambridge Dictionary, \"ingredient.\" [Online]. Available: https://dictionary.cambridge.org/us/dictionary/english/ingredient. [Accessed Nov. 10, 2018]"
@@ -443,7 +458,7 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe",
+  "@id" : "https://purl.org/heals/wtm/core/LessThanOneHourRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Dictionary.com, \"hour.\" [Online]. Available: https://www.dictionary.com/browse/hour. [Accessed Oct. 5, 2018]"
@@ -461,8 +476,8 @@
     "@value" : "recipe class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Lunch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Meal" ],
+  "@id" : "https://purl.org/heals/wtm/core/Lunch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Meal" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Lunch,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018]."
   } ],
@@ -476,7 +491,7 @@
     "@value" : "used as a meal"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe",
+  "@id" : "https://purl.org/heals/wtm/core/LunchRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Lunch,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018]."
@@ -494,7 +509,7 @@
     "@value" : "recipe class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Meal",
+  "@id" : "https://purl.org/heals/wtm/core/Meal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]"
@@ -512,7 +527,7 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Measurement",
+  "@id" : "https://purl.org/heals/wtm/core/Measurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Measure,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/measure. [Accessed: 12-Oct-2018]."
@@ -530,7 +545,7 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken",
+  "@id" : "https://purl.org/heals/wtm/core/MeatFromChicken",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400741. [Accessed Nov. 14, 2018]."
@@ -548,7 +563,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow",
+  "@id" : "https://purl.org/heals/wtm/core/MeatFromCow",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]."
@@ -566,7 +581,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb",
+  "@id" : "https://purl.org/heals/wtm/core/MeatFromLamb",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]."
@@ -584,7 +599,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig",
+  "@id" : "https://purl.org/heals/wtm/core/MeatFromPig",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]."
@@ -602,7 +617,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow",
+  "@id" : "https://purl.org/heals/wtm/core/MilkFromCow",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Milk.\" [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow's_milk. [Accessed: Nov. 10, 2018]"
@@ -620,7 +635,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom",
+  "@id" : "https://purl.org/heals/wtm/core/Mushroom",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Mushroom.\" [Online]. Available: https://en.wikipedia.org/wiki/Mushroom. [Accessed: Nov. 22, 2018]"
@@ -629,7 +644,7 @@
     "@value" : "mushroom"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin"
+    "@id" : "https://purl.org/heals/wtm/core/PrimaryFoodCommodityOfFungusOrigin"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source"
@@ -638,7 +653,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin",
+  "@id" : "https://purl.org/heals/wtm/core/PrimaryFoodCommodityOfFungusOrigin",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "NHS, \"Eating processed foods,\" January 2017. [Online]. Available: https://www.nhs.uk/live-well/eat-well/what-are-processed-foods/. [Accessed Nov.22 2018]"
@@ -647,7 +662,7 @@
     "@value" : "primary food commodity of fungus origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Food"
+    "@id" : "https://purl.org/heals/wtm/core/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "unaltered food derived from fungus"
@@ -656,7 +671,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Recipe",
+  "@id" : "https://purl.org/heals/wtm/core/Recipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]."
@@ -674,8 +689,8 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Salad",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Course" ],
+  "@id" : "https://purl.org/heals/wtm/core/Salad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Course" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Salad.\" [Online]. Available: https://en.wikipedia.org/wiki/Salad. [Accessed: Nov. 16, 2018]"
   } ],
@@ -689,8 +704,8 @@
     "@value" : "used as a course"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Side",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Course" ],
+  "@id" : "https://purl.org/heals/wtm/core/Side",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Course" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Side Dish,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018]."
   } ],
@@ -704,7 +719,7 @@
     "@value" : "used as a course"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe",
+  "@id" : "https://purl.org/heals/wtm/core/SideRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Side Dish,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018]."
@@ -722,8 +737,8 @@
     "@value" : "recipe class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Snack",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Meal" ],
+  "@id" : "https://purl.org/heals/wtm/core/Snack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Meal" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Snack,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/snack. [Accessed: 1-Nov-2018]"
   } ],
@@ -737,8 +752,8 @@
     "@value" : "used as a meal"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Soup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://idea.rpi.edu/heals/ont/whattomake/core/Course" ],
+  "@id" : "https://purl.org/heals/wtm/core/Soup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://purl.org/heals/wtm/core/Course" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Soup.\" [Online]. Available: https://en.wikipedia.org/wiki/Soup. [Accessed: Nov. 16, 2018]"
   } ],
@@ -752,7 +767,7 @@
     "@value" : "used as a course"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement",
+  "@id" : "https://purl.org/heals/wtm/core/TemperatureMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Temperature measurement.\" [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]"
@@ -761,7 +776,7 @@
     "@value" : "temperature measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Measurement"
+    "@id" : "https://purl.org/heals/wtm/core/Measurement"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "degree of hotness or coldness measured on a definite scale"
@@ -770,7 +785,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Texture",
+  "@id" : "https://purl.org/heals/wtm/core/Texture",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Texture,\" Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/texture. [Accessed: 12-Oct-2018]."
@@ -779,7 +794,7 @@
     "@value" : "texture"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic"
+    "@id" : "https://purl.org/heals/wtm/core/Characteristic"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "the characteristic physical structure given to a material, an object, etc., by the size, shape, arrangement, and proportions of its parts"
@@ -788,7 +803,7 @@
     "@value" : "food property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement",
+  "@id" : "https://purl.org/heals/wtm/core/TimeMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Merriam-Webster, \"Time.\" [Online]. Available: https://www.merriam-webster.com/dictionary/time. [Accessed: Nov. 22, 018]"
@@ -799,7 +814,7 @@
     "@value" : "time measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Measurement"
+    "@id" : "https://purl.org/heals/wtm/core/Measurement"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "the measured or measurable period during which an action, process, or condition exists or continues"
@@ -808,7 +823,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/User",
+  "@id" : "https://purl.org/heals/wtm/core/User",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"User,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/user. [Accessed: 12-Oct-2018]."
@@ -826,7 +841,7 @@
     "@value" : "top-level class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/Yeast",
+  "@id" : "https://purl.org/heals/wtm/core/Yeast",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikidictionary, \"Yeast.\" [Online]. Available: https://en.wiktionary.org/wiki/yeast. [Accessed: Nov. 22, 2018]"
@@ -835,7 +850,7 @@
     "@value" : "yeast"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin"
+    "@id" : "https://purl.org/heals/wtm/core/PrimaryFoodCommodityOfFungusOrigin"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "humid, yellowish froth produced by fermenting malt worts, and used to brew beer, leaven bread, and also used in certain medicines"
@@ -844,7 +859,7 @@
     "@value" : "used for ingredient classification"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/dislikes",
+  "@id" : "https://purl.org/heals/wtm/core/dislikes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Dislike,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dislike. [Accessed: 12-Oct-2018]."
@@ -859,7 +874,7 @@
     "@value" : "user property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/forbids",
+  "@id" : "https://purl.org/heals/wtm/core/forbids",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Forbid,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/forbid. [Accessed: 12-Oct-2018]."
@@ -874,7 +889,7 @@
     "@value" : "user property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion",
+  "@id" : "https://purl.org/heals/wtm/core/hasConversion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Converting,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/converting. [Accessed: 12-Oct-2018]."
@@ -889,7 +904,7 @@
     "@value" : "unit property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime",
+  "@id" : "https://purl.org/heals/wtm/core/hasCookTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Cook Time,\" Collins English Dictionary. [Online]. Available: https://www.collinsdictionary.com/us/dictionary/english/cooking-time"
@@ -904,7 +919,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature",
+  "@id" : "https://purl.org/heals/wtm/core/hasCookingTemperature",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Dictionary.com, \"temperature.\" [Online]. Available: https://www.dictionary.com/browse/temperature. [Accessed Oct. 13, 2018]"
@@ -919,7 +934,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor",
+  "@id" : "https://purl.org/heals/wtm/core/hasFlavor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Dictionary.com, \"flavor.\" [Online]. Available: https://www.dictionary.com/browse/flavor?s=t. [Accessed Oct. 13, 2018]"
@@ -934,7 +949,7 @@
     "@value" : "ingredient property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten",
+  "@id" : "https://purl.org/heals/wtm/core/hasGluten",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Gluten.\" [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018]"
@@ -949,7 +964,7 @@
     "@value" : "ingredient property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex",
+  "@id" : "https://purl.org/heals/wtm/core/hasGlycemicIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Méthod Montignac , \"The Glycemic Index Concept,\" 2014. [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]"
@@ -964,7 +979,7 @@
     "@value" : "ingredient property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient",
+  "@id" : "https://purl.org/heals/wtm/core/hasIngredient",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Merriam-Webster, \"ingredient,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/ingredient. [Accessed Oct. 18, 2018]"
@@ -979,7 +994,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved",
+  "@id" : "https://purl.org/heals/wtm/core/hasSaved",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Merriam-Webster, \"save,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/save. [Accessed Oct. 13, 2018]"
@@ -994,7 +1009,7 @@
     "@value" : "user property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture",
+  "@id" : "https://purl.org/heals/wtm/core/hasTexture",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Dictionary.com, \"texture.\" [Online]. Available: https://www.dictionary.com/browse/texture?s=t. [Accessed Oct. 13, 2018]"
@@ -1009,7 +1024,7 @@
     "@value" : "ingredient property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe",
+  "@id" : "https://purl.org/heals/wtm/core/highGlycemicRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Montignac Method, \"Search for a specific Glycemic Index,\"  2014. [Online]. Available: http://www.montignac.com/en/search-for-a-specific-glycemic-index/. [Accessed Nov. 1, 2018]"
@@ -1027,7 +1042,7 @@
     "@value" : "recipe class"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo",
+  "@id" : "https://purl.org/heals/wtm/core/isAllergicTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Merriam-Webster, \"allergic,\"2018. [Online]. Available https https://www.merriam-webster.com/dictionary/allergic. [Accessed Oct. 13, 2018]"
@@ -1042,7 +1057,7 @@
     "@value" : "user property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse",
+  "@id" : "https://purl.org/heals/wtm/core/isRecommendedForCourse",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]"
@@ -1057,7 +1072,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal",
+  "@id" : "https://purl.org/heals/wtm/core/isRecommendedForMeal",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]"
@@ -1072,7 +1087,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/serves",
+  "@id" : "https://purl.org/heals/wtm/core/serves",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Serve definition and meaning,\" Collins English Dictionary. Available: https://www.collinsdictionary.com/dictionary/english/serve [Accessed 27-Oct-2018]."
@@ -1087,7 +1102,7 @@
     "@value" : "recipe property"
   } ]
 }, {
-  "@id" : "http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor",
+  "@id" : "https://purl.org/heals/wtm/core/substitutesFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "\"Substitute,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/substitute. [Accessed: 12-Oct-2018]."
@@ -1101,21 +1116,6 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@value" : "ingredient property"
   } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/FOODON_03400737",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/FOODON_03400740",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/FOODON_03400741",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/modified",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/publisher",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

@@ -1,28 +1,28 @@
-@prefix : <http://idea.rpi.edu/heals/ont/whattomake/core/> .
+@prefix : <https://purl.org/heals/wtm/core/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://idea.rpi.edu/heals/ont/whattomake/core/> .
+@base <https://purl.org/heals/wtm/core/> .
 
-<http://idea.rpi.edu/heals/ont/whattomake/core/> rdf:type owl:Ontology ;
-                                                  owl:versionIRI <http://idea.rpi.edu/heals/ont/whattomake/core/> ;
-                                                  owl:imports <http://www.omg.org/techprocess/ab/SpecificationMetadata/> ;
-                                                  <http://purl.org/dc/terms/abstract> "The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology." ;
-                                                  <http://purl.org/dc/terms/contributor> "Forest Eckhardt" ,
-                                                                                         "Kevin Blissett" ,
-                                                                                         "Miao Qi" ,
-                                                                                         "Yarden Ne'eman" ;
-                                                  <http://purl.org/dc/terms/description> "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations." ;
-                                                  <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
-                                                  <http://purl.org/dc/terms/modified> "2019-04-03"^^xsd:date ;
-                                                  <http://purl.org/dc/terms/publisher> "WhatToMake" ;
-                                                  <http://purl.org/dc/terms/references> "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance" ;
-                                                  rdfs:label "What to Make Base Ontology" ;
-                                                  owl:priorVersion "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/" ;
-                                                  <http://www.w3.org/2004/02/skos/core#changeNote> "Changes to this ontology since the previous version include: update of the ontology IRI." ;
-                                                  <https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi" .
+<https://purl.org/heals/wtm/core/> rdf:type owl:Ontology ;
+                                    owl:versionIRI <https://purl.org/heals/wtm/core/> ;
+                                    owl:imports <http://www.omg.org/techprocess/ab/SpecificationMetadata/> ;
+                                    <http://purl.org/dc/terms/abstract> "The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology." ;
+                                    <http://purl.org/dc/terms/contributor> "Forest Eckhardt" ,
+                                                                           "Kevin Blissett" ,
+                                                                           "Miao Qi" ,
+                                                                           "Yarden Ne'eman" ;
+                                    <http://purl.org/dc/terms/description> "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations." ;
+                                    <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+                                    <http://purl.org/dc/terms/modified> "2019-04-03"^^xsd:date ;
+                                    <http://purl.org/dc/terms/publisher> "WhatToMake" ;
+                                    <http://purl.org/dc/terms/references> "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance" ;
+                                    rdfs:label "What to Make Base Ontology" ;
+                                    owl:priorVersion "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/" ;
+                                    <http://www.w3.org/2004/02/skos/core#changeNote> "Changes to this ontology since the previous version include: update of the ontology IRI." ;
+                                    <https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi" .
 
 #################################################################
 #    Annotation properties
@@ -44,7 +44,7 @@
 #    Object Properties
 #################################################################
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/dislikes
+###  https://purl.org/heals/wtm/core/dislikes
 :dislikes rdf:type owl:ObjectProperty ;
           <http://purl.org/dc/terms/source> "\"Dislike,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dislike. [Accessed: 12-Oct-2018]." ;
           rdfs:label "dislikes" ;
@@ -52,7 +52,7 @@
           <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/forbids
+###  https://purl.org/heals/wtm/core/forbids
 :forbids rdf:type owl:ObjectProperty ;
          <http://purl.org/dc/terms/source> "\"Forbid,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/forbid. [Accessed: 12-Oct-2018]." ;
          rdfs:label "forbids" ;
@@ -60,7 +60,7 @@
          <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasConversion
+###  https://purl.org/heals/wtm/core/hasConversion
 :hasConversion rdf:type owl:ObjectProperty ,
                         owl:SymmetricProperty ;
                <http://purl.org/dc/terms/source> "\"Converting,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/converting. [Accessed: 12-Oct-2018]." ;
@@ -69,7 +69,7 @@
                <http://www.w3.org/2004/02/skos/core#scopeNote> "unit property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasFlavor
+###  https://purl.org/heals/wtm/core/hasFlavor
 :hasFlavor rdf:type owl:ObjectProperty ;
            <http://purl.org/dc/terms/source> "Dictionary.com, \"flavor.\" [Online]. Available: https://www.dictionary.com/browse/flavor?s=t. [Accessed Oct. 13, 2018]" ;
            rdfs:label "has flavor" ;
@@ -77,7 +77,7 @@
            <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasIngredient
+###  https://purl.org/heals/wtm/core/hasIngredient
 :hasIngredient rdf:type owl:ObjectProperty ;
                <http://purl.org/dc/terms/source> "Merriam-Webster, \"ingredient,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/ingredient. [Accessed Oct. 18, 2018]" ;
                rdfs:label "has ingredient" ;
@@ -85,7 +85,7 @@
                <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasSaved
+###  https://purl.org/heals/wtm/core/hasSaved
 :hasSaved rdf:type owl:ObjectProperty ;
           <http://purl.org/dc/terms/source> "Merriam-Webster, \"save,\" 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/save. [Accessed Oct. 13, 2018]" ;
           rdfs:label "has saved" ;
@@ -93,7 +93,7 @@
           <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasTexture
+###  https://purl.org/heals/wtm/core/hasTexture
 :hasTexture rdf:type owl:ObjectProperty ;
             <http://purl.org/dc/terms/source> "Dictionary.com, \"texture.\" [Online]. Available: https://www.dictionary.com/browse/texture?s=t. [Accessed Oct. 13, 2018]" ;
             rdfs:label "has texture" ;
@@ -101,7 +101,7 @@
             <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/isAllergicTo
+###  https://purl.org/heals/wtm/core/isAllergicTo
 :isAllergicTo rdf:type owl:ObjectProperty ;
               <http://purl.org/dc/terms/source> "Merriam-Webster, \"allergic,\"2018. [Online]. Available https https://www.merriam-webster.com/dictionary/allergic. [Accessed Oct. 13, 2018]" ;
               rdfs:label "is allergic to" ;
@@ -109,7 +109,7 @@
               <http://www.w3.org/2004/02/skos/core#scopeNote> "user property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForCourse
+###  https://purl.org/heals/wtm/core/isRecommendedForCourse
 :isRecommendedForCourse rdf:type owl:ObjectProperty ;
                         <http://purl.org/dc/terms/source> "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]" ;
                         rdfs:label "is recommended for course" ;
@@ -117,7 +117,7 @@
                         <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/isRecommendedForMeal
+###  https://purl.org/heals/wtm/core/isRecommendedForMeal
 :isRecommendedForMeal rdf:type owl:ObjectProperty ;
                       <http://purl.org/dc/terms/source> "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]" ;
                       rdfs:label "is recommended for meal" ;
@@ -125,7 +125,7 @@
                       <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/substitutesFor
+###  https://purl.org/heals/wtm/core/substitutesFor
 :substitutesFor rdf:type owl:ObjectProperty ,
                          owl:SymmetricProperty ;
                 <http://purl.org/dc/terms/source> "\"Substitute,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/substitute. [Accessed: 12-Oct-2018]." ;
@@ -138,7 +138,7 @@
 #    Data properties
 #################################################################
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasCookTime
+###  https://purl.org/heals/wtm/core/hasCookTime
 :hasCookTime rdf:type owl:DatatypeProperty ;
              <http://purl.org/dc/terms/source> "\"Cook Time,\" Collins English Dictionary. [Online]. Available: https://www.collinsdictionary.com/us/dictionary/english/cooking-time" ;
              rdfs:label "has cook time" ;
@@ -146,7 +146,7 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasCookingTemperature
+###  https://purl.org/heals/wtm/core/hasCookingTemperature
 :hasCookingTemperature rdf:type owl:DatatypeProperty ;
                        <http://purl.org/dc/terms/source> "Dictionary.com, \"temperature.\" [Online]. Available: https://www.dictionary.com/browse/temperature. [Accessed Oct. 13, 2018]" ;
                        rdfs:label "has cooking temperature" ;
@@ -154,7 +154,7 @@
                        <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasGluten
+###  https://purl.org/heals/wtm/core/hasGluten
 :hasGluten rdf:type owl:DatatypeProperty ;
            <http://purl.org/dc/terms/source> "Wikipedia, \"Gluten.\" [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018]" ;
            rdfs:label "has gluten" ;
@@ -162,7 +162,7 @@
            <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/hasGlycemicIndex
+###  https://purl.org/heals/wtm/core/hasGlycemicIndex
 :hasGlycemicIndex rdf:type owl:DatatypeProperty ;
                   <http://purl.org/dc/terms/source> "Méthod Montignac , \"The Glycemic Index Concept,\" 2014. [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]" ;
                   rdfs:label "has glycemic index" ;
@@ -170,7 +170,7 @@
                   <http://www.w3.org/2004/02/skos/core#scopeNote> "ingredient property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/serves
+###  https://purl.org/heals/wtm/core/serves
 :serves rdf:type owl:DatatypeProperty ;
         <http://purl.org/dc/terms/source> "\"Serve definition and meaning,\" Collins English Dictionary. Available: https://www.collinsdictionary.com/dictionary/english/serve [Accessed 27-Oct-2018]." ;
         rdfs:label "serves" ;
@@ -182,7 +182,19 @@
 #    Classes
 #################################################################
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/BreakfastRecipe
+###  http://purl.obolibrary.org/obo/FOODON_03400737
+<http://purl.obolibrary.org/obo/FOODON_03400737> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400740
+<http://purl.obolibrary.org/obo/FOODON_03400740> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FOODON_03400741
+<http://purl.obolibrary.org/obo/FOODON_03400741> rdf:type owl:Class .
+
+
+###  https://purl.org/heals/wtm/core/BreakfastRecipe
 :BreakfastRecipe rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( :Recipe
                                                             [ rdf:type owl:Restriction ;
@@ -198,7 +210,7 @@
                  <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Characteristic
+###  https://purl.org/heals/wtm/core/Characteristic
 :Characteristic rdf:type owl:Class ;
                 <http://purl.org/dc/terms/source> "\"Characteristic,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/characterisitc. [Accessed: 25-Oct-2018]." ;
                 rdfs:label "characteristic" ;
@@ -207,7 +219,7 @@
                 <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/ChemicalFoodProduct
+###  https://purl.org/heals/wtm/core/ChemicalFoodProduct
 :ChemicalFoodProduct rdf:type owl:Class ;
                      rdfs:subClassOf :Food ;
                      <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03411041. [Accessed Nov. 19, 2018]." ;
@@ -216,7 +228,7 @@
                      <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Course
+###  https://purl.org/heals/wtm/core/Course
 :Course rdf:type owl:Class ;
         <http://purl.org/dc/terms/source> "Wikipedia , \"Course (food).\" [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]" ;
         rdfs:label "course" ;
@@ -225,7 +237,7 @@
         <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/DinnerRecipe
+###  https://purl.org/heals/wtm/core/DinnerRecipe
 :DinnerRecipe rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( :Recipe
                                                          [ rdf:type owl:Restriction ;
@@ -241,7 +253,7 @@
               <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Flavor
+###  https://purl.org/heals/wtm/core/Flavor
 :Flavor rdf:type owl:Class ;
         rdfs:subClassOf :Characteristic ;
         owl:disjointWith :Texture ;
@@ -251,7 +263,7 @@
         <http://www.w3.org/2004/02/skos/core#scopeNote> "food property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Food
+###  https://purl.org/heals/wtm/core/Food
 :Food rdf:type owl:Class ;
       <http://purl.org/dc/terms/source> "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]." ;
       rdfs:label "food" ;
@@ -260,7 +272,7 @@
       <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Ingredient
+###  https://purl.org/heals/wtm/core/Ingredient
 :Ingredient rdf:type owl:Class ;
             <http://purl.org/dc/terms/source> "Cambridge Dictionary, \"ingredient.\" [Online]. Available: https://dictionary.cambridge.org/us/dictionary/english/ingredient. [Accessed Nov. 10, 2018]" ;
             rdfs:label "ingredient" ;
@@ -269,7 +281,7 @@
             <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/LessThanOneHourRecipe
+###  https://purl.org/heals/wtm/core/LessThanOneHourRecipe
 :LessThanOneHourRecipe rdf:type owl:Class ;
                        owl:equivalentClass [ owl:intersectionOf ( :Recipe
                                                                   [ rdf:type owl:Restriction ;
@@ -290,7 +302,7 @@
                        <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/LunchRecipe
+###  https://purl.org/heals/wtm/core/LunchRecipe
 :LunchRecipe rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( :Recipe
                                                         [ rdf:type owl:Restriction ;
@@ -306,7 +318,7 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Meal
+###  https://purl.org/heals/wtm/core/Meal
 :Meal rdf:type owl:Class ;
       <http://purl.org/dc/terms/source> "Wikipedia, \"Meal.\" [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]" ;
       rdfs:label "meal" ;
@@ -315,7 +327,7 @@
       <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Measurement
+###  https://purl.org/heals/wtm/core/Measurement
 :Measurement rdf:type owl:Class ;
              <http://purl.org/dc/terms/source> "\"Measure,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/measure. [Accessed: 12-Oct-2018]." ;
              rdfs:label "measurement" ;
@@ -324,7 +336,7 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromChicken
+###  https://purl.org/heals/wtm/core/MeatFromChicken
 :MeatFromChicken rdf:type owl:Class ;
                  rdfs:subClassOf <http://purl.obolibrary.org/obo/FOODON_03400741> ;
                  <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400741. [Accessed Nov. 14, 2018]." ;
@@ -333,7 +345,7 @@
                  <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromCow
+###  https://purl.org/heals/wtm/core/MeatFromCow
 :MeatFromCow rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/FOODON_03400737> ;
              <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]." ;
@@ -342,7 +354,7 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromLamb
+###  https://purl.org/heals/wtm/core/MeatFromLamb
 :MeatFromLamb rdf:type owl:Class ;
               rdfs:subClassOf <http://purl.obolibrary.org/obo/FOODON_03400737> ;
               <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]." ;
@@ -351,7 +363,7 @@
               <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/MeatFromPig
+###  https://purl.org/heals/wtm/core/MeatFromPig
 :MeatFromPig rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/FOODON_03400737> ;
              <http://purl.org/dc/terms/source> "BioPortal, \"FoodOn,\"  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018]." ;
@@ -360,7 +372,7 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/MilkFromCow
+###  https://purl.org/heals/wtm/core/MilkFromCow
 :MilkFromCow rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/FOODON_03400740> ;
              <http://purl.org/dc/terms/source> "Wikipedia, \"Milk.\" [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow's_milk. [Accessed: Nov. 10, 2018]" ;
@@ -369,7 +381,7 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Mushroom
+###  https://purl.org/heals/wtm/core/Mushroom
 :Mushroom rdf:type owl:Class ;
           rdfs:subClassOf :PrimaryFoodCommodityOfFungusOrigin ;
           <http://purl.org/dc/terms/source> "Wikipedia, \"Mushroom.\" [Online]. Available: https://en.wikipedia.org/wiki/Mushroom. [Accessed: Nov. 22, 2018]" ;
@@ -378,7 +390,7 @@
           <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/PrimaryFoodCommodityOfFungusOrigin
+###  https://purl.org/heals/wtm/core/PrimaryFoodCommodityOfFungusOrigin
 :PrimaryFoodCommodityOfFungusOrigin rdf:type owl:Class ;
                                     rdfs:subClassOf :Food ;
                                     <http://purl.org/dc/terms/source> "NHS, \"Eating processed foods,\" January 2017. [Online]. Available: https://www.nhs.uk/live-well/eat-well/what-are-processed-foods/. [Accessed Nov.22 2018]" ;
@@ -387,7 +399,7 @@
                                     <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Recipe
+###  https://purl.org/heals/wtm/core/Recipe
 :Recipe rdf:type owl:Class ;
         <http://purl.org/dc/terms/source> "BBC, \"Food Ontology,\" ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018]." ;
         rdfs:label "recipe" ;
@@ -396,7 +408,7 @@
         <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/SideRecipe
+###  https://purl.org/heals/wtm/core/SideRecipe
 :SideRecipe rdf:type owl:Class ;
             owl:equivalentClass [ owl:intersectionOf ( :Recipe
                                                        [ rdf:type owl:Restriction ;
@@ -412,7 +424,7 @@
             <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/TemperatureMeasurement
+###  https://purl.org/heals/wtm/core/TemperatureMeasurement
 :TemperatureMeasurement rdf:type owl:Class ;
                         rdfs:subClassOf :Measurement ;
                         <http://purl.org/dc/terms/source> "Wikipedia, \"Temperature measurement.\" [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]" ;
@@ -421,7 +433,7 @@
                         <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Texture
+###  https://purl.org/heals/wtm/core/Texture
 :Texture rdf:type owl:Class ;
          rdfs:subClassOf :Characteristic ;
          <http://purl.org/dc/terms/source> "\"Texture,\" Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/texture. [Accessed: 12-Oct-2018]." ;
@@ -430,7 +442,7 @@
          <http://www.w3.org/2004/02/skos/core#scopeNote> "food property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/TimeMeasurement
+###  https://purl.org/heals/wtm/core/TimeMeasurement
 :TimeMeasurement rdf:type owl:Class ;
                  rdfs:subClassOf :Measurement ;
                  <http://purl.org/dc/terms/source> "Merriam-Webster, \"Time.\" [Online]. Available: https://www.merriam-webster.com/dictionary/time. [Accessed: Nov. 22, 018]" ,
@@ -440,7 +452,7 @@
                  <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe property" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/User
+###  https://purl.org/heals/wtm/core/User
 :User rdf:type owl:Class ;
       <http://purl.org/dc/terms/source> "\"User,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/user. [Accessed: 12-Oct-2018]." ;
       rdfs:label "user" ;
@@ -449,7 +461,7 @@
       <http://www.w3.org/2004/02/skos/core#scopeNote> "top-level class" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Yeast
+###  https://purl.org/heals/wtm/core/Yeast
 :Yeast rdf:type owl:Class ;
        rdfs:subClassOf :PrimaryFoodCommodityOfFungusOrigin ;
        <http://purl.org/dc/terms/source> "Wikidictionary, \"Yeast.\" [Online]. Available: https://en.wiktionary.org/wiki/yeast. [Accessed: Nov. 22, 2018]" ;
@@ -458,7 +470,7 @@
        <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/highGlycemicRecipe
+###  https://purl.org/heals/wtm/core/highGlycemicRecipe
 :highGlycemicRecipe rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( :Recipe
                                                                [ rdf:type owl:Restriction ;
@@ -482,23 +494,11 @@
                     <http://www.w3.org/2004/02/skos/core#scopeNote> "recipe class" .
 
 
-###  http://purl.obolibrary.org/obo/FOODON_03400737
-<http://purl.obolibrary.org/obo/FOODON_03400737> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/FOODON_03400740
-<http://purl.obolibrary.org/obo/FOODON_03400740> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/FOODON_03400741
-<http://purl.obolibrary.org/obo/FOODON_03400741> rdf:type owl:Class .
-
-
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Appetizer
+###  https://purl.org/heals/wtm/core/Appetizer
 :Appetizer rdf:type owl:NamedIndividual ,
                     :Course ;
            <http://purl.org/dc/terms/source> "\"Appetizer,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/appetizer. [Accessed: 1-Nov-2018]" ;
@@ -507,7 +507,7 @@
            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Breakfast
+###  https://purl.org/heals/wtm/core/Breakfast
 :Breakfast rdf:type owl:NamedIndividual ,
                     :Meal ;
            <http://purl.org/dc/terms/source> "\"Breakfast,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018]." ;
@@ -516,7 +516,7 @@
            <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Brunch
+###  https://purl.org/heals/wtm/core/Brunch
 :Brunch rdf:type owl:NamedIndividual ,
                  :Meal ;
         <http://purl.org/dc/terms/source> "Wikipedia, \"Brunch.\" [Online]. Available: https://en.wikipedia.org/wiki/Brunch. [Accessed: Nov. 16, 2018]" ;
@@ -525,7 +525,7 @@
         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Dessert
+###  https://purl.org/heals/wtm/core/Dessert
 :Dessert rdf:type owl:NamedIndividual ,
                   :Course ;
          <http://purl.org/dc/terms/source> "\"Dessert,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dessert. [Accessed: 1-Nov-2018]" ;
@@ -534,7 +534,7 @@
          <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Dinner
+###  https://purl.org/heals/wtm/core/Dinner
 :Dinner rdf:type owl:NamedIndividual ,
                  :Meal ;
         <http://purl.org/dc/terms/source> "\"Dinner,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018]." ;
@@ -543,7 +543,7 @@
         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Entree
+###  https://purl.org/heals/wtm/core/Entree
 :Entree rdf:type owl:NamedIndividual ,
                  :Course ;
         <http://purl.org/dc/terms/source> "\"Entree,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/entree. [Accessed: 1-Nov-2018]" ;
@@ -552,7 +552,7 @@
         <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Lunch
+###  https://purl.org/heals/wtm/core/Lunch
 :Lunch rdf:type owl:NamedIndividual ,
                 :Meal ;
        <http://purl.org/dc/terms/source> "\"Lunch,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018]." ;
@@ -561,7 +561,7 @@
        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Salad
+###  https://purl.org/heals/wtm/core/Salad
 :Salad rdf:type owl:NamedIndividual ,
                 :Course ;
        <http://purl.org/dc/terms/source> "Wikipedia, \"Salad.\" [Online]. Available: https://en.wikipedia.org/wiki/Salad. [Accessed: Nov. 16, 2018]" ;
@@ -570,7 +570,7 @@
        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Side
+###  https://purl.org/heals/wtm/core/Side
 :Side rdf:type owl:NamedIndividual ,
                :Course ;
       <http://purl.org/dc/terms/source> "\"Side Dish,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018]." ;
@@ -579,7 +579,7 @@
       <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a course" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Snack
+###  https://purl.org/heals/wtm/core/Snack
 :Snack rdf:type owl:NamedIndividual ,
                 :Meal ;
        <http://purl.org/dc/terms/source> "\"Snack,\" Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/snack. [Accessed: 1-Nov-2018]" ;
@@ -588,7 +588,7 @@
        <http://www.w3.org/2004/02/skos/core#scopeNote> "used as a meal" .
 
 
-###  http://idea.rpi.edu/heals/ont/whattomake/core/Soup
+###  https://purl.org/heals/wtm/core/Soup
 :Soup rdf:type owl:NamedIndividual ,
                :Course ;
       <http://purl.org/dc/terms/source> "Wikipedia, \"Soup.\" [Online]. Available: https://en.wikipedia.org/wiki/Soup. [Accessed: Nov. 16, 2018]" ;
