@@ -17,7 +17,8 @@ This dataset includes mappings to some of the concepts found in:
 To reproduce the knowledge graph described in the paper, you will require the following:
 
 * `make` (available on most Linux distributions; can be obtained with some effort for Windows)
-* (TODO: link to the repository here)
+* Python 3, along with the virtualenv module
+* This repository, https://github.com/foodkg/foodkg.github.io/
 * im2recipe's Recipe1M dataset. Sign up to acquire it here: http://im2recipe.csail.mit.edu/dataset/login/
 
 Specific instructions for creating and transforming the data are found in `/src/README.md`. A high level overview:
