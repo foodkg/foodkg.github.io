@@ -61,7 +61,7 @@ This code was written in python 3. To use it you will need to install:
 
 ### Load pretrained word embeddings
 
-* Download the pretrained Glove word ebeddings [glove.840B.300d.zip](http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip)
+* Download the pretrained Glove word ebeddings [glove.840B.300d.zip](http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip).
 
 * Unzip the file and convert glove format to word2vec format using the following cmd:
 
@@ -69,7 +69,7 @@ This code was written in python 3. To use it you will need to install:
 	python -m gensim.scripts.glove2word2vec --input glove.840B.300d.txt --output glove.840B.300d.w2v
 	```
 
-* Fetch the pretrained Glove vectors for our vocabulary
+* Fetch the pretrained Glove vectors for our vocabulary.
 
 	```
 	python build_pretrained_w2v.py -emb glove.840B.300d.w2v -data_dir [qas_dir] -out [qas_dir/glove_pretrained_300d_w2v.npy] -emb_size 300
@@ -91,7 +91,7 @@ This code was written in python 3. To use it you will need to install:
 	python run_online.py -config config/kbqa.yml
 	```
 
-Note that we use the BAMnet model as our KBQA system in this application. For more details about the BAMnet model, please refer to the [original paper] (https://arxiv.org/abs/1903.02188).
+Note that we use the BAMnet model as our KBQA system in this application. For more details about the BAMnet model, please refer to the [original paper](https://arxiv.org/abs/1903.02188).
 
 
 
