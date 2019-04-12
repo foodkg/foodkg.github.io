@@ -79,7 +79,7 @@ This code was written in python 3. To use it you will need to install:
 
 * Modify the config file config/kbqa.yml (e.g., file paths, vocab size).
 
-* Train the KBQA model. Note that you need to install pytorch 0.4.
+* Train the KBQA model.
 
 	```
 	python train.py -config config/kbqa.yml

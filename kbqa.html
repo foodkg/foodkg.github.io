@@ -76,8 +76,11 @@
       <h5>Go to the data_builder/src folder, run the following cmd:</h5>
         <code>
           python usda.py -o [qas_dir]
+        </code><br>
+        <code>
           python recipe.py -o [qas_dir]
-        </code><br><br>
+        </code>
+        <br><br>
 
         In the [qas_dir] folder, you will see two JSON files: <b>usda_subgraphs.json</b> which is  for the USDA data and <b>recipe_kg.json</b> which is for the Recipe1M data.
       </li><br>
@@ -171,7 +174,7 @@ Unzip the file and convert glove format to word2vec format using the following c
 
 
 <li>
-<h5>Train the KBQA model. Note that you need to install pytorch 0.4.</h5>
+<h5>Train the KBQA model.</h5>
   <code>
   python train.py -config config/kbqa.yml
    </code>
