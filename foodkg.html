@@ -39,8 +39,35 @@
     <div class="col-sm-2 sidenav">
         <div class="bg"></div>
     </div>
-
+    asbestos
     <div class="col-sm-8 text-left"> 
+      <h1>Knowledge Graph Construction</h1>
+      <br/>
+      <p>
+        We combine multiple sources of data into a single cohesive knowledge graph, forming linkages to relate similar concepts.
+      </p>
+      <hr>
+      <h2>Components</h2>
+        <ul>
+          <li>Recipe data</li>
+          <li>Nutrient data</li>
+          <li>Food ontologies</li>
+        </ul>
+        <hr>
+      <h2>Construction</h2>
+      <h3>Prerequisites</h3>
+      <p>You will need to manually acquire the following:</p>
+      <ul>
+        <li>The Im2Recipe <a href="http://im2recipe.csail.mit.edu/dataset/download/">Recipe1M Dataset</a></li>
+      </ul>
+      <h3>Execution</h3>
+      <p>After cloning the <a href="https://github.com/foodkg/foodkg.github.io">repository</a>, detailed instructions for reproduction are available under the /src directory. A broad overview follows:</p>
+      <ol>
+        <li>Acquire the data listed above</li>
+        <li>Use /src/prep-scripts/ to join automatically-acquired data with the manual data</li>
+        <li>Use /src/recipe-handler/ to generate a knowledge graph from the prepared data</li>
+        <li>Use /src/verify to generate statistics from the result</li>
+      </ol>
     </div>
 
   </div>
