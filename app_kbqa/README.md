@@ -62,7 +62,9 @@
 	python build_pretrained_w2v.py -emb glove.840B.300d.w2v -data_dir [qas_dir] -out [qas_dir/glove_pretrained_300d_w2v.npy] -emb_size 300
 	```
 
-* Modify the config file config/kbqa.yml (e.g., file paths). 
+### Tran/test a KBQA system
+
+* Modify the config file config/kbqa.yml (e.g., file paths, vocab size). 
 
 * Train the KBQA model. Note that you need to install pytorch 0.4.
 
