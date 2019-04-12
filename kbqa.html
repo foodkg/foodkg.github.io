@@ -46,6 +46,12 @@
       <br/>
       <p>
         We demonstrate a potential use of our FoodKG for answering natural language questions over knowledge graphs, aka, knowledge base question answering (KBQA).
+        Given questions in natural language such as "what Indian dishes can I make with chicken and garlic?", our goal here is to automatically find answers from the FoodKG.
+        We believe this is a natural way to access a large-scale knowledge graph, especially for non-experts users.
+        Moreover, in this way, our FoodKG is able to benefit users by providing nutrition facts of ingredients and diverse recipe options in a user-friendly way.
+        To this end, we build this application which is <b>Answering Natural Language Questions over FoodKG</b>.
+        We first create a synthetic Q&A dataset based on our FoodKG using a set of manually designed question templates.
+        Then we employ a state-of-the-art neural network-based KBQA model called <a href="https://arxiv.org/abs/1903.02188">BAMnet</a> to answer natural language questions.
       </p>
       <hr>
 
@@ -188,7 +194,7 @@ Unzip the file and convert glove format to word2vec format using the following c
    </code>
 </li>
 </ol><br>
-Note that we use the BAMnet model as our KBQA system in this application. For more details about the BAMnet model, please refer to the <a href="https://arxiv.org/abs/1903.02188">original paper</a>.
+<!-- Note that we use the BAMnet model as our KBQA system in this application. For more details about the BAMnet model, please refer to the <a href="https://arxiv.org/abs/1903.02188">original paper</a>. -->
 </section><br>
 
 
