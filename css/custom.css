@@ -21,6 +21,18 @@
     color: white;
     padding: 15px;
   }
+
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+
+  .link {
+    display: block
+  }
   
   /* On small screens, set height to 'auto' for sidenav and grid */
   @media screen and (max-width: 767px) {
