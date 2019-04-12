@@ -11,14 +11,14 @@
  </head>
 <body>
 
-  
+
 <nav class="navbar navbar-inverse mx-auto">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#"></a>
     </div>
@@ -33,14 +33,177 @@
     </div>
   </div>
 </nav>
-  
-<div class="container-fluid text-center">    
+
+<div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
         <div class="bg"></div>
     </div>
 
-    <div class="col-sm-8 text-left"> 
+    <div class="col-sm-8 text-left">
+      <!-- Content -->
+      <h1>Answering Natural Language Questions over FoodKG</h1>
+      <br/>
+      <p>
+        We demonstrate a potential use of our FoodKG for answering natural language questions over knowledge graphs, aka, knowledge base question answering (KBQA).
+      </p>
+      <hr>
+
+<section>
+      <h2>Prerequisites</h2>
+      This code was written in python 3. To use it you will need to install:
+        <ul>
+          <li>pytorch 0.4</li>
+          <li>Numpy</li>
+          <li>NLTK</li>
+          <li>gensim</li>
+          <li>fuzzywuzzy</li>
+          <li>SPARQLWrapper</li>
+          <li>argparse</li>
+          <li>yaml</li>
+        </ul>
+        <hr>
+</section>
+
+
+
+<section>
+      <h2>Create a synthetic Q&A dataset</h2>
+      <h4><b>Fetch KG subgraphs from a remote KG stored in Blazegraph</b></h4>
+
+      <ol>
+      <li>
+      <h5>Go to the data_builder/src folder, run the following cmd:</h5>
+        <code>
+          python usda.py -o [qas_dir]
+          python recipe.py -o [qas_dir]
+        </code><br><br>
+
+        In the [qas_dir] folder, you will see two JSON files: <b>usda_subgraphs.json</b> which is  for the USDA data and <b>recipe_kg.json</b> which is for the Recipe1M data.
+      </li><br>
+
+
+        <li>
+        <h5>Note that in the recipe data, a few tags contain more than 5000 recipes which might cause Out of Memory issue when running the KBQA system. So you may want to create a smaller recipe dataset by randomly keeping at most 2000 recipes under each recipe tag. In order to do that, run the following cmd:</h5>
+          <code>
+          python filterout_recipe.py -recipe [qas_dir/recipe_kg.json] -o [qas_dir/sampled_recipe_kg.json] -max_dish_count_per_tag 2000
+          </code>
+        </li><br>
+
+
+        <li>
+        <h5>Now, you can merge the above two files into a single file using the following cmd:</h5>
+          <code>
+          cat [qas_dir/usda_subgraphs.json] [qas_dir/sampled_recipe_kg.json] > [qas_dir/foodkg.json]
+         </code><br><br>
+          This is the local KG file which will be accessed by a KBQA system.<br>
+        </li>
+    </ol><br>
+
+
+
+<h4><b>Generate synthetic questions</b></h4>
+
+<ol>
+<li>
+<h5>Run the following cmd:</h5>
+  <code>
+  python generate_qa.py -usda [qas_dir/usda_subgraphs.json] -recipe [qas_dir/sampled_recipe_kg.json]
+  </code>
+</li>
+</ol><br>
+</section>
+
+
+
+<section>
+  <h2>Run a KBQA system</h2>
+<h4><b>Preprocess the Q&A dataset</b></h4>
+
+<ol>
+  <li>
+  <h5>Go to the BAMnet/src folder, run the following cmd:</h5>
+
+  <code>
+  python build_all_data.py -data_dir [qas_dir] -kb_path [qas_dir/foodkg.json] -out_dir [qas_dir]
+   </code>
+ </li>
+</ol><br>
+
+
+
+<h4><b>Load pretrained word embeddings</b></h4>
+
+
+<ol>
+  <li>
+<h5>Download the pretrained Glove word ebeddings <a href="http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip">glove.840B.300d.zip</a>.
+</h5>
+</li><br>
+
+
+<li>
+<h5>
+Unzip the file and convert glove format to word2vec format using the following cmd:</h5>
+ <code>
+  python -m gensim.scripts.glove2word2vec --input glove.840B.300d.txt --output glove.840B.300d.w2v
+   </code>
+</li><br>
+
+
+<li>
+<h5> Fetch the pretrained Glove vectors for our vocabulary.
+</h5>
+ <code>
+  python build_pretrained_w2v.py -emb glove.840B.300d.w2v -data_dir [qas_dir] -out [qas_dir/glove_pretrained_300d_w2v.npy] -emb_size 300
+  </code>
+</li><br>
+</ol>
+
+
+
+<h4><b>Tran/test a KBQA system</b></h4>
+
+<ol>
+  <li>
+ Modify the config file config/kbqa.yml (e.g., file paths, vocab size).
+</li><br>
+
+
+<li>
+<h5>Train the KBQA model. Note that you need to install pytorch 0.4.</h5>
+  <code>
+  python train.py -config config/kbqa.yml
+   </code>
+
+</li><br>
+
+<li>
+<h5>Test the KBQA model:</h5>
+  <code>
+  python run_online.py -config config/kbqa.yml
+   </code>
+</li>
+</ol><br>
+Note that we use the BAMnet model as our KBQA system in this application. For more details about the BAMnet model, please refer to the <a href="https://arxiv.org/abs/1903.02188">original paper</a>.
+</section><br>
+
+
+
+<!--
+      <ol>
+        <li>Acquire the data listed above</li>
+        <li>Use /src/prep-scripts/ to join automatically-acquired data with the manual data</li>
+        <li>Use /src/recipe-handler/ to generate a knowledge graph from the prepared data</li>
+        <li>Use /src/verify to generate statistics from the result</li>
+      </ol>
+ -->
+
+
+
+
+
+
     </div>
 
   </div>
