@@ -8,12 +8,12 @@
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-	<!ENTITY wtm "https://purl.org/heals/wtm/core/" >
+	<!ENTITY wtm "http://purl.org/heals/food/" >
     <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 ]>
 
-<rdf:RDF xml:base="https://purl.org/heals/wtm/core/"
-     xmlns:wtm="https://purl.org/heals/wtm/core/"
+<rdf:RDF xml:base="http://purl.org/heals/food/"
+     xmlns:wtm="http://purl.org/heals/food/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -23,17 +23,16 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:sm="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
-    <owl:Ontology rdf:about="https://purl.org/heals/wtm/core/">
-        <owl:versionIRI rdf:resource="https://purl.org/heals/wtm/core/"/>
-        <owl:imports rdf:resource="https://purl.org/heals/wtm/foodon/"/>
+    <owl:Ontology rdf:about="http://purl.org/heals/food/">
+        <owl:versionIRI rdf:resource="http://purl.org/heals/food/"/>
+        <owl:imports rdf:resource="http://purl.org/heals/foodon/"/>
         <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
         <dct:contributor>Forest Eckhardt</dct:contributor>
         <dct:contributor>Kevin Blissett</dct:contributor>
         <dct:contributor>Yarden Ne'eman</dct:contributor>
         <dct:contributor>Miao Qi</dct:contributor>
-<!--        <owl:priorVersion>http://tw.rpi.edu/media/latest/OE_12_WhatToMake.rdf</owl:priorVersion>-->
         <owl:priorVersion>https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/</owl:priorVersion>
-        <dct:modified rdf:datatype="&xsd;date">2019-04-03</dct:modified>
+        <dct:modified rdf:datatype="&xsd;date">2019-04-12</dct:modified>
         <skos:changeNote>Changes to this ontology since the previous version include: update of the ontology IRI.</skos:changeNote>
         <dct:description>The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations.</dct:description>
         <dct:abstract rdf:datatype="&xsd;string">The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology.</dct:abstract>
