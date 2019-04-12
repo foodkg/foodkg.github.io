@@ -1,29 +1,29 @@
-@prefix : <https://purl.org/heals/wtm/foodon/> .
+@prefix : <http://purl.org/heals/foodon/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://purl.org/heals/wtm/foodon/> .
+@base <http://purl.org/heals/foodon/> .
 
-<https://purl.org/heals/wtm/foodon/> rdf:type owl:Ontology ;
-                                      owl:versionIRI <https://purl.org/heals/wtm/foodon/> ;
-                                      owl:imports <http://www.omg.org/techprocess/ab/SpecificationMetadata/> ;
-                                      <http://purl.org/dc/terms/abstract> "The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology." ;
-                                      <http://purl.org/dc/terms/contributor> "Forest Eckhardt" ,
-                                                                             "Kevin Blissett" ,
-                                                                             "Miao Qi" ,
-                                                                             "Yarden Ne'eman" ;
-                                      <http://purl.org/dc/terms/description> "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations." ;
-                                      <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
-                                      <http://purl.org/dc/terms/modified> "2019-04-03"^^xsd:date ;
-                                      <http://purl.org/dc/terms/publisher> "WhatToMake" ;
-                                      <http://purl.org/dc/terms/references> "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance" ;
-                                      <http://purl.org/dc/terms/source> "https://bioportal.bioontology.org/ontologies/FOODON/?p=summary" ;
-                                      rdfs:label "WhatToMake Food Classification" ;
-                                      owl:priorVersion "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/" ;
-                                      <http://www.w3.org/2004/02/skos/core#changeNote> "Changes to this ontology since the previous version include: update of ontology IRI" ;
-                                      <https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi" .
+<http://purl.org/heals/foodon/> rdf:type owl:Ontology ;
+                                 owl:versionIRI <http://purl.org/heals/foodon/> ;
+                                 owl:imports <http://www.omg.org/techprocess/ab/SpecificationMetadata/> ;
+                                 <http://purl.org/dc/terms/abstract> "The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology." ;
+                                 <http://purl.org/dc/terms/contributor> "Forest Eckhardt" ,
+                                                                        "Kevin Blissett" ,
+                                                                        "Miao Qi" ,
+                                                                        "Yarden Ne'eman" ;
+                                 <http://purl.org/dc/terms/description> "The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations." ;
+                                 <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+                                 <http://purl.org/dc/terms/modified> "2019-04-12"^^xsd:date ;
+                                 <http://purl.org/dc/terms/publisher> "WhatToMake" ;
+                                 <http://purl.org/dc/terms/references> "https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance" ;
+                                 <http://purl.org/dc/terms/source> "https://bioportal.bioontology.org/ontologies/FOODON/?p=summary" ;
+                                 rdfs:label "WhatToMake Food Classification" ;
+                                 owl:priorVersion "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/" ;
+                                 <http://www.w3.org/2004/02/skos/core#changeNote> "Changes to this ontology since the previous version include: update of ontology IRI" ;
+                                 <https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi" .
 
 #################################################################
 #    Annotation properties
@@ -63,7 +63,7 @@
 
 ###  http://purl.obolibrary.org/obo/FOODON_03400644
 <http://purl.obolibrary.org/obo/FOODON_03400644> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.org/heals/wtm/core/Food> ;
+                                                 rdfs:subClassOf <http://purl.org/heals/food/Food> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" ;
                                                  <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0644" ;
@@ -76,7 +76,7 @@
 
 ###  http://purl.obolibrary.org/obo/FOODON_03400645
 <http://purl.obolibrary.org/obo/FOODON_03400645> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.org/heals/wtm/core/Food> ;
+                                                 rdfs:subClassOf <http://purl.org/heals/food/Food> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" ;
                                                  <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0645" ;
@@ -89,7 +89,7 @@
 
 ###  http://purl.obolibrary.org/obo/FOODON_03400647
 <http://purl.obolibrary.org/obo/FOODON_03400647> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.org/heals/wtm/core/Food> ;
+                                                 rdfs:subClassOf <http://purl.org/heals/food/Food> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" ;
                                                  <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0647" ;
@@ -102,7 +102,7 @@
 
 ###  http://purl.obolibrary.org/obo/FOODON_03400648
 <http://purl.obolibrary.org/obo/FOODON_03400648> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.org/heals/wtm/core/Food> ;
+                                                 rdfs:subClassOf <http://purl.org/heals/food/Food> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://langual.org" ;
                                                  <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.langual.org/langual_thesaurus.asp?termid=A0648" ;
@@ -1187,8 +1187,8 @@ Specific commodities will be listed in this group with their code nos. according
                                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "used for ingredient classification" .
 
 
-###  https://purl.org/heals/wtm/core/Food
-<https://purl.org/heals/wtm/core/Food> rdf:type owl:Class .
+###  http://purl.org/heals/food/Food
+<http://purl.org/heals/food/Food> rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

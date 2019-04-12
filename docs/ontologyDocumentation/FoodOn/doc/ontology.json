@@ -18,7 +18,7 @@
     "@value" : "primary food commodity of plant origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/heals/wtm/core/Food"
+    "@id" : "http://purl.org/heals/food/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -49,7 +49,7 @@
     "@value" : "primary food commodity of animal origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/heals/wtm/core/Food"
+    "@id" : "http://purl.org/heals/food/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -80,7 +80,7 @@
     "@value" : "processed food of plant origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/heals/wtm/core/Food"
+    "@id" : "http://purl.org/heals/food/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -111,7 +111,7 @@
     "@value" : "processed food of animal origin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/heals/wtm/core/Food"
+    "@id" : "http://purl.org/heals/food/Food"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2373,13 +2373,10 @@
   "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://purl.org/heals/wtm/core/Food",
+  "@id" : "http://purl.org/heals/food/Food",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://purl.org/heals/wtm/foodon/",
+  "@id" : "http://purl.org/heals/foodon/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@value" : "The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology."
@@ -2402,7 +2399,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2019-04-03"
+    "@value" : "2019-04-12"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "WhatToMake"
@@ -2423,7 +2420,7 @@
     "@value" : "https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake_FoodOn/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://purl.org/heals/wtm/foodon/"
+    "@id" : "http://purl.org/heals/foodon/"
   } ],
   "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
     "@value" : "Changes to this ontology since the previous version include: update of ontology IRI"
@@ -2431,6 +2428,9 @@
   "https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright" : [ {
     "@value" : "Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne'eman, Miao Qi"
   } ]
+}, {
+  "@id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
