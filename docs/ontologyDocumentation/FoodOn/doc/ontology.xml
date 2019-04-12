@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://purl.org/heals/wtm/foodon/"
-     xml:base="https://purl.org/heals/wtm/foodon/"
+<rdf:RDF xmlns="http://purl.org/heals/foodon/"
+     xml:base="http://purl.org/heals/foodon/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,8 +12,8 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:SpecificationMetadata1="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
-    <owl:Ontology rdf:about="https://purl.org/heals/wtm/foodon/">
-        <owl:versionIRI rdf:resource="https://purl.org/heals/wtm/foodon/"/>
+    <owl:Ontology rdf:about="http://purl.org/heals/foodon/">
+        <owl:versionIRI rdf:resource="http://purl.org/heals/foodon/"/>
         <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
         <terms:abstract>The WhatToMake Food Classification Ontology is used to represent the different food classificaitons. The terms in this ontology were extracted from the EBI Food Ontology ( http://purl.obolibrary.org/obo/foodon.owl) and is used as the basis for classifying individuals into food groups. Terms that were added to enhance this classification are found in the WhatToMake Base Ontology.</terms:abstract>
         <terms:contributor>Forest Eckhardt</terms:contributor>
@@ -22,7 +22,7 @@
         <terms:contributor>Yarden Ne&apos;eman</terms:contributor>
         <terms:description>The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations.</terms:description>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</terms:license>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-03</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-12</terms:modified>
         <terms:publisher>WhatToMake</terms:publisher>
         <terms:references>https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance</terms:references>
         <terms:source>https://bioportal.bioontology.org/ontologies/FOODON/?p=summary</terms:source>
@@ -111,7 +111,7 @@
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400644">
-        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0644</oboInOwl:hasDbXref>
@@ -128,7 +128,7 @@
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400645">
-        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0645</oboInOwl:hasDbXref>
@@ -145,7 +145,7 @@
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400647">
-        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0647</oboInOwl:hasDbXref>
@@ -162,7 +162,7 @@
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400648">
-        <rdfs:subClassOf rdf:resource="https://purl.org/heals/wtm/core/Food"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0648</oboInOwl:hasDbXref>
@@ -1557,10 +1557,10 @@ Specific commodities will be listed in this group with their code nos. according
     
 
 
-    <!-- https://purl.org/heals/wtm/core/Food -->
+    <!-- http://purl.org/heals/food/Food -->
 
 
-    <owl:Class rdf:about="https://purl.org/heals/wtm/core/Food"/>
+    <owl:Class rdf:about="http://purl.org/heals/food/Food"/>
 </rdf:RDF>
 
 

@@ -1,7 +1,7 @@
 ############################################################################
 ### THIS FILE SHOULD BE PLACED ON THE PARENT FOLDER OF THE DOCUMENTATION ###
 ### OTHERWISE THE CONTENT NEGOTIATION WILL NOT WORK                      ###
-### THE URL OF YOUR VOCABULARY WILL BE (domain)/FoodOn/def    ###
+### THE URL OF YOUR VOCABULARY WILL BE (domain)/Food/def    ###
 ############################################################################
 # Turn off MultiViews
 Options -MultiViews
@@ -16,7 +16,7 @@ AddType application/ld+json .json
 # Rewrite engine setup
 RewriteEngine On
 #Change the path to the folder here
-RewriteBase /FoodOn 
+RewriteBase /Food 
 
 # Rewrite rule to serve HTML content from the vocabulary URI if requested
 RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
