@@ -1,0 +1,21 @@
+[URI of the OWL(RDF/XML) output file]
+http://purl.obolibrary.org/obo/foodon.owl
+
+[Source ontology]
+FOODON
+
+[Low level source term URIs]
+http://purl.obolibrary.org/obo/FOODON_00002381
+includeAllChildren
+
+[Top level source term URIs and target direct superclass URIs]
+
+[Source term retrieval setting]
+includeNoIntermediates
+
+[Source annotation URIs]
+http://www.w3.org/2000/01/rdf-schema#label
+http://purl.obolibrary.org/obo/IAO_0000115 #iao:definition
+http://www.geneontology.org/formats/oboInOwl#hasSynonym
+
+[Source annotation URIs to be excluded]

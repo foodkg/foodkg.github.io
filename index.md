@@ -17,19 +17,18 @@ This dataset includes mappings to some of the concepts found in:
 To reproduce the knowledge graph described in the paper, you will require the following:
 
 * `make` (available on most Linux distributions; can be obtained with some effort for Windows)
-* (TODO: link to the repository here)
+* Python 3, along with the virtualenv module
+* This repository, https://github.com/foodkg/foodkg.github.io/
 * im2recipe's Recipe1M dataset. Sign up to acquire it here: http://im2recipe.csail.mit.edu/dataset/login/
 
-1. Enter the cloned repository
-2. cd into `/prep-scripts`
-3. Create a directory called `in`.
-4. Place `det_ingrs.json` and `layer1.json` from the Recipe1M data in `in/`
-5. Run `make iswc`
-6. Run `make copy` to copy the resulting data into place for the next step
-7. cd into `/recipe-handler`
-8. Run `make`
+Specific instructions for creating and transforming the data are found in `/src/README.md`. A high level overview:
 
-The `.trig` data will be found in `out/`. By default, it will be broken into groups of 1,000,000 triples to ease loading. You can change this behavior by adjusting the `--cutoff` parameter in the Makefile
+1. Download the data required by `/src/prep-scripts/README.md`
+2. Build the source data with `make`
+3. Move to `/src/recipe-handler`
+4. Create the linked data with `make` (placed into the `out` directory)
+5. Move to `/src/verify`
+6. Create statistics with `make`
 
 ## Usage
 

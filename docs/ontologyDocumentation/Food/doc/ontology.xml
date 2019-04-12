@@ -1,0 +1,912 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/heals/food/"
+     xml:base="http://purl.org/heals/food/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:SpecificationMetadata1="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="http://purl.org/heals/food/">
+        <owl:versionIRI rdf:resource="http://purl.org/heals/food/"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
+        <terms:abstract>The WhatToMake Base Ontology contains all of the main classes and properties. The individuals contained in this ontology are individuals related to some of the classes and do not include the individual recipes or ingredients. Also included in this ontology are the additional classes made to extend the FoodOn Ontology.</terms:abstract>
+        <terms:contributor>Forest Eckhardt</terms:contributor>
+        <terms:contributor>Kevin Blissett</terms:contributor>
+        <terms:contributor>Miao Qi</terms:contributor>
+        <terms:contributor>Yarden Ne&apos;eman</terms:contributor>
+        <terms:description>The goal of this project is to create a system capable of recommending recipes to a user subject to the ingredients that user has on hand and the time they want to spend cooking. The system should also be able to recommend best-matched substitutions for ingredients where appropriate in order to meet the user’s taste preferences or food allergy related needs. The users are allowed to specify the meal types (e.g. lunch) and course types (e.g. entree) in the request. If the users request not to have recipes that contain high Glycemic Index (GI) ingredients, the system will avoid offering these high glycemic recipes in the recommendations.</terms:description>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</terms:license>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-12</terms:modified>
+        <terms:publisher>WhatToMake</terms:publisher>
+        <terms:references>https://tw.rpi.edu/web/Courses/Ontologies/2018/Project2/maintenance</terms:references>
+        <rdfs:label>What to Make Base Ontology</rdfs:label>
+        <owl:priorVersion>https://tw.rpi.edu/Courses/Ontologies/2018/WhatToMake/WhatToMake/</owl:priorVersion>
+        <skos:changeNote>Changes to this ontology since the previous version include: update of the ontology IRI.</skos:changeNote>
+        <SpecificationMetadata1:copyright>Copyright (c) 2018 Kevin Blissett, Forest Eckhardt, Yarden Ne&apos;eman, Miao Qi</SpecificationMetadata1:copyright>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright -->
+
+
+    <owl:AnnotationProperty rdf:about="https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/heals/food/dislikes -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/dislikes">
+        <terms:source>&quot;Dislike,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dislike. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>dislikes</rdfs:label>
+        <skos:definition>something that a person habitually does not like or enjoy, a feeling of aversion or disapproval</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/forbids -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/forbids">
+        <terms:source>&quot;Forbid,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/forbid. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>forbids</rdfs:label>
+        <skos:definition>to hinder or prevent as if by an effectual command</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasConversion -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/hasConversion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <terms:source>&quot;Converting,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/converting. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>has conversion</rdfs:label>
+        <skos:definition>to exchange for an equivalent</skos:definition>
+        <skos:scopeNote>unit property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasFlavor -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/hasFlavor">
+        <terms:source>Dictionary.com, &quot;flavor.&quot; [Online]. Available: https://www.dictionary.com/browse/flavor?s=t. [Accessed Oct. 13, 2018]</terms:source>
+        <rdfs:label>has flavor</rdfs:label>
+        <skos:definition>indicates that this item has this flavor</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasIngredient -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/hasIngredient">
+        <terms:source>Merriam-Webster, &quot;ingredient,&quot; 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/ingredient. [Accessed Oct. 18, 2018]</terms:source>
+        <rdfs:label>has ingredient</rdfs:label>
+        <skos:definition>to have a component part of any combination or mixture</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasSaved -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/hasSaved">
+        <terms:source>Merriam-Webster, &quot;save,&quot; 2018. [Online]. Available: https://www.merriam-webster.com/dictionary/save. [Accessed Oct. 13, 2018]</terms:source>
+        <rdfs:label>has saved</rdfs:label>
+        <skos:definition>to store (data) in a computer or on a storage device</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasTexture -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/hasTexture">
+        <terms:source>Dictionary.com, &quot;texture.&quot; [Online]. Available: https://www.dictionary.com/browse/texture?s=t. [Accessed Oct. 13, 2018]</terms:source>
+        <rdfs:label>has texture</rdfs:label>
+        <skos:definition>indicates that this item has this texture</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/isAllergicTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/isAllergicTo">
+        <terms:source>Merriam-Webster, &quot;allergic,&quot;2018. [Online]. Available https https://www.merriam-webster.com/dictionary/allergic. [Accessed Oct. 13, 2018]</terms:source>
+        <rdfs:label>is allergic to</rdfs:label>
+        <skos:definition>the subject has an allergy to the object of this relation</skos:definition>
+        <skos:scopeNote>user property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/isRecommendedForCourse -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/isRecommendedForCourse">
+        <terms:source>Wikipedia , &quot;Course (food).&quot; [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]</terms:source>
+        <rdfs:label>is recommended for course</rdfs:label>
+        <skos:definition>a property of recipe that indicates what course the recipe is recommended for</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/isRecommendedForMeal -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/isRecommendedForMeal">
+        <terms:source>Wikipedia, &quot;Meal.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]</terms:source>
+        <rdfs:label>is recommended for meal</rdfs:label>
+        <skos:definition>a property of recipe that indicates what meal the recipe is recommended for</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/substitutesFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/heals/food/substitutesFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <terms:source>&quot;Substitute,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/substitute. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>substitutes for</rdfs:label>
+        <skos:definition>indicates that this item can take the place or function of another</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/heals/food/hasCookTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/heals/food/hasCookTime">
+        <terms:source>&quot;Cook Time,&quot; Collins English Dictionary. [Online]. Available: https://www.collinsdictionary.com/us/dictionary/english/cooking-time</terms:source>
+        <rdfs:label>has cook time</rdfs:label>
+        <skos:definition>the time that something needs to cook</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasCookingTemperature -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/heals/food/hasCookingTemperature">
+        <terms:source>Dictionary.com, &quot;temperature.&quot; [Online]. Available: https://www.dictionary.com/browse/temperature. [Accessed Oct. 13, 2018]</terms:source>
+        <rdfs:label>has cooking temperature</rdfs:label>
+        <skos:definition>the temperature at which a food must be baked</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasGluten -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/heals/food/hasGluten">
+        <terms:source>Wikipedia, &quot;Gluten.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Gluten. [Accessed: Oct. 25, 2018]</terms:source>
+        <rdfs:label>has gluten</rdfs:label>
+        <skos:definition>a property of ingredients that show whether or not that ingerdient contains gluten</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/hasGlycemicIndex -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/heals/food/hasGlycemicIndex">
+        <terms:source>Méthod Montignac , &quot;The Glycemic Index Concept,&quot; 2014. [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]</terms:source>
+        <rdfs:label>has glycemic index</rdfs:label>
+        <skos:definition>has a glycemic indexe value which measures carbs’ from the perspective of their pure sugar/starch content in order to determine how they affect glycemia (blood sugar levels)  after meals</skos:definition>
+        <skos:scopeNote>ingredient property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/heals/food/serves -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/heals/food/serves">
+        <terms:source>&quot;Serve definition and meaning,&quot; Collins English Dictionary. Available: https://www.collinsdictionary.com/dictionary/english/serve [Accessed 27-Oct-2018].</terms:source>
+        <rdfs:label>serves</rdfs:label>
+        <skos:definition>used to indicate how much food a recipe produces</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400737 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400737"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400740 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400740"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400741 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400741"/>
+    
+
+
+    <!-- http://purl.org/heals/food/BreakfastRecipe -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/BreakfastRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/heals/food/Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/heals/food/isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="http://purl.org/heals/food/Breakfast"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:source>&quot;Breakfast,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>breakfast recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type breakfast</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Characteristic -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Characteristic">
+        <terms:source>&quot;Characteristic,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/characterisitc. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>characteristic</rdfs:label>
+        <skos:definition>a distinguishing trait, quality, or property</skos:definition>
+        <skos:example>Classes that inherit from this class represent different possible characteristics of food. Examples in this ontology include &quot;flavor&quot; and &quot;texture&quot; but these can be expanded as desired. Specific flavors and textures are represented as individuals that inherent from their respective subclass.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/ChemicalFoodProduct -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/ChemicalFoodProduct">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
+        <terms:source>BioPortal, &quot;FoodOn,&quot;  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03411041. [Accessed Nov. 19, 2018].</terms:source>
+        <rdfs:label>chemical food product</rdfs:label>
+        <skos:definition>a food substance derived from a nonliving source (e.g., salt, water or synthesized compounds)</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Course -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Course">
+        <terms:source>Wikipedia , &quot;Course (food).&quot; [Online]. Available: http://www.montignac.com/en/the-glycemic-index-concept/. [Accessed Nov. 1 2018]</terms:source>
+        <rdfs:label>course</rdfs:label>
+        <skos:definition>dfferent types of specific sets of food items that are served together during a meal</skos:definition>
+        <skos:example>The individuals that inhreit from this class represent courses of a meal. The recipe &quot;banana bread&quot; can be &quot;recommended for course&quot; &quot;dessert&quot;. Additional courses can be added as individuals that inheret from this class.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/DinnerRecipe -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/DinnerRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/heals/food/Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/heals/food/isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="http://purl.org/heals/food/Dinner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:source>&quot;Dinner,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>dinner recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type dinner</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Flavor -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Flavor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Characteristic"/>
+        <owl:disjointWith rdf:resource="http://purl.org/heals/food/Texture"/>
+        <terms:source>&quot;Flavor,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/flavor. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>flavor</rdfs:label>
+        <skos:definition>the quality of something that affects the sense of taste</skos:definition>
+        <skos:scopeNote>food property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Food -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Food">
+        <terms:source>BBC, &quot;Food Ontology,&quot; ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018].</terms:source>
+        <rdfs:label>food</rdfs:label>
+        <skos:definition>something that can be eaten</skos:definition>
+        <skos:example>This class is the top-level element that represents different classifications of food. An ingredient individual will have the type of the most specific category it falls under. For example, &quot;chicken egg&quot; will be a type of &quot;egg&quot; which is a subclass of &quot;poultry product&quot; which is a subclass of &quot;primary food commodity of animal origin&quot; which is a subclass of &quot;food&quot;. Additional classifications can be added at any level of the classification.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Ingredient -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Ingredient">
+        <terms:source>Cambridge Dictionary, &quot;ingredient.&quot; [Online]. Available: https://dictionary.cambridge.org/us/dictionary/english/ingredient. [Accessed Nov. 10, 2018]</terms:source>
+        <rdfs:label>ingredient</rdfs:label>
+        <skos:definition>a food that is used with other foods in the preparation of a particular dish</skos:definition>
+        <skos:example>Individuals that are subclasses of this class represent ingredients that are used in a specific recipe. For example, the individual &quot;banana&quot; is a subclass of &quot;ingredient&quot; and the recipe &quot;banana bread&quot; &quot;has ingredient&quot; &quot;banana&quot;. Ingredients can have the properties &quot;has glycymic index&quot; and &quot;has gluten&quot;.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/LessThanOneHourRecipe -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/LessThanOneHourRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/heals/food/Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/heals/food/hasCookTime"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:source>Dictionary.com, &quot;hour.&quot; [Online]. Available: https://www.dictionary.com/browse/hour. [Accessed Oct. 5, 2018]</terms:source>
+        <rdfs:label>less than one hour recipe</rdfs:label>
+        <skos:definition>a class that contains all recipes that only take one hour to cook</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/LunchRecipe -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/LunchRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/heals/food/Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/heals/food/isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="http://purl.org/heals/food/Lunch"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:source>&quot;Lunch,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>lunch recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type lunch</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Meal -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Meal">
+        <terms:source>Wikipedia, &quot;Meal.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Meal. [Accessed: Oct. 25, 2018]</terms:source>
+        <rdfs:label>meal</rdfs:label>
+        <skos:definition>a class that links a recipe to a certain meal</skos:definition>
+        <skos:example>The individuals that inhreit from this class represent different types of meals. The recipe &quot;kamut pancakes&quot; can be &quot;recommended for meal&quot; &quot;breakfast&quot;. Additional meals can be added as individuals that inheret from this class.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Measurement -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Measurement">
+        <terms:source>&quot;Measure,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/measure. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>measurement</rdfs:label>
+        <skos:definition>an adequate or due portion</skos:definition>
+        <skos:example>This class contains subclasses that represent different kinds of measurements relating to cooking. For example &quot;time measurement&quot; is a class that contains the individuals &quot;minute&quot; and &quot;hour&quot; and is used to represent the amount of time a recipe takes to make or cook.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/MeatFromChicken -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/MeatFromChicken">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400741"/>
+        <terms:source>BioPortal, &quot;FoodOn,&quot;  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400741. [Accessed Nov. 14, 2018].</terms:source>
+        <rdfs:label>meat from chicken</rdfs:label>
+        <skos:definition>the muscular tissues from a chicken</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/MeatFromCow -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/MeatFromCow">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400737"/>
+        <terms:source>BioPortal, &quot;FoodOn,&quot;  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018].</terms:source>
+        <rdfs:label>meat from cow</rdfs:label>
+        <skos:definition>the muscular tissues from a cow</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/MeatFromLamb -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/MeatFromLamb">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400737"/>
+        <terms:source>BioPortal, &quot;FoodOn,&quot;  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018].</terms:source>
+        <rdfs:label>meat from lamb</rdfs:label>
+        <skos:definition>the muscular tissues from a lamb</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/MeatFromPig -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/MeatFromPig">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400737"/>
+        <terms:source>BioPortal, &quot;FoodOn,&quot;  November 2018. [Online]. Available: https://bioportal.bioontology.org/ontologies/FOODON/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FFOODON_03400737. [Accessed Nov. 14, 2018].</terms:source>
+        <rdfs:label>meat from pig</rdfs:label>
+        <skos:definition>the muscular tissues from a pig</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/MilkFromCow -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/MilkFromCow">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400740"/>
+        <terms:source>Wikipedia, &quot;Milk.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Milk#Cow&apos;s_milk. [Accessed: Nov. 10, 2018]</terms:source>
+        <rdfs:label>milk from cow</rdfs:label>
+        <skos:definition>milk obtained from a cow</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Mushroom -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Mushroom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/PrimaryFoodCommodityOfFungusOrigin"/>
+        <terms:source>Wikipedia, &quot;Mushroom.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Mushroom. [Accessed: Nov. 22, 2018]</terms:source>
+        <rdfs:label>mushroom</rdfs:label>
+        <skos:definition>the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/PrimaryFoodCommodityOfFungusOrigin -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/PrimaryFoodCommodityOfFungusOrigin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
+        <terms:source>NHS, &quot;Eating processed foods,&quot; January 2017. [Online]. Available: https://www.nhs.uk/live-well/eat-well/what-are-processed-foods/. [Accessed Nov.22 2018]</terms:source>
+        <rdfs:label>primary food commodity of fungus origin</rdfs:label>
+        <skos:definition>unaltered food derived from fungus</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Recipe -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Recipe">
+        <terms:source>BBC, &quot;Food Ontology,&quot; ONTOLOGIES, March 2014. [Online]. Available: https://www.bbc.co.uk/ontologies/fo. [Accessed Sep. 29, 2018].</terms:source>
+        <rdfs:label>recipe</rdfs:label>
+        <skos:definition>a combination of ingredients and a method, created by a chef, that produces a food</skos:definition>
+        <skos:example>Individuals that are a type of this class represent instances of recipes that are found online. For example, the individual &quot;banana bread&quot; can be found on AllRecipes.com and has the properties &quot;has ingredient,&quot; &quot;has cook time,&quot; &quot;has cooking temprature,&quot; &quot;serves,&quot; &quot;is recommended for course,&quot; and &quot;is recommended for meal&quot;.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/SideRecipe -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/SideRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/heals/food/Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/heals/food/isRecommendedForMeal"/>
+                        <owl:hasValue rdf:resource="http://purl.org/heals/food/Side"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:source>&quot;Side Dish,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>side recipe</rdfs:label>
+        <skos:definition>a class that contains recipes of type side</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/TemperatureMeasurement -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/TemperatureMeasurement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Measurement"/>
+        <terms:source>Wikipedia, &quot;Temperature measurement.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]</terms:source>
+        <rdfs:label>temperature measurement</rdfs:label>
+        <skos:definition>degree of hotness or coldness measured on a definite scale</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Texture -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Texture">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Characteristic"/>
+        <terms:source>&quot;Texture,&quot; Dictionary.com. [Online]. Available: https://www.dictionary.com/browse/texture. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>texture</rdfs:label>
+        <skos:definition>the characteristic physical structure given to a material, an object, etc., by the size, shape, arrangement, and proportions of its parts</skos:definition>
+        <skos:scopeNote>food property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/TimeMeasurement -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/TimeMeasurement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Measurement"/>
+        <terms:source>Merriam-Webster, &quot;Time.&quot; [Online]. Available: https://www.merriam-webster.com/dictionary/time. [Accessed: Nov. 22, 018]</terms:source>
+        <terms:source>Wikipedia, &quot;Temperature measurement.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Temperature_measurement. [Accessed: Nov. 22, 018]</terms:source>
+        <rdfs:label>time measurement</rdfs:label>
+        <skos:definition>the measured or measurable period during which an action, process, or condition exists or continues</skos:definition>
+        <skos:scopeNote>recipe property</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/User -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/User">
+        <terms:source>&quot;User,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/user. [Accessed: 12-Oct-2018].</terms:source>
+        <rdfs:label>user</rdfs:label>
+        <skos:definition>a user of the system</skos:definition>
+        <skos:example>Individuals that inherit from this class represent users of the system. Individual users can have likes, dislikes, and allergies that are saved in the system through the &quot;likes,&quot; &quot;dislikes,&quot; &quot;forbids,&quot; and &quot;is allergic to,&quot; properties.</skos:example>
+        <skos:scopeNote>top-level class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/Yeast -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Yeast">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/PrimaryFoodCommodityOfFungusOrigin"/>
+        <terms:source>Wikidictionary, &quot;Yeast.&quot; [Online]. Available: https://en.wiktionary.org/wiki/yeast. [Accessed: Nov. 22, 2018]</terms:source>
+        <rdfs:label>yeast</rdfs:label>
+        <skos:definition>humid, yellowish froth produced by fermenting malt worts, and used to brew beer, leaven bread, and also used in certain medicines</skos:definition>
+        <skos:scopeNote>used for ingredient classification</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/heals/food/highGlycemicRecipe -->
+
+
+    <owl:Class rdf:about="http://purl.org/heals/food/highGlycemicRecipe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/heals/food/Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/heals/food/hasIngredient"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/heals/food/hasGlycemicIndex"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">50</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:source>Montignac Method, &quot;Search for a specific Glycemic Index,&quot;  2014. [Online]. Available: http://www.montignac.com/en/search-for-a-specific-glycemic-index/. [Accessed Nov. 1, 2018]</terms:source>
+        <rdfs:label>high glycemic recipe</rdfs:label>
+        <skos:definition>a class of recipes that contains an ingredient with a glycemic index of 50 or more</skos:definition>
+        <skos:scopeNote>recipe class</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/heals/food/Appetizer -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Appetizer">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Course"/>
+        <terms:source>&quot;Appetizer,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/appetizer. [Accessed: 1-Nov-2018]</terms:source>
+        <rdfs:label>appetizer</rdfs:label>
+        <skos:definition>a food or drink that stimulates the appetite and is usually served before a meal</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Breakfast -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Breakfast">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Meal"/>
+        <terms:source>&quot;Breakfast,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/breakfast. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>breakfast</rdfs:label>
+        <skos:definition>the first meal of the day especially when taken in the morning</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Brunch -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Brunch">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Meal"/>
+        <terms:source>Wikipedia, &quot;Brunch.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Brunch. [Accessed: Nov. 16, 2018]</terms:source>
+        <rdfs:label>brunch</rdfs:label>
+        <skos:definition>a combination of breakfast and lunch eaten usually during the late morning to early afternoon, generally served from 10am up to 2pm, and regularly has some form of alcoholic drink (most usually champagne or a cocktail) served with it</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Dessert -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Dessert">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Course"/>
+        <terms:source>&quot;Dessert,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dessert. [Accessed: 1-Nov-2018]</terms:source>
+        <rdfs:label>dessert</rdfs:label>
+        <skos:definition>a usually sweet course or dish (as of pastry or ice cream) usually served at the end of a meal</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Dinner -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Dinner">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Meal"/>
+        <terms:source>&quot;Dinner,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/dinner. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>dinner</rdfs:label>
+        <skos:definition>the principal meal of the day</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Entree -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Entree">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Course"/>
+        <terms:source>&quot;Entree,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/entree. [Accessed: 1-Nov-2018]</terms:source>
+        <rdfs:label>entree</rdfs:label>
+        <skos:definition>the main course of a meal in the U.S.</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Lunch -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Lunch">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Meal"/>
+        <terms:source>&quot;Lunch,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/lunch. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>lunch</rdfs:label>
+        <skos:definition>a usually light, especially one taken in the middle of the day</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Salad -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Salad">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Course"/>
+        <terms:source>Wikipedia, &quot;Salad.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Salad. [Accessed: Nov. 16, 2018]</terms:source>
+        <rdfs:label>salad</rdfs:label>
+        <skos:definition>a dish consisting of a mixture of small pieces of food, usually vegetables</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Side -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Side">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Course"/>
+        <terms:source>&quot;Side Dish,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/side dish. [Accessed: 25-Oct-2018].</terms:source>
+        <rdfs:label>side</rdfs:label>
+        <skos:definition>a food served separately along with the main course</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Snack -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Snack">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Meal"/>
+        <terms:source>&quot;Snack,&quot; Merriam-Webster. [Online]. Available: https://www.merriam-webster.com/dictionary/snack. [Accessed: 1-Nov-2018]</terms:source>
+        <rdfs:label>snack</rdfs:label>
+        <skos:definition>a light meal : food eaten between regular meals</skos:definition>
+        <skos:scopeNote>used as a meal</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/heals/food/Soup -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/heals/food/Soup">
+        <rdf:type rdf:resource="http://purl.org/heals/food/Course"/>
+        <terms:source>Wikipedia, &quot;Soup.&quot; [Online]. Available: https://en.wikipedia.org/wiki/Soup. [Accessed: Nov. 16, 2018]</terms:source>
+        <rdfs:label>soup</rdfs:label>
+        <skos:definition>a primarily liquid food, generally served warm or hot (but may be cool or cold), that is made by combining ingredients of meat or vegetables with stock, juice, water, or another liquid</skos:definition>
+        <skos:scopeNote>used as a course</skos:scopeNote>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+
