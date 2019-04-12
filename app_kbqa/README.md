@@ -1,5 +1,18 @@
 # Application: running a KBQA system on FoodKG
 
+## Prerequisites
+
+This code was written in python 3. To use it you will need to install:
+
+* pytorch 0.4
+* Numpy
+* NLTK
+* gensim
+* fuzzywuzzy
+* SPARQLWrapper
+* argparse
+* yaml
+
 
 ## Create a synthetic Q&A dataset
 
