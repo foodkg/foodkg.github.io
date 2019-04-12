@@ -1,5 +1,18 @@
 # Application: running a KBQA system on FoodKG
 
+## Prerequisites
+
+This code was written in python 3. To use it you will need to install:
+
+* pytorch 0.4
+* Numpy
+* NLTK
+* gensim
+* fuzzywuzzy
+* SPARQLWrapper
+* argparse
+* yaml
+
 
 ## Create a synthetic Q&A dataset
 
@@ -78,7 +91,7 @@
 	python run_online.py -config config/kbqa.yml
 	```
 
-
+Note that we use the BAMnet model as our KBQA system in this application. For more details about the BAMnet model, please refer to the [original paper] (https://arxiv.org/abs/1903.02188).
 
 
 
