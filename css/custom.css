@@ -34,6 +34,15 @@
     display: block
   }
   
+  .font-20 {
+    font-size: 20px;
+    margin-left: 20px
+  }
+
+  #conceptualModel img {
+    border: 1px solid black;
+    padding: 10px
+  }
   /* On small screens, set height to 'auto' for sidenav and grid */
   @media screen and (max-width: 767px) {
     .sidenav {

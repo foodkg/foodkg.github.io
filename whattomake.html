@@ -38,50 +38,60 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
         <div class="bg"></div>
-        <div class="mt-20">
-          <a class="link" href="#conceptualModel">Conceptual Model</a>
-          <a class="link" href="#competencyQuestions">Competency Questions &amp; Queries</a>
-          <a class="link" href="#documentation">Documentation</a>
-        </div>
     </div>
 
     <div class="col-sm-8 text-left">
+      <div class="mt-20 font-20">
+        Contents:
+        <a class="link" href="#documentation">1. Documentation</a>
+        <a class="link" href="#conceptualModel">2. Conceptual Model</a>
+        <a class="link" href="#competencyQuestions">3. Competency Questions &amp; Queries</a>
+      </div>
+      <div id="documentation" class="container mb-20">
+        <h2>Documentation</h2>
+        <div class="col-md-12">
+          The WhatToMake ontology is separated into three components: Food, FoodOn, and Ingredient. The Food component of the ontology contains all of the base classes that were created for the ontology. The FoodOn component contains all of the imported classes from FoodOn. The Ingredient component contains all of the individuals that represent different recipes and ingredients. Documentation for each component of the ontology can be found in the links below:<br/>
+          <a target="_blank" class="link" href="https://foodkg.github.io/docs/ontologyDocumentation/Food/doc/index-en.html">Food</a>
+          <a target="_blank" class="link" href="https://foodkg.github.io/docs/ontologyDocumentation/FoodOn/doc/index-en.html">FoodOn</a>
+          <a target="_blank" class="link" href="https://foodkg.github.io/docs/ontologyDocumentation/Ingredient/doc/index-en.html">Ingredient</a>
+        </div>
+      </div>
       <div id="conceptualModel" class="container mb-20">
         <h2>Conceptual Model</h2>
-        <div class="col-md-12 mt-20">The motivation for WhatToMake Ontology came from our observation of the pains of using traditional cookbooks or even some online recipe archives to find recipes that fit a given person’s requirements. We felt that in order to make that experience better, a user should have the ability to search for a wide range of parameters such as ingredients, cook time, course type, and meal type and have recipes that fulfilled those parameters returned to them. We also saw that recipe searching was difficult if a user had some form of allergy, health concern, or dietary restriction. We wanted to create something which would help the user not only enter those restrictions but to help them find adequate substitutes for the ingredients that they have restricted in the event that was necessary. These were the driving problems that influenced our design of WhatToMake Ontology.
+        <div class="col-md-8 mt-20">The motivation for WhatToMake Ontology came from our observation of the pains of using traditional cookbooks or even some online recipe archives to find recipes that fit a given person’s requirements. We felt that in order to make that experience better, a user should have the ability to search for a wide range of parameters such as ingredients, cook time, course type, and meal type and have recipes that fulfilled those parameters returned to them. We also saw that recipe searching was difficult if a user had some form of allergy, health concern, or dietary restriction. We wanted to create something which would help the user not only enter those restrictions but to help them find adequate substitutes for the ingredients that they have restricted in the event that was necessary. These were the driving problems that influenced our design of WhatToMake Ontology.
         In creating this ontology, we set out to relate recipes and their ingredients in a way that allows users to query the system and get results that would accommodate different requirements. Some of these requirements have to do with the meal or course type or the preparation time of a recipe, while others have to do with allergies and substitution requests. We thus needed to model our ontology in a way that would allow us to efficiently answer these types of questions. Our ontology is made up of several major classes: food, ingredient, recipe, characteristic, user, course, and meal. These classes can be seen in the overview diagram below.</div>
-        <div class="col-md-12" style="margin-bottom:20px;">
-          <img width="100%" src="images/ontology_diagram1.png"/>
+        <div class="col-md-4" style="margin-bottom:20px;">
+          <a target="_blank" href="images/ontology_diagram1.png"><img width="100%" src="images/ontology_diagram1.png"/></a>
         </div>
-        <div class="col-md-12 mt-20">
+        <div class="col-md-8 mt-20">
           This diagram illustrates how the classes (denoted by green rectangles) are related to each other through object properties (denoted by the red rectangles). The data properties for each class are represented by the yellow rectangles. In some cases, there is a limited set of individuals used to represent different meals or courses. These individuals are shown as purple circles.
         </div>
-        <div class="col-md-offset-3 col-md-6">
-          <img width="100%" src="images/ontology_diagram2.png"/>
+        <div class="col-md-4" align="center">
+          <a target="_blank" href="images/ontology_diagram2.png"><img width="50%" src="images/ontology_diagram2.png"/></a>
         </div>
-        <div class="col-md-12 mt-20">This piece of the concept diagram illustrates the relationship that the Recipe class has with other classes and properties. The recipe class has individuals that represent specific recipes. Each recipe individual has three data properties: hasCookTime, hasCookingTemprature, and serves. Each recipe individual also has however many hasIngredient relations with ingredient individuals. Each recipe has at least one Meal and Course that it is recommended for. Each ingredient individual has a boolean data property hasGluten to indicate whether this ingredient contains gluten and a data property hasGlycemicIndex that stores the glycemic index value for this ingredient.
-        </div>
-
-        <div class="col-md-offset-3 col-md-6">
-          <img width="100%" src="images/ontology_diagram3.png"/>
-        </div>
-        <div class="col-md-12 mt-20">This piece of the diagram shows the makeup of the Characteristic class. Each ingredient can have the relations hasFlavor and/or hasTexture, which represent the flavor and texture of this ingredient. This can help us when trying to make substitutions for ingredients. The flavors and textures themselves are represented as individuals.
+        <div class="col-md-8 mt-20">This piece of the concept diagram illustrates the relationship that the Recipe class has with other classes and properties. The recipe class has individuals that represent specific recipes. Each recipe individual has three data properties: hasCookTime, hasCookingTemprature, and serves. Each recipe individual also has however many hasIngredient relations with ingredient individuals. Each recipe has at least one Meal and Course that it is recommended for. Each ingredient individual has a boolean data property hasGluten to indicate whether this ingredient contains gluten and a data property hasGlycemicIndex that stores the glycemic index value for this ingredient.
         </div>
 
-        <div class="col-md-offset-3 col-md-6 mt-20">
-          <img width="100%" src="images/ontology_diagram4.png"/>
+        <div class="col-md-4 mt-20" align="center">
+          <a target="_blank" href="images/ontology_diagram3.png"><img width="80%" src="images/ontology_diagram3.png"/></a>
         </div>
-        <div class="col-md-12 mt-20">This piece of the diagram shows the relationship between Users and Ingredients/Recipes. A user (which is represented as an individual) can have a “dislikes,” “forbids,” or “isAllergicTo” relationship with an ingredient. This makes it so the user doesn’t have to input this information into the system every time. The user can also save recipes, which is represented by the “hasSaved” relation so that any recipes this user particularly likes can be easily displayed.
+        <div class="col-md-8 mt-20">This piece of the diagram shows the makeup of the Characteristic class. Each ingredient can have the relations hasFlavor and/or hasTexture, which represent the flavor and texture of this ingredient. This can help us when trying to make substitutions for ingredients. The flavors and textures themselves are represented as individuals.
         </div>
-        <div class="col-md-12 mt-20">
-          <img width="100%" src="images/ontology_diagram5.png"/>
+
+        <div class="col-md-4 mt-20">
+          <a target="_blank" href="images/ontology_diagram4.png"><img width="100%" src="images/ontology_diagram4.png"/></a>
+        </div>
+        <div class="col-md-8 mt-20">This piece of the diagram shows the relationship between Users and Ingredients/Recipes. A user (which is represented as an individual) can have a “dislikes,” “forbids,” or “isAllergicTo” relationship with an ingredient. This makes it so the user doesn’t have to input this information into the system every time. The user can also save recipes, which is represented by the “hasSaved” relation so that any recipes this user particularly likes can be easily displayed.
+        </div>
+        <div class="col-md-4 mt-20">
+          <a target="_blank" href="images/ontology_diagram5.png"><img width="100%" src="images/ontology_diagram5.png"/></a>
         </div>
         <div class="col-md-12 mt-20">In addition to the ingredient class (which is used to indicate which individuals are ingredients), there is a separate hierarchy to classify these ingredients as foods. The top level element is “Food” and serves as the superclass for all food classifications. The classes represented in blue are existing classes that were imported from the EBI Food Ontology and the classes represented in green are additions made to improve the classification. This diagram does not represent all of the imported classes, but rather shows a representative set of those classes that are most relevant to the competency questions.
         </div>
       </div>
       <div id="competencyQuestions">
         <h2>Competency Questions &amp; Queries</h2>
-        <div class="mt-20">
+        <div class="col-md-12 mt-20 mb-20">
           <p>The functionality of the WhatToMake system can be demonstrated through the five competency questions that were devised in order to develop the ontology. Each question aims to target a specific functionality of the WhatToMake ontology, as explained below.</p>
           <p><strong>1) "What recipes contain beef?"</strong><br/>
             This question targets the ontology's ability to query the system for recipes that contain a single incredient, beef. An example SPARQL query for this question is shown below.
@@ -147,13 +157,6 @@
             This question utilizes the hierarchical nature of the food classification to exclude certain classes of ingredients based on where they fall in the hierarchy. For this question, any ingredients that fall under the classes "primary food commodity of animal origin" or "processed food of animal origin" would be excluded. Currently, there is no SPARQL query for this question.
           </p>
         </div>
-      </div>
-      <div id="documentation" class="mb-20">
-        <h2>Documentation</h2>
-        The WhatToMake ontology is separated into three components: Food, FoodOn, and Ingredient. The Food component of the ontology contains all of the base classes that were created for the ontology. The FoodOn component contains all of the imported classes from FoodOn. The Ingredient component contains all of the individuals that represent different recipes and ingredients. Documentation for each component of the ontology can be found in the links below:<br/>
-        <a target="_blank" class="link" href="https://foodkg.github.io/docs/ontologyDocumentation/Food/doc/index-en.html">Food</a>
-        <a target="_blank" class="link" href="https://foodkg.github.io/docs/ontologyDocumentation/FoodOn/doc/index-en.html">FoodOn</a>
-        <a target="_blank" class="link" href="https://foodkg.github.io/docs/ontologyDocumentation/Ingredient/doc/index-en.html">Ingredient</a>
       </div>
     </div>
 
