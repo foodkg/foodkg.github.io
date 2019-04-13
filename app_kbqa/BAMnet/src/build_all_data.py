@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     train_vec = build_all_data(train_data, kb, entity2id, entityType2id, relation2id, vocab2id)
     dump_json(train_vec, os.path.join(args.out_dir, 'train_vec.json'))
-    del train_data
+    del train_data[:]
     del train_vec[:]
 
     valid_vec = build_all_data(valid_data, kb, entity2id, entityType2id, relation2id, vocab2id)

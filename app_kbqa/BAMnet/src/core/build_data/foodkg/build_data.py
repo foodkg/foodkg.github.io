@@ -298,7 +298,7 @@ def build_all_data(qa, kb, entity2id, entityType2id, relation2id, vocab2id, pred
                 # the question can *NOT* be answered by this KB entity.
                 gold_ans_inds.append(pos_cand_inds)
                 cand_path_labels.append(ans_path_labels)
-    return (queries, raw_queries, query_mentions, memories, cand_labels, gold_ans_inds, gold_ans_labels, cand_path_labels, cand_ids)
+    return [queries, raw_queries, query_mentions, memories, cand_labels, gold_ans_inds, gold_ans_labels, cand_path_labels, cand_ids]
 
 def build_vocab(data, kb, used_kbkeys=None, min_freq=1):
     entities, entity_types, relations, kb_vocabs = build_kb_data(kb, used_kbkeys)
