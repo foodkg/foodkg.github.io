@@ -149,13 +149,13 @@ if __name__ == '__main__':
 
 
     # USDA simple questions
-    simple_qas = generate_simple_qas(usda_kg, usda_keys, SIMPLE_QAS_TEMPLATES, p=0.1)
+    simple_qas = generate_simple_qas(usda_kg, usda_keys, SIMPLE_QAS_TEMPLATES, p=0.05)
 
     # USDA comparison questions
-    comparision_qas = generate_comparision_qas(usda_kg, usda_keys, COMPARISION_QAS_TEMPLATES, p=0.1)
+    comparision_qas = generate_comparision_qas(usda_kg, usda_keys, COMPARISION_QAS_TEMPLATES, p=0.05)
 
     # Recipe constraint questions
-    constraint_qas = generate_constraint_qas(recipe_kg, recipe_keys, CONSTRAINT_QAS_TEMPLATES, num_qas_per_tag=40)
+    constraint_qas = generate_constraint_qas(recipe_kg, recipe_keys, CONSTRAINT_QAS_TEMPLATES, num_qas_per_tag=20)
 
     qas = simple_qas + comparision_qas + constraint_qas
 
