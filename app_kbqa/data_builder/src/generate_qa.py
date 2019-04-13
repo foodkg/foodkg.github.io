@@ -132,6 +132,8 @@ if __name__ == '__main__':
     parser.add_argument('-recipe', '--recipe', type=str, help='path to the recipe data')
     parser.add_argument('-o', '--output', required=True, type=str, help='path to the output dir')
     parser.add_argument('-split_ratio', '--split_ratio', nargs=3, type=float, default=[0.5, 0.2, 0.3], help='split ratio')
+    parser.add_argument('-sampling_prob', '--sampling_prob', default=0.05, type=float, help='sampling prob')
+    parser.add_argument('-num_qas_per_tag', '--num_qas_per_tag', default=20, type=int, help='num of questions per tag')
 
     opt = vars(parser.parse_args())
 
@@ -149,13 +151,13 @@ if __name__ == '__main__':
 
 
     # USDA simple questions
-    simple_qas = generate_simple_qas(usda_kg, usda_keys, SIMPLE_QAS_TEMPLATES, p=0.05)
+    simple_qas = generate_simple_qas(usda_kg, usda_keys, SIMPLE_QAS_TEMPLATES, p=opt['sampling_prob'])
 
     # USDA comparison questions
-    comparision_qas = generate_comparision_qas(usda_kg, usda_keys, COMPARISION_QAS_TEMPLATES, p=0.05)
+    comparision_qas = generate_comparision_qas(usda_kg, usda_keys, COMPARISION_QAS_TEMPLATES, p=opt['sampling_prob'])
 
     # Recipe constraint questions
-    constraint_qas = generate_constraint_qas(recipe_kg, recipe_keys, CONSTRAINT_QAS_TEMPLATES, num_qas_per_tag=20)
+    constraint_qas = generate_constraint_qas(recipe_kg, recipe_keys, CONSTRAINT_QAS_TEMPLATES, num_qas_per_tag=opt['num_qas_per_tag'])
 
     qas = simple_qas + comparision_qas + constraint_qas
 

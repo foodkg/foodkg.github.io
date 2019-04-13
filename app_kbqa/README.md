@@ -45,8 +45,11 @@ This code was written in python 3. To use it you will need to install:
 * Run the following cmd:
 
 	```
-	python generate_qa.py -usda [qas_dir/usda_subgraphs.json] -recipe [qas_dir/sampled_recipe_kg.json] -o [qas_dir]
+	python generate_qa.py -usda [qas_dir/usda_subgraphs.json] -recipe [qas_dir/sampled_recipe_kg.json] -o [qas_dir] -sampling_prob 0.05 -num_qas_per_tag 20
 	```
+	Note that if your machine does not have large RAM (e.g., > 16GB), you can set smaller sampling ratios (i.e., sampling_prob and num_qas_per_tag) when creating the dataset.
+
+
 
 
 ## Run a KBQA system
