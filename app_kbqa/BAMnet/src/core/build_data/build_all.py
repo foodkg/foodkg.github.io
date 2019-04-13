@@ -8,7 +8,7 @@ import os
 
 from . import utils as build_utils
 from ..utils.utils import *
-from .usda.build_data import build_vocab, build_all_data
+from .foodkg.build_data import build_vocab, build_all_data
 
 
 def build(dpath, kbpath, version=None, out_dir=None):

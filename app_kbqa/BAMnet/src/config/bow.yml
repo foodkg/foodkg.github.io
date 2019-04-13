@@ -1,23 +1,23 @@
 name: 'qas'
-data_dir: '../data/'
-kb_path: '../data/foodkg.json'
+data_dir: '../../qas/'
+kb_path: '../../qas/foodkg.json'
 train_data: 'train_vec.json'
 valid_data: 'valid_vec.json'
 test_data: 'test_vec.json'
 test_raw_data: 'test_qas.json'
-pre_word2vec: '../data/glove_pretrained_300d_w2v.npy'
+pre_word2vec: '../../qas/glove_pretrained_300d_w2v.npy'
 
 # Full vocab
-vocab_size: 8324
-num_ent_types: 7
-num_relations: 46
+vocab_size: 8324 # please modify this, it should match the size of vocab2id
+num_ent_types: 7 # please modify this, it should match the size of entityType2id
+num_relations: 46 # please modify this, it should match the size of relation2id
 
 
 
 num_query_words: 10
 
 # Output
-model_file: '../runs/bow.model'
+model_file: '../../qas/bow.model'
 
 
 # Model

@@ -11,8 +11,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-config', '--config', required=True, type=str, help='path to the config file')
 
-    # config_path = "/healthcare/workspace_2019/RPI-HEALS-KBQA/BAMnet/src/config/kbqa_all.yml"
-    # config = get_config(config_path)
     cfg = vars(parser.parse_args())
     config = get_config(cfg['config'])
 
