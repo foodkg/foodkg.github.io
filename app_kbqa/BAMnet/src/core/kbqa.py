@@ -12,7 +12,7 @@ from .utils.generic_utils import unique
 from .config import *
 
 
-USE_ENDPOINT_URL = "http://your_server_domain:8080/blazegraph/namespace/knowledge/sparql"
+USE_ENDPOINT_URL = "http://whyislogics.heals.rpi.edu:8080/blazegraph/namespace/knowledge/sparql"
 
 
 ONLINE_KB_QUERY = False
