@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     train_data = load_ndjson(os.path.join(args.data_dir, 'train_qas.json'))
     valid_data = load_ndjson(os.path.join(args.data_dir, 'valid_qas.json'))
-    test_data = load_ndjson(os.path.join(args.data_dir, 'test_qas.json'))
+    # test_data = load_ndjson(os.path.join(args.data_dir, 'test_qas.json'))
     kb = load_ndjson(args.kb_path, return_type='dict')
 
     if not (os.path.exists(os.path.join(args.out_dir, 'entity2id.json')) and \
@@ -51,11 +51,20 @@ if __name__ == '__main__':
         print('Using pre-built vocabs stored in %s' % args.out_dir)
 
     train_vec = build_all_data(train_data, kb, entity2id, entityType2id, relation2id, vocab2id)
-    valid_vec = build_all_data(valid_data, kb, entity2id, entityType2id, relation2id, vocab2id)
-    test_vec = build_all_data(test_data, kb, entity2id, entityType2id, relation2id, vocab2id)
     dump_json(train_vec, os.path.join(args.out_dir, 'train_vec.json'))
+    del train_data
+    del train_vec[:]
+
+    valid_vec = build_all_data(valid_data, kb, entity2id, entityType2id, relation2id, vocab2id)
     dump_json(valid_vec, os.path.join(args.out_dir, 'valid_vec.json'))
-    dump_json(test_vec, os.path.join(args.out_dir, 'test_vec.json'))
+    del valid_data[:]
+    del valid_vec[:]
+
+    # test_vec = build_all_data(test_data, kb, entity2id, entityType2id, relation2id, vocab2id)
+    # dump_json(test_vec, os.path.join(args.out_dir, 'test_vec.json'))
+    # del test_data[:]
+    # del test_vec[:]
+
     print('Saved data to {}'.format(os.path.join(args.out_dir, 'train(valid, or test)_vec.json')))
 
     # Mark the data as built.
