@@ -80,7 +80,8 @@ This code was written in python 3. To use it you will need to install:
 
 ### Tran/test a KBQA system
 
-* Modify the config file config/kbqa.yml (e.g., file paths, vocab size).
+* Modify the config file config/kbqa.yml (e.g., file paths, vocab_size, num_ent_types, num_relations).
+
 
 * Train the KBQA model.
 
