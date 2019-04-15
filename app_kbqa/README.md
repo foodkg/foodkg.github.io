@@ -24,7 +24,9 @@ This code was written in python 3. To use it you will need to install:
     python usda.py -o [qas_dir]
     python recipe.py -o [qas_dir]
 	```
-	In the [qas\_dir] folder, you will see two JSON files: *usda\_subgraphs.json* which is 	for the USDA data and *recipe\_kg.json* which is for the Recipe1M data.
+	In the [qas\_dir] folder, you will see two JSON files: *usda\_subgraphs.json* which is 	for the USDA data and *recipe\_kg.json* which is for the Recipe1M data. Note that you will need to change the USE_ENDPOINT_URL variable (defined in config/data_config.py file) to the url of your own Blazegraph instance where your FoodKG copy is stored.
+
+
 
 * Note that in the recipe data, a few tags contain more than 5000 recipes which might cause Out of Memory issue when running the KBQA system. So you may want to create a smaller recipe dataset by randomly keeping at most 2000 recipes under each recipe tag. In order to do that, run the following cmd:
 
