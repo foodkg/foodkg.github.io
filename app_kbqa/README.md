@@ -17,6 +17,7 @@ This code was written in python 3. To use it you will need to install:
 ## Create a synthetic Q&A dataset
 
 ### Fetch KG subgraphs from a remote KG stored in Blazegraph
+We assume you have already loaded a FoodKG copy into Blazegraph.
 
 * Go to the data_builder/src folder, run the following cmd:
 
