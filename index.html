@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>FoodKG</title>
   <meta charset="utf-8">
@@ -8,94 +9,112 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/custom.css">
- </head>
+</head>
+
 <body>
 
-<nav class="navbar navbar-inverse mx-auto">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="foodkg.html">FoodKG Construction</a></li>
-        <li><a href="whattomake.html">What To Make Application</a></li>
-        <li><a href="kbqa.html">Answering Natural Language Questions over FoodKG</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container-fluid text-center">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <div class="bg"></div>
-      <span class="caption">
-        source: <a href="https://www.freeimages.com/search/food-question-mark">https://www.freeimages.com/search/food-question-mark</a>.
-      </span>
-
-    </div>
-
-    <div class="col-sm-8 text-left">
-        <a href="https://github.com/foodkg/foodkg.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;"
-            src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
-      
-      <h1>FoodKG: A Semantics-Driven Knowledge Graph for Food Recommendation</h1>
-      <br/>
-      <p>The proliferation of recipes and other food information on the Web presents an opportunity for discovering and
-        organizing diet-related knowledge into a knowledge graph.
-        Currently, there are several ontologies related to food, but they are specialized in specific domains, e.g., from an
-        agricultural, production, or specific health condition
-        point-of-view. There is a lack of a unified knowledge graph that is oriented towards
-        consumers who want to eat healthily, and who need an integrated food suggestion
-        service that encompasses food and recipes that they encounter on a day-to-day basis, along with the provenance of the
-        information they receive.
-        Our resource contribution is a software toolkit that can be used to create a
-        unified food knowledge graph that links the various silos related to food
-        while preserving the provenance information.
-        We describe the construction process of our knowledge graph, the plan for its maintenance,
-        and how this knowledge graph has been utilized in several applications.
-        These applications include a SPARQL-based service that lets a user determine what recipe to make based on ingredients
-        at hand while taking constraints such as allergies into
-        account, as well as a cognitive agent that can perform natural language question answering on the knowledge graph.</p>
-      <hr>
-      <h2>Resources</h2>
-        <ul>
-          <li><a href="foodkg.html">Scripts for FoodKG construction</a></li>
-          <li><a href="https://drive.google.com/open?id=1hkitCcxnM_7R6OYuvC5zakWojlN2Xuog">Sample of the FoodKG (USDA mappings) </a></li>
-          <li><a href="whattomake.html">What To Make Ontology and Application</a></li>
+  <nav class="navbar navbar-inverse mx-auto">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="foodkg.html">FoodKG Construction</a></li>
+          <li><a href="whattomake.html">What To Make Application</a></li>
           <li><a href="kbqa.html">Answering Natural Language Questions over FoodKG</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <div class="bg"></div>
+        <span class="caption">
+          source: <a
+            href="https://www.freeimages.com/search/food-question-mark">https://www.freeimages.com/search/food-question-mark</a>.
+        </span>
+
+      </div>
+
+      <div class="col-sm-8 text-left">
+        <a href="https://github.com/foodkg/foodkg.github.io"><img
+            style="position: absolute; top: 0; right: 0; border: 0;"
+            src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+        <h1>FoodKG: A Semantics-Driven Knowledge Graph for Food Recommendation</h1>
+        <br />
+        <p>The proliferation of recipes and other food information on the Web presents an opportunity for discovering
+          and
+          organizing diet-related knowledge into a knowledge graph.
+          Currently, there are several ontologies related to food, but they are specialized in specific domains, e.g.,
+          from an
+          agricultural, production, or specific health condition
+          point-of-view. There is a lack of a unified knowledge graph that is oriented towards
+          consumers who want to eat healthily, and who need an integrated food suggestion
+          service that encompasses food and recipes that they encounter on a day-to-day basis, along with the provenance
+          of the
+          information they receive.
+          Our resource contribution is a software toolkit that can be used to create a
+          unified food knowledge graph that links the various silos related to food
+          while preserving the provenance information.
+        </p>
+        <hr>
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="foodkg.html">FoodKG construction</a>: we describe the construction process of our knowledge graph
+            and make available all the scripts that were used.</li>
+          <li><a href="whattomake.html">What To Make Ontology and Application</a>: An Ontology modeled to to let a user
+            determine what recipe to make based on ingredients at hand while taking constraints such as allergies into
+            account.</li>
+          <li><a href="kbqa.html">Answering Natural Language Questions over FoodKG</a>: A cognitive agent that can
+            perform natural language question answering on the knowledge graph.</li>
+        </ul>
+        <h3>Knowledge Graph Store</h3>
+        <p>To load the integrated knowledge graph that will be generated using the software we have provided, we recommend using <a
+            href="https://www.blazegraph.com">Blazegraph</a>.
+          Please follow the instructions in the <a href="https://wiki.blazegraph.com/wiki/index.php/Quick_Start">User Guide</a>
+          to download, install, and load the RDF data in to the Blazegraph endpoint on your system.</p>
+          <p>Optionally, you may use <a href="http://tetherless-world.github.io/whyis/">whyis</a> as your knowledge graph store.</p>
         <hr>
         <h2>Team</h2>
-        <p>FoodKG is a research and development effort of the <a href="https://science.rpi.edu/biology/news/ibm-and-rensselaer-team-research-chronic-diseases-cognitive-computing">Health Empowerment by Analytics Learning and Semantics (HEALS) project</a>.</p>
+        <p>FoodKG is a research and development effort of the <a
+            href="https://science.rpi.edu/biology/news/ibm-and-rensselaer-team-research-chronic-diseases-cognitive-computing">Health
+            Empowerment by Analytics Learning and Semantics (HEALS) project</a>.</p>
         <p>The team members include:</p>
         <ul>
-            <li>Steven Haussmann, Rensselaer Polytechnic Institute</li>
-            <li><a href="https://idea.tw.rpi.edu/people/oshani">Oshani Seneviratne</a>, Rensselaer Polytechnic Institute</li>
-            <li><a href="https://www.cs.rpi.edu/~cheny39/">Yu Chen</a>, Rensselaer Polytechnic Institute</li>
-            <li>Yarden Ne'eman, Rensselaer Polytechnic Institute</li>
-            <li><a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-jvcodell">James Codella</a>, IBM Research, USA</li>
-            <li><a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-chinghua">Ching-Hua Chen</a>, IBM Research, USA</li>
-            <li><a href="https://tw.rpi.edu/web/person/deborah_l_mcguinness">Deborah L. McGuinness</a>, Rensselaer Polytechnic Institute</li>
-            <li><a href="https://www.cs.rpi.edu/~zaki/">Mohammed J. Zaki</a>, Rensselaer Polytechnic Institute</li>
+          <li>Steven Haussmann, Rensselaer Polytechnic Institute</li>
+          <li><a href="https://idea.tw.rpi.edu/people/oshani">Oshani Seneviratne</a>, Rensselaer Polytechnic Institute
+          </li>
+          <li><a href="https://www.cs.rpi.edu/~cheny39/">Yu Chen</a>, Rensselaer Polytechnic Institute</li>
+          <li>Yarden Ne'eman, Rensselaer Polytechnic Institute</li>
+          <li><a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-jvcodell">James Codella</a>, IBM
+            Research, USA</li>
+          <li><a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-chinghua">Ching-Hua Chen</a>, IBM
+            Research, USA</li>
+          <li><a href="https://tw.rpi.edu/web/person/deborah_l_mcguinness">Deborah L. McGuinness</a>, Rensselaer
+            Polytechnic Institute</li>
+          <li><a href="https://www.cs.rpi.edu/~zaki/">Mohammed J. Zaki</a>, Rensselaer Polytechnic Institute</li>
         </ul>
 
+      </div>
+
     </div>
-
   </div>
-</div>
 
-<!-- <footer class="container-fluid text-center">
+  <!-- <footer class="container-fluid text-center">
   <p></p>
 </footer> -->
 
 </body>
+
 </html>

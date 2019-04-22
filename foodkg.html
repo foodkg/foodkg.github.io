@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>FoodKG</title>
   <meta charset="utf-8">
@@ -8,84 +9,99 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/custom.css">
- </head>
+</head>
+
 <body>
 
-  
-<nav class="navbar navbar-inverse mx-auto">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"></a>
+
+  <nav class="navbar navbar-inverse mx-auto">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="foodkg.html">FoodKG Construction</a></li>
+          <li><a href="whattomake.html">What To Make Application</a></li>
+          <li><a href="kbqa.html">Question Answering on Knowledge Base Application</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="foodkg.html">FoodKG Construction</a></li>
-        <li><a href="whattomake.html">What To Make Application</a></li>
-        <li><a href="kbqa.html">Question Answering on Knowledge Base Application</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+  </nav>
+
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
         <div class="bg"></div>
         <span class="caption">
-          source: <a href="https://www.freeimages.com/search/food-question-mark">https://www.freeimages.com/search/food-question-mark</a>.
+          source: <a
+            href="https://www.freeimages.com/search/food-question-mark">https://www.freeimages.com/search/food-question-mark</a>.
         </span>
       </div>
-    <div class="col-sm-8 text-left"> 
-        <a href="https://github.com/foodkg/foodkg.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;"
+      <div class="col-sm-8 text-left">
+        <a href="https://github.com/foodkg/foodkg.github.io"><img
+            style="position: absolute; top: 0; right: 0; border: 0;"
             src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-      <h1>Knowledge Graph Construction</h1>
-      <br/>
-      <p>
-        We combine multiple sources of data into a single cohesive knowledge graph, forming linkages to relate similar concepts.
-      </p>
-      <hr>
-      <h2>Components</h2>
-      <h3>Recipe data</h3>
+        <h1>Knowledge Graph Construction</h1>
+        <br />
+        <p>
+          We combine multiple sources of data into a single cohesive knowledge graph, forming linkages to relate similar
+          concepts.
+        </p>
+        <hr>
+        <h2>Components</h2>
+        <h3>Recipe data</h3>
 
-      <p>Recipes can be derived from a multitude of sources, such as books, websites, and structured datasets. For the purposes of the publication dataset, we chose to use a collection of recipes gathered by the authors of and used in the making of the <a href="http://im2recipe.csail.mit.edu/">Im2Recipe project</a>.</p>
+        <p>Recipes can be derived from a multitude of sources, such as books, websites, and structured datasets. For the
+          purposes of the publication dataset, we chose to use a collection of recipes gathered by the authors of and
+          used in the making of the <a href="http://im2recipe.csail.mit.edu/">Im2Recipe project</a>.</p>
 
-      <h3>Nutrient data</h3>
+        <h3>Nutrient data</h3>
 
-      <p>Nutrient information can be found in great quantities for a variety of foods. We chose to source our data from the USDA. To bring the data they provide into the knowledge graph, we took advantage of <a href="https://tw.rpi.edu/web/project/SDD">Semantic Data Dictionaries</a>, an RPI project.</p>
+        <p>Nutrient information can be found in great quantities for a variety of foods. We chose to source our data
+          from the USDA. To bring the data they provide into the knowledge graph, we took advantage of <a
+            href="https://tetherless-world.github.io/sdd">Semantic Data Dictionaries</a>, an RPI project.
+          We make available a <a href="https://drive.google.com/open?id=1hkitCcxnM_7R6OYuvC5zakWojlN2Xuog">sample of
+            the FoodKG (USDA mappings) </a> that were created using the Semantc Data Dictionary proces.</p>
 
-      <h3>Food knowledge</h3>
+        <h3>Food knowledge</h3>
 
-      Finally, to provide some structure to the ingredients encountered in our recipes, we incorporated <a href="https://foodon.org">FoodOn</a>. The ontology provides detailed information about the origin and preparation of foods.
+        Finally, to provide some structure to the ingredients encountered in our recipes, we incorporated <a
+          href="https://foodon.org">FoodOn</a>. The ontology provides detailed information about the origin and
+        preparation of foods.
 
-      <h2>Construction</h2>
-      <h3>Prerequisites</h3>
-      <p>You will need to manually acquire the following:</p>
-      <ul>
-        <li>The Im2Recipe <a href="http://im2recipe.csail.mit.edu/dataset/download/">Recipe1M Dataset</a></li>
-      </ul>
-      <h3>Execution</h3>
-      <p>After cloning the <a href="https://github.com/foodkg/foodkg.github.io">repository</a>, detailed instructions for reproduction are available under the /src directory. A broad overview follows:</p>
-      <ol>
-        <li>Acquire the data listed above</li>
-        <li>Use /src/prep-scripts/ to join automatically-acquired data with the manual data</li>
-        <li>Use /src/recipe-handler/ to generate a knowledge graph from the prepared data</li>
-        <li>Use /src/verify to generate statistics from the result</li>
-      </ol>
+
+        <h2>Construction</h2>
+        <h3>Prerequisites</h3>
+        <p>You will need to manually acquire the following:</p>
+        <ul>
+          <li>The Im2Recipe <a href="http://im2recipe.csail.mit.edu/dataset/download/">Recipe1M Dataset</a></li>
+        </ul>
+        <h3>Execution</h3>
+        <p>After cloning the <a href="https://github.com/foodkg/foodkg.github.io">repository</a>, detailed instructions
+          for reproduction are available under the /src directory. A broad overview follows:</p>
+        <ol>
+          <li>Acquire the data listed above</li>
+          <li>Use /src/prep-scripts/ to join automatically-acquired data with the manual data</li>
+          <li>Use /src/recipe-handler/ to generate a knowledge graph from the prepared data</li>
+          <li>Use /src/verify to generate statistics from the result</li>
+        </ol>
+      </div>
+
     </div>
-
   </div>
-</div>
 
-<!-- <footer class="container-fluid text-center">
+  <!-- <footer class="container-fluid text-center">
   <p></p>
 </footer> -->
 
 </body>
+
 </html>
