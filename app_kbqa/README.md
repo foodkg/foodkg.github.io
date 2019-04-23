@@ -1,7 +1,7 @@
 # Application: Answering Natural Language Questions over FoodKG
 
 ## Prerequisites
-In order to run the following experiments, you will need to first download the [code] (https://github.com/foodkg/foodkg.github.io).
+In order to run the following experiments, you will need to first download the [code](https://github.com/foodkg/foodkg.github.io).
 All relevant code is in the `app_kbqa` folder.
 This code is written in python 3. You will need to install a few python packages in order to run the code.
 We recommend you to use `virtualenv` to manage your python packages and environments.
@@ -17,8 +17,8 @@ Please take the following steps to create a python virtual environment.
 ## Create a synthetic Q&A dataset
 
 ### Fetch KG subgraphs from a remote KG stored in Blazegraph
-We assume you have already loaded the FoodKG into [Blazegraph] (https://www.blazegraph.com/).
-If not, please follow the instructions in the [User Guide] (https://wiki.blazegraph.com/wiki/index.php/Quick_Start) to download, install, and load the FoodKG RDF data in to the Blazegraph endpoint on your system.
+We assume you have already loaded the FoodKG into [Blazegraph](https://www.blazegraph.com/).
+If not, please follow the instructions in the [User Guide](https://wiki.blazegraph.com/wiki/index.php/Quick_Start) to download, install, and load the FoodKG RDF data in to the Blazegraph endpoint on your system.
 Please also confirm that the variable `USE_ENDPOINT_URL` hard-coded in `data_builder/src/config/data_config.py` matches the URL and namespace of your Blazegraph instance.
 
 * Go to the `data_builder/src` folder, run the following cmd:
