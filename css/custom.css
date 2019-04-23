@@ -67,4 +67,19 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
   }
+
+  /* Bottom right text */
+.item {
+  /* To correctly align image, regardless of content height: */
+  vertical-align: top;
+  display: inline-block;
+  /* To horizontally center images and caption */
+  text-align: center;
+}
+
+.caption {
+  display: block;
+  font-size: 60%;
+}

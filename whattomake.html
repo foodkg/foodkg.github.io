@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>FoodKG</title>
   <meta charset="utf-8">
@@ -8,117 +9,184 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/custom.css">
- </head>
+</head>
+
 <body>
 
-  
-<nav class="navbar navbar-inverse mx-auto">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="foodkg.html">FoodKG Construction</a></li>
-        <li class="active"><a href="whattomake.html">What To Make Application</a></li>
-        <li><a href="kbqa.html">Question Answering on Knowledge Base Application</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-        <div class="bg"></div>
-    </div>
 
-    <div class="col-sm-8 text-left">
-      <div class="mt-20 font-20">
-        <h2>Contents</h2>
-        <div class="col-md-12 mb-20">
-          <a class="link" href="#documentation">1. Documentation</a>
-          <a class="link" href="#conceptualModel">2. Conceptual Model</a>
-          <a class="link" href="#competencyQuestions">3. Competency Questions &amp; Queries</a>
-        </div>
+  <nav class="navbar navbar-inverse mx-auto">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
       </div>
-      <div id="documentation" class="container mb-20">
-        <h2>Documentation</h2>
-        <div class="col-md-12">
-          The WhatToMake ontology is separated into three components: Food, FoodOn, and Ingredient. The Food component of the ontology contains all of the base classes that were created for the ontology. The FoodOn component contains all of the imported classes from FoodOn. The Ingredient component contains all of the individuals that represent different recipes and ingredients. Documentation for each component of the ontology can be found in the links below, as well as the link to the ontology itself.<br/>
-          <div class="col-md-offset-3 col-md-6 mt-20">
-            <table class="table table-striped">
-              <tr>
-                <td>Food</td>
-                <td><a target="_blank" href="https://foodkg.github.io/docs/ontologyDocumentation/Food/doc/index-en.html">Documentation</a></td>
-                <td><a target="_blank" href="http://purl.org/heals/food">Ontology</a></td>
-              </tr>
-              <tr>
-                <td>FoodOn</td>
-                <td><a target="_blank" href="https://foodkg.github.io/docs/ontologyDocumentation/FoodOn/doc/index-en.html">Documentation</a></td>
-                <td><a target="_blank" href="http://purl.org/heals/foodon">Ontology</a></td>
-              </tr>
-              <tr>
-                <td>Ingredient</td>
-                <td><a target="_blank" href="https://foodkg.github.io/docs/ontologyDocumentation/Ingredient/doc/index-en.html">Documentation</a></td>
-                <td><a target="_blank" href="http://purl.org/heals/ingredient">Ontology</a></td>
-              </tr>
-            </table>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="foodkg.html">FoodKG Construction</a></li>
+          <li class="active"><a href="whattomake.html">What To Make Application</a></li>
+          <li><a href="kbqa.html">Question Answering on Knowledge Base Application</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <div class="bg"></div>
+        <span class="caption">
+          source: <a
+            href="https://www.freeimages.com/search/food-question-mark">https://www.freeimages.com/search/food-question-mark</a>.
+        </span>
+      </div>
+
+      <div class="col-sm-8 text-left">
+        <a href="https://github.com/foodkg/foodkg.github.io"><img
+            style="position: absolute; top: 0; right: 0; border: 0;"
+            src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+        <div class="mt-20">
+          <h2>Contents</h2>
+          <div class="col-md-12 mb-20">
+            <a class="link" href="#documentation">1. Documentation</a>
+            <a class="link" href="#conceptualModel">2. Conceptual Model</a>
+            <a class="link" href="#competencyQuestions">3. Competency Questions &amp; Queries</a>
+            <a class="link" href="#runningQueries">4. Running &amp; Queries</a>
           </div>
         </div>
-      </div>
-      <div id="conceptualModel" class="container mb-20">
-        <h2>Conceptual Model</h2>
-        <div class="col-md-12 mt-20">The motivation for WhatToMake Ontology came from our observation of the pains of using traditional cookbooks or even some online recipe archives to find recipes that fit a given person’s requirements. We felt that in order to make that experience better, a user should have the ability to search for a wide range of parameters such as ingredients, cook time, course type, and meal type and have recipes that fulfilled those parameters returned to them. We also saw that recipe searching was difficult if a user had some form of allergy, health concern, or dietary restriction. We wanted to create something which would help the user not only enter those restrictions but to help them find adequate substitutes for the ingredients that they have restricted in the event that was necessary. These were the driving problems that influenced our design of WhatToMake Ontology.
-        In creating this ontology, we set out to relate recipes and their ingredients in a way that allows users to query the system and get results that would accommodate different requirements. Some of these requirements have to do with the meal or course type or the preparation time of a recipe, while others have to do with allergies and substitution requests. We thus needed to model our ontology in a way that would allow us to efficiently answer these types of questions. Our ontology is made up of several major classes: food, ingredient, recipe, characteristic, user, course, and meal. These classes can be seen in the overview diagram below.</div>
-        <div class="col-md-8 mt-20">
-          This diagram illustrates how the classes (denoted by green rectangles) are related to each other through object properties (denoted by the red rectangles). The data properties for each class are represented by the yellow rectangles. In some cases, there is a limited set of individuals used to represent different meals or courses. These individuals are shown as purple circles.
+        <div id="documentation" class="container mb-20">
+          <h2>Documentation</h2>
+          <div class="col-md-12">
+            The WhatToMake ontology is separated into three components: Food, FoodOn, and Ingredient. The Food component
+            of the ontology contains all of the base classes that were created for the ontology. The FoodOn component
+            contains all of the imported classes from FoodOn. The Ingredient component contains all of the individuals
+            that represent different recipes and ingredients. Documentation for each component of the ontology can be
+            found in the links below, as well as the link to the ontology itself.<br />
+            <div class="col-md-offset-3 col-md-6 mt-20">
+              <table class="table table-striped">
+                <tr>
+                  <td>Food</td>
+                  <td><a target="_blank"
+                      href="https://foodkg.github.io/docs/ontologyDocumentation/Food/doc/index-en.html">Documentation</a>
+                  </td>
+                  <td><a target="_blank" href="http://purl.org/heals/food">Ontology</a></td>
+                </tr>
+                <tr>
+                  <td>FoodOn</td>
+                  <td><a target="_blank"
+                      href="https://foodkg.github.io/docs/ontologyDocumentation/FoodOn/doc/index-en.html">Documentation</a>
+                  </td>
+                  <td><a target="_blank" href="http://purl.org/heals/foodon">Ontology</a></td>
+                </tr>
+                <tr>
+                  <td>Ingredient</td>
+                  <td><a target="_blank"
+                      href="https://foodkg.github.io/docs/ontologyDocumentation/Ingredient/doc/index-en.html">Documentation</a>
+                  </td>
+                  <td><a target="_blank" href="http://purl.org/heals/ingredient">Ontology</a></td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4 mb-20">
-          <a target="_blank" href="images/ontology_diagram1.png"><img width="100%" src="images/ontology_diagram1.png"/></a>
-          <figcaption align="center">WhatToMake Ontology Conceptual Model: Whole</figcaption>
+        <div id="conceptualModel" class="container mb-20">
+          <h2>Conceptual Model</h2>
+          <div class="col-md-12 mt-20">The motivation for WhatToMake Ontology came from our observation of the pains of
+            using traditional cookbooks or even some online recipe archives to find recipes that fit a given person’s
+            requirements. We felt that in order to make that experience better, a user should have the ability to search
+            for a wide range of parameters such as ingredients, cook time, course type, and meal type and have recipes
+            that fulfilled those parameters returned to them. We also saw that recipe searching was difficult if a user
+            had some form of allergy, health concern, or dietary restriction. We wanted to create something which would
+            help the user not only enter those restrictions but to help them find adequate substitutes for the
+            ingredients that they have restricted in the event that was necessary. These were the driving problems that
+            influenced our design of WhatToMake Ontology.
+            In creating this ontology, we set out to relate recipes and their ingredients in a way that allows users to
+            query the system and get results that would accommodate different requirements. Some of these requirements
+            have to do with the meal or course type or the preparation time of a recipe, while others have to do with
+            allergies and substitution requests. We thus needed to model our ontology in a way that would allow us to
+            efficiently answer these types of questions. Our ontology is made up of several major classes: food,
+            ingredient, recipe, characteristic, user, course, and meal. These classes can be seen in the overview
+            diagram below.</div>
+          <div class="col-md-8 mt-20">
+            This diagram illustrates how the classes (denoted by green rectangles) are related to each other through
+            object properties (denoted by the red rectangles). The data properties for each class are represented by the
+            yellow rectangles. In some cases, there is a limited set of individuals used to represent different meals or
+            courses. These individuals are shown as purple circles.
+          </div>
+          <div class="col-md-4 mb-20">
+            <a target="_blank" href="images/ontology_diagram1.png"><img width="100%"
+                src="images/ontology_diagram1.png" /></a>
+            <figcaption align="center">WhatToMake Ontology Conceptual Model: Whole</figcaption>
+          </div>
+          <div class="col-md-8 mt-20">This piece of the concept diagram illustrates the relationship that the Recipe
+            class has with other classes and properties. The recipe class has individuals that represent specific
+            recipes. Each recipe individual has three data properties: hasCookTime, hasCookingTemprature, and serves.
+            Each recipe individual also has however many hasIngredient relations with ingredient individuals. Each
+            recipe has at least one Meal and Course that it is recommended for. Each ingredient individual has a boolean
+            data property hasGluten to indicate whether this ingredient contains gluten and a data property
+            hasGlycemicIndex that stores the glycemic index value for this ingredient.
+          </div>
+          <div class="col-md-4" align="center">
+            <a target="_blank" href="images/ontology_diagram2.png"><img width="50%"
+                src="images/ontology_diagram2.png" /></a>
+            <figcaption align="center">WhatToMake Ontology Conceptual Model: Recipe</figcaption>
+          </div>
+          <div class="col-md-8 mt-20">This piece of the diagram shows the makeup of the Characteristic class. Each
+            ingredient can have the relations hasFlavor and/or hasTexture, which represent the flavor and texture of
+            this ingredient. This can help us when trying to make substitutions for ingredients. The flavors and
+            textures themselves are represented as individuals.
+          </div>
+          <div class="col-md-4 mt-20" align="center">
+            <a target="_blank" href="images/ontology_diagram3.png"><img width="80%"
+                src="images/ontology_diagram3.png" /></a>
+            <figcaption align="center">WhatToMake Ontology Conceptual Model: Characteristic</figcaption>
+          </div>
+          <div class="col-md-8 mt-20">This piece of the diagram shows the relationship between Users and
+            Ingredients/Recipes. A user (which is represented as an individual) can have a “dislikes,” “forbids,” or
+            “isAllergicTo” relationship with an ingredient. This makes it so the user doesn’t have to input this
+            information into the system every time. The user can also save recipes, which is represented by the
+            “hasSaved” relation so that any recipes this user particularly likes can be easily displayed.
+          </div>
+          <div class="col-md-4 mt-20">
+            <a target="_blank" href="images/ontology_diagram4.png"><img width="100%"
+                src="images/ontology_diagram4.png" /></a>
+            <figcaption align="center">WhatToMake Ontology Conceptual Model: User</figcaption>
+          </div>
+          <div class="col-md-8 mt-20">In addition to the ingredient class (which is used to indicate which individuals
+            are ingredients), there is a separate hierarchy to classify these ingredients as foods. The top level
+            element is “Food” and serves as the superclass for all food classifications. The classes represented in blue
+            are existing classes that were imported from the EBI Food Ontology and the classes represented in green are
+            additions made to improve the classification. This diagram does not represent all of the imported classes,
+            but rather shows a representative set of those classes that are most relevant to the competency questions.
+          </div>
+          <div class="col-md-4 mt-20">
+            <a target="_blank" href="images/ontology_diagram5.png"><img width="100%"
+                src="images/ontology_diagram5.png" /></a>
+            <figcaption align="center">WhatToMake Ontology Conceptual Model: Food</figcaption>
+          </div>
         </div>
-        <div class="col-md-8 mt-20">This piece of the concept diagram illustrates the relationship that the Recipe class has with other classes and properties. The recipe class has individuals that represent specific recipes. Each recipe individual has three data properties: hasCookTime, hasCookingTemprature, and serves. Each recipe individual also has however many hasIngredient relations with ingredient individuals. Each recipe has at least one Meal and Course that it is recommended for. Each ingredient individual has a boolean data property hasGluten to indicate whether this ingredient contains gluten and a data property hasGlycemicIndex that stores the glycemic index value for this ingredient.
-        </div>
-        <div class="col-md-4" align="center">
-          <a target="_blank" href="images/ontology_diagram2.png"><img width="50%" src="images/ontology_diagram2.png"/></a>
-          <figcaption align="center">WhatToMake Ontology Conceptual Model: Recipe</figcaption>
-        </div>
-        <div class="col-md-8 mt-20">This piece of the diagram shows the makeup of the Characteristic class. Each ingredient can have the relations hasFlavor and/or hasTexture, which represent the flavor and texture of this ingredient. This can help us when trying to make substitutions for ingredients. The flavors and textures themselves are represented as individuals.
-        </div>
-        <div class="col-md-4 mt-20" align="center">
-          <a target="_blank" href="images/ontology_diagram3.png"><img width="80%" src="images/ontology_diagram3.png"/></a>
-          <figcaption align="center">WhatToMake Ontology Conceptual Model: Characteristic</figcaption>
-        </div>
-        <div class="col-md-8 mt-20">This piece of the diagram shows the relationship between Users and Ingredients/Recipes. A user (which is represented as an individual) can have a “dislikes,” “forbids,” or “isAllergicTo” relationship with an ingredient. This makes it so the user doesn’t have to input this information into the system every time. The user can also save recipes, which is represented by the “hasSaved” relation so that any recipes this user particularly likes can be easily displayed.
-        </div>
-        <div class="col-md-4 mt-20">
-          <a target="_blank" href="images/ontology_diagram4.png"><img width="100%" src="images/ontology_diagram4.png"/></a>
-          <figcaption align="center">WhatToMake Ontology Conceptual Model: User</figcaption>
-        </div>
-        <div class="col-md-8 mt-20">In addition to the ingredient class (which is used to indicate which individuals are ingredients), there is a separate hierarchy to classify these ingredients as foods. The top level element is “Food” and serves as the superclass for all food classifications. The classes represented in blue are existing classes that were imported from the EBI Food Ontology and the classes represented in green are additions made to improve the classification. This diagram does not represent all of the imported classes, but rather shows a representative set of those classes that are most relevant to the competency questions.
-        </div>
-        <div class="col-md-4 mt-20">
-          <a target="_blank" href="images/ontology_diagram5.png"><img width="100%" src="images/ontology_diagram5.png"/></a>
-          <figcaption align="center">WhatToMake Ontology Conceptual Model: Food</figcaption>
-        </div>
-      </div>
-      <div id="competencyQuestions">
-        <h2>Competency Questions &amp; Queries</h2>
-        <div class="col-md-12 mt-20 mb-20">
-          <p>The functionality of the WhatToMake system can be demonstrated through the five competency questions that were devised in order to develop the ontology. Each question aims to target a specific functionality of the WhatToMake ontology, as explained below.</p>
-          <p><strong>1) "What recipes contain beef?"</strong><br/>
-            This question targets the ontology's ability to query the system for recipes that contain a single incredient, beef. An example SPARQL query for this question is shown below.
-          </p>
-          <div class="col-md-12 mb-20">
-            <code class="col-md-offset-3 col-md-6">
+        <div id="competencyQuestions">
+          <h2>Competency Questions &amp; Queries</h2>
+          <div class="col-md-12 mt-20 mb-20">
+            <p>The functionality of the WhatToMake system can be demonstrated through the four competency questions that
+              were devised in order to develop the ontology. Each question aims to target a specific functionality of
+              the WhatToMake ontology, as explained below. Some questions include sample SPARQL queries, which can be
+              run by loading the ontology into Protege. To do so, load the <a
+                href="http://purl.org/heals/ingredient">http://purl.org/heals/ingredient</a> ontology by URL into
+              Protege and execute the queries in the SPARQL Query tab. Note that the food and foodon ontology components
+              are imported as a part of the ingredient ontology.</p>
+            <p><strong>1) "What recipes contain beef?"</strong><br />
+              This question targets the ontology's ability to query the system for recipes that contain a single
+              incredient, beef. An example SPARQL query for this question is shown below.
+            </p>
+            <div class="col-md-12 mb-20">
+              <code class="col-md-offset-3 col-md-6">
               @PREFIX food: &lt;http://purl.org/heals/food/&gt;<br/>
               @PREFIX ingredient: &lt;http://purl.org/heals/ingredient/&gt;<br/>
               SELECT DISTINCT ?recipe<br/>
@@ -126,12 +194,13 @@
                   ?recipe food:hasIngredient ingredient:Beef .<br/>
               }
             </code>
-          </div>
-          <p><strong>2) "What recipes contain beef, carrots, and potatoes?"</strong><br/>
-            This question is similar to the first, but allows for a user to specify multiple ingredients at a time. An example SPARQL query for this question is shown below.
-          </p>
-          <div class="col-md-12 mb-20">
-            <code class="col-md-offset-3 col-md-6">
+            </div>
+            <p><strong>2) "What recipes contain beef, carrots, and potatoes?"</strong><br />
+              This question is similar to the first, but allows for a user to specify multiple ingredients at a time. An
+              example SPARQL query for this question is shown below.
+            </p>
+            <div class="col-md-12 mb-20">
+              <code class="col-md-offset-3 col-md-6">
               @PREFIX food: &lt;http://purl.org/heals/food/&gt;<br/>
               @PREFIX ingredient: &lt;http://purl.org/heals/ingredient/&gt;<br/>
               SELECT DISTINCT ?recipe<br/>
@@ -141,12 +210,14 @@
                   ?recipe food:hasIngredient ingredient:Potato .<br/>
               }
             </code>
-          </div>
-          <p><strong>3) "What recipes contain bananas that do not contain walnuts?"</strong><br/>
-            This question allows a user to specify which ingredients the would like to include while also specifying those to exclude. This kind of question is especially relevant in cases of allergies, intolerances, and dislikes. An example SPARQL query for this question is shown below.
-          </p>
-          <div class="col-md-12 mb-20">
-            <code class="col-md-offset-3 col-md-6">
+            </div>
+            <p><strong>3) "What recipes contain bananas that do not contain walnuts?"</strong><br />
+              This question allows a user to specify which ingredients the would like to include while also specifying
+              those to exclude. This kind of question is especially relevant in cases of allergies, intolerances, and
+              dislikes. An example SPARQL query for this question is shown below.
+            </p>
+            <div class="col-md-12 mb-20">
+              <code class="col-md-offset-3 col-md-6">
               @PREFIX food: &lt;http://purl.org/heals/food/&gt;<br/>
               @PREFIX ingredient: &lt;http://purl.org/heals/ingredient/&gt;<br/>
               SELECT DISTINCT ?recipe<br/>
@@ -157,12 +228,15 @@
                   }<br/>
                   }
             </code>
-          </div>
-          <p><strong>4) "What recipes that have chicken are low in sugar?"</strong><br/>
-            This question addresses the use case of accomodating nutritional-based recommendations. This kind of question would be ideal for a diabetic user who must reduct their sugar intake. Currently, the ontology encodes nutritional information related to sugar by using glycemic index values. An example SPARQL query for this question is shown below.
-          </p>
-          <div class="col-md-12 mb-20">
-            <code class="col-md-offset-3 col-md-6">
+            </div>
+            <p><strong>4) "What recipes that have chicken are low in sugar?"</strong><br />
+              This question addresses the use case of accomodating nutritional-based recommendations. This kind of
+              question would be ideal for a diabetic user who must reduct their sugar intake. Currently, the ontology
+              encodes nutritional information related to sugar by using glycemic index values. An example SPARQL query
+              for this question is shown below.
+            </p>
+            <div class="col-md-12 mb-20">
+              <code class="col-md-offset-3 col-md-6">
               @PREFIX food: &lt;http://purl.org/heals/food/&gt;<br/>
               @PREFIX ingredient: &lt;http://purl.org/heals/ingredient/&gt;<br/>
               SELECT DISTINCT ?recipe<br/>
@@ -172,21 +246,34 @@
                       ?recipe food:hasIngredient ?ingredient .<br/>
                       ?ingredient food:hasGlycemicIndex ?GI .<br/>
                       FILTER (?GI >= 50)}<br/>
+              }
             </code>
-          </div>
-          <p><strong>5) "What recipes are vegan?"</strong><br/>
+            </div>
+            <!-- <p><strong>5) "What recipes are vegan?"</strong><br/>
             This question utilizes the hierarchical nature of the food classification to exclude certain classes of ingredients based on where they fall in the hierarchy. For this question, any ingredients that fall under the classes "primary food commodity of animal origin" or "processed food of animal origin" would be excluded. Currently, there is no SPARQL query for this question.
-          </p>
+          </p> -->
+          </div>
+          <div id="runningQueries">
+            <h2>Running Queries</h2>
+            <p>In order to run the above queries, we recommend either option below for loading the ontology:
+              <ul>
+                <li>Use <a href="https://protege.stanford.edu/">Protege</a> to load the ontology and execute the queries
+                  in the SPARQL tab.</li>
+                <li>Use <a href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">blazegraph</a> to load the
+                  ontology as a regular RDF file and execute the queries in the Query view.</li>
+              </ul>
+            </p>
+          </div>
         </div>
       </div>
+
     </div>
-
   </div>
-</div>
 
-<!-- <footer class="container-fluid text-center">
+  <!-- <footer class="container-fluid text-center">
   <p></p>
 </footer> -->
 
 </body>
+
 </html>
