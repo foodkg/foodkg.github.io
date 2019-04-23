@@ -58,17 +58,17 @@
 
 <section>
       <h2>Prerequisites</h2>
-      This code was written in python 3. To use it you will need to install:
-        <ul>
-          <li>pytorch 0.4</li>
-          <li>Numpy</li>
-          <li>NLTK</li>
-          <li>gensim</li>
-          <li>fuzzywuzzy</li>
-          <li>SPARQLWrapper</li>
-          <li>argparse</li>
-          <li>yaml</li>
-        </ul>
+      In order to run the following experiments, you will need to first download the <a href="https://github.com/foodkg/foodkg.github.io">code</a>.
+      All relevant code is in the <b>app_kbqa</b> folder.
+      This code is written in python 3. You will need to install a few python packages in order to run the code.
+      We recommend you to use <code>virtualenv</code> to manage your python packages and environments.
+      Please take the following steps to create a python virtual environment.
+        <ol>
+      <li>If you have not installed virtualenv, install it with <code>pip install virtualenv</code>.</li>
+      <li>Create a virtual environment with <code>virtualenv venv</code>.</li>
+      <li>Activate the virtual environment with <code>source venv/bin/activate</code>.</li>
+      <li>Install the package requirements with <code>pip install -r requirements.txt</code>.</li>
+        </ol>
         <hr>
 </section>
 
@@ -77,7 +77,10 @@
 <section>
       <h2>Create a synthetic Q&A dataset</h2>
       <h4><b>Fetch KG subgraphs from a remote KG stored in Blazegraph</b></h4>
-      <h5>We assume you have already loaded a FoodKG copy into Blazegraph.</h5>
+      <p>We assume you have already loaded the FoodKG into <a href="https://www.blazegraph.com/">Blazegraph</a>.
+        If not, please follow the instructions in the <a href="https://wiki.blazegraph.com/wiki/index.php/Quick_Start">User Guide</a> to download, install, and load the FoodKG RDF data in to the Blazegraph endpoint on your system.
+        Please also confirm that the variable <code>USE_ENDPOINT_URL</code> hard-coded in <b>data_builder/src/config/data_config.py</b> matches the URL and namespace of your Blazegraph instance.
+        </p>
       <ol>
       <li>
       <h5>Go to the data_builder/src folder, run the following cmd:</h5>
@@ -90,7 +93,6 @@
         <br><br>
 
         In the [qas_dir] folder, you will see two JSON files: <b>usda_subgraphs.json</b> which is  for the USDA data and <b>recipe_kg.json</b> which is for the Recipe1M data.
-        Note that you will need to change the USE_ENDPOINT_URL variable (defined in config/data_config.py file) to the url of your own Blazegraph instance where your FoodKG copy is stored.
       </li><br>
 
 
@@ -139,6 +141,7 @@
   <code>
   python build_all_data.py -data_dir [qas_dir] -kb_path [qas_dir/foodkg.json] -out_dir [qas_dir]
    </code>
+  In the message printed out, your will see some data statistics such as <b>vocab_size</b>, <b>num_ent_types</b>, <b>num_relations</b>. These numbers will be used later when modifying the config file.
  </li>
 </ol><br>
 
@@ -178,7 +181,8 @@ Unzip the file and convert glove format to word2vec format using the following c
 
 <ol>
   <li>
- Modify the config file config/kbqa.yml (e.g., file paths, vocab_size, num_ent_types, num_relations).
+  Modify the config file <b>BAMnet/src/config/kbqa.yml</b> to suit your needs. Note that you can start with modifying only the data folder and vocab size (e.g., <b>data_dir</b>, <b>kb_path</b>,
+<b>pre_word2vec</b>, <b>vocab_size</b>, <b>num_ent_types</b>, <b>num_relations</b>), and leave other variables as they are.
 </li><br>
 
 

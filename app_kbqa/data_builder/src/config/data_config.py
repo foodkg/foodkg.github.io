@@ -1,4 +1,4 @@
-USE_ENDPOINT_URL = "http://whyislogics.heals.rpi.edu:8080/blazegraph/namespace/knowledge/sparql"
+USE_ENDPOINT_URL = "http://localhost:9999/bigdata/namespace/kb/sparql"
 
 
 SIMPLE_QAS_TEMPLATES = ['How much {p} does {s} have?',

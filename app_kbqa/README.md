@@ -1,31 +1,33 @@
 # Application: Answering Natural Language Questions over FoodKG
 
 ## Prerequisites
+In order to run the following experiments, you will need to first download the [code] (https://github.com/foodkg/foodkg.github.io).
+All relevant code is in the `app_kbqa` folder.
+This code is written in python 3. You will need to install a few python packages in order to run the code.
+We recommend you to use `virtualenv` to manage your python packages and environments.
+Please take the following steps to create a python virtual environment.
 
-This code was written in python 3. To use it you will need to install:
+* If you have not installed `virtualenv`, install it with ```pip install virtualenv```.
+* Create a virtual environment with ```virtualenv venv```.
+* Activate the virtual environment with `source venv/bin/activate`.
+* Install the package requirements with `pip install -r requirements.txt`.
 
-* pytorch 0.4
-* Numpy
-* NLTK
-* gensim
-* fuzzywuzzy
-* SPARQLWrapper
-* argparse
-* yaml
 
 
 ## Create a synthetic Q&A dataset
 
 ### Fetch KG subgraphs from a remote KG stored in Blazegraph
-We assume you have already loaded a FoodKG copy into Blazegraph.
+We assume you have already loaded the FoodKG into [Blazegraph] (https://www.blazegraph.com/).
+If not, please follow the instructions in the [User Guide] (https://wiki.blazegraph.com/wiki/index.php/Quick_Start) to download, install, and load the FoodKG RDF data in to the Blazegraph endpoint on your system.
+Please also confirm that the variable `USE_ENDPOINT_URL` hard-coded in `data_builder/src/config/data_config.py` matches the URL and namespace of your Blazegraph instance.
 
-* Go to the data_builder/src folder, run the following cmd:
+* Go to the `data_builder/src` folder, run the following cmd:
 
 	```
     python usda.py -o [qas_dir]
     python recipe.py -o [qas_dir]
 	```
-	In the [qas\_dir] folder, you will see two JSON files: *usda\_subgraphs.json* which is 	for the USDA data and *recipe\_kg.json* which is for the Recipe1M data. Note that you will need to change the USE_ENDPOINT_URL variable (defined in config/data_config.py file) to the url of your own Blazegraph instance where your FoodKG copy is stored.
+	In the `[qas_dir]` folder, you will see two JSON files: `usda_subgraphs.json` which is 	for the USDA data and `recipe_kg.json` which is for the Recipe1M data.
 
 
 
@@ -50,7 +52,7 @@ We assume you have already loaded a FoodKG copy into Blazegraph.
 	```
 	python generate_qa.py -usda [qas_dir/usda_subgraphs.json] -recipe [qas_dir/sampled_recipe_kg.json] -o [qas_dir] -sampling_prob 0.05 -num_qas_per_tag 20
 	```
-	Note that if your machine does not have large RAM (e.g., > 16GB), you can set smaller sampling ratios (i.e., sampling_prob and num_qas_per_tag) when creating the dataset.
+	Note that if your machine does not have large RAM (e.g., > 16GB), you can set smaller sampling ratios (i.e., `sampling_prob` and `num_qas_per_tag`) when creating the dataset.
 
 
 
@@ -59,11 +61,13 @@ We assume you have already loaded a FoodKG copy into Blazegraph.
 
 ### Preprocess the Q&A dataset
 
-* Go to the BAMnet/src folder, run the following cmd:
+* Go to the `BAMnet/src` folder, run the following cmd:
 
 	```
 	python build_all_data.py -data_dir [qas_dir] -kb_path [qas_dir/foodkg.json] -out_dir [qas_dir]
 	```
+  In the message printed out, your will see some data statistics such as `vocab_size`, `num_ent_types `, `num_relations`. These numbers will be used later when modifying the config file.
+
 
 ### Load pretrained word embeddings
 
@@ -83,7 +87,9 @@ We assume you have already loaded a FoodKG copy into Blazegraph.
 
 ### Tran/test a KBQA system
 
-* Modify the config file config/kbqa.yml (e.g., file paths, vocab_size, num_ent_types, num_relations).
+* Modify the config file `BAMnet/src/config/kbqa.yml` to suit your needs. Note that you can start with modifying only the data folder and vocab size (e.g., `data_dir`, `kb_path`,
+`pre_word2vec`, `vocab_size`, `num_ent_types `, `num_relations`), and leave other variables as they are.
+
 
 
 * Train the KBQA model.
