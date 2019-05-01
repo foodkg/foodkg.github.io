@@ -37,3 +37,11 @@ You will need the following:
 * Blazegraph or any equivalent knowledge graph database software
 
 The `.trig` data can be imported into a database of your choice. This may take some time, due to the volume of data involved.   
+
+If you are using Blazegraph, then you can load the data with the following procedure:
+
+1. Start the Blazegraph server and navigate to the web interface (typically `localhost:9999`)
+2. Switch to the UPDATE tab
+3. In the dropdown menu below the input field, change from "SPARQL Update" to "File path or URL"
+4. In the input field, enter the absolute path to the generated `.trig` file, prefixed by `file://`. For example, you might load the USDA links with a path of `fiel:///home/alice/foodkg.github.io/src/recipe-handler/out/iswc/usda-links.trig`, replacing `usda-links.trig` with the other file names in the output directory to load everything
+
