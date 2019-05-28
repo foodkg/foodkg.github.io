@@ -1,0 +1,27 @@
+@prefix np: <http://www.nanopub.org/nschema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix chear: <http://hadatac.org/ont/chear#> .
+@prefix uberon: <http://purl.obolibrary.org/obo/UBERON_> .
+@prefix pr: <http://purl.obolibrary.org/obo/PR_>.
+@prefix hasco: <http://hadatac.org/ont/hasco#> .
+@prefix uo: <http://purl.obolibrary.org/obo/UO_> .
+@prefix cst: <http://idea.rpi.edu/ontologies/cancer_staging_terms.owl#>.
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix hp: <http://purl.obolibrary.org/obo/HP_> .
+@prefix dron: <http://purl.obolibrary.org/obo/DRON_> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix db: <https://www.drugbank.ca/drugs/> .
+@prefix usda-kb: <http://idea.rpi.edu/heals/kb/usda#>.
+@prefix uniprot: <http://www.uniprot.org/uniprot/> .
+@prefix doid: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix efo: <http://www.ebi.ac.uk/efo/EFO_> .
+@prefix foodon: <http://purl.obolibrary.org/obo/foodon.owl> .
+@prefix envo: <http://purl.obolibrary.org/obo/envo.owl> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix schema: <http://schema.org/> .
