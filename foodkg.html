@@ -105,7 +105,15 @@
           <li>layer1.json</li>
           <li>det_ingrs.json</li>
         </ul>
-        <p> Other public data sources (e.g., USDA) are downloaded automatically by the script.
+        <p> Other public data sources (e.g., USDA, FoodOn) are downloaded automatically by the script.
+        <h3>Outputs</h3>
+        <p>The final output comprises the serialized RDF data iles comprising the FoodKG:</p>
+        <ul>
+          <li>usda-links.trig (approx 4.1 million triples)(</li>
+          <li>foodon-links.trig (approx 30 thousand triples)</li>
+          <li>foodkg-core.trig (approx 63 million triples)</li>
+        </ul>
+        <p> These files can be loaded into a graph database like BlazeGraph for executing the natural language queries.
       </div>
 
     </div>
