@@ -83,13 +83,13 @@
           href="https://foodon.org">FoodOn</a>. The ontology provides detailed information about the origin and
         preparation of foods.
 
-
         <h2>Construction</h2>
         <h3>Prerequisites</h3>
         <p>You will need to manually acquire the following:</p>
         <ul>
-          <li>The Im2Recipe <a href="http://im2recipe.csail.mit.edu/dataset/download/">Recipe1M Dataset</a></li>
+          <li>The Im2Recipe <a href="http://im2recipe.csail.mit.edu/dataset/download/">Recipe1M Dataset (Layers and Ingredient detections files)</a></li>
         </ul>
+        <p>To build, Python 3.7 is required as some of the prerequisite packages depend on the bundled packages with Python 3.7.
         <h3>Execution</h3>
         <p>After cloning the <a href="https://github.com/foodkg/foodkg.github.io">repository</a>, detailed instructions
           for reproduction are available under the /src directory. A broad overview follows:</p>
@@ -102,8 +102,8 @@
         <h3>Inputs</h3>
         <p>The following two files are required from Recipe1M:</p>
         <ul>
-          <li>layer1.json</li>
-          <li>det_ingrs.json</li>
+          <li>layer1.json (<a =href="http://data.csail.mit.edu/im2recipe/recipe1M_layers.tar.gz">Layers</a> (381 MiB)) </li>
+          <li>det_ingrs.json (<a =href="http://data.csail.mit.edu/im2recipe/det_ingrs.json">Ingredient detections </a> (102 MiB))</li>
         </ul>
         <p> Other public data sources (e.g., USDA, FoodOn) are downloaded automatically by the script.
         <h3>Outputs</h3>
