@@ -1,4 +1,4 @@
-USE_ENDPOINT_URL = "http://localhost:9999/bigdata/namespace/kb/sparql"
+USE_ENDPOINT_URL = "http://localhost:9999/blazegraph/namespace/kb/sparql"
 
 
 SIMPLE_QAS_TEMPLATES = ['How much {p} does {s} have?',
@@ -73,15 +73,13 @@ prefix dbr: <http://dbpedia.org/resource/>
 prefix usda-kb: <http://idea.rpi.edu/heals/kb/usda#>
 prefix foodon: <http://purl.obolibrary.org/obo/foodon.owl>
 prefix schema: <http://schema.org/>
-
 SELECT * WHERE {
   ?id_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Identifier  ;
     <http://semanticscience.org/resource/isAttributeOf>    ?food_V  ;
     <http://semanticscience.org/resource/hasValue> ?id .
   ?description_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:StatusDescriptor  ;
     <http://semanticscience.org/resource/isAttributeOf>    ?food_V  ;
-    <http://semanticscience.org/resource/hasValue> ?description ;
-    rdfs:label "Long Desc"^^xsd:string .
+    <http://semanticscience.org/resource/hasValue> ?description .
   ?water_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> envo:00002006 , chebi:15377 , dbr:Water  ;
     <http://semanticscience.org/resource/isAttributeOf>    ?food_V  ;
     <http://semanticscience.org/resource/hasUnit>    dbr:Gram, uo:0000021 ;
