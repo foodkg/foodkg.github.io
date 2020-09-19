@@ -2,7 +2,7 @@ isodate==0.6.0
 joblib==0.13.2
 jsonpickle==1.1
 more-itertools==6.0.0
-nltk==3.4
+nltk==3.4.5
 numpy==1.16.2
 pyparsing==2.3.1
 rdflib==4.2.2
