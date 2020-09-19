@@ -1,0 +1,586 @@
+@prefix : <http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl> .
+
+<http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl> rdf:type owl:Ontology ;
+                                                          owl:imports <https://purl.org/heals/gprov/1.0.0> ,
+                                                                      <http://semanticscience.org/ontology/sio/v1.43/sio-release.owl> ,
+                                                                      <http://www.w3.org/ns/prov-o-20130430> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#hasPythonRepresentation
+:hasPythonRepresentation rdf:type owl:AnnotationProperty ;
+                         rdfs:subPropertyOf rdfs:comment .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#label
+rdf:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#isDefinedBy
+<http://www.w3.org/ns/prov#isDefinedBy> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#ActivityGuideline
+:ActivityGuideline rdf:type owl:Class ;
+                   rdfs:subClassOf :LifestyleGuideline .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#ActivityLogSummary
+:ActivityLogSummary rdf:type owl:Class ;
+                    rdfs:subClassOf :TemporalSummary .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Carbohydrate
+:Carbohydrate rdf:type owl:Class ;
+              rdfs:subClassOf :Nutrient .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#ConsistentCarbIntakeDirective
+:ConsistentCarbIntakeDirective rdf:type owl:Class ;
+                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                     owl:someValuesFrom :LowCarb
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://semanticscience.org/resource/SIO_001403> ;
+                                                     owl:allValuesFrom :DG02
+                                                   ] ;
+                               rdfs:subClassOf :Directive ;
+                               :hasPythonRepresentation """{'carbohydrate' : 
+    {'unit': 'g',
+     'meal' : 
+       {'type': 'range',
+       'lower' : '30',
+       'upper': '45'},
+    'daily total' : '150'}
+}""" ;
+                               rdf:label "Baseline carbohydrate level should be 30g - 45g per carbs per meal +/- 5 carbs) whole dy 150g max." ;
+                               rdfs:comment "" .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#ConsistentPattern
+:ConsistentPattern rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                                owl:someValuesFrom :Frequency
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                                owl:someValuesFrom :Quantifier
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :TemporalPattern .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DG02
+:DG02 rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                   owl:someValuesFrom :FixedMedicationDosage
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                   owl:someValuesFrom [ owl:intersectionOf ( :ConsistentPattern
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                                                               owl:someValuesFrom :Carbohydrate
+                                                                                             ]
+                                                                                           ) ;
+                                                                        rdf:type owl:Class
+                                                                      ]
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf :DietaryGuideline ;
+      rdfs:comment "For individuals whose daily insulin dosing is fixed, a consistent pattern of carbohydrate intake with respect to time and amount may be recommended to improve glycemic control and reduce the risk of hypoglycemia." ;
+      rdfs:label "For a diabetic individual, if their daily insulin dosing is fixed, and there is a consistent pattern of carbohydrate intake with respect to time and amount, that pattern should be maintained." .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DG05
+:DG05 rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                            owl:someValuesFrom [ owl:intersectionOf ( :ConsistentPattern
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                                        owl:allValuesFrom [ owl:intersectionOf ( :HighCarb
+                                                                                                                 :LowFat
+                                                                                                               ) ;
+                                                                                            rdf:type owl:Class
+                                                                                          ]
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ]
+                          ] ;
+      rdfs:subClassOf :DietaryGuideline ;
+      rdfs:comment "Data on the ideal total dietary fat content for people with diabetes are inconclusive, so an eating plan emphasizing elements of a Mediterranean-style diet rich in monounsaturated and polyunsaturated fats may be considered to improve glucose metabolism and lower cardiovascular disease risk and can be an effective alternative to a diet low in total fat but relatively high in carbohydrates." ;
+      rdfs:label "Diet low in total fat but relatively high in carbohydrates should be replaced with Mediterranean diet." .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DG11
+:DG11 rdf:type owl:Class ;
+      rdfs:subClassOf :DietaryGuideline ;
+      rdfs:comment "Weight loss can be attained with lifestyle programs that achieve a 500–750 kcal/day energy deficit or provide ∼1,200–1,500 kcal/day for women adjusted for the individual's baseline body weight." ;
+      rdfs:label "Ideal caloric deficit for weight loss in women." .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DG12
+:DG12 rdf:type owl:Class ;
+      rdfs:subClassOf :DietaryGuideline ;
+      rdfs:comment "Weight loss can be attained with lifestyle programs that achieve a 500–750 kcal/day energy deficit and 1,500–1,800 kcal/day for men, adjusted for the individual's baseline body weight." ;
+      rdfs:label "Ideal caloric deficit for weight loss in men." .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DG17
+:DG17 rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                            owl:allValuesFrom [ owl:intersectionOf ( :LowCarb
+                                                                     [ rdf:type owl:Class ;
+                                                                       owl:unionOf ( :DiabeticUser
+                                                                                     :PrediabeticUser
+                                                                                   )
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
+                          ] ;
+      rdfs:subClassOf :DietaryGuideline ;
+      rdfs:comment "For people with type 2 diabetes or prediabetes, low-carbohydrate eating plans show potential to improve glycemia and lipid outcomes for up to 1 year." ;
+      rdfs:label "Low-carbohydrate eating plan recommendation." .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DG25
+:DG25 rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                            owl:someValuesFrom [ owl:intersectionOf ( :ConsistentPattern
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                                        owl:allValuesFrom :IdealTotalFat
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ]
+                          ] ;
+      rdfs:subClassOf :DietaryGuideline ;
+      rdfs:comment "The National Academy of Medicine has defined an acceptable macronutrient distribution for total fat for all adults to be 20–35% of total calorie intake. " ;
+      rdfs:label "Macronutrient distribution for total fat should be 20–35% of total calorie intake. "^^xsd:string .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Daily
+:Daily rdf:type owl:Class ;
+       rdfs:subClassOf :Frequency .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DerivedNutrient
+:DerivedNutrient rdf:type owl:Class ;
+                 rdfs:subClassOf :Nutrient .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DiabeticUser
+:DiabeticUser rdf:type owl:Class ;
+              rdfs:subClassOf :HEALSUser .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Diet
+:Diet rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#DietaryGuideline
+:DietaryGuideline rdf:type owl:Class ;
+                  rdfs:subClassOf :LifestyleGuideline .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Directive
+:Directive rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Fat
+:Fat rdf:type owl:Class ;
+     rdfs:subClassOf :Nutrient .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#FixedMedicationDosage
+:FixedMedicationDosage rdf:type owl:Class ;
+                       rdfs:subClassOf :MedicationDosage .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#FoodLogSummary
+:FoodLogSummary rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                             owl:someValuesFrom :Nutrient
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                             owl:someValuesFrom :TemporalPattern
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :TemporalSummary .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Frequency
+:Frequency rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#GlycemicLoad
+:GlycemicLoad rdf:type owl:Class ;
+              rdfs:subClassOf :DerivedNutrient .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Goal
+:Goal rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Guideline
+:Guideline rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#HEALSUser
+:HEALSUser rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://semanticscience.org/resource/SIO_000062> ;
+                                 owl:someValuesFrom :Guideline
+                               ] ;
+           rdfs:subClassOf <http://semanticscience.org/resource/SIO_000485> .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#HighCarb
+:HighCarb rdf:type owl:Class ;
+          rdfs:subClassOf :Diet ;
+          rdf:label "greater that 65% carbs" ;
+          <http://www.w3.org/ns/prov#hadPrimarySource> "https://blog.myfitnesspal.com/ask-the-dietitian-whats-the-best-carb-protein-and-fat-breakdown-for-weight-loss/"^^xsd:anyURI .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#HighProtein
+:HighProtein rdf:type owl:Class ;
+             rdfs:subClassOf :Diet ;
+             rdf:label "10–35% of of calories" ;
+             <http://www.w3.org/ns/prov#hadPrimarySource> "https://blog.myfitnesspal.com/ask-the-dietitian-whats-the-best-carb-protein-and-fat-breakdown-for-weight-loss/"^^xsd:anyURI .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#IdealTotalFat
+:IdealTotalFat rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://semanticscience.org/resource/SIO_001403> ;
+                                     owl:allValuesFrom :DG25
+                                   ] ;
+               rdfs:subClassOf :Diet ;
+               <http://www.w3.org/ns/prov#hadPrimarySource> "https://blog.myfitnesspal.com/ask-the-dietitian-whats-the-best-carb-protein-and-fat-breakdown-for-weight-loss/"^^xsd:anyURI .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#IdealTotalFatDirective
+:IdealTotalFatDirective rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                              owl:someValuesFrom :IdealTotalFat
+                                            ] ;
+                        rdfs:subClassOf :Directive ;
+                        :hasPythonRepresentation """{'total fat': 
+    {'percentage': 'calories',
+    'type': 'range',
+    'meal': {
+        'lower': '20',
+        'upper': '35'}
+    }
+}""" .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#InconsistentPattern
+:InconsistentPattern rdf:type owl:Class ;
+                     rdfs:subClassOf :TemporalPattern .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#IncreasingPattern
+:IncreasingPattern rdf:type owl:Class ;
+                   rdfs:subClassOf :TemporalPattern .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Insulin
+:Insulin rdf:type owl:Class ;
+         rdfs:subClassOf :Medication .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#LifestyleGuideline
+:LifestyleGuideline rdf:type owl:Class ;
+                    rdfs:subClassOf :Guideline .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#LowCarb
+:LowCarb rdf:type owl:Class ;
+         rdfs:subClassOf :Diet ;
+         rdf:label "45–65% of calories" ;
+         <http://www.w3.org/ns/prov#hadPrimarySource> "https://blog.myfitnesspal.com/ask-the-dietitian-whats-the-best-carb-protein-and-fat-breakdown-for-weight-loss/"^^xsd:anyURI .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#LowFat
+:LowFat rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://semanticscience.org/resource/SIO_001403> ;
+                              owl:allValuesFrom :DG25
+                            ] ;
+        rdfs:subClassOf :Diet ;
+        rdf:label "20–35% of calories" ;
+        <http://www.w3.org/ns/prov#hadPrimarySource> "https://blog.myfitnesspal.com/ask-the-dietitian-whats-the-best-carb-protein-and-fat-breakdown-for-weight-loss/"^^xsd:anyURI .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#LoweringPattern
+:LoweringPattern rdf:type owl:Class ;
+                 rdfs:subClassOf :TemporalPattern .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Medication
+:Medication rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#MedicationDosage
+:MedicationDosage rdf:type owl:Class ;
+                  owl:equivalentClass <http://semanticscience.org/resource/SIO_000614> .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Mediterranean
+:Mediterranean rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://semanticscience.org/resource/SIO_001403> ;
+                                     owl:allValuesFrom :DG05
+                                   ] ;
+               rdfs:subClassOf :Diet ;
+               rdf:label "food items tagged as mediterranean" .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#MediterraneanDietDirective
+:MediterraneanDietDirective rdf:type owl:Class ;
+                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                  owl:someValuesFrom :Mediterranean
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://semanticscience.org/resource/SIO_001403> ;
+                                                  owl:allValuesFrom :DG05
+                                                ] ;
+                            rdfs:subClassOf :Directive ;
+                            :hasPythonRepresentation """{'food': 
+    {'tag': 'mediterranean'}
+}""" .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#MonounsaturatedFat
+:MonounsaturatedFat rdf:type owl:Class ;
+                    rdfs:subClassOf :Fat .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Monthly
+:Monthly rdf:type owl:Class ;
+         rdfs:subClassOf :Frequency .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#NormalUser
+:NormalUser rdf:type owl:Class ;
+            rdfs:subClassOf :HEALSUser .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Nutrient
+:Nutrient rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#PharmacologicGuideline
+:PharmacologicGuideline rdf:type owl:Class ;
+                        rdfs:subClassOf :Guideline .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#PolyunsaturatedFat
+:PolyunsaturatedFat rdf:type owl:Class ;
+                    rdfs:subClassOf :Fat .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#PrediabeticUser
+:PrediabeticUser rdf:type owl:Class ;
+                 rdfs:subClassOf :HEALSUser .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Quantifier
+:Quantifier rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Sodium
+:Sodium rdf:type owl:Class ;
+        rdfs:subClassOf :Nutrient .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#TemporalPattern
+:TemporalPattern rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://semanticscience.org/resource/SIO_001403> ;
+                                       owl:someValuesFrom :HEALSUser
+                                     ] .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#TemporalSummary
+:TemporalSummary rdf:type owl:Class .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#TotalFat
+:TotalFat rdf:type owl:Class ;
+          rdfs:subClassOf :Fat .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Weekly
+:Weekly rdf:type owl:Class ;
+        rdfs:subClassOf :Frequency .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#WeightLossGoal
+:WeightLossGoal rdf:type owl:Class ;
+                rdfs:subClassOf :Goal .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#WeightMaintainGoal
+:WeightMaintainGoal rdf:type owl:Class ;
+                    rdfs:subClassOf :Goal .
+
+
+###  http://semanticscience.org/resource/SIO_000614
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Alice
+:Alice rdf:type owl:NamedIndividual ,
+                :PrediabeticUser ,
+                [ rdf:type owl:Restriction ;
+                  owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                  owl:hasValue :AliceDietPattern
+                ] ,
+                [ rdf:type owl:Restriction ;
+                  owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                  owl:hasValue :AliceGoal
+                ] ;
+       rdfs:comment "Alice is a pre-diabetic woman in her thirties. She has a weight loss goal in mind. She has been consuming  a low fat and high carb diet for a month." .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#AliceDietPattern
+:AliceDietPattern rdf:type owl:NamedIndividual ,
+                           [ owl:intersectionOf ( :ConsistentPattern
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                    owl:allValuesFrom [ owl:intersectionOf ( :HighCarb
+                                                                                             :LowFat
+                                                                                           ) ;
+                                                                        rdf:type owl:Class
+                                                                      ]
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#AliceGoal
+:AliceGoal rdf:type owl:NamedIndividual ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                      owl:someValuesFrom :WeightMaintainGoal
+                    ] .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#Bob
+:Bob rdf:type owl:NamedIndividual ,
+              :DiabeticUser ,
+              [ rdf:type owl:Restriction ;
+                owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                owl:someValuesFrom :FixedMedicationDosage
+              ] ,
+              [ rdf:type owl:Restriction ;
+                owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                owl:hasValue :BobActivityPattern
+              ] ,
+              [ rdf:type owl:Restriction ;
+                owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                owl:hasValue :BobDietPattern
+              ] ;
+     rdfs:comment "Bob is an over-weight diabetic man in his sixties. He was advised to take a fixed dose of insulin, and consume a well-balanced consistent meal to maintain a healthy lifestyle."^^xsd:string .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#BobActivityPattern
+:BobActivityPattern rdf:type owl:NamedIndividual .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#BobDietPattern
+:BobDietPattern rdf:type owl:NamedIndividual ,
+                         [ owl:intersectionOf ( :ConsistentPattern
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                  owl:someValuesFrom :Carbohydrate
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                  owl:allValuesFrom :IdealTotalFat
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#BobGoal
+:BobGoal rdf:type owl:NamedIndividual ,
+                  [ rdf:type owl:Restriction ;
+                    owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                    owl:someValuesFrom :WeightLossGoal
+                  ] .
+
+
+###  http://idea.tw.rpi.edu/ontologies/heals-guidelines.owl#MediterraneanDietEvidenceSentence
+:MediterraneanDietEvidenceSentence rdf:type owl:NamedIndividual ,
+                                            <https://purl.org/heals/gprovEvidenceSentence> ;
+                                   rdfs:comment "Data on the ideal total dietary fat content for people with diabetes are inconclusive, so an eating plan emphasizing elements of a Mediterranean-style diet rich in monounsaturated and polyunsaturated fats may be considered to improve glucose metabolism and lower cardiovascular disease risk and can be an effective alternative to a diet low in total fat but relatively high in carbohydrates." .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ConsistentPattern
+                :InconsistentPattern
+                :IncreasingPattern
+                :LoweringPattern
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :InconsistentPattern
+                :IncreasingPattern
+                :LoweringPattern
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
