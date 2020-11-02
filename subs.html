@@ -54,8 +54,53 @@
       <h1>Ingredient Substitutions</h1>
       <br/>
       <p>
+          We are exploring the possibilities of using the FoodKG to suggest ingredient substitutions in recipes.
+          This work is motivated by trying to make recipes healthier for people with specific dietary constraints, like
+          trying to reduce their carbohydrate intake or avoiding eating specific types of foods.
       </p>
       <hr>
+
+        <h2>Approach</h2>
+
+        <h3>Diet-Improvement Ingredient Substitution Heuristic (DIISH)</h3>
+        <p>
+        We calculate a substitutability score based on a heuristic we have developed, DIISH. This heuristic combines both
+        implicit and explicit semantic information about ingredients to try to determine good substitutes.
+        </p>
+
+        <p>
+        We calculate implicit semantics using word embeddings models - a Word2Vec model trained on data from the
+            <a href="http://im2recipe.csail.mit.edu/">Im2Recipe project</a>, and a word embedding model from <a href="https://spacy.io/">spaCy</a>.</p>
+
+        <p>
+        We calculate explicit semantics using recipe and ingredient information in the FoodKG. We calculate scores to
+        try to capture information like whether ingredients are used in similar recipe contexts and whether ingredients
+        are paired together with similar ingredients.
+        </p>
+
+        <p>
+        The DIISH substitutability score is calculated for ingredients, and we rank substitute candidates to provide our
+        final result. We also leverage the FoodKG's links to FoodOn's food ontology to help generalize ingredient uses,
+        as well as filter out options that are unlikely to be considered good substitutes.
+        </p>
+
+        <h3>Substitute Data</h3>
+        <br/>
+        <p>One source that we used to collect substitution data is <a href="http://foodsubs.com/">The Cook's Thesaurus</a>.
+            This website has a large catalog of ingredients, providing background information about the ignredient
+        as well as some common options for substitutions.</p>
+
+        <br/>
+        <p>We also use Food.com review data to collect more data on substitutions. More information about the data set can be found
+            <a href="https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions">here</a>.</p>
+
+        <h3>ISWC 2020 Poster</h3>
+
+        <br/>
+        <img width="100%"
+                src="images/ISWC2020_poster_ingredient_substitution_expanded.jpg" />
+
+
 
 
 </body>
