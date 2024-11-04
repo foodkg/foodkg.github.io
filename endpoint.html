@@ -51,7 +51,6 @@
         <a href="https://github.com/foodkg/foodkg.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;"
           src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
       <!-- Content -->
-      <h1>FoodKG Enpoint</h1>
       <br/>
       <p>
         <!-- We demonstrate the use of healthcoach through demo videos that we create from time to time. -->
@@ -59,7 +58,121 @@
       <hr>
 
 <section>
-      
+    <h1>Accessing FoodKG</h1>
+    <p>FoodKG is a comprehensive food knowledge graph that consolidates information from diverse food-related data sources. It includes recipes, nutrition data, and ingredient information, all linked into a unified ontology with provenance maintained for each data point.</p>
+    <h2>Endpoint Access</h2>
+    <p>To interact with FoodKG, use the following endpoint:</p>
+    <p><a href=" https://inciteprojects.idea.rpi.edu/foodkg" target="_blank"> https://inciteprojects.idea.rpi.edu/foodkg</a></p>
+
+    <h2>Python Code Snippets</h2>
+    <p>Below are some useful Python code snippets for querying FoodKG using SPARQL.</p>
+
+    <h3>Prerequisite</h3>
+    <p>To interact with FoodKG using Python, you need to install the <code>SPARQLWrapper</code> library. You can install it by running:</p>
+    <pre>
+        <code class="language-bash">pip install SPARQLWrapper</code>
+    </pre>
+
+    <h3>1. Setting up the SPARQL Endpoint</h3>
+    <pre>
+        <code class="language-python">
+        from SPARQLWrapper import SPARQLWrapper, JSON
+        from pprint import pprint
+
+        # Initialize the FoodKG endpoint
+        sparql = SPARQLWrapper(" https://inciteprojects.idea.rpi.edu/foodkg")
+        </code>
+    </pre>
+
+    <h3>2. Fetching All Tags</h3>
+    <p>This function retrieves all unique tags associated with recipes in FoodKG.</p>
+    <pre>
+        <code class="language-python">
+        def fetch_all_tags():
+            query = '''
+            PREFIX recipe-kb: <http://idea.rpi.edu/heals/kb/>
+            SELECT DISTINCT ?tag {
+                ?r recipe-kb:tagged ?tag .
+            }'''
+
+            sparql.setQuery(query)
+            sparql.setReturnFormat(JSON)
+            results = sparql.query().convert()
+            tags = [x['tag']['value'] for x in results['results']['bindings']]
+            return tags
+
+        # Example usage
+        tags = fetch_all_tags()
+        pprint(tags)
+        </code>
+    </pre>
+
+    <h3>3. Fetching Dishes by Tag</h3>
+    <p>This function fetches all dishes that have a specific tag in FoodKG.</p>
+    <pre>
+<code class="language-python">
+def get_dishes_for_tag(tag):
+    tag = f'<{tag}>'
+    query = '''
+        PREFIX recipe-kb: <http://idea.rpi.edu/heals/kb/>
+        SELECT DISTINCT ?r ?name {{
+            ?r recipe-kb:tagged {} .
+            ?r rdfs:label ?name .
+        }}'''.format(tag)
+
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    dishes = [(x['r']['value'], x['name']['value']) for x in results['results']['bindings']]
+    return dishes
+
+# Example usage
+tag_uri = "http://idea.rpi.edu/heals/kb/tag/vegetarian"
+dishes = get_dishes_for_tag(tag_uri)
+pprint(dishes)
+</code>
+    </pre>
+
+    <h3>4. Getting Nutrition Information for a Dish</h3>
+    <p>This function fetches nutrition details for a dish by its name.</p>
+    <pre>
+<code class="language-python">
+def get_nutrition_for_dish(dish_name):
+    query = '''
+    PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
+    SELECT ?attribute ?value
+    WHERE {{
+        ?recipe rdfs:label "{}" .
+        ?recipe ?attribute ?value .
+        FILTER(?attribute IN (recipe-kg:recipe_calories, recipe-kg:recipe_protein, recipe-kg:recipe_fat))
+    }}'''.format(dish_name)
+
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    nutrition = {x['attribute']['value'].split('/')[-1]: x['value']['value'] for x in results['results']['bindings']}
+    return nutrition
+
+# Example usage
+nutrition = get_nutrition_for_dish("Vegetable Soup")
+pprint(nutrition)
+</code>
+    </pre>
+
+    <h3>5. Saving Results to JSON</h3>
+    <p>Use this helper function to save query results to a JSON file for easy access.</p>
+    <pre>
+<code class="language-python">
+import json
+
+def save_results(data, file_name):
+    with open(file_name, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+
+# Example usage
+save_results(nutrition, "nutrition_data.json")
+</code>
+    </pre>
 </section>
 
 
