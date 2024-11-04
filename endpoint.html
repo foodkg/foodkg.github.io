@@ -60,11 +60,82 @@
 <section>
     <h1>Accessing FoodKG</h1>
     <p>FoodKG is a comprehensive food knowledge graph that consolidates information from diverse food-related data sources. It includes recipes, nutrition data, and ingredient information, all linked into a unified ontology with provenance maintained for each data point.</p>
+    
     <h2>Endpoint Access</h2>
-    <p>To interact with FoodKG, use the following endpoint:</p>
+    <p>To interact with FoodKG, use the following SPARQL endpoint:</p>
     <p><a href=" https://inciteprojects.idea.rpi.edu/foodkg" target="_blank"> https://inciteprojects.idea.rpi.edu/foodkg</a></p>
 
-    <h2>Python Code Snippets</h2>
+    <p>You must use SPARQL to extract the FoodKG triples.</p>
+
+    <h3>Introduction to SPARQL</h3>
+
+    <p>
+        SPARQL (SPARQL Protocol and RDF Query Language) is specifically designed for retrieving and manipulating data stored in RDF (Resource Description Framework) format. It is similar to SQL but is used for querying graph-based data structures rather than relational databases. In SPARQL, data is represented as a graph of triples (subject-predicate-object).
+    </p>
+
+    <h4>Key Features of SPARQL:</h4>
+    <ul>
+        <li><strong>Triple Pattern Matching:</strong> SPARQL queries are structured as patterns of triples, allowing users to retrieve specific data relationships.</li>
+        <li><strong>Filtering and Constraints:</strong> Supports filtering results, joining multiple patterns, and applying constraints on values.</li>
+        <li><strong>Aggregations and Grouping:</strong> Similar to SQL, SPARQL supports aggregations (e.g., COUNT, AVG) and grouping data.</li>
+    </ul>
+
+<h3>Getting Started with SPARQL:</h3>
+<p>
+    To help you get started, here are some beginner-friendly and advanced tutorials that cover the basics and advanced features of SPARQL:
+</p>
+<ol>
+    <li>
+        <a href="https://www.w3.org/TR/sparql11-query/" target="_blank">
+            <strong>W3C SPARQL 1.1 Query Language</strong> - Official Specification
+        </a><br>
+        The W3C provides an official and comprehensive specification for SPARQL. This is a great resource to refer to for the formal definitions and capabilities of the language.
+    </li>
+    <li>
+        <a href="https://cambridgesemantics.com/blog/semantic-university/learn-sparql/sparql-by-example/" target="_blank">
+            <strong>SPARQL By Example - Cambridge Semantics</strong> - Practical Examples
+        </a><br>
+        This tutorial uses practical examples to teach SPARQL, covering topics like querying for specific data, handling optional data, and performing aggregations.
+    </li>
+    <li>
+        <a href="https://www.learningsparql.com" target="_blank">
+            <strong>Learning SPARQL - Book by Bob DuCharme</strong> - Comprehensive Guide
+        </a><br>
+        This book is an in-depth guide to SPARQL. It provides real-world examples and is a great resource for both beginners and advanced users looking to deepen their SPARQL skills.
+    </li>
+</ol>
+
+    <h3>Example SPARQL Queries to run on FoodKG Endpoint:</h3>
+
+    Here is the code to find five recipes with a particular label, i.e., "Vegetable Soup".
+
+    <pre>
+        <code>
+            PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
+            SELECT ?recipe
+            WHERE {
+                ?recipe rdfs:label "Vegetable Soup" .
+            }
+            LIMIT 5
+        </code>
+    </pre>
+
+    To count the number of ingredients for each recipe, you can use the COUNT function along with GROUP BY to group the results by each recipe. Here’s how to modify the query:
+
+    <pre>
+        <code>
+        PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
+        SELECT ?recipe (COUNT(?ingredient) AS ?ingredientCount)
+        WHERE {
+            ?recipe rdfs:label "Vegetable Soup";
+                    recipe-kg:uses ?ingredient.
+        }
+        GROUP BY ?recipe
+        </code>
+    </pre>
+
+    <h2>Python Code Snippets for Accessing the FoodKG</h2>
+
     <p>Below are some useful Python code snippets for querying FoodKG using SPARQL.</p>
 
     <h3>Prerequisite</h3>
@@ -80,99 +151,34 @@
         from pprint import pprint
 
         # Initialize the FoodKG endpoint
-        sparql = SPARQLWrapper(" https://inciteprojects.idea.rpi.edu/foodkg")
+        sparql = SPARQLWrapper("https://inciteprojects.idea.rpi.edu/foodkg/namespace/kb")
         </code>
     </pre>
 
-    <h3>2. Fetching All Tags</h3>
-    <p>This function retrieves all unique tags associated with recipes in FoodKG.</p>
+    <h3>2. Run the Query</h3>
     <pre>
         <code class="language-python">
-        def fetch_all_tags():
+        def fetch_recipes():
             query = '''
-            PREFIX recipe-kb: <http://idea.rpi.edu/heals/kb/>
-            SELECT DISTINCT ?tag {
-                ?r recipe-kb:tagged ?tag .
-            }'''
+            PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
+            SELECT ?recipe
+            WHERE {
+                ?recipe rdfs:label "Vegetable Soup" .
+            }
+            LIMIT 5'''
 
             sparql.setQuery(query)
             sparql.setReturnFormat(JSON)
             results = sparql.query().convert()
-            tags = [x['tag']['value'] for x in results['results']['bindings']]
-            return tags
+            recipe = [x['recipe']['value'] for x in results['results']['bindings']]
+            return recipes
 
         # Example usage
-        tags = fetch_all_tags()
-        pprint(tags)
+        recipes = fetch_recipes()
+        pprint(recipes)
         </code>
     </pre>
 
-    <h3>3. Fetching Dishes by Tag</h3>
-    <p>This function fetches all dishes that have a specific tag in FoodKG.</p>
-    <pre>
-<code class="language-python">
-def get_dishes_for_tag(tag):
-    tag = f'<{tag}>'
-    query = '''
-        PREFIX recipe-kb: <http://idea.rpi.edu/heals/kb/>
-        SELECT DISTINCT ?r ?name {{
-            ?r recipe-kb:tagged {} .
-            ?r rdfs:label ?name .
-        }}'''.format(tag)
-
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-    dishes = [(x['r']['value'], x['name']['value']) for x in results['results']['bindings']]
-    return dishes
-
-# Example usage
-tag_uri = "http://idea.rpi.edu/heals/kb/tag/vegetarian"
-dishes = get_dishes_for_tag(tag_uri)
-pprint(dishes)
-</code>
-    </pre>
-
-    <h3>4. Getting Nutrition Information for a Dish</h3>
-    <p>This function fetches nutrition details for a dish by its name.</p>
-    <pre>
-<code class="language-python">
-def get_nutrition_for_dish(dish_name):
-    query = '''
-    PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
-    SELECT ?attribute ?value
-    WHERE {{
-        ?recipe rdfs:label "{}" .
-        ?recipe ?attribute ?value .
-        FILTER(?attribute IN (recipe-kg:recipe_calories, recipe-kg:recipe_protein, recipe-kg:recipe_fat))
-    }}'''.format(dish_name)
-
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-    nutrition = {x['attribute']['value'].split('/')[-1]: x['value']['value'] for x in results['results']['bindings']}
-    return nutrition
-
-# Example usage
-nutrition = get_nutrition_for_dish("Vegetable Soup")
-pprint(nutrition)
-</code>
-    </pre>
-
-    <h3>5. Saving Results to JSON</h3>
-    <p>Use this helper function to save query results to a JSON file for easy access.</p>
-    <pre>
-<code class="language-python">
-import json
-
-def save_results(data, file_name):
-    with open(file_name, 'w') as json_file:
-        json.dump(data, json_file, indent=4)
-
-# Example usage
-save_results(nutrition, "nutrition_data.json")
-</code>
-    </pre>
 </section>
 
 
