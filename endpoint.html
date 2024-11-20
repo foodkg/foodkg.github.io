@@ -111,7 +111,7 @@
 
     <pre>
         <code>
-        PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
+        PREFIX recipe-kg: &lt;http://idea.rpi.edu/heals/kb/&gt;
         SELECT ?recipe
         WHERE {
             ?recipe rdfs:label "Vegetable Soup" .
@@ -124,7 +124,7 @@
 
     <pre>
         <code>
-        PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
+        PREFIX recipe-kg: &lt;http://idea.rpi.edu/heals/kb/&gt;
         SELECT ?recipe (COUNT(?ingredient) AS ?ingredientCount)
         WHERE {
             ?recipe rdfs:label "Vegetable Soup";
@@ -160,7 +160,7 @@
         <code class="language-python">
         def fetch_recipes():
             query = '''
-            PREFIX recipe-kg: <http://idea.rpi.edu/heals/kb/>
+            PREFIX recipe-kg: &lt;http://idea.rpi.edu/heals/kb/&gt;
             SELECT ?recipe
             WHERE {
                 ?recipe rdfs:label "Vegetable Soup" .
